@@ -12,13 +12,45 @@
 .row {
   margin: 0; }
 
+.navbar, .navbar-expand {
+  display: none; }
+  @media only screen and (min-width: 600px) {
+    .navbar, .navbar-expand {
+      display: block; } }
+
 nav {
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 1.5px;
   font-family: 'Quicksand', sans-serif;
-  color: #39ae9e;
+  color: rgba(30, 30, 30, 0.8);
   font-weight: 700; }
+  @media only screen and (min-width: 600px) {
+    nav {
+      display: none;
+      background: rgba(30, 30, 30, 0.8); } }
+
+.nav2 {
+  width: 100%;
+  top: 0px;
+  display: none;
+  text-align: center;
+  position: fixed; }
+  @media only screen and (max-width: 600px) {
+    .nav2 {
+      display: block;
+      background: #26D0CE;
+      z-index: 9999; } }
+  .nav2 .iconmenu li {
+    display: inline-block;
+    padding: 10px; }
+    .nav2 .iconmenu li .icon {
+      transition: 1s;
+      color: whitesmoke;
+      font-size: 30px; }
+      .nav2 .iconmenu li .icon:hover {
+        color: #76e6e5;
+        transition: 1s; }
 
 @keyframes aumenta {
   0% {
@@ -50,12 +82,17 @@ nav {
     width: 0px;
     background-color: none; } }
 .textoit {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: black;
   font-size: 13.5px;
-  line-height: 30px;
+  line-height: 28px;
   letter-spacing: 1.3px;
   padding: 20px 0px; }
+  @media only screen and (max-width: 600px) {
+    .textoit {
+      text-align: -webkit-auto;
+      font-size: 12.5px;
+      line-height: 22px; } }
 
 .tituloit {
   font-family: 'Raleway', sans-serif;
@@ -63,6 +100,9 @@ nav {
   font-weight: 700;
   font-size: 40px;
   margin-top: 20px; }
+  @media only screen and (max-width: 600px) {
+    .tituloit {
+      font-size: 32.5px; } }
 
 .spantext {
   color: #26D0CE; }
@@ -74,6 +114,9 @@ nav {
     width: 80%;
     margin: 20px auto;
     height: 100vh; }
+    @media only screen and (max-width: 600px) {
+      .itsolutions .portada {
+        margin-top: 100px; } }
     .itsolutions .portada .portada_wrapper_texto {
       font-family: "Raleway";
       padding: 0px 20px;
@@ -98,7 +141,7 @@ nav {
         display: inline-block;
         padding-left: 0px; }
         .itsolutions .portada .portada_wrapper_texto .social .social-icons a {
-          color: #662ef3;
+          color: #26D0CE;
           font-size: 30px;
           padding: 0px 5px; }
       .itsolutions .portada .portada_wrapper_texto button {
@@ -130,6 +173,9 @@ nav {
         display: block;
         animation: float 2s infinite;
         transition: all ease-in-out 2s; }
+        @media only screen and (max-width: 600px) {
+          .itsolutions .portada .portada_wrapper_texto .logoImg {
+            margin: 0 auto; } }
       .itsolutions .portada .portada_wrapper_texto .logoshadow {
         margin-left: 10px;
         position: absolute;
@@ -139,6 +185,10 @@ nav {
         opacity: 0.6;
         animation: shadow 2s infinite;
         margin-left: 10px; }
+        @media only screen and (max-width: 600px) {
+          .itsolutions .portada .portada_wrapper_texto .logoshadow {
+            margin: 0 auto;
+            left: 30%; } }
     .itsolutions .portada .portada_wrapper_logo {
       position: relative; }
       .itsolutions .portada .portada_wrapper_logo .portadaImage {
@@ -153,14 +203,16 @@ nav {
     background: no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: 100%;
     background-position: bottom; }
-    @media screen and (min-width: 1px) and (max-width: 400px) {
+    @media only screen and (max-width: 600px) {
       .itsolutions .nosotros {
         background-attachment: fixed;
-        color: red;
-        background: red; } }
+        background-position: center; } }
     .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
       padding: 85px;
       text-align: left; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+          padding: 75px; } }
     .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-image {
       padding: 50px; }
   .itsolutions .busquedas {
@@ -188,7 +240,7 @@ nav {
       position: absolute;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.3);
       filter: blur(10px); }
     .itsolutions .busquedas .titlebus {
       text-align: center;

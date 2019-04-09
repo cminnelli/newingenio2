@@ -63,14 +63,57 @@ $color-newingenio:rgb(57,174,158);
 }
 
 // ANEXOS
+.navbar , .navbar-expand{
+	display: none;
+	@media only screen and  (min-width:600px) {
+		display: block;
+
+	}	
+}
 nav{
 	text-transform: uppercase;
 	font-size: 13px;
 	letter-spacing: 1.5px;
 	font-family: 'Quicksand', sans-serif;
-	color:$color-newingenio;
+	color:$color-grey;
 	font-weight: 700;
 
+
+
+		@media only screen and  (min-width:600px) {
+		display: none;
+		background: $color-grey;
+	}	 
+
+}
+
+.nav2{
+	width: 100%;
+	top:0px;
+	@media only screen and  (max-width:600px) {
+		display: block;
+		background: $color-span;
+		z-index:9999;
+	}	 
+	display: none;
+	text-align: center;
+	position: fixed;
+	.iconmenu{
+		
+		li{
+			display: inline-block;
+			padding:10px;
+			.icon{
+				transition: 1s;
+				color:whitesmoke;
+				font-size: 30px;
+				&:hover{
+					color:lighten($color-span,20%);
+					transition: 1s;
+				}
+			}
+		}
+	}
 }
 
 @keyframes aumenta {
@@ -120,12 +163,18 @@ nav{
 }
 
 .textoit{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color:black;
     font-size:13.5px;   
-    line-height: 30px;
+    line-height: 28px;
     letter-spacing: 1.3px;
-    padding:20px 0px;
+	padding:20px 0px;
+	@media only screen and  (max-width:600px) {
+		text-align:-webkit-auto;
+		font-size:12.5px;
+		line-height: 22px;
+	}	 
+
 }
 
 .tituloit{
@@ -133,7 +182,14 @@ nav{
     color:$color-titulos;
     font-weight: 700;   
 	font-size:40px;
-	margin-top:20px;             
+	margin-top:20px;
+
+	@media only screen and  (max-width:600px) {
+	
+		font-size:32.5px;
+	
+	}		
+	
 }
 .spantext{
     color:#26D0CE;
@@ -149,6 +205,10 @@ nav{
         width:80%;
 		margin:20px auto;
 		height: 100vh;
+
+		@media only screen and  (max-width:600px) {
+			margin-top:100px;
+		}	 
         .portada_wrapper_texto{
 			@media screen and (min-width:300px) and (max-width:900px) {
 				text-align: center;
@@ -179,7 +239,7 @@ nav{
 					display:inline-block;
 					padding-left:0px;
 					a{
-						color:$color-but1;
+						color:$color-span;
 						font-size: 30px;
 						padding:0px 5px;
 						
@@ -227,6 +287,9 @@ nav{
 				display: block;
 				animation:float 2s infinite;
 				transition:all ease-in-out 2s;
+				@media only screen and  (max-width:600px) {
+					margin:0 auto;
+				}	 
 			}
 			.logoshadow{
 				margin-left:10px;
@@ -237,6 +300,10 @@ nav{
 				opacity:0.6;
 				animation:shadow 2s infinite;
 				margin-left:10px;
+				@media only screen and  (max-width:600px) {
+					margin:0 auto;
+					left: 30%;
+				}	 
 			}
         }
 
@@ -259,20 +326,23 @@ nav{
         margin:0 auto;
 		
 		background:no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-		//background-attachment: fixed;
 		background-size:100%;
 		background-position: bottom;
-		@media screen and  (min-width:1px) and (max-width:400px){
+		@media only screen and  (max-width:600px) {
 			background-attachment: fixed;
-			color:red;
-			background:red;
-		}
+			
+			background-position: center;
+		}	
+
 
 		//@include shadows(25px);
         .nosotros-wrapper{
             .modulo-nosotros-texto{
                 padding:85px;
-                text-align: left;
+				text-align: left;
+				@media only screen and  (max-width:600px) {
+					padding:75px;
+				}	
             }
             .modulo-nosotros-image{
                 padding:50px;
@@ -315,7 +385,7 @@ nav{
 			position: absolute;
 			height:100%;
 			width:100%;
-			background-color:rgba(0,0,0,0.7);
+			background-color:rgba(0,0,0,0.3);
 			filter:blur(10px);
 
 

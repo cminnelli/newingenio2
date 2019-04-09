@@ -64,7 +64,7 @@
 <body ng-cloak class="itsolutions" ng-init="" ng-app="myApp" ng-controller="busquedaController">
 
 	<script> new WOW().init() </script>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="nav1 navbar navbar-expand-lg navbar-light bg-light .d-sm-none .d-md-block">
 		<a class="navbar-brand" href="#"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
 		 aria-expanded="false" aria-label="Toggle navigation">
@@ -94,6 +94,16 @@
 		</div>
 	</nav>
 
+	<div class="nav2">
+		<ul class="iconmenu">
+			<li><a href=""><ion-icon name="home"></ion-icon></a></li>
+			<li><a href=""><ion-icon name="logo-codepen"></ion-icon></a></li>
+			<li><a href=""><ion-icon name="contact"></ion-icon></a></li>
+			<li><a href=""><ion-icon name="wifi"></ion-icon></a></li>
+		</ul>
+	</div>
+
+
 	<section id="portada " class="portada itparticular" data-wow-delay="0.2s">
 		<div class="row">
 
@@ -101,7 +111,7 @@
 				<img class="logoImg" src="/imagenes/web/LOGO3.png" />
 				<img class="logoshadow" src="/imagenes/web/shadow.png" />
 				<div class="banner">
-					<span class="spantext">Call </span>	<h1 id="typed" class="tituloit"></h1>	
+					<h1 id="typed" class="tituloit"></h1>	
 				</div>
 
 				<p class="textoit">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aspernatur nostrum fuga? Iusto cumque obcaecati similique
@@ -142,7 +152,7 @@ var typed = new Typed("#typed", {
 		
 
 			<div class="portada_wrapper_logo col-xs-12 col-md-5">
-				<img class="portadaImage" src="/imagenes/web/portadaIcons.png" />
+				<!-- <img class="portadaImage" alt="imagen mas cool" src="" /> -->
 
 
 			</div>
@@ -157,14 +167,14 @@ var typed = new Typed("#typed", {
 			<div class="row">
 
 
-				<div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
-					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> ¿Porque elegir
-						<span class="spantext"> IT Solutions</span>?</h2>
+				<div class="col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
+					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> ¿Porque elegir <span class="spantext"> IT Solutions</span>? </h2>
+					<br>
 					<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
 						possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
 
 				</div>
-				<div class="col col-xs-12 col-md-4 modulo-nosotros-image">
+				<div class="col-xs-12 col-md-4 modulo-nosotros-image">
 
 				</div>
 			</div>
