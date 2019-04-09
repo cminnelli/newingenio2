@@ -38,7 +38,7 @@ app.listen(port, function(req , res){
 
 app.get("/" , function(req , res){
 
-	res.send("Bienvenido, aca van a estar los dos logos")
+	res.sendFile(path.join(__dirname ,"index_it.html"));
 
 })
 
