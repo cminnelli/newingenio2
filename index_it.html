@@ -1,0 +1,678 @@
+<!DOCTYPE html >
+<html lang="es">
+
+<head>
+	<title>Ingenio Tecnico © - Buscamos talento </title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+	<link href='imagenes/web/ISOTIPO.png' rel='shortcut icon' type='image/png'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous"></script>
+
+
+
+	<!-- <link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css"> -->
+	<script src="https://unpkg.com/ionicons@4.0.0/dist/ionicons.js"></script>
+	<link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/>
+	<link rel="stylesheet" href="css/ripple.css">
+	<link rel="stylesheet" href="css/estilosit.css">
+
+	<link rel="stylesheet" href="css/footer.css">
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+	<!-- ANGULAR SCRIPTS -->
+	<script src="/libs/angular/angular.min.js"></script>
+
+	<script src="/js/app.js"></script>
+	<script src="/js/services/google.js"></script>
+	<script src="/js/services/myService.js"></script>
+	<script src="/js/controllers/busquedas.js"></script>
+	<script src="/js/controllers/contacto.js"></script>
+
+	<script src="libs/jquery/jquery.js"></script>
+			<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+			
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+</head>
+
+
+
+<body ng-cloak class="itsolutions" ng-init="" ng-app="myApp" ng-controller="busquedaController">
+
+	<script> new WOW().init() </script>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Porque ingenio?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Servicios</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Busquedas </span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<section id="portada " class="portada itparticular" data-wow-delay="0.2s">
+		<div class="row">
+
+			<div class="portada_wrapper_texto col-xs-12 col-md-7">
+				<img class="logoImg" src="/imagenes/web/LOGO3.png" />
+				<img class="logoshadow" src="/imagenes/web/shadow.png" />
+				<div class="banner">
+					<span class="spantext">Call </span>	<h1 id="typed" class="tituloit"></h1>	
+				</div>
+
+				<p class="textoit">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aspernatur nostrum fuga? Iusto cumque obcaecati similique
+					beatae nostrum ducimus sint repellat? Rerum ratione </p>
+
+				<div class="social">
+					<ul class="social-icons">
+						<a href="#">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-linkedin"></i>
+						</a>
+	
+					</ul>	
+				</div>				
+				<!-- <button class="but1">Conocenos mas!</button> -->
+			</div>		
+			
+
+<script>
+
+
+var typed = new Typed("#typed", {
+  // Waits 1000ms after typing "First"
+  strings: ["Buscamos profesionales ( )" , "Servicio personalizado ( )", "Tu candidato ( )", "Servicios IT()"],
+		typeSpeed: 30,//specifies the typing speed of the text
+		backSpeed: 25, //specifies speed of deletion of the text
+		loop: false //repetition
+});
+  
+  </script>
+
+
+		
+
+			<div class="portada_wrapper_logo col-xs-12 col-md-5">
+				<img class="portadaImage" src="/imagenes/web/portadaIcons.png" />
+
+
+			</div>
+
+
+		</div>
+	</section>
+
+	<section class="nosotros wow fadeIn" id="nosotros">
+
+		<div class="nosotros-wrapper wow fadeIn">
+			<div class="row">
+
+
+				<div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
+					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> ¿Porque elegir
+						<span class="spantext"> IT Solutions</span>?</h2>
+					<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
+						possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
+
+				</div>
+				<div class="col col-xs-12 col-md-4 modulo-nosotros-image">
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</section>
+
+	<section class="servicios wow fadeIn" id="servicios">
+		<div class="row">
+
+		</div>
+	</section>
+
+
+	<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
+		<!-- <div class="curvetop"></div> -->
+		<div class="transparencia"></div>
+		<div class="curvebot"></div>
+		<div class="row">
+			<div class="col-xs-12 col-md-3 busquedas-title wow fadeIn">
+				<h2 class="tituloit titlebus"> <ion-icon name="contact"></ion-icon> Búsquedas
+					<span class="spantext"> IT</span>
+				</h2>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
+				<div class="row">
+					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-md-3 col-md-offset-1">
+
+						<div class="jobOfferWrapp">
+
+							<div class="jobText">
+								<h4 class="job-title"> {{j.puesto}} </h4>
+								<p class="badge badge-default">{{j.seniority}}</p>
+
+
+								<p> {{j.area}}</p>
+								<p>{{j.rubro}}</p>
+								<p>{{j.segmento}}</p>
+							</div>
+
+							<div class="jobLink">
+								<div class="row">
+									<!-- <div class="col col-xs-12 col-md-6"><a href="" class="link">.../a></div> -->
+									<div class="col col-xs-12 col-md-6 days">Hace 6 días</div>
+								</div>
+							</div>
+
+
+							<div class="comentariosWrapp">
+							</div>
+
+		
+							<ion-icon name="aperture" class="infoicon"></ion-icon>
+							<ion-icon name="close" class="closeicon"></ion-icon>
+							<p class="jobcom">{{j.comentarios}}</p>
+
+						</div>
+						<script>
+							$(".infoicon").mouseenter(function () {
+
+								var ind = $(".infoicon").index(this);
+								console.log(ind);
+
+								$(".comentariosWrapp").eq(ind).css({
+									transition: '0s',
+									animation: 'aumenta 3.5s',
+									animationFillMode: 'forwards'
+
+								});
+
+								$(".jobcom").eq(ind).fadeIn(500)
+
+
+							})
+
+							$(".closeicon").click(function () {
+
+								var ind = $(".closeicon").index(this);
+								console.log(ind);
+
+								$(".comentariosWrapp").eq(ind).css({
+									transition: '3s',
+									animation: 'dismin 1s',
+									animationFillMode: 'forwards'
+								});
+
+								$(".jobcom").eq(ind).fadeOut(500)
+
+
+							})
+
+						</script>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		</div>
+	</section>
+
+	 <script>
+	   
+	   $(document).ready(function(){
+		
+		 $('.owl-carousel , owl-theme').owlCarousel({
+		 center:true,
+		 autoplay: true,
+		 center: true,
+		 loop: true,
+		 nav: true,
+		 margin:10,
+			 responsive:{
+			   600:{
+				   items:6
+			   },
+			   }
+	   });
+	   
+		  
+	   });
+		 
+		 
+		  
+	   
+	   </script>
+
+	<section class="testimoniales ">
+
+	   <ion-icon class="bigcuote" name="quote"></ion-icon>
+	   
+	   <div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
+		<h2 class="tituloit"> <ion-icon name="bookmark"></ion-icon> Testimonios Sobre 
+			<span class="spantext"> Ingenio IT </span></h2>
+		<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
+			possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
+
+		</div>
+	   
+	   <div class="owl-carousel owl-theme">
+	   
+		   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://scontent.faep9-2.fna.fbcdn.net/v/t1.0-9/19029561_10154503905920951_4737250782048933711_n.jpg?_nc_cat=105&_nc_ht=scontent.faep9-2.fna&oh=7fb20f753f76b5775ad2914405c1e63d&oe=5D185579">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://www.expoknews.com/wp-content/uploads/2017/09/mark-zuckerberg-headshot-11.jpg">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://www.thefamouspeople.com/profiles/images/steve-jobs-3.jpg">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://prabook.com/web/show-photo-icon.jpg?id=1876292&width=220&cache=false">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+		   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis a</p>
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	  	   
+	   </section>
+	<section class="contacto">
+
+		<ion-icon class="bigwifi" name="wifi"></ion-icon>
+		<div class="row">
+					
+			<div class="col col-xs-12  col-md-5 modulo-nosotros-texto">
+				<h2 class="tituloit"> <ion-icon name="wifi"></ion-icon> Conectate 
+					<span class="spantext"> con Nosotros</span></h2>
+				<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!</p>
+		
+			</div>
+
+			<form action="" class="col-xs-12 col-md-7">
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping">@</span>
+					</div>
+					<input type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
+
+				</div>
+				<br>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping">@
+					</div>
+					<input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
+				</div>
+				<br>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping">@</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Tema" aria-label="Username" aria-describedby="addon-wrapping">
+				</div>
+				<br>
+				<button type="button" class="mybut">CLICK</button>
+
+			</form>
+		</div>
+
+		<div class="slidediv"></div>
+
+
+		<div class="textdiv">
+			<h3>INGENIO IT: Gracias por contactarnos</h3>
+			<hr>
+			<p> A la brevedad nos estaremos poniendo en contacto! </p>
+		</div>
+
+
+
+	</section>
+
+
+
+	<script>
+
+		$(".mybut").click(function (event) {
+			
+			$(".slidediv").css({
+				animation: 'movdiv 4s',
+				animationFillMode: 'forwards'
+			});
+
+			$(".textdiv").fadeIn(2000)
+
+
+			setTimeout(function () {
+				$(".slidediv").fadeOut(1000)
+				$(".textdiv").fadeOut(1000)
+
+
+
+			}, 7000)
+
+
+
+		});
+
+
+
+
+
+	</script>
+
+	<!-- <section class="contacto wow fadeInUp" id="contacto">
+		
+
+
+				<div class="formWrapper">
+					<div class="encabezado">
+								<h2 class="titContact">	Contactanos <span class="spantext"></span></h2>
+					</div>
+
+					<form method="post" action="/sendMail" class="">
+						<div class="row">
+								<div class="form-group col-xs-12 offset-md-1 col-md-5 ">								
+										<input required name="nombre" placeholder="Nombre completo" type="text" class="form-control" >
+								</div>
+								<div class="form-group col-xs-12  col-md-5">									
+										<input required name="asunto" placeholder="Asunto" type="text" class="form-control" >
+								</div>
+								<div class="form-group col-xs-12 offset-md-1 col-md-10 ">									
+										<input required name="mail" placeholder="Mail" type="email" class="form-control" >
+								</div>
+		
+								<div class="form-group col-xs-12 offset-md-1 col-md-10 ">
+										<textarea required name="comentario" placeholder="Dejanos tu comentario" class="form-control" rows="5" id="comment"></textarea>									
+								</div>
+								
+
+						</div>
+						<div class="text-center">
+								<button class="but1"> Enviar Mensaje!</button>
+						</div>
+
+					</form>
+			</div>
+			
+		</section> -->
+
+	<footer class="footer-distributed">
+
+		<div class="footer-left">
+			<!-- 				
+					<p class="footer-links">
+						<a href="#">Home</a>					
+						<a href="#">Blog</a>					
+						<a href="#">Pricing</a>				
+	
+					</p> -->
+
+			<div class="footer-icons">
+				<p>Redes Sociales</p>
+				<a href="#">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-github"></i>
+				</a>
+
+			</div>
+
+			<p class="footer-company-name">Ingenio Técnico &copy; 2019</p>
+		</div>
+
+		<div class="footer-center">
+
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p>
+					<span>E Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>
+			</div>
+
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>+1 555 123456</p>
+			</div>
+
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p>
+					<a href="mailto:web.ingeniotecnico@gmail.com">web.ingeniotecnico@gmail.com</a>
+				</p>
+			</div>
+
+
+
+
+		</div>
+
+		<div class="footer-right">
+
+			<p class="footer-company-about">
+				<span>Desarrollado por:</span>
+				<img src="imagenes/web/broomLogo.png" alt="" class="logoBroom">
+
+
+			</p>
+
+
+		</div>
+
+	</footer>
+
+
+
+
+
+
+
+
+
+	<!-- STICKY MOJO SCRIPTS -->
+	<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+	<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+	<!-- <script src="/js/otros/portadaFade.js"></script> -->
+
+</body>
+
+</html>

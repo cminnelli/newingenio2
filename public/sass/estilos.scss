@@ -1,0 +1,1057 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC|Raleway|Rubik|Rubik+Mono+One|Space+Mono|Spectral|Spectral+SC');
+@import url('../css/animate.css');
+
+
+$secondary-color:#B9DCE0;
+$color-grey:rgba(30,30,30,0.8);
+
+$color-background:#EDEEF2;
+
+$color-ingenio1:#055174;
+$color-ingenio2:#028090;
+$color-ingenio3:#00a896;
+$color-ingenio4:#f261ad;
+$color-nosotros:#EDEEF2;
+
+$font-primary:'Quicksand', sans-serif;
+$font-encabezado:'Quicksand', sans-serif;
+$font-navegador:'Quicksand', sans-serif;
+$font-titulos:'Quicksand', sans-serif;
+
+/*CLASES GENERALES*/
+.centerpos{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+#cv{
+	width: 100%;
+}
+.stars {
+  display: inline-block;
+  font-size: 13px;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.stars > i {
+  color: #FFD76E;
+  padding: 2px;
+  transition: all 0.2s ease;
+}
+
+@keyframes pulsar{
+	from{
+	height:150px;
+	}	
+	to{
+	height:190px;
+	}
+}
+
+
+
+
+// BUTTONS
+
+.buttonGroup{
+	padding:5px;
+}
+
+.but{
+	background-color:transparent;
+	color:whitemsmoke;
+	padding:8px 15px;
+	font-size:14px;
+	border-radius:30px;
+	margin:2.5px 1px;
+	border-style:none;
+	&:hover{
+		background-color:whitesmoke;
+		color:black;
+		transition:2s;
+	}
+
+	&.butGoogle{
+		background-color:$color-ingenio3;
+		
+	}
+	&.butOffer{
+		background-color:$color-ingenio1;
+	
+		//border:0.5px solid whitesmoke;
+	}
+	&.butCv{
+		background-color:$color-ingenio2;
+		//border:1.5px solid $color-ingenio2;
+	}
+	&.butPostulate{
+		background-color:$color-ingenio1;
+		color:whitesmoke;		
+	}
+	&.butCandidato{
+		background-color:$color-ingenio2;
+		color:whitesmoke;
+	}
+
+
+
+}
+//LOADING SECTION//
+
+.loading{
+
+	background: whitesmoke;
+	overflow-y:hidden;
+	height:100vh;
+	background-color:white;
+	z-index:3;
+
+	.sloganIT{
+		@extend .centerpos;
+		top:62%;
+		text-align: center;
+		font-size: 18px;
+		letter-spacing: 2.2px;
+		color:$color-grey;
+		font-family: "Roboto";
+		@media screen and (max-width:600px){
+			bottom:53%;
+			
+		}
+
+		span{
+			color:$color-ingenio3;
+			font-size: 25px;
+			font-family: 'Roboto';
+		}
+
+		@media screen and (max-width:600px){
+			font-size: 14px;
+			top:59%;
+		}
+
+	}
+	
+	.loadingWrapper{
+		height:200px;
+		.logoIT{
+			animation:pulsar 3s;
+			animation-iteration-count: infinite;
+			@extend .centerpos;
+			height: 150px;
+			
+		}	
+	}	
+}
+
+
+.bodyMain{
+	font-family: $font-primary;
+	font-weight:300;
+	overflow-y:hidden;
+}
+
+/*BOOTSTRAP MODIFY*/
+h1, .container , .container-fluid{
+	margin:0;
+	margin-left: 0px;
+	margin-right: 0;
+	padding:0px;
+	padding-left:0px;
+	padding-right: 0px;
+}
+.navbar-header , .navbar-default {
+border-radius: 0;
+background:rgba(255,255,255,0.3);
+border:none;
+
+background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.navbar-toggle , .collapsed{
+border:none;
+&:hover{
+	border:none;
+}
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:$color-grey;
+	font-size: 14px;
+	  
+}
+
+.navbar-default .navbar-nav>li{
+	color:$color-grey; 
+	font-size: 13px;
+	padding:0px;
+	text-align:center;
+	font-weight: 700;
+}
+.highNav{
+	height: 40px;
+	background-color:$color-ingenio1;
+	position: fixed;
+	transition:0.6s;
+
+
+}
+
+/*PORTADA SECTION*/
+
+$color-whiteopacity:rgba(255, 255, 255, 0.90);
+
+.portada{
+	
+	background-attachment: fixed;
+	background-size: cover;
+	background-position:top;
+	height: 100vh;
+	position: relative;
+	z-index: 1000;
+
+	position:relative;
+// 	.transparencia{
+// 		position:absolute;
+// 		height: 100%;
+// 		width:100%;
+// 		opacity: 0.8;
+// 		background: #b993d6; /* fallback for old browsers */
+//   background: -webkit-linear-gradient(to bottom, #b993d6, #8ca6db); /* Chrome 10-25, Safari 5.1-6 */
+//   background: linear-gradient(to bottom, #b993d6, #8ca6db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// 	}
+
+	&.ingeneriaparticular{
+		background: url("/imagenes/web/portada13.jpg")  no-repeat top;
+	}
+	&.itparticular{
+		//background: url("/imagenes/web/portada12.jpg")  no-repeat top;
+	}
+	#mainportada{
+		height: 100%;
+
+		.slogan{
+			@extend .centerpos;
+			top:48%;
+	
+		}
+		.logoWrapper{
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;	
+			@extend .centerpos;
+			top:55%;		
+			background: $color-whiteopacity;
+			padding:20px;	
+			
+			.logoIT{
+				height: 135px;
+				@extend .centerpos;
+		
+	
+				
+			}
+	
+		}
+
+	}
+
+
+
+}
+
+
+/*NAVBAR*/
+
+.navBar{
+	
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+	margin-top:30px;
+
+	color:$color-ingenio1;
+
+
+	ul{
+		padding:100px;
+		padding-top:20px;
+		margin:0px;
+		text-align: left;
+
+		li{
+			&:first-child{
+			color:orange;
+			}
+			color:black;
+			list-style: none;
+			padding-right: 25px;
+			font-size: 14px;
+			cursor: pointer;
+			display: inline-block;
+			&:hover{
+				transition: 1s;
+				color:orange;
+			}
+			span{
+				font-size: 18px;
+				padding:3px;
+				margin-right:2px;
+			}
+		}
+	}
+
+}
+
+$color-titulos:#484848;
+
+
+.titulos{
+	color:$color-titulos;
+	text-align: left;
+	padding:5px;
+}
+
+/*NOSOTROS SECTION*/
+
+.nosotros{
+	position:relative;
+	.col-xs-12 , .col-xs-6, .row{
+		padding:0px;
+		margin:0px;
+	}
+	color:#4F4E4A;
+	text-align: center;
+
+	&.itparticular{
+		background: #1A2980;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		
+	}
+
+	&.ingenieriaparticular{
+
+		background: #43cea2; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #43cea2, #185a9d);
+	}
+
+	.modulo-nosotros{
+		transition: 1s;
+		
+		
+
+	
+
+		
+
+			.engineertool{
+				height: 250px;
+				position: absolute;
+				height: 100%;
+				right: 0px;
+				transition: 1s;
+				@media screen and (max-width:800px){
+					display: none;
+				}
+			}
+		
+
+		.texto-wrapper{
+			padding:50px;
+			color:white;
+			h2{
+				margin-top:0;
+				margin-bottom:15px;
+				margin-top:8px;
+			}
+			h5{
+				text-transform: uppercase;
+				color:$color-ingenio2;
+				margin-top:0;
+				margin-bottom:0;
+				margin-top:5px;
+			}
+			p{
+				line-height: 2;
+				width: 65%;
+				@media screen and (max-width:600px){
+					width: 98%;
+					text-align: justify;
+				}
+				margin:0 auto;
+			}
+
+		}
+	
+	
+
+
+	}
+
+
+}
+
+
+// BUSQUEDAS
+
+
+.busquedas{
+	background-attachment: fixed;
+
+	&.itparticular{
+		background: url("/imagenes/web/portada14.jpeg")  no-repeat center;	
+	}
+
+	&.ingenieriaparticular{
+	background: url("/imagenes/web/portada10.jpg")  no-repeat top;	
+
+		.job-title{
+		// INSERTAR DISTINTIVOS
+		}
+
+	}
+
+	.jobs-result{	
+			
+			text-align: center;			
+			margin-bottom:10px;	
+			padding:10px;			
+			
+			.job-offer{
+				
+				margin:0px;
+				padding:0px;
+
+
+				.job-wrapp{
+					width: 95%;
+					margin:0 auto;
+					padding:15px;
+					background-color:$color-whiteopacity;
+					margin-bottom:10px;
+					border-bottom:5px solid $color-ingenio1;
+					&:hover{
+						border-bottom:5px solid $color-ingenio3;
+						transition:0.9s;
+						& span{
+							color:$color-ingenio2;
+							transition: 1.2s;
+						}
+					}
+
+				}
+
+	
+				.job-head{
+					
+					.job-title{
+						font-weight:700;
+						letter-spacing: 1.3px;
+						color:darken($color-ingenio1,30%);
+					}
+					
+
+					padding:10px;
+				}
+				.job-body{
+					height:200px;
+					padding:10px;
+					text-align: left;
+					letter-spacing: 1.5px;
+					padding:5px;
+			
+				}
+
+				.iconGroup{
+					position: absolute;
+					bottom:15px;
+					right:35px;
+					.linkICON{
+						padding:5px;
+						color:$color-ingenio1;
+						font-size: 40px;
+						cursor:pointer;
+					
+					}
+				}
+
+				.job-title{
+					margin-top:10px;					
+					font-weight: 700;
+					color:darken($color-ingenio1 , 35%);
+				}
+
+
+	
+				.icon{
+					padding:3px;
+					margin-right:4px;
+					color:#0077B5;
+					font-size: 18px;
+				}
+				&:hover .icon{
+					transition:0.8s;
+								
+				}
+				label{
+					color:$color-grey;
+					text-align: left;
+					
+				}
+	}
+}
+			
+
+
+
+}
+
+/*SERVICIOS SECTION*/
+
+.servicios{
+
+	
+	padding:20px;	
+	background:white;
+	
+		.servGeneral{
+			padding:60px;
+			@media screen and (max-width:600px){
+				padding:20px;
+			}			
+			.servWrapper{
+				border:10px solid white;
+				margin:0px;
+				margin-bottom:5px;
+				padding:0px;				
+				background-color:white;			
+				
+				&:hover{
+					transition:0.5s;
+					-webkit-transform: scale(1.03,1.03);
+
+				}
+				&:hover img{					
+					overflow: hidden;
+				}
+				&:hover .textWrapper{
+				
+					background-color:white;
+					transition:0.8s;
+					color:darken($color-ingenio1 , 25%);
+				}
+				&:hover .servBody{
+					
+					transition:0.5s;					
+					color:darken($color-ingenio1 , 35%);
+				}
+
+				.servHead{			
+					padding:0px;
+					img{
+						border-radius: 3px;
+						max-height: 249.781px;
+					}
+
+
+					.textWrapper{
+						
+						text-align: center;
+						padding:5px;
+
+						.serv-tit{
+							text-align: center;
+							font-weight: 700;
+					
+							
+							
+						}
+					}
+				}
+				.servBody{
+		
+					background-color:white;
+					color:$color-titulos;
+					padding:25px;
+					text-align: center;
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+
+
+
+/*BUSQUEDAS SECTION*/
+
+
+
+.encabezado{
+	font-family: $font-encabezado;
+	color:$color-grey;
+	text-align: center;
+	font-weight: 900;
+	&.servicio-title{
+		color:$color-titulos;
+	}
+	&.busquedas-title{
+		color:black;
+	}
+
+	h3{
+		padding:15px;
+		margin:0;
+		font-size: 35px;
+		//text-transform: uppercase;
+		span{
+			padding:5px;
+			display: block;
+
+		}
+	}
+}
+
+@keyframes colorear{
+	20%{
+	background-color:rgba(1,120,200,0.2);
+	}
+	40%{
+	background-color:rgba(1,100,150,0.4)	
+	}
+	60%{
+		background-color:rgba(1,120,125,0.5)
+	}
+	80%{
+	background-color:rgba(1,120,200,0.6)
+	}
+	100%{
+	background-color:rgba(1,100,200,0.8);
+	border-top: 5px solid whitesmoke;
+	}
+
+}
+
+$button-color:#00CCCB;
+
+	.panel{
+		padding:20px;
+		background-color:transparent;
+		//background: url("https://i2.wp.com/onlyvectorbackgrounds.com/wp-content/uploads/2018/10/Abstract-Gradient-Shadow-Lines-Background-Blue.jpg?resize=1024%2C725")  no-repeat top;
+		background: #2b5876;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		height: 100vh;
+		background-size:cover;
+		background-attachment: fixed;
+		
+		.titulo{
+			font-size:25px;
+			color:white;
+			margin-bottom:20px;
+			text-align: right;
+		}
+		.jobWrapper{
+			margin:0;
+			padding:0;
+			background-color:none;
+			.jobOffer{
+				font-size:14px;
+				cursor:pointer;
+				border:none;		
+				box-sizing:border-box;
+				padding:10px;
+				.jobOfferIn{
+					padding:10px;
+					transition:2s;
+	
+					background:white;
+
+
+					.jobTitle{
+						text-align:center;
+						p{
+							margin:0;
+							padding-top:3px;
+							letter-spacing:1.5px;
+							color:black;
+						}
+
+						h4{
+							font-weight:700;
+							text-transform:uppercase;
+							margin:0;
+							padding:1px;
+							color:black;
+						}
+					}
+					.jobBody{
+						padding:15px;
+						p{
+							font-size:13px;
+							color:black;
+						}
+						.jobProp{
+							margin:0;
+							color:$color-ingenio1;
+							font-weight:700;
+							font-size:15px;
+						}
+					}
+				}
+			
+			}
+		}
+	
+
+		.sesion{
+			color:whitesmoke;
+			border-radius:5px;
+			cursor:pointer;
+			margin-bottom:10px;	
+			text-align:center;
+			background: #4CB8C4;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+			
+			opacity:0.95;
+			//box-shadow:grey 0px 5px 10px 3px;
+			padding:15px;
+			transition:2s;
+			// &:hover{
+			// 	transition:1.7s;
+			//     box-shadow:whitesmoke 0px 5px 15px 5px;
+			//     transition:2s;
+			// }
+
+			h4{
+				width: 75%;
+				padding:5px;
+				margin: 0 auto;
+			}
+			#progress{
+				width:0%;
+			}
+
+			.avatar{
+			border-radius:50%;
+			margin:5px 0 5px 0;
+			height:160px;
+			border:3px solid rgba(1000,1000,1000,0.5);
+			}			
+			
+
+
+			#cv{
+				display: none;
+			}
+
+			
+
+		}
+
+
+
+		
+		
+
+
+	/*CONTACTO SECTION*/
+	
+
+	.contacto{	
+		background-attachment: fixed;
+		background:$color-nosotros;
+		background-size: cover;
+
+	
+		padding:20px;
+
+		.row{
+			padding:0px;
+			margin:0px;
+		}
+		input ,textarea{
+			border-right:none;
+			border-left: none;	
+			font-size: 13px;
+			outline: none;
+			border:none;
+			box-shadow: none;
+			background-color: rgba(100,100,100,0.25);
+			color:$color-ingenio1;
+			transition: 1.6s;
+			&:focus{
+				outline: none;
+				box-shadow: none;
+				background-color: rgba(100,100,100,0.25);
+				color:$color-ingenio1;
+				transition: 1.6s;
+
+			}
+		}
+	}
+
+	#footer-wrapper{
+		
+		.footer-title{
+			font-weight: 700;
+			padding:2px;
+		}
+		.copyright{
+
+			box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+		-webkit-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+		-moz-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+	
+		height: 55%;
+		background-color:rgba(105, 120, 131, 0.34);
+		color: black;
+		box-shadow: 10px 10px 5px #888888;
+		padding:18px;
+		.telefono , .direccion , .social-media{
+			padding:10px;
+			text-align: center;
+		}
+		.social-media{
+			
+			a{
+				text-decoration: none;
+				span{
+					color:$color-ingenio1;
+					padding:5px;
+					font-size: 30px;
+
+				}
+			}
+
+		}
+			p ,h5{
+				padding:3px;
+				margin-bottom:0;
+			
+				margin:0;
+			span{
+				padding:8px;
+				color: lighten($color-ingenio1,0.2);
+			}
+
+
+		}
+	
+		}
+		.design-contact{
+			cursor:pointer;
+			height: 45%;
+			background-color:#24292E;
+			color:whitesmoke;
+			font-size: 15px;
+			box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+			p{
+				padding:10px;
+				margin-bottom:0;
+			}
+	
+		}
+	}
+
+
+
+.admin{
+
+	.linkedin{
+		.linkelist{
+			height: 400px;
+			overflow-y: scroll;	
+		}
+
+	}
+	.jobWrapper{
+		padding:5px;
+
+		height: 400px;
+		overflow-y: scroll;
+		.jobMenu{
+			h4{
+				display: inline-block;
+			}
+			padding:10px;			
+			border-bottom:1px solid $color-ingenio1;
+		}
+	}
+}
+
+
+
+
+li > a , .servWrapper{
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+li > a:hover ,.servWrapper:hover {
+  color: #000;
+    text-decoration: none;
+}
+
+li > a:before ,.servWrapper:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.8px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-ingenio3;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > a:hover:before ,.servWrapper:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*LOGIN*/
+
+.login{
+	padding:30px;
+	background-color:#F9F9F9;
+	font-family: "Arial";
+	font-weight: 200;
+	text-align: center;
+	font-family: $font-primary;	
+
+	h3{
+		margin:0;
+		padding:10px;
+	}	
+	h4{
+		margin:0;
+		padding:10px;
+		font-weight: 700;
+	}
+
+	.logwrapper{
+
+		background-color:white;
+		padding:30px;
+		
+		border:0.6px solid rgba(100,100,100,0.5);
+	}
+	input{
+	border:0.6px solid rgba(100,100,100,0.5);	
+	}
+	.form-group{
+		padding:3px;
+		text-align: left;
+	}
+
+}
+}
+
+
+//loader
+
+.loadcontain {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  filter: url('#goo');
+  animation: rotate-move 2s ease-in-out infinite;
+}
+
+.dot { 
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dot-3 {
+  background-color: $color-ingenio3;
+  animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.dot-2 {
+  background-color: $color-ingenio2;
+  animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.dot-1 {
+  background-color: $color-ingenio4;
+  animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+  20% {transform: scale(1)}
+  45% {transform: translateY(-18px) scale(.45)}
+  60% {transform: translateY(-90px) scale(.45)}
+  80% {transform: translateY(-90px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-2-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(-16px, 12px) scale(.45)}
+  60% {transform: translate(-80px, 60px) scale(.45)}
+  80% {transform: translate(-80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-1-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(16px, 12px) scale(.45)}
+  60% {transform: translate(80px, 60px) scale(.45)}
+  80% {transform: translate(80px, 60px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes rotate-move {
+  55% {transform: translate(-50%, -50%) rotate(0deg)}
+  80% {transform: translate(-50%, -50%) rotate(360deg)}
+  100% {transform: translate(-50%, -50%) rotate(360deg)}
+}
+
+@keyframes index {
+  0%, 100% {z-index: 3}
+  33.3% {z-index: 2}
+  66.6% {z-index: 1}
+}
+
+
+// IT SOLUTIONS WEB
+
+
+.itsolutions{
+	overflow-y: visible;
+	.portada{
+		background: whitesmoke;
+	}
+}

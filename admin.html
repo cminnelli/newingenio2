@@ -1,0 +1,373 @@
+<!DOCTYPE html >
+<html lang="es">
+<head> 
+	<title>Ingenio Tecnico © - Buscamos talento </title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href='imagenes/web/ISOTIPO.png' rel='shortcut icon' type='image/png'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+	<!-- ANGULAR SCRIPTS -->
+	<script src="/libs/angular/angular.min.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/services/google.js"></script>
+	<script src="/js/services/myService.js"></script>	
+	<script src="/js/controllers/main.js"></script>
+	<script src="/js/controllers/busquedas.js"></script>
+	<!-- <script src="/js/controllers/contacto.js"></script> -->
+
+
+
+</head>
+
+<body class="bodyMain"   ng-app="myApp" ng-controller="busquedaController">
+	<script>
+		
+	$(".test").css({
+		property1: 'value1',
+		property2: 'value2'
+	});
+
+	</script>
+
+	<script> new WOW().init() </script>
+<!-- 
+		<section class="loading" id="loading">
+			
+			<div class="loadingWrapper">
+					<img class="logoIT"  src="/imagenes/web/LOGO.png" />
+					<h2 class="sloganIT"> [Buscando talento]</h2>
+			</div>
+		</section>
+		
+		script
+
+		<section id="portada" class="portada" data-wow-delay="0.2s" >	
+				<nav id="navbar" class="navbar navbar-default navbar-fixed-top wow fadeInDown">
+						<div class="container-fluid">
+				
+						  <div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							  <span class="sr-only">Toggle navigation</span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							</button>
+				
+						  </div>
+		
+						  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-left">
+							  <li><a class="ancla" href="#"><span class="ion-home"></span></a></li>
+							  <li><a class="ancla" href="#nosotros"><span class="ion-tshirt"></span> Nosotros</a></li>
+							  <li><a class="ancla" href="#servicios"><span class="ion-briefcase"></span> Servicios</a></li>
+							  <li><a class="ancla" href="#busquedas"><span class="ion-social-linkedin"></span> Busquedas</a></li>
+							  <li><a class="ancla" href="#contacto"><span class="ion-person-stalker"></span> Contactanos</a></li>
+							</ul>
+	
+		
+						  </div>
+						</div>
+
+			<div id="mainportada">
+				<div class="logoWrapper">
+						<img class="logoIT"  src="/imagenes/web/LOGO.png" />
+						
+				</div>
+			
+			</div>
+		</section>
+
+		<section class="nosotros wow fadeIn" id="nosotros" >
+
+			<div class="nosotros-wrapper">
+				<div class="row">
+					<div class="col-xs-12 modulo-nosotros">
+						<img class="engineertool wow fadeInLeft"  src="/imagenes/web/helmet.png" />
+						<div class="col-xs-12  texto-wrapper wow fadeInDown">									
+								<h5>Buscamos talento</h5>
+								<h2>Sobre Nosotros</h2>
+								<p>Somos el headhunter especialista en captar los mejores talentos con perfil técnico e industrial. Estando conformados por un apasionado equipo de especialistas en ingeniería, supply chain y operaciones, nos focalizamos en generar una red de profesionales a través de la cual conectamos verdaderos talentos con empresas líderes. Es gracias a esto, nuestro fuerte compromiso profesional con dar un valor agregado a nuestros procesos y el claro entendimiento que tenemos del mercado, lo que nos permite alcanzar los resultados de calidad que nuestros clientes merecen.
+									
+								</p>
+
+						</div>
+						
+
+						
+	
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class = "servicios wow fadeIn" id="servicios">
+			<div class="row">
+				<div class="encabezado servicio-title wow fadeIn">
+					<h3> <span class="ion-briefcase"></span>Servicios</h3>
+				</div>
+				
+				
+				<div class="servGeneral">			
+					<div ng-repeat="serv in servicios" class="servWrapper col-xs-12 col-sm-6 col-lg-4 wow fadeInUp">
+						<div class="servHead">
+							<img class="img-responsive wow fadeInDown" src={{serv.img}} />
+							<div class="textWrapper">
+							<h3 class="serv-tit">{{serv.nombre}}</h3>
+							</div>
+						</div>
+						<div class="servBody">
+							<p>{{serv.descripcion}}</p>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+	
+
+	</script>
+	<section  class="panel wow fadeIn" ng-init="busquedaInit()" ng-controller="busquedaController" id="busquedas">
+
+
+		<div class="wow fadeIn">
+			<h3 class="titulo"> Ingenio <span></span> ABM Panel</h3>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-3 fadeInUp">
+
+				<div  class="sesion">
+					<img class="avatar" src="imagenes/web/avatar2.png" alt="">
+					<div>
+						<h4>{{sesionMsg}}</h4>
+						
+						<div id="progressWrapp" class="progress" style="display: none">
+							<div id="progress" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+								<span class="sr-only">100% Complete</span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="buttonGroup">
+
+						<button ng-show="buttonGoogle" ng-click="googleSignIn()"  class="but butGoogle"> <span class="ion-social-googleplus"></span> Google</button>
+
+						<button ng-show="signOut" ng-click="googleSignOut()"  class="but butGoogle"> <span class="ion-social-googleplus"></span> SignOut</button>
+
+
+						<button ng-show="ingenio" type="button" class="but butOffer" data-toggle="modal" data-target="#myModal">Nueva Oferta</button>
+
+						<button ng-show="ingenio" ng-click="simulate()" type="button" class="but butOffer">simular</button>
+
+						<input id="cv" name="input-b1" type="file" class="btn btn-file" placeholder="hola">	
+					</div>					
+				</div>
+			</div>
+
+
+
+			<div class="jobWrapper col-xs-12 col-md-9">
+
+				<div ng-show = "loader" class="loadcontain">
+					<div class="dot dot-1"></div>
+					<div class="dot dot-2"></div>
+					<div class="dot dot-3"></div>
+				</div>
+
+				<svg ng-show="loader" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+						<filter id="goo">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
+						</filter>
+					</defs>
+				</svg>
+
+
+				<div ng-repeat="x in job" class="wow fadeInUp jobOffer col-xs-12 col-md-4 col-lg-4">
+					<div class="jobOfferIn">
+
+						<div class="jobTitle">
+							<P><strong>{{x.seniority}}</strong></P>
+
+							<div ng-repeat="n in getStars(x.seniority)" class="stars">
+								<i class="fa fa-star" aria-hidden="true"></i>
+							</div>
+
+							<h4>{{x.puesto}}</h4>
+						</div>
+
+						<div class="jobBody">
+
+							<div class="row">
+								<div class="col-xs-6 col-lg-6">
+									<p class="jobProp">Rubro</p>
+									<P>{{x.rubro}}</P>
+									<p class="jobProp">Segmento</p>
+									<P>{{x.segmento}}</P>
+								</div>
+								<div class="col-xs-6 col-lg-6">
+									<p class="jobProp">Area</p>
+									<P>{{x.area}}</P>
+									<p class="jobProp">Ubicación</p>
+									<P>{{x.ubicacion}}</P>
+
+								</div>
+								<div class="jobMap col-xs-12">
+
+								</div>
+							</div>								
+					
+							<button ng-click="eliminarJob(x.key)" class="but butCandidato">Eliminar</button>																
+							<button ng-click="modificarJob(x.key)" class="but butCandidato">Modificar</button>																
+
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>	
+		</div>	
+
+
+<script>
+	
+
+
+
+</script>
+
+		<!-- MODAL NUEVA OFERTA -->
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Agregar Nueva Oferta</h4>
+					</div>
+					<div class="modal-body">
+							<div class="alert alert-success" role="alert">
+									<h4 class="alert-heading">Genial! nuevo Job agregado</h4>
+							</div>
+						<form action="/joboffer_new" method="post" class="">
+							<div class="row">
+
+								<div class="form-group  col-xs-12 col-md-8 col-md-offset-2">
+								  <label for="sel1">Select list:</label>
+								  <select class="form-control" id="division">
+								    <option>Ingeniería Job</option>
+								    <option>IT Job</option>
+								  </select>
+								</div>
+
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">	
+									<input placeholder="cuit" name="cuit" type="text" class="form-control" id="cuit" required>
+								</div>
+
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">	
+									<input placeholder="Empresa" name="empresa" type="text" class="form-control" id="empresa" >
+								</div>
+
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">	
+									<input placeholder="Puesto" name="puesto" type="text" class="form-control" id="puesto" >
+								</div>
+
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2 ui-widget ">
+									<input placeholder="Seniority" name="seniority" type="text" class="form-control" id="seniority">
+								</div>
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">									
+									<input placeholder="Area" name="area" type="text" class="form-control" id="area">
+								</div>
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">			
+									<input placeholder="rubro" id="rubro" name="rubro" type="text" class="form-control" id="rubro">
+
+								</div>
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">			
+									<input placeholder="segmento" name="segmento" id="segmento" type="text" class="form-control" id="segmento">
+								</div>
+
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">			
+									<input name="location" placeholder="Lugar" type="text" class="form-control" id="ubicacion">
+								</div>
+
+								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">			
+									<input placeholder="Comentarios" name="comentario" type="text" class="form-control" id="comentarios">
+								</div>
+
+							</div>
+
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						<button ng-click="newJob()" type="button" class="btn btn-light">Guardar </button>
+						<button ng-click="newJob()" type="button" class="btn btn-dark">Guardar y  Nuevo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MODAL CANDIDATOS -->
+		<div class="modal fade" id="candidatosModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"> candidatos</h4>
+					</div>
+					
+					<div  class="modal-body text-center">			
+						<div class="modalCandidatos" ng-repeat="x in usuariosPostulados">
+							<img src="{{x.photoURL}}" alt="">
+							<a href="{{x.cvFile}}"><span class="ios7-cloud-download">{{x.displayName}}</a>
+							<p>{{x.email}}</p>
+						</div>
+
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>						
+	</section>
+
+
+	
+	
+
+
+
+			<!-- STICKY MOJO SCRIPTS -->
+			<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+			<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+			<script src="/js/otros/portadaFade.js"></script>
+
+	</body>
+
+</html>

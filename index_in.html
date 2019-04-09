@@ -1,0 +1,299 @@
+<!DOCTYPE html >
+<html lang="es">
+<head>
+<title>Ingenio Tecnico © - Buscamos talento </title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href='imagenes/web/ISOTIPO.png' rel='shortcut icon' type='image/png'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="libs/jquery/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/footer.css">
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+<!-- ANGULAR SCRIPTS -->
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/services/google.js"></script>
+<script src="/js/services/myService.js"></script>	
+<script src="/js/controllers/busquedas.js"></script>
+<script src="/js/controllers/contacto.js"></script>
+
+</head>
+
+	<body class="bodyMain" ng-init="" ng-app="myApp" ng-controller="busquedaController">
+
+		<script> new WOW().init() </script>
+
+	
+
+		<section class="loading" id="loading">
+			
+			<div class="loadingWrapper">
+					<img class="logoIT"  src="/imagenes/web/LOGO.png" />
+					<h2 class="sloganIT"> [Buscando talento]</h2>
+			</div>
+		</section>
+		
+
+		<section id="portada" class="portada ingeneriaparticular" data-wow-delay="0.2s" >	
+				<nav id="navbar" class="navbar navbar-default navbar-fixed-top ingenieriaparticular wow fadeInDown">
+						<div class="container-fluid">
+						  <!-- Brand and toggle get grouped for better mobile display -->
+						  <div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							  <span class="sr-only">Toggle navigation</span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							  <span class="icon-bar"></span>
+							</button>
+							<!-- <a class="navbar-brand" href="#"><img src="/imagenes/web/LOGO.png" style="height:100px ; margin-left:10px" alt=""></a> -->
+						  </div>
+					  
+						  <!-- Collect the nav links, forms, and other content for toggling -->
+						  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-left">
+								<!-- <li><a href="#"><img id="isotipo" style="height:30px ; display:none" src="/imagenes/web/isotipo.png" alt=""></a></li> -->
+							  <li><a class="ancla" href="#"><span class="ion-home"></span></a></li>
+							  <li><a class="ancla" href="#nosotros"><span class="ion-tshirt"></span> Nosotros</a></li>
+							  <li><a class="ancla" href="#servicios"><span class="ion-briefcase"></span> Servicios</a></li>
+							  <li><a class="ancla" href="#busquedas"><span class="ion-social-linkedin"></span> Busquedas</a></li>
+							  <li><a class="ancla" href="#contacto"><span class="ion-person-stalker"></span> Contactanos</a></li>
+							</ul>
+	
+		
+						  </div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+					  </nav>
+
+					  <div class="transparencia"></div>
+
+			<div id="mainportada">
+				<div class="logoWrapper">
+						<img class="logoIT"  src="/imagenes/web/LOGO.png" />
+						
+				</div>
+			
+			</div>
+		</section>
+
+		<section class="nosotros ingenieriaparticular wow fadeIn" id="nosotros" >
+
+			<div class="nosotros-wrapper">
+				<div class="row">
+					<div class="col-xs-12 modulo-nosotros">
+						<img class="engineertool wow fadeInLeft"  src="/imagenes/web/helmet.png" />
+						<div class="col-xs-12  texto-wrapper wow fadeInDown">									
+								<h5>Buscamos talento</h5>
+								<h2>Sobre Nosotros</h2>
+								<p>Somos el headhunter especialista en captar los mejores talentos con perfil técnico e industrial. Estando conformados por un apasionado equipo de especialistas en ingeniería, supply chain y operaciones, nos focalizamos en generar una red de profesionales a través de la cual conectamos verdaderos talentos con empresas líderes. Es gracias a esto, nuestro fuerte compromiso profesional con dar un valor agregado a nuestros procesos y el claro entendimiento que tenemos del mercado, lo que nos permite alcanzar los resultados de calidad que nuestros clientes merecen.
+									
+								</p>
+
+						</div>
+
+						
+
+						
+	
+					</div>
+				</div>
+			</div>
+
+
+				
+
+		</section>
+
+		<section class = "servicios wow fadeIn" id="servicios">
+			<div class="row">
+				<div class="encabezado servicio-title wow fadeIn">
+					<h3> <span class="ion-briefcase"></span>Servicios</h3>
+				</div>
+				
+				
+				<div class="servGeneral">			
+					<div ng-repeat="serv in servicios_in" class="servWrapper col-xs-12 col-sm-6 col-lg-4 wow fadeInUp">
+						<div class="servHead">
+							<img class="img-responsive wow fadeInDown" src={{serv.img}} />
+							<div class="textWrapper">
+							<h3 class="serv-tit">{{serv.nombre}}</h3>
+							</div>
+						</div>
+						<div class="servBody">
+							<p>{{serv.descripcion}}</p>
+						</div>				
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section ng-init="initBusquedas()" class="busquedas ingenieriaparticular wow fadeIn" id="busquedas">
+				<div class="row">
+			<div class=" col-xs-3 encabezado busquedas-title wow fadeIn">
+				<h3> Búsquedas Ingeniería</h3>
+			</div>
+
+				<div class="col-xs-9 jobs-result wow fadeInUp">
+					<div ng-repeat="j in job | filter:'ingeniería'| orderBy:orderProp"  class="job-offer wow fadeInUp col-xs-12 col-sm-3 ">
+							<div class="job-wrapp">				
+								<div class="job-head">
+										<h4 class="job-title"> {{j.puesto}} </h4>
+										<p class="badge badge-default">{{j.seniority}}</p>
+								</div>
+		
+								<div class="job-body">										
+										<p> <span class="ion-lightbulb icon"></span>{{j.area}}</p>
+										 <p> <span class="ion-pricetags icon"></span>{{j.rubro}}</p>
+										<p> <span class="ion-log-in icon"></span>{{j.segmento}}</p>
+										Locación: <p> <span class="ion-location icon"></span>{{j.location}}</p>												
+								</div>
+		
+								<div class="iconGroup">
+										<a ng-click="linkopen(job.linkedin)"><span class="linkICON ion-social-linkedin"></span></a>
+								</div>
+							</div>
+
+					
+					</div>
+				</div>
+
+
+
+				
+				
+			</div>			
+		</section>
+
+		
+
+		
+		<section class="contacto wow fadeInUp" id="contacto">
+		
+				<div class="encabezado">
+						<h3> <span class="ion-person-stalker"></span>Contacto</h3>
+				</div>
+
+				<form method="post" action="/sendMail" class="">
+					<div class="row">
+							<div class="form-group col-xs-12 col-md-4 col-md-offset-4">								
+									<input required name="nombre" placeholder="Nombre completo" type="text" class="form-control" >
+							</div>
+							<div class="form-group col-xs-12 col-md-4 col-md-offset-4">									
+									<input required name="asunto" placeholder="Asunto" type="text" class="form-control" >
+							</div>
+							<div class="form-group col-xs-12 col-md-4 col-md-offset-4">									
+									<input required name="mail" placeholder="Mail" type="email" class="form-control" >
+							</div>
+	
+							<div class="form-group col-xs-12 col-md-4 col-md-offset-4">
+									<textarea required name="comentario" placeholder="Dejanos tu comentario" class="form-control" rows="5" id="comment"></textarea>									
+							</div>
+							
+
+						
+
+					</div>
+					<div class="text-center">
+							<button class="btn btn-default btn-sm"> <span class="ion-paper-airplane"></span>	 Enviar!</button>
+					</div>
+
+				</form>
+
+			
+		</section>
+
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+			
+				<p class="footer-links">
+					<a href="#">Home</a>					
+					<a href="#">Blog</a>					
+					<a href="#">Pricing</a>				
+
+				</p>
+				
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+				<p class="footer-company-name">Ingenio Técnico &copy; 2019</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>E Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:web.ingeniotecnico@gmail.com">web.ingeniotecnico@gmail.com</a></p>
+				</div>
+
+				
+
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+						<span>Desarrollado por:</span>
+					<img src="imagenes/web/broomLogo.png" alt="" class="logoBroom">
+
+
+				</p>
+
+
+			</div>
+
+		</footer>
+
+
+
+
+				
+	
+
+
+	
+	
+
+		<!-- STICKY MOJO SCRIPTS -->
+		<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+		<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+		<script src="/js/otros/portadaFade.js"></script>
+	
+	</body>
+
+</html>
