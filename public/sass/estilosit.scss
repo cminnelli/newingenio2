@@ -9,7 +9,7 @@ $color-grey:rgba(30,30,30,0.8);
 
 $color-background:#EDEEF2;
 
-$color-ingenio1:#055174;
+$color-ingenio1:#010608;
 $color-ingenio2:#028090;
 $color-ingenio3:#00a896;
 $color-ingenio4:#f261ad;
@@ -60,6 +60,26 @@ $color-newingenio:rgb(57,174,158);
 	text-transform: uppercase;
 	
 
+}
+
+.function{
+	color:$color-span;
+	display: inline-block;
+	font-size:28px;
+	
+	@media only screen and  (max-width:600px) {
+	
+		font-size:20px;
+	
+	}	
+}
+
+.capital{
+	font-size:35px;
+	opacity:0.5;
+	color:$color-grey;
+	font-weight: 700;
+	font-family:"Roboto";
 }
 
 // ANEXOS
@@ -183,10 +203,13 @@ nav{
     font-weight: 700;   
 	font-size:40px;
 	margin-top:20px;
+	&.portadatit{
+	font-size:25px;	
+	}
 
 	@media only screen and  (max-width:600px) {
 	
-		font-size:32.5px;
+		font-size:25px;
 	
 	}		
 	
@@ -205,9 +228,10 @@ nav{
         width:80%;
 		margin:20px auto;
 		height: 100vh;
-
+		
 		@media only screen and  (max-width:600px) {
-			margin-top:100px;
+		
+			margin:100px auto;
 		}	 
         .portada_wrapper_texto{
 			@media screen and (min-width:300px) and (max-width:900px) {
@@ -324,17 +348,31 @@ nav{
     .nosotros{
       
         margin:0 auto;
-		
+		position: relative;
 		background:no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 		background-size:100%;
-		background-position: bottom;
+		background-position: bottom left;
+		overflow: hidden;
+		padding:50px 100px;
 		@media only screen and  (max-width:600px) {
 			background-attachment: fixed;
-			
+			background:none;
+			padding:5px;
 			background-position: center;
 		}	
 
-
+		.bigcode{
+			z-index: 10;
+			font-size:900px;
+			opacity: 0.06;
+			text-align: center;
+			position: absolute;
+		
+			top:-10%;
+			left: 20%;
+			transform: translate(-50%,-50%);
+					
+		}
 		//@include shadows(25px);
         .nosotros-wrapper{
             .modulo-nosotros-texto{

@@ -111,7 +111,8 @@
 				<img class="logoImg" src="/imagenes/web/LOGO3.png" />
 				<img class="logoshadow" src="/imagenes/web/shadow.png" />
 				<div class="banner">
-					<h1 id="typed" class="tituloit"></h1>	
+					<h1 id="typed" class="tituloit portadatit"></h1>
+						
 				</div>
 
 				<p class="textoit">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aspernatur nostrum fuga? Iusto cumque obcaecati similique
@@ -140,11 +141,22 @@
 
 var typed = new Typed("#typed", {
   // Waits 1000ms after typing "First"
-  strings: ["Buscamos profesionales ( )" , "Servicio personalizado ( )", "Tu candidato ( )", "Servicios IT()"],
+  strings: ["Innovacion  ( <p class='function'> anticiparnos al futuro </p> )" , "Creatividad  ( <p class='function'> exigencias del mercado </p> )", "Flexibilidad ( <p class='function'> Necesidades del cliente </p> )", "Dinamismo ( <p class='function'> Respuesta  </p> )"],
 		typeSpeed: 30,//specifies the typing speed of the text
-		backSpeed: 25, //specifies speed of deletion of the text
+		backSpeed: 15, //specifies speed of deletion of the text,
+		contentType: 'html',
 		loop: false //repetition
 });
+// setTimeout(function(){
+// 	var typed = new Typed("#typed2", {
+//   // Waits 1000ms after typing "First"
+//   strings: ["Para anticiparnos al futuro" , "ante las exigencias del mercado", "ante las necesidades de nuestros clientes", "D inamismo ()"],
+// 		typeSpeed: 30,//specifies the typing speed of the text
+// 		backSpeed: 25, //specifies speed of deletion of the text
+// 		loop: false //repetition
+// });
+// },1000)
+
   
   </script>
 
@@ -162,19 +174,23 @@ var typed = new Typed("#typed", {
 	</section>
 
 	<section class="nosotros wow fadeIn" id="nosotros">
-
+		
 		<div class="nosotros-wrapper wow fadeIn">
 			<div class="row">
+				<ion-icon class="bigcode" name="code"></ion-icon>	
 
-
-				<div class="col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
-					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> ¿Porque elegir <span class="spantext"> IT Solutions</span>? </h2>
+				<div class="col-xs-12  col-md-7 modulo-nosotros-texto">
+					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> Sobre <span class="spantext"> Ingenio IT</span> </h2>
 					<br>
-					<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
-						possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
+					<p class="textoit">  <span class="capital">S</span>omos ingenio IT, es un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional. Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada día más desafiante, con un gran conocimiento del mercado tecnológico y sus principales actores. </p>
+
+					<p class="textoit">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
+					</p>
+
+						
 
 				</div>
-				<div class="col-xs-12 col-md-4 modulo-nosotros-image">
+				<div class="col-xs-12 col-md-5 modulo-nosotros-image">
 
 				</div>
 			</div>
@@ -319,7 +335,7 @@ var typed = new Typed("#typed", {
 	   <ion-icon class="bigcuote" name="quote"></ion-icon>
 	   
 	   <div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
-		<h2 class="tituloit"> <ion-icon name="bookmark"></ion-icon> Testimonios Sobre 
+		<h2 class="tituloit"> <ion-icon name="bookmark"></ion-icon> Testimonios 
 			<span class="spantext"> Ingenio IT </span></h2>
 		<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
 			possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
@@ -514,7 +530,7 @@ var typed = new Typed("#typed", {
 					<input type="text" class="form-control" placeholder="Tema" aria-label="Username" aria-describedby="addon-wrapping">
 				</div>
 				<br>
-				<button type="button" class="mybut">CLICK</button>
+				<button type="button" class="mybut">CONECTATE!</button>
 
 			</form>
 		</div>
