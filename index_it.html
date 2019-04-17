@@ -180,6 +180,7 @@ var typed = new Typed("#typed", {
 				<ion-icon class="bigcode" name="code"></ion-icon>	
 
 				<div class="col-xs-12  col-md-7 modulo-nosotros-texto">
+					<img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner">
 					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> Sobre <span class="spantext"> Ingenio IT</span> </h2>
 					<br>
 					<p class="textoit">  <span class="capital">S</span>omos ingenio IT, es un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional. Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada día más desafiante, con un gran conocimiento del mercado tecnológico y sus principales actores. </p>
@@ -227,31 +228,79 @@ var typed = new Typed("#typed", {
 					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-md-3 col-md-offset-1">
 
 						<div class="jobOfferWrapp">
-
-							<div class="jobText">
-								<h4 class="job-title"> {{j.puesto}} </h4>
-								<p class="badge badge-default">{{j.seniority}}</p>
-
-
-								<p> {{j.area}}</p>
-								<p>{{j.rubro}}</p>
-								<p>{{j.segmento}}</p>
-							</div>
-
 							<div class="jobLink">
 								<div class="row">
 									<!-- <div class="col col-xs-12 col-md-6"><a href="" class="link">.../a></div> -->
 									<div class="col col-xs-12 col-md-6 days">Hace 6 días</div>
 								</div>
 							</div>
+							<div class="buttonWrapp">									
+									<ion-icon name="close" class="closeicon"></ion-icon>
+							</div>
 
+							<div class="jobText">
+								<h4 class="job-title"> {{j.puesto}} </h4>
+								<p class="badge badge-default">{{j.seniority}}</p>
+
+							</div>
+
+							<div class="jobDescription">
+								<div class="row">
+									<div class="item col-xs-12 col-lg-12">
+											<div class="row">
+
+											
+											<div class="col-xs-4 col-lg-4 iconDes">
+													<ion-icon name="business"></ion-icon>	
+											</div>
+											<div class="col-xs-8 col-lg-8 textCat">
+												<p class="">{{j.area}}</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="item col-xs-12 col-lg-12" >
+										<div class="row">
+											<div class="col-xs-4 col-lg-4 iconDes">
+													<ion-icon name="keypad"></ion-icon>	
+											</div>
+											<div class="col-xs-8 col-lg-8 textCat">
+												<p class="">{{j.rubro}}</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="item col-xs-12 col-lg-12">
+										<div class="row">
+
+										
+											<div class="col-xs-4 col-lg-4 iconDes">
+													<ion-icon name="pin"></ion-icon>	
+											</div>
+											<div class="col-xs-8 col-lg-8 textCat">
+												<p class="">{{j.ubicacion}}</p>
+											</div>
+										</div>
+									</div>
+	
+
+								</div>
+							</div>
+
+							<div class="buttonWrapp2">
+									
+									<ion-icon name="arrow-dropdown-circle" class="infoicon"></ion-icon>
+
+							</div>
+							
+	
 
 							<div class="comentariosWrapp">
+								
 							</div>
 
 		
-							<ion-icon name="aperture" class="infoicon"></ion-icon>
-							<ion-icon name="close" class="closeicon"></ion-icon>
+
 							<p class="jobcom">{{j.comentarios}}</p>
 
 						</div>
@@ -260,7 +309,7 @@ var typed = new Typed("#typed", {
 
 								var ind = $(".infoicon").index(this);
 								console.log(ind);
-
+								$(".closeicon").eq(ind).fadeIn(1200)	
 								$(".comentariosWrapp").eq(ind).css({
 									transition: '0s',
 									animation: 'aumenta 3.5s',
@@ -285,7 +334,7 @@ var typed = new Typed("#typed", {
 								});
 
 								$(".jobcom").eq(ind).fadeOut(500)
-
+								$(".closeicon").eq(ind).fadeOut(500)	
 
 							})
 
@@ -330,7 +379,7 @@ var typed = new Typed("#typed", {
 	   
 	   </script>
 
-	<section class="testimoniales ">
+	<!-- <section class="testimoniales ">
 
 	   <ion-icon class="bigcuote" name="quote"></ion-icon>
 	   
@@ -494,7 +543,7 @@ var typed = new Typed("#typed", {
 			   <ion-icon class="quote" name="quote"></ion-icon>
 		   </div>
 	  	   
-	   </section>
+	   </section> -->
 	<section class="contacto">
 
 		<ion-icon class="bigwifi" name="wifi"></ion-icon>

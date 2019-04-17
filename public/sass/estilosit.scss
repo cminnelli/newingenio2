@@ -82,6 +82,11 @@ $color-newingenio:rgb(57,174,158);
 	font-family:"Roboto";
 }
 
+.highlights{
+	font-weight: 700;
+	//color:$color-span;
+}
+
 // ANEXOS
 .navbar , .navbar-expand{
 	display: none;
@@ -119,10 +124,11 @@ nav{
 	text-align: center;
 	position: fixed;
 	.iconmenu{
-		
+		padding-left:0px;
 		li{
 			display: inline-block;
 			padding:10px;
+
 			.icon{
 				transition: 1s;
 				color:whitesmoke;
@@ -157,7 +163,7 @@ nav{
 		left:50%;
 		background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		opacity: 0.85;
+		opacity: 0.95;
 	}
 
 }
@@ -183,12 +189,13 @@ nav{
 }
 
 .textoit{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     color:black;
     font-size:13.5px;   
     line-height: 28px;
-    letter-spacing: 1.3px;
+    letter-spacing: 0.6px;
 	padding:20px 0px;
+	margin-bottom: 0px;
 	@media only screen and  (max-width:600px) {
 		text-align:-webkit-auto;
 		font-size:12.5px;
@@ -353,11 +360,11 @@ nav{
 		background-size:100%;
 		background-position: bottom left;
 		overflow: hidden;
-		padding:50px 100px;
+		padding:0px 100px;
 		@media only screen and  (max-width:600px) {
 			background-attachment: fixed;
 			background:none;
-			padding:5px;
+			padding:1px;
 			background-position: center;
 		}	
 
@@ -370,17 +377,50 @@ nav{
 		
 			top:-10%;
 			left: 20%;
+			transform: translate(-50%,-50%) rotate(20deg);
+			
+		@media only screen and  (max-width:600px) {
+			top:30%;
+			left: 50%;
 			transform: translate(-50%,-50%);
-					
+			font-size:350px;			
+			}						
 		}
 		//@include shadows(25px);
         .nosotros-wrapper{
             .modulo-nosotros-texto{
+            	position: 	relative;
+            	z-index: 900;
                 padding:85px;
 				text-align: left;
 				@media only screen and  (max-width:600px) {
-					padding:75px;
-				}	
+					padding:50px;
+					text-align: justify;
+				}
+				.tituloit{
+    				
+					@media only screen and  (max-width:600px) {
+							margin: 70px 0px;
+					}    				
+				}
+				.textoit{
+					text-align: justify;
+					font-size: 13px;
+					}
+					.nosotros-banner{
+						top:0px;
+						left:0px;
+						z-index: 	-100;
+						position: 	absolute;
+						clip: rect(50px,600px,220px,0px);
+						display: 	none;
+						@media only screen and  (max-width:600px) {
+							
+							text-align: justify;
+							display: block;	
+						}
+
+					}					
             }
             .modulo-nosotros-image{
                 padding:50px;
@@ -446,7 +486,7 @@ nav{
 					padding:0px;
 					
 					.jobOfferWrapp{
-						height: 300px;
+						//height: 430px;
 						z-index: 0;
 						position: relative;
 						background: rgba(255,255,255,0.75);
@@ -458,22 +498,6 @@ nav{
 						overflow: hidden;
 						transition: 0.5s;
 
-						// @keyframes aumenta {
-						// 	0%{
-						// 		height:50px;
-						// 		width:50px;
-								
-						// 	}
-
-						// 	100%{
-
-						// 		height:750px;
-						// 		width:750px;
-						// 		transform: translate(-50%,-50%);	
-						// 		background-color:#2C6C97;
-						// 	}
-
-						// }
 						.comentariosWrapp{
 							z-index: 10;
 							position: absolute;
@@ -485,17 +509,12 @@ nav{
 			
 							border-radius:50%;
 							overflow: hidden;
-							transition:4s;
-
-							// &:hover{
-							// 	transition:3s;
-							// 	animation: aumenta 1.5s;
-							// 	animation-fill-mode:forwards;
-							// }
-							
-							
+							transition:4s;									
 						}
+
 						.jobcom{
+							width:100%;
+							height: 100%;
 							position: absolute;
 							top:50%;
 							left:50%;
@@ -503,44 +522,93 @@ nav{
 							z-index:999;
 							display:none;	
 							color:white;
+							text-align: justify;
+							font-size:15px;
+							margin:20% auto;
+							
+							padding:20px;
 						}
 
-						.infoicon , .icon-inner{
-							position: absolute;
-							font-size:30px;
-							top:0px;
-							left: 5px;
-							color:#2C6C97;
-							z-index:9999;
+						.buttonWrapp{
+
+							.closeicon{
+								display: none;
+							}
+							.closeicon, .icon-inner{							
+							}
+
 						}
 
-						.closeicon, .icon-inner{
-							position: absolute;
-							font-size:30px;
-							top:0px;
-							right: 60px;
-							color:white;
-							z-index:9999;
+						.buttonWrapp2{
+
+							.infoicon{
+								color: $color-but1;
+								font-size:40px;
+								height:50px;
+							}
+							.closeicon, .icon-inner{							
+							}
+
 						}
+
+
+						// .closeicon{
+						// 	display: none;
+						// }
+						// .closeicon, .icon-inner{
+						// 	position: absolute;
+						// 	font-size:30px;
+						// 	top:0px;
+						// 	right: 60px;
+						// 	color:white;
+						// 	z-index:9999;
+							
+						// }
 						
 						
 						.jobText{
+							padding:20px;
+							
 							.job-title{
+								text-transform: capitalize;
 								color:$color-texto2;
 								font-family: "Raleway";
-								font-size:16px;
+								font-size:18px;
+								font-weight: 700;
+								margin-bottom:0px;
 							}
 						}
-						.jobText{
-	
+						.jobDescription{
+						
+							.item{
+								border-top:1px solid grey;
+								padding:10px;
+								border-top:1px whitesmoke;
+								.iconDes,.icon-inner{
+									font-size:25px;
+									color:$color-span;
+									height:100%;
+									//color:black;
+								}
+		
+								.textCat{
+									text-align: left;
+									@media only screen and  (max-width:600px) {
+										text-align: center;
+										padding:0px;
+
+									}
+								}
+							}
+		
 						}
 						.jobLink{
 							font-size: 14px;
 							.link{
-								color:#2C6C97;
+								color:$color-but1;
 							}
 							.days{
-								color:$color-span;
+								color:$color-but1;
 							}
 						}
 

@@ -27,6 +27,9 @@
   font-weight: 700;
   font-family: "Roboto"; }
 
+.highlights {
+  font-weight: 700; }
+
 .navbar, .navbar-expand {
   display: none; }
   @media only screen and (min-width: 600px) {
@@ -56,16 +59,18 @@ nav {
       display: block;
       background: #26D0CE;
       z-index: 9999; } }
-  .nav2 .iconmenu li {
-    display: inline-block;
-    padding: 10px; }
-    .nav2 .iconmenu li .icon {
-      transition: 1s;
-      color: whitesmoke;
-      font-size: 30px; }
-      .nav2 .iconmenu li .icon:hover {
-        color: #76e6e5;
-        transition: 1s; }
+  .nav2 .iconmenu {
+    padding-left: 0px; }
+    .nav2 .iconmenu li {
+      display: inline-block;
+      padding: 10px; }
+      .nav2 .iconmenu li .icon {
+        transition: 1s;
+        color: whitesmoke;
+        font-size: 30px; }
+        .nav2 .iconmenu li .icon:hover {
+          color: #76e6e5;
+          transition: 1s; }
 
 @keyframes aumenta {
   0% {
@@ -85,7 +90,7 @@ nav {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.85; } }
+    opacity: 0.95; } }
 @keyframes dismin {
   0% {
     height: 750px;
@@ -97,12 +102,13 @@ nav {
     width: 0px;
     background-color: none; } }
 .textoit {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   font-size: 13.5px;
   line-height: 28px;
-  letter-spacing: 1.3px;
-  padding: 20px 0px; }
+  letter-spacing: 0.6px;
+  padding: 20px 0px;
+  margin-bottom: 0px; }
   @media only screen and (max-width: 600px) {
     .textoit {
       text-align: -webkit-auto;
@@ -222,12 +228,12 @@ nav {
     background-size: 100%;
     background-position: bottom left;
     overflow: hidden;
-    padding: 50px 100px; }
+    padding: 0px 100px; }
     @media only screen and (max-width: 600px) {
       .itsolutions .nosotros {
         background-attachment: fixed;
         background: none;
-        padding: 5px;
+        padding: 1px;
         background-position: center; } }
     .itsolutions .nosotros .bigcode {
       z-index: 10;
@@ -237,13 +243,39 @@ nav {
       position: absolute;
       top: -10%;
       left: 20%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%) rotate(20deg); }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .nosotros .bigcode {
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 350px; } }
     .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+      position: relative;
+      z-index: 900;
       padding: 85px;
       text-align: left; }
       @media only screen and (max-width: 600px) {
         .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-          padding: 75px; } }
+          padding: 50px;
+          text-align: justify; } }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .tituloit {
+          margin: 70px 0px; } }
+      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .textoit {
+        text-align: justify;
+        font-size: 13px; }
+      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
+        top: 0px;
+        left: 0px;
+        z-index: -100;
+        position: absolute;
+        clip: rect(50px, 600px, 220px, 0px);
+        display: none; }
+        @media only screen and (max-width: 600px) {
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
+            text-align: justify;
+            display: block; } }
     .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-image {
       padding: 50px; }
   .itsolutions .busquedas {
@@ -283,7 +315,6 @@ nav {
         margin: 5px 0px;
         padding: 0px; }
         .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp {
-          height: 300px;
           z-index: 0;
           position: relative;
           background: rgba(255, 255, 255, 0.75);
@@ -306,37 +337,54 @@ nav {
             overflow: hidden;
             transition: 4s; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobcom {
+            width: 100%;
+            height: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 999;
             display: none;
-            color: white; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .infoicon, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .icon-inner {
-            position: absolute;
-            font-size: 30px;
-            top: 0px;
-            left: 5px;
-            color: #2C6C97;
-            z-index: 9999; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .closeicon, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .icon-inner {
-            position: absolute;
-            font-size: 30px;
-            top: 0px;
-            right: 60px;
             color: white;
-            z-index: 9999; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
-            color: #3C495A;
-            font-family: "Raleway";
-            font-size: 16px; }
+            text-align: justify;
+            font-size: 15px;
+            margin: 20% auto;
+            padding: 20px; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .closeicon {
+            display: none; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .infoicon {
+            color: #662ef3;
+            font-size: 40px;
+            height: 50px; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
+            padding: 20px; }
+            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
+              text-transform: capitalize;
+              color: #3C495A;
+              font-family: "Raleway";
+              font-size: 18px;
+              font-weight: 700;
+              margin-bottom: 0px; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
+            border-top: 1px solid grey;
+            padding: 10px;
+            border-top: 1px whitesmoke; }
+            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
+              font-size: 25px;
+              color: #26D0CE;
+              height: 100%; }
+            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+              text-align: left; }
+              @media only screen and (max-width: 600px) {
+                .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+                  text-align: center;
+                  padding: 0px; } }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
             font-size: 14px; }
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
-              color: #2C6C97; }
+              color: #662ef3; }
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
-              color: #26D0CE; }
+              color: #662ef3; }
 
 .testimoniales {
   position: relative;
