@@ -364,7 +364,7 @@ nav{
 		@media only screen and  (max-width:600px) {
 			background-attachment: fixed;
 			background:none;
-			padding:1px;
+			padding:10px;
 			background-position: center;
 		}	
 
@@ -388,13 +388,14 @@ nav{
 		}
 		//@include shadows(25px);
         .nosotros-wrapper{
+			margin-bottom:150px;
             .modulo-nosotros-texto{
             	position: 	relative;
             	z-index: 900;
-                padding:85px;
+                padding:10px 85px;
 				text-align: left;
 				@media only screen and  (max-width:600px) {
-					padding:50px;
+					padding:35px;
 					text-align: justify;
 				}
 				.tituloit{
@@ -428,14 +429,70 @@ nav{
                 // background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
                 // background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                          
-            }
+			}
+
+			.modulo-nosotros-inclusion{
+			//background:url("/imagenes/web/inclusion/inclusion5.png") no-repeat;
+			background-size:100%;
+				padding:85px;
+				@media only screen and  (max-width:600px) {
+					padding:35px;
+					text-align: justify;
+				}
+				.inclusionWrapper{
+					padding:30px;
+				color:whitesmoke;
+				background:url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
+				background-size: cover;
+				box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
+				border-radius:20px;
+				
+				
+				margin-bottom:30px;
+				background-color: rgba(255,255,255,0.5);
+				position: relative;
+
+				.transparencia{
+					border-radius:20px;
+					position: absolute;
+					top:0px;
+					left:0px;
+					height:100%;
+					width:100%;
+					background: #5C258D;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+					
+					
+					opacity: 0.8;
+					filter:blur(0px);
+		
+		
+				}
+				.tituloit{
+					font-size:20px;
+					color:white;
+					padding:5px 0px 15px 5px;
+					border-bottom:1px solid whitesmoke;
+					text-align: left;
+				}
+				.textoit{
+					text-align: justify;
+					color:whitesmoke;
+					font-family: "Quicksand";
+				}
+				img{
+					margin-top:45px;
+				}
+			}
+			}
         }
     }
 
     .busquedas{
 
         padding:20px 0px;
-        background-attachment: fixed;
+        -webkit-background-attachment: fixed;
 		background: url("/imagenes/web/portada12.jpg")  no-repeat top;	
 		background-attachment: fixed;
 		position: relative;
@@ -534,7 +591,8 @@ nav{
 							.closeicon{
 								display: none;
 							}
-							.closeicon, .icon-inner{							
+							.closeicon, .icon-inner{		
+								display: none;					
 							}
 
 						}
@@ -546,7 +604,8 @@ nav{
 								font-size:40px;
 								height:50px;
 							}
-							.closeicon, .icon-inner{							
+							.infoicon, .icon-inner{	
+	display: none;					
 							}
 
 						}
@@ -593,6 +652,7 @@ nav{
 		
 								.textCat{
 									text-align: left;
+									font-size: 14px;
 									@media only screen and  (max-width:600px) {
 										text-align: center;
 										padding:0px;

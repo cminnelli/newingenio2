@@ -233,7 +233,7 @@ nav {
       .itsolutions .nosotros {
         background-attachment: fixed;
         background: none;
-        padding: 1px;
+        padding: 10px;
         background-position: center; } }
     .itsolutions .nosotros .bigcode {
       z-index: 10;
@@ -250,37 +250,83 @@ nav {
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 350px; } }
-    .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-      position: relative;
-      z-index: 900;
-      padding: 85px;
-      text-align: left; }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-          padding: 50px;
-          text-align: justify; } }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .tituloit {
-          margin: 70px 0px; } }
-      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .textoit {
-        text-align: justify;
-        font-size: 13px; }
-      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
-        top: 0px;
-        left: 0px;
-        z-index: -100;
-        position: absolute;
-        clip: rect(50px, 600px, 220px, 0px);
-        display: none; }
+    .itsolutions .nosotros .nosotros-wrapper {
+      margin-bottom: 150px; }
+      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+        position: relative;
+        z-index: 900;
+        padding: 10px 85px;
+        text-align: left; }
         @media only screen and (max-width: 600px) {
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+            padding: 35px;
+            text-align: justify; } }
+        @media only screen and (max-width: 600px) {
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .tituloit {
+            margin: 70px 0px; } }
+        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .textoit {
+          text-align: justify;
+          font-size: 13px; }
+        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
+          top: 0px;
+          left: 0px;
+          z-index: -100;
+          position: absolute;
+          clip: rect(50px, 600px, 220px, 0px);
+          display: none; }
+          @media only screen and (max-width: 600px) {
+            .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
+              text-align: justify;
+              display: block; } }
+      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-image {
+        padding: 50px; }
+      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
+        background-size: 100%;
+        padding: 85px; }
+        @media only screen and (max-width: 600px) {
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
+            padding: 35px;
+            text-align: justify; } }
+        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
+          padding: 30px;
+          color: whitesmoke;
+          background: url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
+          background-size: cover;
+          box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
+          border-radius: 20px;
+          margin-bottom: 30px;
+          background-color: rgba(255, 255, 255, 0.5);
+          position: relative; }
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .transparencia {
+            border-radius: 20px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background: #5C258D;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #4389A2, #5C258D);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            opacity: 0.8;
+            filter: blur(0px); }
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .tituloit {
+            font-size: 20px;
+            color: white;
+            padding: 5px 0px 15px 5px;
+            border-bottom: 1px solid whitesmoke;
+            text-align: left; }
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .textoit {
             text-align: justify;
-            display: block; } }
-    .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-image {
-      padding: 50px; }
+            color: whitesmoke;
+            font-family: "Quicksand"; }
+          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper img {
+            margin-top: 45px; }
   .itsolutions .busquedas {
     padding: 20px 0px;
-    background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     background: url("/imagenes/web/portada12.jpg") no-repeat top;
     background-attachment: fixed;
     position: relative;
@@ -352,10 +398,14 @@ nav {
             padding: 20px; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .closeicon {
             display: none; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .closeicon, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .icon-inner {
+            display: none; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .infoicon {
             color: #662ef3;
             font-size: 40px;
             height: 50px; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .infoicon, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .icon-inner {
+            display: none; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
             padding: 20px; }
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
@@ -374,7 +424,8 @@ nav {
               color: #26D0CE;
               height: 100%; }
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
-              text-align: left; }
+              text-align: left;
+              font-size: 14px; }
               @media only screen and (max-width: 600px) {
                 .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
                   text-align: center;
