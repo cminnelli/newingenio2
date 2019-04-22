@@ -76,28 +76,23 @@ nav {
   0% {
     height: 30px;
     width: 30px;
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    background-color: #1ea5a3;
+    opacity: 0.90; }
   100% {
-    height: 750px;
-    width: 750px;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.95; } }
+    height: 470px;
+    width: 470px;
+    opacity: 0.95;
+    background-color: #1a8f8e; } }
 @keyframes dismin {
   0% {
-    height: 750px;
-    width: 750px;
-    transform: translate(-50%, -50%);
-    background-color: #2C6C97; }
+    height: 470px;
+    width: 470px;
+    opacity: 0.95;
+    background-color: #1a8f8e; }
+  20% {
+    opacity: 0.55; }
   100% {
+    opacity: 0.95;
     height: 0px;
     width: 0px;
     background-color: none; } }
@@ -143,6 +138,7 @@ nav {
     .itsolutions .portada .portada_wrapper_texto {
       font-family: "Raleway";
       padding: 0px 20px;
+      perspective: 500px;
       position: relative; }
       @media screen and (min-width: 300px) and (max-width: 900px) {
         .itsolutions .portada .portada_wrapper_texto {
@@ -176,6 +172,27 @@ nav {
         font-size: 12px;
         letter-spacing: 2px;
         text-transform: uppercase; }
+@keyframes floatInit {
+  0% {
+    transform: translateY(0px); }
+  20% {
+    transform: translateY(10px) rotate(-2deg); }
+  30% {
+    transform: translateY(0px); }
+  40% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(10px) rotate(-2deg); }
+  60% {
+    transform: translateY(0px); }
+  70% {
+    transform: translateY(0px); }
+  80% {
+    transform: translateY(10px) rotate(-2deg); }
+  90% {
+    transform: translateY(0px); }
+  10% {
+    transform: translateY(0px) translateZ(50px); } }
 @keyframes float {
   0% {
     transform: translateY(0px); }
@@ -192,9 +209,10 @@ nav {
   100% {
     width: 100px; } }
       .itsolutions .portada .portada_wrapper_texto .logoImg {
+        transform: translateZ(200px);
         height: 120px;
         display: block;
-        animation: float 2s infinite;
+        animation: floatInit 5s infinite;
         transition: all ease-in-out 2s; }
         @media only screen and (max-width: 600px) {
           .itsolutions .portada .portada_wrapper_texto .logoImg {
@@ -226,14 +244,14 @@ nav {
     position: relative;
     background: no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: 100%;
-    background-position: bottom left;
+    background-position: top left;
     overflow: hidden;
     padding: 0px 100px; }
     @media only screen and (max-width: 600px) {
       .itsolutions .nosotros {
         background-attachment: fixed;
         background: none;
-        padding: 10px;
+        padding: 0px;
         background-position: center; } }
     .itsolutions .nosotros .bigcode {
       z-index: 10;
@@ -263,7 +281,7 @@ nav {
             text-align: justify; } }
         @media only screen and (max-width: 600px) {
           .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .tituloit {
-            margin: 70px 0px; } }
+            margin: 90px 0px; } }
         .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .textoit {
           text-align: justify;
           font-size: 13px; }
@@ -278,8 +296,6 @@ nav {
             .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .nosotros-banner {
               text-align: justify;
               display: block; } }
-      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-image {
-        padding: 50px; }
       .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
         background-size: 100%;
         padding: 85px; }
@@ -346,17 +362,22 @@ nav {
       background-position: top;
       position: absolute; }
     .itsolutions .busquedas .transparencia {
+      top: 0;
       position: absolute;
       height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-      filter: blur(10px); }
+      width: 100%; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .busquedas .transparencia {
+          background-color: rgba(0, 0, 0, 0.8); } }
     .itsolutions .busquedas .titlebus {
       text-align: center;
       color: whitesmoke !important; }
     .itsolutions .busquedas .jobs-result {
       text-align: center;
       padding: 50px; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .busquedas .jobs-result {
+          padding: 20px; } }
       .itsolutions .busquedas .jobs-result .job-offer {
         margin: 5px 0px;
         padding: 0px; }
@@ -365,18 +386,24 @@ nav {
           position: relative;
           background: rgba(255, 255, 255, 0.75);
           width: 95%;
-          margin: 0 auto;
+          margin: 5px auto;
           padding: 10px;
           border-left: 10px solid #26D0CE;
           overflow: hidden;
-          transition: 0.5s; }
+          transition: 0.5s;
+          border-radius: 20px; }
+          @media only screen and (max-width: 600px) {
+            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp {
+              border-radius: 25px;
+              animation: 2s;
+              background-color: rgba(255, 255, 255, 0.85); } }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
             z-index: 10;
             position: absolute;
             height: 0px;
             width: 0px;
-            top: 7px;
-            left: 3px;
+            bottom: -8%;
+            right: -50%;
             background: white;
             /* fallback for old browsers */
             border-radius: 50%;
@@ -387,25 +414,15 @@ nav {
             height: 100%;
             position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            right: 0%;
+            transform: translate(0%, -50%);
             z-index: 999;
             display: none;
             color: white;
-            text-align: justify;
+            text-align: right;
             font-size: 15px;
             margin: 20% auto;
-            padding: 20px; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .closeicon {
-            display: none; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .closeicon, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp .icon-inner {
-            display: none; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .infoicon {
-            color: #662ef3;
-            font-size: 40px;
-            height: 50px; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .infoicon, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .buttonWrapp2 .icon-inner {
-            display: none; }
+            padding: 30px; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
             padding: 20px; }
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
@@ -417,9 +434,8 @@ nav {
               margin-bottom: 0px; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
             border-top: 1px solid grey;
-            padding: 10px;
             border-top: 1px whitesmoke; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
+            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
               font-size: 25px;
               color: #26D0CE;
               height: 100%; }
@@ -430,6 +446,18 @@ nav {
                 .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
                   text-align: center;
                   padding: 0px; } }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera {
+            margin: 5px auto; }
+            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
+              padding: 10px 20px !important;
+              border-radius: 20px;
+              background: #26D0CE;
+              color: whitesmoke;
+              border-style: none;
+              padding: 15px 30px;
+              font-size: 12px;
+              letter-spacing: 2px;
+              text-transform: uppercase; }
           .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
             font-size: 14px; }
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
@@ -578,7 +606,7 @@ html {
       text-align: center;
       border-radius: 20px;
       background-color: #39ae9e;
-      padding: 10px 40px;
+      padding: 8px 20px;
       color: white;
       font-size: 14px;
       border-style: none;
@@ -591,13 +619,15 @@ html {
   0% {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    transform: translateZ(200px); }
   100% {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 1500px;
     width: 1500px;
-    background-color: #39ae9e; } }
+    background-color: #39ae9e;
+    transform: perspective(500px) translateZ(1000px); } }
 
 /*# sourceMappingURL=estilosit.css.map */
