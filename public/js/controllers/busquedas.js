@@ -43,6 +43,7 @@ $scope.nosign = true;
 
 //BD EMPLEOS
 $scope.job;
+$scope.robot = false;
 
 // BUTTONS , LOADER & PROGRESS
 
@@ -85,10 +86,14 @@ $scope.displayButtons = function(data){
 
 googleService.monitor("empleos" ,function(data){
 
-	var arr = myService.object2array(data)
-	$scope.job = myService.object2array(data);
+	if(data != null){
+		var arr = myService.object2array(data)
+		$scope.job = myService.object2array(data);
+		$scope.loader = false;		
+	}else{
+		$scope.robot = true;
+	}
 
-	$scope.loader = false;
 
 	try{
 		var userName = googleService.currentUser();

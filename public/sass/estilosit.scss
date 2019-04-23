@@ -69,7 +69,7 @@ $color-newingenio:rgb(57,174,158);
 	
 	@media only screen and  (max-width:600px) {
 	
-		font-size:20px;
+		font-size:18px;
 	
 	}	
 }
@@ -115,6 +115,7 @@ nav{
 .nav2{
 	width: 100%;
 	top:0px;
+	transition: all ease 0.8s;
 	@media only screen and  (max-width:600px) {
 		display: block;
 		background: $color-span;
@@ -234,15 +235,18 @@ nav{
 .itsolutions{
     font-family: 'Lato', sans-serif;
     background: #F9FAFE;
+    background:#F4F7FA;
     
 	.portada{       
  
         width:80%;
-		margin:20px auto;
+		margin:0 auto;
 		height: 100vh;
 		
 		@media only screen and  (max-width:600px) {		
-			margin:100px auto;
+			margin:80px 0px;
+			width:100%;
+			padding:15px;
 		}	 
 
         .portada_wrapper_texto{
@@ -259,7 +263,10 @@ nav{
 					display: inline-block;
 					margin-top:50px;
 					@media screen and (min-width:300px) and (max-width:900px) {
-						font-size: 22px;
+						font-size: 18px;
+						text-align: left;
+						//float:left;
+						//display: 	block;
 					}	
 	
 				}
@@ -292,43 +299,8 @@ nav{
 				@include mybut($color-but1);
 			}
 
-			@keyframes floatInit{
-				0%{
-				transform: translateY(0px)
-				}
-				20%{
-				transform: translateY(10px) rotate(-2deg);
-				}
-				30%{
-				transform: translateY(0px);
-				}	
 
-				40%{
-				transform: translateY(0px);
-				}
-				50%{
-				transform: translateY(10px) rotate(-2deg);
-				}
-				60%{
-				transform: translateY(0px);
-				}	
-
-				70%{
-				transform: translateY(0px);
-				}
-				80%{
-				transform: translateY(10px) rotate(-2deg);
-				}
-				90%{
-				transform: translateY(0px);
-				}	
-
-				10%{
-				transform: translateY(0px) translateZ(50px);
-				}	
-
-			}
-
+			
 	
 			@keyframes float{
 				0%{
@@ -363,7 +335,7 @@ nav{
             	transform:translateZ(200px);
 				height: 120px; 
 				display: block;
-				animation:floatInit 5s infinite;
+				animation:float 2s infinite;
 				transition:all ease-in-out 2s;
 				@media only screen and  (max-width:600px) {
 					margin:0 auto;
@@ -543,13 +515,32 @@ nav{
 		background: url("/imagenes/web/portada12.jpg")  no-repeat top;	
 		background-attachment: fixed;
 		position: relative;
-		min-height: 350px;
-	
+		min-height: 550px;
+		@media only screen and  (max-width:600px) {
+			
+			
+		}		
+		
+		.robot{
+			width: 99%;
+			margin:0 auto;
+			padding:0px 70px;
+			.errtit{
+				font-size: 20px;
+				color:$color-span;
+				margin-bottom: 2px;
+			}
+			.errtext{
+				font-size: 13px;
+				color:whitesmoke;
+				margin-bottom: 10px;	
+			}
+				
+		}
 
 
 		.curvetop{
 			background: url("/imagenes/web/curvetop.png") no-repeat;
-				
 			background-position: top;
 			position: absolute;	
 			top:0%;
@@ -574,6 +565,7 @@ nav{
 			//background-color:rgba(255,255,255,0.3);
 			@media only screen and  (max-width:600px) {
 				background-color:rgba(0,0,0,0.80);
+				
 			}	
 
 
@@ -672,6 +664,9 @@ nav{
 									font-size:25px;
 									color:$color-span;
 									height:100%;
+									//svg{
+									//	display: none;
+									//}
 									//color:black;
 								}
 		
@@ -863,7 +858,9 @@ html{
 		font-size:16px;
 		top:50%;
 		left: 50%;
-		border-radius:50%;             
+		border-radius:50%; 
+		z-index: 999;
+
 
 	}
 
@@ -879,6 +876,7 @@ html{
 			transform: translate(-50%,-50%);
 			border-radius:50%;
 			display: none;	
+			z-index: 9999;
 
 		}
 
@@ -902,7 +900,7 @@ html{
 	form{
 
 	text-align: center;
-		z-index: 9999;
+		z-index: 99;
 		span{
 			background-color: white;
 			border-right:none;
@@ -956,7 +954,7 @@ html{
 				 top:50%;
                  left:50%;
 				 transform: translate(-50%,-50%);
-				 transform: translateZ(200px);
+
                 }
 
                 100%{
@@ -966,7 +964,7 @@ html{
 					height: 1500px;
 					width: 1500px;
                     background-color: $color-newingenio;
-                    transform: perspective(500px) translateZ(1000px);
+                   //transform: perspective(500px) translateZ(1000px);
                 }
 
 }

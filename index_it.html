@@ -139,6 +139,34 @@
 
 <script>
 
+window.onscroll= function(){
+	var sc = window.scrollY
+
+	if (sc > 100){
+		$(".nav2").css({
+			height: '60px',
+			backgroundColor: 'darken($color-span,15%)',
+			opacity:"0.92"
+		});
+
+		$("ion-icon").css({
+			fontSize: '25px',
+			backgroundColor: '$color-span'
+		});
+
+	}else{
+		$(".nav2").css({
+			height: '70px',
+			backgroundColor: '$color-span',
+			opacity:"1"
+		});
+
+		$("ion-icon").css({
+			fontSize: '28px',
+			backgroundColor: '$color-span'
+		});
+	}
+}
 
 var typed = new Typed("#typed", {
   // Waits 1000ms after typing "First"
@@ -241,6 +269,11 @@ setTimeout(function(){
 		<div class="row">
 			<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
 				<div class="row">
+					<div class="robot" ng-show="robot">
+						<img class="img-fluid" src="/imagenes/web/robot.jpg" alt="">
+						<p class="errtit">Ups...Hay algun errorcin!</p>
+						<p class="errtext">Intenta de nuevo en un rato</p>
+					</div>
 					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-3 col-md-offset-1 wow fadeIn">
 
 						<div class="jobOfferWrapp">
@@ -321,7 +354,7 @@ setTimeout(function(){
 
 								});
 
-								$(".jobcom").eq(ind).fadeIn(800)
+								$(".jobcom").eq(ind).fadeIn(1400)
 								
 								setTimeout(function(){
 									$(".comentariosWrapp").eq(ind).css({
@@ -329,7 +362,7 @@ setTimeout(function(){
 										animation: 'dismin 1s',
 										animationFillMode: 'forwards'
 									});
-									$(".jobcom").eq(ind).fadeOut(500)
+									$(".jobcom").eq(ind).fadeOut(400)
 								},5500)
 
 		
@@ -367,31 +400,6 @@ setTimeout(function(){
 		</div>
 	</section>
 
-	 <script>
-	   
-	   $(document).ready(function(){
-		
-		 $('.owl-carousel , owl-theme').owlCarousel({
-		 center:true,
-		 autoplay: true,
-		 center: true,
-		 loop: true,
-		 nav: true,
-		 margin:10,
-			 responsive:{
-			   600:{
-				   items:6
-			   },
-			   }
-	   });
-	   
-		  
-	   });
-		 
-		 
-		  
-	   
-	   </script>
 
 	<!-- <section class="testimoniales ">
 
@@ -682,13 +690,7 @@ setTimeout(function(){
 	<footer class="footer-distributed">
 
 		<div class="footer-left">
-			<!-- 				
-					<p class="footer-links">
-						<a href="#">Home</a>					
-						<a href="#">Blog</a>					
-						<a href="#">Pricing</a>				
-	
-					</p> -->
+
 
 			<div class="footer-icons">
 				<p>Redes Sociales</p>

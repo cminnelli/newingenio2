@@ -56,8 +56,7 @@ app.service("googleService" , function(){
 	this.monitor = function(pth , callback) {
 		var database = firebase.database().ref(pth);
 		database.on('value', function(snapshot) {
-		 callback(snapshot.val())
-		 
+		 callback(snapshot.val())		 
 		});
 		
 	}
