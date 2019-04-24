@@ -1,0 +1,1738 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC|Raleway|Rubik|Rubik+Mono+One|Space+Mono|Spectral|Spectral+SC');
+@import url('../css/animate.css');
+
+
+$secondary-color:#B9DCE0;
+$color-grey:rgba(30,30,30,0.8);
+
+$color-background:#EDEEF2;
+
+$color-ingenio1:#010608;
+$color-ingenio2:#028090;
+$color-ingenio3:#00a896;
+$color-ingenio4:#f261ad;
+$color-nosotros:#EDEEF2;
+
+$font-primary:'Quicksand', sans-serif;
+$font-encabezado:'Quicksand', sans-serif;
+$font-navegador:'Quicksand', sans-serif;
+$font-titulos:'Quicksand', sans-serif;
+
+/*CLASES GENERALES*/
+.centerpos{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+// IT SOLUTIONS WEB
+@mixin shadows($weight){
+    box-shadow: 0 1px $weight rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.row{
+    margin:0;
+}
+
+$color-background:#F9FAFE;
+$color-titulos:#212240;
+$color-texto:#827D96;
+$color-texto2:#3C495A;
+$color-but1:rgb(102, 46, 243);
+$color-ingenio4:#f261ad;
+$color-nosotros:212240;
+$color-span:#26D0CE;
+$color-newingenio:rgb(57,174,158);
+
+@mixin mybut($color){
+    border-radius:20px;
+    background: $color;
+    color:whitesmoke;
+    border-style: none;
+    padding:15px 30px;
+	font-size:12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	
+
+}
+
+.function{
+	color:$color-span;
+	display: inline-block;
+	font-size:28px;
+	
+	@media only screen and  (max-width:600px) {
+	
+		font-size:18px;
+	
+	}	
+}
+
+.capital{
+	font-size:35px;
+	opacity:0.5;
+	color:$color-grey;
+	font-weight: 700;
+	font-family:"Roboto";
+}
+
+.highlights{
+	font-weight: 700;
+	//color:$color-span;
+}
+
+// ANEXOS
+.navbar , .navbar-expand{
+	display: none;
+	@media only screen and  (min-width:600px) {
+		display: block;
+
+	}	
+}
+nav{
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	font-family: 'Quicksand', sans-serif;
+	color:$color-grey;
+	font-weight: 700;
+
+
+
+		@media only screen and  (min-width:600px) {
+		display: none;
+		background: $color-grey;
+	}	 
+
+}
+
+.nav2{
+	width: 100%;
+	top:0px;
+	transition: all ease 0.8s;
+	@media only screen and  (max-width:600px) {
+		display: block;
+		background: $color-span;
+		z-index:9999;
+	}	 
+	display: none;
+	text-align: center;
+	position: fixed;
+	.iconmenu{
+		padding-left:0px;
+		li{
+			display: inline-block;
+			padding:10px;
+
+			.icon{
+				transition: 1s;
+				color:whitesmoke;
+				font-size: 30px;
+				&:hover{
+					color:lighten($color-span,20%);
+					transition: 1s;
+				}
+			}
+		}
+	}
+}
+
+@keyframes aumenta {
+	0%{
+		height:30px;
+		width:30px;
+		//background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+		//background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-color: darken($color-span,10%);
+		opacity: 0.90;
+	}
+
+
+	100%{
+
+		height:470px;
+		width:470px;
+		//transform: translate(-50%,-50%);	
+		//top:50%;
+		//left:50%;
+		//background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+		//background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		opacity: 0.95;
+		background-color: darken($color-span,15%);
+	}
+
+}
+
+@keyframes dismin {
+
+
+	0%{
+
+	height:470px;
+		width:470px;
+
+		opacity: 0.95;
+		background-color: darken($color-span,15%);
+	}
+	20%{
+	opacity: 0.55;
+	}
+
+	100%{
+		opacity: 0.95;
+		height:0px;
+		width:0px;
+		background-color:none;
+		
+	}
+
+}
+
+.textoit{
+    font-family: 'Quicksand', sans-serif;
+    color:black;
+    font-size:13.5px;   
+    line-height: 25px;
+    letter-spacing: 0.6px;
+	padding:20px 0px;
+	margin-bottom: 0px;
+	@media only screen and  (max-width:600px) {
+		text-align:-webkit-auto;
+		font-size:12.5px;
+		line-height: 20px;
+	}	 
+
+}
+
+.tituloit{
+	font-family: 'Raleway', sans-serif;
+    color:$color-titulos;
+    font-weight: 700;   
+	font-size:40px;
+	margin-top:20px;
+	&.portadatit{
+	font-size:25px;	
+	}
+
+	@media only screen and  (max-width:600px) {
+	
+		font-size:25px;
+	
+	}		
+	
+}
+.spantext{
+    color:#26D0CE;
+}
+
+// INICIO WEB
+.itsolutions{
+    font-family: 'Lato', sans-serif;
+    background: #F9FAFE;
+    background:#F4F7FA;
+    
+	.portada{       
+ 
+        width:80%;
+		margin:0 auto;
+		height: 100vh;
+		
+		@media only screen and  (max-width:600px) {		
+			margin:80px 0px;
+			width:100%;
+			padding:15px;
+		}	 
+
+        .portada_wrapper_texto{
+			@media screen and (min-width:300px) and (max-width:900px) {
+				text-align: center;
+			}
+            font-family: "Raleway";
+			padding:0px 20px;
+			perspective: 500px;
+			position:relative;
+			.banner{
+				margin-top:10px;
+				h1{
+					display: inline-block;
+					margin-top:50px;
+					@media screen and (min-width:300px) and (max-width:900px) {
+						font-size: 18px;
+						text-align: left;
+						//float:left;
+						//display: 	block;
+					}	
+	
+				}
+				span{
+					color:$color-newingenio;
+					font-weight: 700;   
+					font-size:40px;   
+					padding-left:10px; 
+				}
+			}
+
+			.social{
+				.social-icons{
+					display:inline-block;
+					padding-left:0px;
+					a{
+						color:$color-span;
+						font-size: 30px;
+						padding:0px 5px;
+						
+						
+
+					}
+
+				}
+			}
+
+
+			button{
+				@include mybut($color-but1);
+			}
+
+
+			
+	
+			@keyframes float{
+				0%{
+				transform: translateY(0px)
+				}
+				50%{
+				transform: translateY(10px) rotate(-2deg);
+				}
+					100%{
+				transform: translateY(0px)
+				}	
+			}
+
+
+			@keyframes shadow{
+				0%{
+					width:100px;
+				
+				}
+				50%{
+					width:130px;
+	
+					opacity:0.5;
+				}
+					100%{
+					width:100px;
+		
+				
+				}	
+			}			
+            .logoImg{
+            	transform:translateZ(200px);
+				height: 120px; 
+				display: block;
+				animation:float 2s infinite;
+				transition:all ease-in-out 2s;
+				@media only screen and  (max-width:600px) {
+					margin:0 auto;
+				}	 
+			}
+			.logoshadow{
+				margin-left:10px;
+				position:absolute;
+				transition:all ease-in-out 4s;
+				width: 100px;
+				top:120px;
+				opacity:0.6;
+				animation:shadow 2s infinite;
+				margin-left:10px;
+				@media only screen and  (max-width:600px) {
+					margin:0 auto;
+					left: 30%;
+				}	 
+			}
+        }
+
+        .portada_wrapper_logo{
+            position:relative;
+            .portadaImage{
+                position: absolute;
+                transform:translate(0%, -50%);
+                top:55%;
+                left:10%;
+				height: 350px;
+				opacity: 0.6;
+            }
+
+        }
+    }   
+
+    .nosotros{
+      
+        margin:0 auto;
+		position: relative;
+		background:no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+		background-size:100%;
+		background-position: top left;
+		overflow: hidden;
+		padding:50px 100px;
+
+		@media only screen and  (max-width:600px) {
+			background-attachment: fixed;
+			background:none;
+			padding:0px;
+			background-position: center;
+		}	
+
+		.bigcode{
+			z-index: 0;
+			font-size:800px;
+			opacity: 0.06;
+			text-align: center;
+			position: absolute;		
+			top:40%;
+			left: 20%;
+			transform: translate(-50%,-50%);
+			
+		@media only screen and  (max-width:600px) {
+			top:30%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			font-size:350px;			
+			}	
+
+		}
+		//@include shadows(25px);
+        .nosotros-wrapper{
+			margin-bottom:150px;
+            .modulo-nosotros-texto{
+            	position: 	relative;
+            	z-index: 900;
+               	text-align: left;
+				@media only screen and  (max-width:600px) {
+					padding:15px;
+					text-align: justify;
+				}
+
+				.textoit{
+					text-align: justify;
+					font-size: 13px;
+					}									
+            }
+            .modulo-nosotros-image{
+                //padding:50px;
+                // background: #4776E6;  /* fallback for old browsers */
+                // background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+                // background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                         
+			}
+
+			.modulo-nosotros-inclusion{
+			//background:url("/imagenes/web/inclusion/inclusion5.png") no-repeat;
+				background-size:100%;
+				@media only screen and  (max-width:600px) {
+					padding:10px;
+					text-align: justify;
+				}
+				
+				.inclusionWrapper{
+				padding:15px 85px;
+				color:whitesmoke;
+				background:url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
+				background-size: cover;
+				box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
+				border-radius:20px;			
+				
+				margin-bottom:30px;
+				background-color: rgba(255,255,255,0.4);
+				position: relative;
+
+				@media only screen and  (max-width:600px) {
+					padding:20px;
+					text-align: justify;
+				}
+
+				.transparencia{
+					border-radius:20px;
+					position: absolute;
+					top:0px;
+					left:0px;
+					height:100%;
+					width:100%;
+					background: #5C258D;  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
+					opacity: 0.8;
+		
+				}
+
+				.compromisoTit{
+					padding:10px;					
+					color:white;
+				
+					
+				}
+				.textoit{
+					text-align: justify;
+					color:whitesmoke;
+					padding:2px;
+					font-family: "Quicksand";
+				}
+				img{
+					margin-top:45px;
+				}
+			}
+			}
+        }
+    }
+
+    .busquedas{
+
+		padding:50px 100px;
+        -webkit-background-attachment: fixed;
+		background: url("/imagenes/web/portada12.jpg")  no-repeat top;	
+		background-attachment: fixed;
+		position: relative;
+		min-height: 550px;
+		@media only screen and  (max-width:600px) {			
+			padding:25px;	
+		}	
+		
+
+
+		
+		.robot{
+			width: 99%;
+			margin:0 auto;
+			padding:0px 70px;
+			.errtit{
+				font-size: 20px;
+				color:$color-span;
+				margin-bottom: 2px;
+			}
+			.errtext{
+				font-size: 13px;
+				color:whitesmoke;
+				margin-bottom: 10px;	
+			}
+				
+		}
+
+
+			.transparencia{
+			top:0px;
+			left:0px;
+			position: absolute;
+			height:100%;
+			width:100%;
+			
+			background-color:rgba(255,255,255,0.9);
+			filter: grayscale(100px);
+			@media only screen and  (max-width:600px) {
+				background-color:rgba(0,0,0,0.80);
+				
+			}	
+
+
+		}
+		.tituloit{
+			@media only screen and  (max-width:600px) {
+				color: whitesmoke;				
+			}
+		}
+
+        .jobs-result{	
+                
+                text-align: center;			
+                 padding:30px;			
+	
+				@media only screen and  (max-width:600px) {
+					padding:20px;
+				}	
+                .job-offer{
+            
+                    margin:5px 0px;
+					padding:0px;
+					
+					.jobOfferWrapp{
+						z-index: 0;
+						position: relative;
+						background: rgba(255,255,255,0.75);
+						width: 90%;
+						margin:5px auto;
+						padding:10px;
+						border-left:10px solid $color-span;
+						overflow: hidden;
+						transition: 0.5s;
+						border-radius: 20px;
+
+						@media only screen and  (max-width:600px) {
+							border-radius: 25px;
+							animation:2s;
+							background-color: rgba(255,255,255,0.85);
+						}							
+
+						.comentariosWrapp{
+							z-index: 10;
+							position: absolute;
+							height: 0px;
+							width: 0px;
+							bottom:-8%;
+							right: -50%;
+							background: white;  /* fallback for old browsers */
+			
+							border-radius:50%;
+							overflow: hidden;
+							transition:4s;									
+						}
+
+						.jobcom{
+							width:100%;
+							height: 100%;
+							position: absolute;
+							top:50%;
+							right:0%;
+							transform: translate(0%, -50%);
+							z-index:999;
+							display:none;	
+							color:white;
+							text-align: right;
+							font-size:15px;
+							margin:20% auto;
+							
+							padding:30px;
+						}
+
+
+
+						
+						.jobText{
+							padding:20px;
+							
+							.job-title{
+								text-transform: capitalize;
+								color:$color-texto2;
+								font-family: "Raleway";
+								font-size:18px;
+								font-weight: 700;
+								margin-bottom:0px;
+							}
+
+						}
+
+						.jobDescription{
+						
+							.item{
+								padding:8px;
+								border-top:1px solid grey;
+								border-top:1px whitesmoke;
+								.iconDes, svg , .icon-inner{
+									font-size:25px;
+									color:$color-span;
+									height:100%;
+									//svg{
+									//	display: none;
+									//}
+									//color:black;
+								}
+		
+								.textCat{
+									text-align: left;
+									font-size: 14px;
+									@media only screen and  (max-width:600px) {
+										text-align: center;
+										padding:0px;
+
+									}
+								}	
+							}
+							.butonera{
+							margin:5px auto;
+									button{
+										padding:10px 20px !important;
+										@include mybut($color-span);
+									}
+								}
+		
+						}
+						.jobLink{
+							font-size: 14px;
+							.link{
+								color:$color-but1;
+							}
+							.days{
+								color:$color-but1;
+							}
+						}
+
+					}
+                    
+
+                }
+    }
+                
+    
+   
+	}
+	
+
+}
+
+.testimoniales{
+	position: relative;
+	overflow: hidden;
+	padding:10px;
+
+.bigcuote{
+	z-index: -10;
+	font-size:200px;
+	opacity: 0.1;
+	text-align: center;
+	position: absolute;
+
+	top:10%;
+	right: 10%;
+			
+}
+
+padding:30px;
+	.card{
+		// &:nth-child(1) ,&:nth-child(3){
+		// 	opacity: 0.2;
+		// }
+		background:rgba(255,255,255,0.5);
+		transition: ease-in-out 0.1s;
+		font-family: "Raleway", "Roboto";
+		padding:25px;
+		margin-top:50px;
+		border: none;
+		border-right: 5px solid $color-span;
+		box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+		position: relative;
+		.testimoniales-avatar{
+			text-align: center;
+			position: absolute;
+			top:-30px;
+			left: 50%;
+			transform: translate(-50%,0%);
+			img{
+				height: 70px;
+				width: 70px;
+				border-radius: 50%;
+			}
+		}
+
+		.quote{
+			font-size:80px;
+			opacity: 0.1;
+			text-align: center;
+			position: absolute;
+			color:$color-span;
+			top:-0px;
+			left: 20%;
+			transform: translate(-50%,0%);			
+		}
+
+		.circle{
+			font-size:200px;
+			opacity: 0.1;
+			text-align: center;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			transform: translate(-50%,0%);			
+		}		
+
+
+		.testimoniales-content{
+			text-align: center;
+			.testimoniales-content-titulos{
+				padding:5px;
+				h4{
+					margin:0px;
+					color:darken($color-span,12%);
+					font-weight: 700;
+				}
+				span{
+					font-style: italic;
+					font-size:14px;
+					color:$color-span;
+				}
+
+			}	
+
+			.testimoniales-content-texto{
+				font-size:12px;	
+				text-align: justify-all;
+				.quote{
+					font-size:25px;
+					opacity: 0.4;
+				}
+			}
+
+		}
+		.logolink{
+			font-size:30px;
+			//color:#0077B5;
+			color:$color-grey;
+			text-align: center;
+		}	
+
+		
+	}
+
+}   
+
+
+
+$color-newingenio:rgb(57,174,158);
+
+html{
+	height: auto;
+
+}
+
+ 
+
+.contacto{
+    
+ 	background-color: $color-background;
+ 	padding:180px 50px;
+ 	position: relative;
+	overflow: hidden;
+	height:100vh;
+
+	@media only screen and  (max-width:600px) {	
+		padding:100px 25px;
+	}	
+	
+
+	.bigwifi{
+		z-index: 10;
+		font-size:700px;
+		opacity: 0.08;
+		text-align: center;
+		position: absolute;
+	
+		top:65%;
+		left: 30%;
+		transform: translate(-50%, -50%) rotate(90deg) ;
+
+		@media only screen and  (max-width:600px) {	
+			top:0%;
+			left: 0%;
+			font-size:500px;	
+			transform: translate(-50%, -50%) rotate(190deg) ;	
+		}	
+		
+				
+	}
+
+	.slidediv{
+		height: 100px;
+		width:100px;
+		position: absolute;
+		color:white;
+		padding:50px;
+		font-size:16px;
+		top:50%;
+		left: 50%;
+		border-radius:50%; 
+		z-index: 999;
+
+
+	}
+
+ 
+
+		.textdiv{
+			position: absolute;
+			color:white;
+			padding:50px;
+			font-size:16px;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border-radius:50%;
+			display: none;	
+			z-index: 9999;
+
+		}
+
+		.contacto-encabezado{
+			padding:60px;
+			text-align:center;
+			h2{
+				font-family: "Raleway";
+				font-size:25px;
+				text-weight:300;
+				text-align:center;
+				color:$color-newingenio;
+			}
+
+		}
+
+ 
+
+ 
+
+	form{
+
+	text-align: center;
+		z-index: 99;
+		span{
+			background-color: white;
+			border-right:none;
+			font-size:13px;
+			color:#C5C9C8;
+			border:none;						
+		}
+
+		input{
+			font-size:13px;
+			//background-color: #F4F8F7;
+			border-left:none;
+			color:white;
+			padding:12px;
+			border:none;	
+
+			&:focus{
+				outline:none;
+
+			}						
+
+		}
+
+		.mybut{
+			text-align: center;
+			border-radius:20px;
+			background-color: $color-newingenio;
+			padding:8px 20px;
+			color:white;
+			font-size: 14px;
+			border-style: none;
+			border:none;
+			outline: none;
+			transition: 3s;
+			animation-fill-mode: forwards;
+		}
+
+	}
+
+}
+
+
+
+@keyframes movdiv{
+
+                0%{   
+				 top:50%;
+                 left:50%;
+				 transform: translate(-50%,-50%);
+
+                }
+
+                100%{
+					top:50%;
+					left:50%;
+					transform: translate(-50%,-50%);
+					height: 1500px;
+					width: 1500px;
+                    background-color: $color-newingenio;
+                   //transform: perspective(500px) translateZ(1000px);
+                }
+
+}
+
+ 
+
+
+
+<!DOCTYPE html >
+<html lang="es">
+
+<head>
+	<title>Ingenio Tecnico © - Buscamos talento </title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+	<link href='imagenes/web/LOGO3.png' rel='shortcut icon' type='image/png'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<link rel="stylesheet" href="css/animate.css">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous"></script>
+
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- <link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css"> -->
+	<script src="https://unpkg.com/ionicons@4.0.0/dist/ionicons.js"></script>
+	<link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/>
+	<link rel="stylesheet" href="css/ripple.css">
+	<link rel="stylesheet" href="css/estilosit.css">
+
+	<link rel="stylesheet" href="css/footer.css">
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+	<!-- ANGULAR SCRIPTS -->
+	<script src="/libs/angular/angular.min.js"></script>
+
+	<script src="/js/app.js"></script>
+	<script src="/js/services/google.js"></script>
+	<script src="/js/services/myService.js"></script>
+	<script src="/js/controllers/busquedas.js"></script>
+	<script src="/js/controllers/contacto.js"></script>
+
+	<script src="libs/jquery/jquery.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+</head>
+
+
+
+<body ng-cloak class="itsolutions" ng-init="" ng-app="myApp" ng-controller="busquedaController">
+
+	<script> new WOW().init() </script>
+	<nav class="nav1 navbar navbar-expand-lg navbar-light bg-light .d-sm-none .d-md-block">
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link ancla" href="#home">Home
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link ancla" href="#nosotros">Porque ingenio?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link ancla" href="#servicios">Servicios</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link ancla" href="#busquedas">Busquedas </span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link ancla" href="#contacto">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="nav2">
+		<ul class="iconmenu">
+			<li><a class="ancla" href="#home"><ion-icon name="home"></ion-icon></a></li>
+			<li><a class="ancla" href="#nosotros"><ion-icon name="logo-codepen"></ion-icon></a></li>
+
+			<li><a class="ancla" href="#servicios"><ion-icon name="briefcase"></ion-icon></a></li>
+
+			<li><a class="ancla" href="#busquedas"><ion-icon name="contact"></ion-icon></a></li>
+			<li><a class="ancla" href="#contacto"><ion-icon name="wifi"></ion-icon></a></li>
+
+
+			
+		</ul>
+	</div>
+
+
+	<section id="portada " class="portada itparticular wow fadeIn" data-wow-delay="0.2s" id="home">
+		<div class="row">
+
+			<div class="portada_wrapper_texto col-xs-12 col-md-7 wow fadeInLeft">
+				<img class="logoImg" src="/imagenes/web/LOGO3.png" />
+				<img class="logoshadow" src="/imagenes/web/shadow.png" />
+				<div class="banner">
+					<h1 id="typed" class="tituloit portadatit"></h1>
+						
+				</div>
+
+				<p class="textoit">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aspernatur nostrum fuga? Iusto cumque obcaecati similique
+					beatae nostrum ducimus sint repellat? Rerum ratione </p>
+
+				<div class="social ">
+					<ul class="social-icons">
+						<a href="#" class="wow fadeInUp">
+							<i class="fa fa-facebook"></i>
+						</a>
+						<a href="#" class="wow fadeInUp">
+							<i class="fa fa-twitter"></i>
+						</a>
+						<a href="#" class="wow fadeInUp">
+							<i class="fa fa-linkedin"></i>
+						</a>
+	
+					</ul>	
+				</div>				
+				<!-- <button class="but1">Conocenos mas!</button> -->
+			</div>		
+			
+
+<script>
+
+window.onscroll= function(){
+	var sc = window.scrollY
+
+	if (sc > 100){
+		$(".nav2").css({
+			height: '60px',
+			backgroundColor: 'darken($color-span,15%)',
+			opacity:"0.92"
+		});
+
+		$("ion-icon").css({
+			fontSize: '25px',
+			backgroundColor: '$color-span'
+		});
+
+	}else{
+		$(".nav2").css({
+			height: '70px',
+			backgroundColor: '$color-span',
+			opacity:"1"
+		});
+
+		$("ion-icon").css({
+			fontSize: '28px',
+			backgroundColor: '$color-span'
+		});
+	}
+}
+
+var typed = new Typed("#typed", {
+  // Waits 1000ms after typing "First"
+  strings: ["Innovacion  ( <p class='function'> anticiparnos al futuro </p> )" , "Creatividad  ( <p class='function'> exigencias del mercado </p> )", "Flexibilidad ( <p class='function'> Necesidades del cliente </p> )", "Dinamismo ( <p class='function'> Respuesta  </p> )"],
+		typeSpeed: 30,//specifies the typing speed of the text
+		backSpeed: 15, //specifies speed of deletion of the text,
+		contentType: 'html',
+		loop: false //repetition
+});
+setTimeout(function(){
+
+},1000)
+
+  
+  </script>
+
+
+		
+
+			<div class="portada_wrapper_logo col-xs-12 col-md-5">
+				<!-- <img class="portadaImage" alt="imagen mas cool" src="" /> -->
+
+
+			</div>
+
+
+		</div>
+	</section>
+
+	<section class="nosotros wow fadeIn" id="nosotros">
+		
+		<div class="nosotros-wrapper wow fadeIn">
+			<div class="row">
+				<ion-icon class="bigcode" name="logo-codepen"></ion-icon>	
+				<!-- <i class="fas fa-cubes bigcode"></i> -->
+				<i class="fab fa-codepen bigcode"></i>
+
+
+				<div class="col-xs-12  col-md-9 modulo-nosotros-texto">
+					<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
+					<h2 class="tituloit"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
+					<br>
+					<div class="row">
+						<div class="text1 col-xs-12 col-md-6">
+							<p class="textoit wow fadeInLeft">  Somos ingenio IT, es un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional. Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada día más desafiante, con un gran conocimiento del mercado tecnológico y sus principales actores. </p>
+
+						</div> 
+					
+						<div class="text2 col-xs-12 col-md-6 ">
+								<p class="textoit wow fadeInRight">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
+									</p>
+						</div>
+
+	
+					</div>
+
+						
+
+				</div>
+				<div class="col-xs-12 col-md-5 modulo-nosotros-image">
+
+				</div>
+
+
+				<div class="col-xs-12  col-md-9 modulo-nosotros-inclusion wow fadeInUp">
+					<div class="inclusionWrapper">
+					<div class="transparencia"></div>
+					<div class="row">
+					
+						<div class="col-xs-12 col-md-12 order-first">
+								<h4 class="compromisoTit"> <i class="fas fa-hands-helping"></i> Compromiso con la Inclusion</h4>
+								<p class="textoit">
+										En ingenio creemos fuertemente en derribar barreras y crear oportunidades, es por esto que apostamos a la inclusión laboral de profesionales con
+										discapacidad y otros grupos vulnerables.
+		
+								</p>
+						</div>
+
+					</div>
+					</div>	
+
+				</div>
+				
+			</div>
+		</div>
+
+
+
+
+	</section>
+
+	<section class="servicios wow fadeIn" id="servicios">
+		<div class="row">
+
+		</div>
+	</section>
+
+
+	<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
+
+		<div class="transparencia"></div>
+
+		<!-- <i class="fas fa-user-circle biguser"></i> -->
+		<div class="row">
+			<div class="col-xs-12 col-md-12 busquedas-title wow fadeIn">
+					<h2 class="tituloit"> <i class="fas fa-fingerprint"></i> Busquedas <span class="spantext"> Ingenio IT</span> </h2>
+					<br>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
+				<div class="row">
+					<div class="robot" ng-show="robot">
+						<img class="img-fluid" src="/imagenes/web/robot.png" alt="">
+						<p class="errtit">Ups...Hay algun errorcin!</p>
+						<p class="errtext">Intenta de nuevo en un rato</p>
+					</div>
+					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-3 col-md-offset-1 wow fadeIn">
+
+						<div class="jobOfferWrapp">
+
+							<div class="jobText">
+								<h4 class="job-title"> {{j.puesto}} </h4>
+								<p class="badge badge-secondary">{{j.seniority}}</p>
+
+							</div>
+
+							<div class="jobDescription">
+								<div class="row">
+									<div class="item col-xs-4 col-md-4 col-lg-12">
+											<div class="row">
+
+											
+											<div class="col-xs-4 col-lg-4 iconDes">
+													<i class="fas fa-building"></i>
+
+											</div>
+											<div class="col-xs-8 col-lg-8 textCat">
+												<p class="">{{j.area}}</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="item col-xs-4 col-md-4 col-lg-12" >
+										<div class="row">
+											<div class="col-xs-4 col-lg-4 iconDes">
+													
+													<i class="fa fa-angle-double-down"></i>
+											</div>
+											<div class="col-xs-8 col-lg-8 textCat">
+												<p class="">{{j.rubro}}</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="item col-xs-4 col-md-4 col-lg-12">
+										<div class="row">
+
+										
+											<div class="col-xs-4 col-lg-4 iconDes">
+													<i class="fas fa-map-marker-alt"></i>	
+											</div>
+											<div class="col-xs-8 col-lg-8 textCat">
+												<p class="">{{j.ubicacion}}</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="butonera">
+										<button class="infobut">Ver más</button>
+									</div>
+	
+
+								</div>
+							</div>
+
+
+
+							<div class="comentariosWrapp">
+								
+							</div>
+
+		
+
+							<p class="jobcom">{{j.comentarios}}</p>
+
+						</div>
+						<script>
+
+							$(".infobut").click(function () {
+								var ind = $(".infobut").index(this);
+
+								$(".comentariosWrapp").eq(ind).css({
+									transition: 'all ease-in-out 0s',
+									animation: 'aumenta 1.8s',
+									animationFillMode: 'forwards'
+
+								});
+
+								$(".jobcom").eq(ind).fadeIn(1400)
+								
+								setTimeout(function(){
+									$(".comentariosWrapp").eq(ind).css({
+										transition: '3s',
+										animation: 'dismin 1s',
+										animationFillMode: 'forwards'
+									});
+									$(".jobcom").eq(ind).fadeOut(400)
+								},5500)
+
+		
+
+							})
+
+							// $(".closeicon").click(function () {
+
+							// 	var ind = $(".closeicon").index(this);
+							// 	console.log(ind);
+
+							// 	$(".comentariosWrapp").eq(ind).css({
+							// 		transition: '3s',
+							// 		animation: 'dismin 1s',
+							// 		animationFillMode: 'forwards'
+							// 	});
+
+							// 	$(".jobcom").eq(ind).fadeOut(500)
+							// 	$(".closeicon").eq(ind).fadeOut(500)	
+
+							// })
+
+						</script>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		</div>
+	</section>
+
+
+	<!-- <section class="testimoniales ">
+
+	   <ion-icon class="bigcuote" name="quote"></ion-icon>
+	   
+	   <div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
+		<h2 class="tituloit"> <ion-icon name="bookmark"></ion-icon> Testimonios 
+			<span class="spantext"> Ingenio IT </span></h2>
+		<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
+			possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
+
+		</div>
+	   
+	   <div class="owl-carousel owl-theme">
+	   
+		   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://scontent.faep9-2.fna.fbcdn.net/v/t1.0-9/19029561_10154503905920951_4737250782048933711_n.jpg?_nc_cat=105&_nc_ht=scontent.faep9-2.fna&oh=7fb20f753f76b5775ad2914405c1e63d&oe=5D185579">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://www.expoknews.com/wp-content/uploads/2017/09/mark-zuckerberg-headshot-11.jpg">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://www.thefamouspeople.com/profiles/images/steve-jobs-3.jpg">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://prabook.com/web/show-photo-icon.jpg?id=1876292&width=220&cache=false">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+	   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	   
+		   <div class="card ">
+	   
+			   <div class="testimoniales-avatar">
+				 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+			   </div>
+	   
+			   <div class="testimoniales-content">
+				   <div class="testimoniales-content-titulos">
+				   <br>
+				   <br>
+					   <h4>Carlos E Minnelli</h4>
+					   <span>Desarrollador @ Google</span>
+					   
+				   </div>
+	   
+				   <div class="testimoniales-content-texto">
+					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis a</p>
+				   </div>
+	   
+				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+			   </div>
+	   
+			   <ion-icon class="quote" name="quote"></ion-icon>
+		   </div>
+	  	   
+	   </section> --> 
+	<section class="contacto wow fadeInUp" id="contacto">
+
+		<!-- <ion-icon class="bigwifi" name="wifi"></ion-icon> -->
+		<i class="fas fa-wifi bigwifi"></i>
+
+		<div class="row">
+					
+			<div class="col col-xs-12  col-md-5 modulo-nosotros-texto">
+				<h2 class="tituloit"> <i class="fas fa-wifi"></i>  Conectate 
+					<span class="spantext"> con Nosotros</span></h2>
+				<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!</p>
+		
+			</div>
+
+			<form action="" class="col-xs-12 col-md-7">
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
+					</div>
+					<input type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
+
+				</div>
+				<br>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+					</div>
+					<input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
+				</div>
+				<br>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping"><i class="far fa-envelope"></i></span>
+					</div>
+					<input type="text" class="form-control" placeholder="Tema" aria-label="Username" aria-describedby="addon-wrapping">
+				</div>
+				<br>
+				<button type="button" class="mybut">CONECTATE!</button>
+
+			</form>
+		</div>
+
+		<div class="slidediv"></div>
+
+
+		<div class="textdiv">
+			<h3>INGENIO IT: Gracias por contactarnos</h3>
+			<hr>
+			<p> A la brevedad nos estaremos poniendo en contacto! </p>
+		</div>
+
+
+
+	</section>
+
+
+
+	<script>
+
+		$(".mybut").click(function (event) {
+			
+			$(".slidediv").css({
+				animation: 'movdiv 4s',
+				animationFillMode: 'forwards'
+			});
+
+			$(".textdiv").fadeIn(2000)
+
+
+			setTimeout(function () {
+				$(".slidediv").fadeOut(1000)
+				$(".textdiv").fadeOut(1000)
+
+
+
+			}, 7000)
+
+
+
+		});
+
+
+
+
+
+	</script>
+
+	<!-- <section class="contacto wow fadeInUp" id="contacto">
+		
+
+
+				<div class="formWrapper">
+					<div class="encabezado">
+								<h2 class="titContact">	Contactanos <span class="spantext"></span></h2>
+					</div>
+
+					<form method="post" action="/sendMail" class="">
+						<div class="row">
+								<div class="form-group col-xs-12 offset-md-1 col-md-5 ">								
+										<input required name="nombre" placeholder="Nombre completo" type="text" class="form-control" >
+								</div>
+								<div class="form-group col-xs-12  col-md-5">									
+										<input required name="asunto" placeholder="Asunto" type="text" class="form-control" >
+								</div>
+								<div class="form-group col-xs-12 offset-md-1 col-md-10 ">									
+										<input required name="mail" placeholder="Mail" type="email" class="form-control" >
+								</div>
+		
+								<div class="form-group col-xs-12 offset-md-1 col-md-10 ">
+										<textarea required name="comentario" placeholder="Dejanos tu comentario" class="form-control" rows="5" id="comment"></textarea>									
+								</div>
+								
+
+						</div>
+						<div class="text-center">
+								<button class="but1"> Enviar Mensaje!</button>
+						</div>
+
+					</form>
+			</div>
+			
+		</section> -->
+
+	<footer class="footer-distributed">
+
+		<div class="footer-left">
+
+
+			<div class="footer-icons">
+				<p>Redes Sociales</p>
+				<a href="#">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<a href="#">
+					<i class="fa fa-github"></i>
+				</a>
+
+			</div>
+
+			<p class="footer-company-name">Ingenio Técnico &copy; 2019</p>
+		</div>
+
+		<div class="footer-center">
+
+			<div>
+				<i class="fa fa-map-marker"></i>
+				<p>
+					<span>E Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>
+			</div>
+
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>+1 555 123456</p>
+			</div>
+
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p>
+					<a href="mailto:web.ingeniotecnico@gmail.com">web.ingeniotecnico@gmail.com</a>
+				</p>
+			</div>
+
+
+
+
+		</div>
+
+		<div class="footer-right">
+
+			<p class="footer-company-about">
+				<span>Desarrollado por:</span>
+				<img src="imagenes/web/broomLogo.png" alt="" class="logoBroom">
+
+
+			</p>
+
+
+		</div>
+
+	</footer>
+
+
+
+
+
+
+
+
+
+	<!-- STICKY MOJO SCRIPTS -->
+	<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+	<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+	<!-- <script src="/js/otros/portadaFade.js"></script> -->
+
+</body>
+
+</html>
