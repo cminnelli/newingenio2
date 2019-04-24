@@ -10,7 +10,7 @@
 
 
 
-	<link href='imagenes/web/ISOTIPO.png' rel='shortcut icon' type='image/png'>
+	<link href='imagenes/web/LOGO3.png' rel='shortcut icon' type='image/png'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 	<link rel="stylesheet" href="css/animate.css">
 
@@ -25,7 +25,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	 crossorigin="anonymous"></script>
 
-
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 	<!-- <link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css"> -->
 	<script src="https://unpkg.com/ionicons@4.0.0/dist/ionicons.js"></script>
@@ -50,12 +50,7 @@
 	<script src="/js/controllers/contacto.js"></script>
 
 	<script src="libs/jquery/jquery.js"></script>
-			<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
 
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-			
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 </head>
 
@@ -73,22 +68,22 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home
+					<a class="nav-link ancla" href="#home">Home
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Porque ingenio?</a>
+					<a class="nav-link ancla" href="#nosotros">Porque ingenio?</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Servicios</a>
+					<a class="nav-link ancla" href="#servicios">Servicios</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Busquedas </span>
+					<a class="nav-link ancla" href="#busquedas">Busquedas </span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Contacto</a>
+					<a class="nav-link ancla" href="#contacto">Contacto</a>
 				</li>
 			</ul>
 		</div>
@@ -96,18 +91,24 @@
 
 	<div class="nav2">
 		<ul class="iconmenu">
-			<li><a href=""><ion-icon name="home"></ion-icon></a></li>
-			<li><a href=""><ion-icon name="logo-codepen"></ion-icon></a></li>
-			<li><a href=""><ion-icon name="contact"></ion-icon></a></li>
-			<li><a href=""><ion-icon name="wifi"></ion-icon></a></li>
+			<li><a class="ancla" href="#home"><ion-icon name="home"></ion-icon></a></li>
+			<li><a class="ancla" href="#nosotros"><ion-icon name="logo-codepen"></ion-icon></a></li>
+
+			<li><a class="ancla" href="#servicios"><ion-icon name="briefcase"></ion-icon></a></li>
+
+			<li><a class="ancla" href="#busquedas"><ion-icon name="contact"></ion-icon></a></li>
+			<li><a class="ancla" href="#contacto"><ion-icon name="wifi"></ion-icon></a></li>
+
+
+			
 		</ul>
 	</div>
 
 
-	<section id="portada " class="portada itparticular" data-wow-delay="0.2s">
+	<section id="portada " class="portada itparticular wow fadeIn" data-wow-delay="0.2s" id="home">
 		<div class="row">
 
-			<div class="portada_wrapper_texto col-xs-12 col-md-7">
+			<div class="portada_wrapper_texto col-xs-12 col-md-7 wow fadeInLeft">
 				<img class="logoImg" src="/imagenes/web/LOGO3.png" />
 				<img class="logoshadow" src="/imagenes/web/shadow.png" />
 				<div class="banner">
@@ -118,15 +119,15 @@
 				<p class="textoit">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aspernatur nostrum fuga? Iusto cumque obcaecati similique
 					beatae nostrum ducimus sint repellat? Rerum ratione </p>
 
-				<div class="social">
+				<div class="social ">
 					<ul class="social-icons">
-						<a href="#">
+						<a href="#" class="wow fadeInUp">
 							<i class="fa fa-facebook"></i>
 						</a>
-						<a href="#">
+						<a href="#" class="wow fadeInUp">
 							<i class="fa fa-twitter"></i>
 						</a>
-						<a href="#">
+						<a href="#" class="wow fadeInUp">
 							<i class="fa fa-linkedin"></i>
 						</a>
 	
@@ -138,6 +139,34 @@
 
 <script>
 
+window.onscroll= function(){
+	var sc = window.scrollY
+
+	if (sc > 100){
+		$(".nav2").css({
+			height: '60px',
+			backgroundColor: 'darken($color-span,15%)',
+			opacity:"0.92"
+		});
+
+		$("ion-icon").css({
+			fontSize: '25px',
+			backgroundColor: '$color-span'
+		});
+
+	}else{
+		$(".nav2").css({
+			height: '70px',
+			backgroundColor: '$color-span',
+			opacity:"1"
+		});
+
+		$("ion-icon").css({
+			fontSize: '28px',
+			backgroundColor: '$color-span'
+		});
+	}
+}
 
 var typed = new Typed("#typed", {
   // Waits 1000ms after typing "First"
@@ -147,15 +176,9 @@ var typed = new Typed("#typed", {
 		contentType: 'html',
 		loop: false //repetition
 });
-// setTimeout(function(){
-// 	var typed = new Typed("#typed2", {
-//   // Waits 1000ms after typing "First"
-//   strings: ["Para anticiparnos al futuro" , "ante las exigencias del mercado", "ante las necesidades de nuestros clientes", "D inamismo ()"],
-// 		typeSpeed: 30,//specifies the typing speed of the text
-// 		backSpeed: 25, //specifies speed of deletion of the text
-// 		loop: false //repetition
-// });
-// },1000)
+setTimeout(function(){
+
+},1000)
 
   
   </script>
@@ -177,16 +200,28 @@ var typed = new Typed("#typed", {
 		
 		<div class="nosotros-wrapper wow fadeIn">
 			<div class="row">
-				<ion-icon class="bigcode" name="code"></ion-icon>	
+				<ion-icon class="bigcode" name="logo-codepen"></ion-icon>	
+				<!-- <i class="fas fa-cubes bigcode"></i> -->
+				<i class="fab fa-codepen bigcode"></i>
 
-				<div class="col-xs-12  col-md-7 modulo-nosotros-texto">
-					<img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner">
-					<h2 class="tituloit"> <ion-icon name="logo-codepen"></ion-icon> Sobre <span class="spantext"> Ingenio IT</span> </h2>
+
+				<div class="col-xs-12  col-md-9 modulo-nosotros-texto">
+					<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
+					<h2 class="tituloit"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
 					<br>
-					<p class="textoit">  <span class="capital">S</span>omos ingenio IT, es un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional. Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada día más desafiante, con un gran conocimiento del mercado tecnológico y sus principales actores. </p>
+					<div class="row">
+						<div class="text1 col-xs-12 col-md-6">
+							<p class="textoit wow fadeInLeft">  Somos ingenio IT, es un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional. Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada día más desafiante, con un gran conocimiento del mercado tecnológico y sus principales actores. </p>
 
-					<p class="textoit">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
-					</p>
+						</div> 
+					
+						<div class="text2 col-xs-12 col-md-6 ">
+								<p class="textoit wow fadeInRight">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
+									</p>
+						</div>
+
+	
+					</div>
 
 						
 
@@ -196,13 +231,13 @@ var typed = new Typed("#typed", {
 				</div>
 
 
-				<div class="col-xs-12  col-md-8 modulo-nosotros-inclusion">
+				<div class="col-xs-12  col-md-9 modulo-nosotros-inclusion wow fadeInUp">
 					<div class="inclusionWrapper">
 					<div class="transparencia"></div>
 					<div class="row">
 					
 						<div class="col-xs-12 col-md-12 order-first">
-								<h4 class="tituloit"> <ion-icon name="hand"></ion-icon>  Compromiso con la Inclusion</h4>
+								<h4 class="compromisoTit"> <i class="fas fa-hands-helping"></i> Compromiso con la Inclusion</h4>
 								<p class="textoit">
 										En ingenio creemos fuertemente en derribar barreras y crear oportunidades, es por esto que apostamos a la inclusión laboral de profesionales con
 										discapacidad y otros grupos vulnerables.
@@ -231,14 +266,14 @@ var typed = new Typed("#typed", {
 
 
 	<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
-		<!-- <div class="curvetop"></div> -->
+
 		<div class="transparencia"></div>
-		<div class="curvebot"></div>
+
+		<!-- <i class="fas fa-user-circle biguser"></i> -->
 		<div class="row">
-			<div class="col-xs-12 col-md-3 busquedas-title wow fadeIn">
-				<h2 class="tituloit titlebus"> <ion-icon name="contact"></ion-icon> Búsquedas
-					<span class="spantext"> IT</span>
-				</h2>
+			<div class="col-xs-12 col-md-12 busquedas-title wow fadeIn">
+					<h2 class="tituloit"> <i class="fas fa-fingerprint"></i> Busquedas <span class="spantext"> Ingenio IT</span> </h2>
+					<br>
 			</div>
 		</div>
 
@@ -246,33 +281,30 @@ var typed = new Typed("#typed", {
 		<div class="row">
 			<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
 				<div class="row">
-					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-md-3 col-md-offset-1">
+					<div class="robot" ng-show="robot">
+						<img class="img-fluid" src="/imagenes/web/robot.png" alt="">
+						<p class="errtit">Ups...Hay algun errorcin!</p>
+						<p class="errtext">Intenta de nuevo en un rato</p>
+					</div>
+					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-3 col-md-offset-1 wow fadeIn">
 
 						<div class="jobOfferWrapp">
-							<div class="jobLink">
-								<div class="row">
-									<!-- <div class="col col-xs-12 col-md-6"><a href="" class="link">.../a></div> -->
-									<div class="col col-xs-12 col-md-6 days">Hace 6 días</div>
-								</div>
-							</div>
-							<div class="buttonWrapp">									
-									<ion-icon name="close" class="closeicon"></ion-icon>
-							</div>
 
 							<div class="jobText">
 								<h4 class="job-title"> {{j.puesto}} </h4>
-								<p class="badge badge-default">{{j.seniority}}</p>
+								<p class="badge badge-secondary">{{j.seniority}}</p>
 
 							</div>
 
 							<div class="jobDescription">
 								<div class="row">
-									<div class="item col-xs-12 col-lg-12">
+									<div class="item col-xs-4 col-md-4 col-lg-12">
 											<div class="row">
 
 											
 											<div class="col-xs-4 col-lg-4 iconDes">
-													<ion-icon name="business"></ion-icon>	
+													<i class="fas fa-building"></i>
+
 											</div>
 											<div class="col-xs-8 col-lg-8 textCat">
 												<p class="">{{j.area}}</p>
@@ -280,10 +312,11 @@ var typed = new Typed("#typed", {
 										</div>
 									</div>
 
-									<div class="item col-xs-12 col-lg-12" >
+									<div class="item col-xs-4 col-md-4 col-lg-12" >
 										<div class="row">
 											<div class="col-xs-4 col-lg-4 iconDes">
-													<ion-icon name="keypad"></ion-icon>	
+													
+													<i class="fa fa-angle-double-down"></i>
 											</div>
 											<div class="col-xs-8 col-lg-8 textCat">
 												<p class="">{{j.rubro}}</p>
@@ -291,30 +324,28 @@ var typed = new Typed("#typed", {
 										</div>
 									</div>
 
-									<div class="item col-xs-12 col-lg-12">
+									<div class="item col-xs-4 col-md-4 col-lg-12">
 										<div class="row">
 
 										
 											<div class="col-xs-4 col-lg-4 iconDes">
-													<ion-icon name="pin"></ion-icon>	
+													<i class="fas fa-map-marker-alt"></i>	
 											</div>
 											<div class="col-xs-8 col-lg-8 textCat">
 												<p class="">{{j.ubicacion}}</p>
 											</div>
 										</div>
 									</div>
+
+									<div class="butonera">
+										<button class="infobut">Ver más</button>
+									</div>
 	
 
 								</div>
 							</div>
 
-							<div class="buttonWrapp2">
-									
-									<ion-icon name="arrow-dropdown-circle" class="infoicon"></ion-icon>
 
-							</div>
-							
-	
 
 							<div class="comentariosWrapp">
 								
@@ -326,38 +357,47 @@ var typed = new Typed("#typed", {
 
 						</div>
 						<script>
-							$(".infoicon").mouseenter(function () {
 
-								var ind = $(".infoicon").index(this);
-								console.log(ind);
-								$(".closeicon").eq(ind).fadeIn(1200)	
+							$(".infobut").click(function () {
+								var ind = $(".infobut").index(this);
+
 								$(".comentariosWrapp").eq(ind).css({
-									transition: '0s',
-									animation: 'aumenta 3.5s',
+									transition: 'all ease-in-out 0s',
+									animation: 'aumenta 1.8s',
 									animationFillMode: 'forwards'
 
 								});
 
-								$(".jobcom").eq(ind).fadeIn(500)
+								$(".jobcom").eq(ind).fadeIn(1400)
+								
+								setTimeout(function(){
+									$(".comentariosWrapp").eq(ind).css({
+										transition: '3s',
+										animation: 'dismin 1s',
+										animationFillMode: 'forwards'
+									});
+									$(".jobcom").eq(ind).fadeOut(400)
+								},5500)
 
-
-							})
-
-							$(".closeicon").click(function () {
-
-								var ind = $(".closeicon").index(this);
-								console.log(ind);
-
-								$(".comentariosWrapp").eq(ind).css({
-									transition: '3s',
-									animation: 'dismin 1s',
-									animationFillMode: 'forwards'
-								});
-
-								$(".jobcom").eq(ind).fadeOut(500)
-								$(".closeicon").eq(ind).fadeOut(500)	
+		
 
 							})
+
+							// $(".closeicon").click(function () {
+
+							// 	var ind = $(".closeicon").index(this);
+							// 	console.log(ind);
+
+							// 	$(".comentariosWrapp").eq(ind).css({
+							// 		transition: '3s',
+							// 		animation: 'dismin 1s',
+							// 		animationFillMode: 'forwards'
+							// 	});
+
+							// 	$(".jobcom").eq(ind).fadeOut(500)
+							// 	$(".closeicon").eq(ind).fadeOut(500)	
+
+							// })
 
 						</script>
 					</div>
@@ -374,31 +414,6 @@ var typed = new Typed("#typed", {
 		</div>
 	</section>
 
-	 <script>
-	   
-	   $(document).ready(function(){
-		
-		 $('.owl-carousel , owl-theme').owlCarousel({
-		 center:true,
-		 autoplay: true,
-		 center: true,
-		 loop: true,
-		 nav: true,
-		 margin:10,
-			 responsive:{
-			   600:{
-				   items:6
-			   },
-			   }
-	   });
-	   
-		  
-	   });
-		 
-		 
-		  
-	   
-	   </script>
 
 	<!-- <section class="testimoniales ">
 
@@ -564,14 +579,16 @@ var typed = new Typed("#typed", {
 			   <ion-icon class="quote" name="quote"></ion-icon>
 		   </div>
 	  	   
-	   </section> -->
-	<section class="contacto">
+	   </section> --> 
+	<section class="contacto wow fadeInUp" id="contacto">
 
-		<ion-icon class="bigwifi" name="wifi"></ion-icon>
+		<!-- <ion-icon class="bigwifi" name="wifi"></ion-icon> -->
+		<i class="fas fa-wifi bigwifi"></i>
+
 		<div class="row">
 					
 			<div class="col col-xs-12  col-md-5 modulo-nosotros-texto">
-				<h2 class="tituloit"> <ion-icon name="wifi"></ion-icon> Conectate 
+				<h2 class="tituloit"> <i class="fas fa-wifi"></i>  Conectate 
 					<span class="spantext"> con Nosotros</span></h2>
 				<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!</p>
 		
@@ -580,7 +597,7 @@ var typed = new Typed("#typed", {
 			<form action="" class="col-xs-12 col-md-7">
 				<div class="input-group flex-nowrap">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping">@</span>
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
 					</div>
 					<input type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
 
@@ -588,14 +605,14 @@ var typed = new Typed("#typed", {
 				<br>
 				<div class="input-group flex-nowrap">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping">@
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
 					</div>
 					<input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
 				</div>
 				<br>
 				<div class="input-group flex-nowrap">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping">@</span>
+						<span class="input-group-text" id="addon-wrapping"><i class="far fa-envelope"></i></span>
 					</div>
 					<input type="text" class="form-control" placeholder="Tema" aria-label="Username" aria-describedby="addon-wrapping">
 				</div>
@@ -689,13 +706,7 @@ var typed = new Typed("#typed", {
 	<footer class="footer-distributed">
 
 		<div class="footer-left">
-			<!-- 				
-					<p class="footer-links">
-						<a href="#">Home</a>					
-						<a href="#">Blog</a>					
-						<a href="#">Pricing</a>				
-	
-					</p> -->
+
 
 			<div class="footer-icons">
 				<p>Redes Sociales</p>
