@@ -554,6 +554,20 @@ nav {
 html {
   height: auto; }
 
+.graciasporcontactarnos {
+  background-color: #26D0CE;
+  height: 100vh;
+  padding: 5px; }
+  .graciasporcontactarnos .graciasWrapper .textdiv {
+    position: absolute;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%; }
+
 .contacto {
   background-color: #F9FAFE;
   padding: 180px 50px;
@@ -562,7 +576,8 @@ html {
   height: 100vh; }
   @media only screen and (max-width: 600px) {
     .contacto {
-      padding: 100px 25px; } }
+      padding: 100px 25px;
+      height: auto; } }
   .contacto .bigwifi {
     z-index: 10;
     font-size: 700px;
@@ -589,17 +604,6 @@ html {
     left: 50%;
     border-radius: 50%;
     z-index: 999; }
-  .contacto .textdiv {
-    position: absolute;
-    color: white;
-    padding: 50px;
-    font-size: 16px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    display: none;
-    z-index: 9999; }
   .contacto .contacto-encabezado {
     padding: 60px;
     text-align: center; }
@@ -613,11 +617,13 @@ html {
     text-align: center;
     z-index: 99; }
     .contacto form span {
-      background-color: #827D96;
+      background-color: #323462;
       border-right: none;
       font-size: 13px;
       color: #C5C9C8;
       border: none; }
+      .contacto form span i {
+        color: white; }
     .contacto form input {
       font-size: 13px;
       border-left: none;

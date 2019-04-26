@@ -59,6 +59,12 @@ $scope.busquedaInit = function(){
 
 }
 
+// $scope.sendMail = function(){
+	
+// 	myService.angularhttp("post", "sendMail" , function(data){
+// 		console.log(data);
+// 	})
+// }
 
 
 $scope.displayButtons = function(data){

@@ -70,169 +70,34 @@ var Busboy = require('busboy');
 
 app.post("/sendMail" , upload.single('adjunto'),  function(req, res, next){
 	var pt = req.file;
-	
-	console.log(req.file);
-	console.log(req.body);
+		var bd = req.body;
 
-var bd = req.body;
+	var mailOptions = {
+	  from: req.body.mail ,
+	  to: mailingenio,
+	   attachments: [{
+	    filename: pt.originalname,
+	    path: pt.path,
+	   contentType: 'application/pdf'
+	  }],
 
-var mailOptions = {
-  from: req.body.mail ,
-  to: mailingenio,
-   attachments: [{
-    filename: pt.originalname,
-    path: pt.path,
-   contentType: 'application/pdf'
-  }],
-  subject: 'Usuario: ' + req.body.nombre +' - Mail: ' + req.body.mail + " - Asunto: " + req.body.asunto,
-  text: req.body.comentario
-};
-
-// console.log(mailOptions)
-mail.enviar(mailOptions)
-//res.redirect("/mailcontacto")
-})
+	  subject: 'Usuario: ' + req.body.nombre +' - Mail: ' + req.body.mail + " - Asunto: " + req.body.asunto,
+	  text: req.body.comentario
+	};
 
 
-
-app.post("/linkedin/:id" , function(req,res){
-	var link = "https://www.linkedin.com/in/"
-	var profile= req.params.id;
-	var newProfile = new linkedinUser({
-		linkedin:link + profile,
-	})
-
-
-
-	newProfile.save(function(err , user){
-		if (err) {
-			throw err;
-		}else{
-			console.log("nuevo usuario agregado");
-		}
-	})
-
-
-	var linkedin = {
-		url:req.params.id,
-		mensaje: "gracias por dejar tu mail"
-	}
-
-	res.send(linkedin)
-})
-
-
-
-app.get("/joboffer" , function(err, res ){
-
-
-	joboffer.find({} , function(err, data){
-		if (err){
-			throw err;
-		}else{
-			res.send(data)
-		}
-	})
-
-
-})
-
-
-app.get("/linkedinUser" , function(err, res ){
-
-	linkedinUser.find({} , function(err, data){
-		if (err){
-			throw err;
-		}else{
-			res.send(data);
-		}
-	})
-	
-	
-	
-	})
-
-app.post("/joboffer_new" , function(req,res){
-	var empresa = req.body.empresa;
-	var puesto = req.body.puesto;
-	var seniority = req.body.seniority;
-	var area = req.body.area;
-	var rubro = req.body.rubro;
-	var segmento = req.body.segmento;
-	var location = req.body.location;
-	var linkedin = req.body.linkedin;
-
-
-	var newJob =  new joboffer({
-	empresa:empresa,
-	puesto:puesto,
-	seniority:seniority,
-	rubro:rubro,
-	segmento:segmento,
-	area:area,
-	location:location,
-	linkedin:linkedin,
-
-	fecha: Date.now()
-
-	})
-
-	newJob.save(function(err , job){
-		if (err){
-			throw err;
-		}else{
-			res.sendFile(path.join(__dirname,"myadmin.html"));
-		}
-	})	
-
-})
-
-app.post("/joboffer_remove/:job" , function(req,res){
-	var jobId = req.params.job;
-
-	joboffer.remove({_id:jobId} , function(err){
-		console.log(err)
-	})
-
-	res.send("eliminamos "+ jobId)
-
-})
-
-/*LOGIN*/
-
-var validate = function(us , pass , callback){
-	var result;	
-	if ((us === mailingenio || us === user) && pass===ps ){
-		result = true
+mail.enviar(mailOptions , function(data){
+	console.log(data);
+	var check =data.indexOf("OK")
+	console.log("check: " + check)
+	if (check > 0){
+		res.redirect("/mailcontacto")
 	}else{
-		result = false
+		console.log("error");		
 	}
-	callback(result)
-	
-	}
-	
-	
-	app.get("/login" , function(req,res,next){
-		res.sendFile(path.join(__dirname,"login.html"))
-	})
-	
-	app.post("/welcome_admin" , function(req,res,next){
-		var pp = req.body.password
-		var uu = req.body.user
-		validate(uu , pp , function(rta){
-			if (rta===true) {
-				res.sendFile(path.join(__dirname,"myadmin.html"))
-			}else{
-				res.send("Usuario Incorrecto, vuelva a intentarlo!")
-			}
-		})
-	
-	})
-	
+})
+})
 
 
 
-
-
-//sendgrid trest
 
