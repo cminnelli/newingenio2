@@ -98,7 +98,7 @@ nav {
     width: 0px;
     background-color: none; } }
 .textoit {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksesand', sans-serif;
   color: black;
   font-size: 13.5px;
   line-height: 25px;
@@ -309,6 +309,45 @@ nav {
             font-family: "Quicksand"; }
           .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper img {
             margin-top: 45px; }
+  .itsolutions .servicios {
+    padding: 50px; }
+    @media only screen and (max-width: 600px) {
+      .itsolutions .servicios {
+        padding: 10px; } }
+    .itsolutions .servicios .servicios-wrapper {
+      background-color: rgba(250, 255, 255, 0.75);
+      box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #15aabf;
+      padding: 40px;
+      margin-top: 40px; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .servicios .servicios-wrapper {
+          padding: 5px; } }
+      .itsolutions .servicios .servicios-wrapper img {
+        margin-top: 80px; }
+      .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper {
+        width: 95%;
+        margin: 0 auto; }
+        .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
+          padding: 20px;
+          text-align: justify; }
+          @media only screen and (max-width: 600px) {
+            .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
+              border: none; } }
+          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard:hover i {
+            color: #F06595;
+            transition: 1s; }
+          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard i {
+            font-size: 30px;
+            padding: 15px; }
+          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-title {
+            font-size: 18px;
+            text-transform: uppercase; }
+          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
+            font-size: 18px;
+            color: #15aabf; }
+          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .textoit {
+            font-family: 13.5px; }
   .itsolutions .busquedas {
     padding: 50px 100px;
     -webkit-background-attachment: fixed;
@@ -574,7 +613,7 @@ html {
     text-align: center;
     z-index: 99; }
     .contacto form span {
-      background-color: white;
+      background-color: #827D96;
       border-right: none;
       font-size: 13px;
       color: #C5C9C8;
@@ -582,7 +621,7 @@ html {
     .contacto form input {
       font-size: 13px;
       border-left: none;
-      color: white;
+      color: #827D96;
       padding: 12px;
       border: none; }
       .contacto form input:focus {
@@ -611,6 +650,6 @@ html {
     transform: translate(-50%, -50%);
     height: 1500px;
     width: 1500px;
-    background-color: #39ae9e; } }
+    background-color: #15aabf; } }
 
 /*# sourceMappingURL=estilosit.css.map */

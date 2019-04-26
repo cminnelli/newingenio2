@@ -49,6 +49,13 @@ $color-nosotros:212240;
 $color-span:#26D0CE;
 $color-newingenio:rgb(57,174,158);
 
+$size-textoit:13.5px;
+$size-textoit2:12.5px;
+$size-titulosec:18px;
+$size-titulopri:30px;
+$size-posttitulosec:18px;
+$color-span2:#15aabf;
+
 @mixin mybut($color){
     border-radius:20px;
     background: $color;
@@ -195,16 +202,16 @@ nav{
 }
 
 .textoit{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksesand', sans-serif;
     color:black;
-    font-size:13.5px;   
+    font-size:$size-textoit  ; 
     line-height: 25px;
     letter-spacing: 0.6px;
 	padding:20px 0px;
 	margin-bottom: 0px;
 	@media only screen and  (max-width:600px) {
 		text-align:-webkit-auto;
-		font-size:12.5px;
+		font-size:$size-textoit2;
 		line-height: 20px;
 	}	 
 
@@ -488,6 +495,67 @@ nav{
 			}
 			}
         }
+	}
+	
+
+    .servicios{
+    	padding:50px;
+
+		@media only screen and  (max-width:600px) {
+			padding:10px;
+		}	
+
+		.servicios-wrapper{
+			background-color:rgba(250,255,255,0.75);
+			box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+			border-top:4px solid $color-span2;
+			padding:40px;
+			margin-top:40px;
+
+			@media only screen and  (max-width:600px) {
+				padding:5px;
+			}	
+
+			img{
+				margin-top:80px;
+			}
+	    	.servicio-item-wrapper{
+	    		width:95%;
+	    		margin:0 auto;
+	    		.serviceCard{
+	    			//border-right:1.8px solid white;
+					padding:20px;
+					text-align: justify;
+
+					@media only screen and  (max-width:600px) {
+						border:none;
+					}	
+
+					&:hover i{
+						color:#F06595;
+						transition:1s;				}
+
+	    			i{
+					font-size: $size-titulopri;
+					padding:15px;
+	    			}
+
+	    			.card-title{
+					font-size: $size-titulosec;
+					text-transform:uppercase;
+	    			}
+	    			.card-subtitle{
+					font-size: $size-posttitulosec;
+					color:$color-span2;
+	    			}
+	    			.textoit{
+	    				font-family: $size-textoit;
+
+	    				// borrar cuando se generalice en texto it
+	    			}
+	    		}
+	    	}
+    	}
     }
 
     .busquedas{
@@ -885,7 +953,7 @@ html{
 	text-align: center;
 		z-index: 99;
 		span{
-			background-color: white;
+			background-color: $color-texto;
 			border-right:none;
 			font-size:13px;
 			color:#C5C9C8;
@@ -896,7 +964,7 @@ html{
 			font-size:13px;
 			//background-color: #F4F8F7;
 			border-left:none;
-			color:white;
+			color:$color-texto;
 			padding:12px;
 			border:none;	
 
@@ -942,7 +1010,7 @@ html{
 					transform: translate(-50%,-50%);
 					height: 1500px;
 					width: 1500px;
-                    background-color: $color-newingenio;
+                    background-color: #15aabf;
                    //transform: perspective(500px) translateZ(1000px);
                 }
 

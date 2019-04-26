@@ -776,29 +776,38 @@ $button-color:#00CCCB;
 		background:$color-nosotros;
 		background-size: cover;
 
-	
+
 		padding:20px;
 
 		.row{
 			padding:0px;
 			margin:0px;
 		}
-		input ,textarea{
+		form{
+			color:black;
+		}
+		form > input , form >textarea{
 			border-right:none;
 			border-left: none;	
 			font-size: 13px;
 			outline: none;
 			border:none;
 			box-shadow: none;
-			background-color: rgba(100,100,100,0.25);
-			color:$color-ingenio1;
+			background-color: rgba(100,100,100,0.25) ; 
+			color:$color-titulos;
 			transition: 1.6s;
 			&:focus{
 				outline: none;
 				box-shadow: none;
 				background-color: rgba(100,100,100,0.25);
-				color:$color-ingenio1;
+				color:red;
 				transition: 1.6s;
+
+			}
+			&:focus-within{
+
+				color:red;
+
 
 			}
 		}

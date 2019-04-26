@@ -41,13 +41,14 @@
 	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
 	<!-- ANGULAR SCRIPTS -->
-	<script src="/libs/angular/angular.min.js"></script>
+	<!-- <script src="/libs/angular/angular.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
 
 	<script src="/js/app.js"></script>
+
+	<script src="/js/controllers/busquedas.js"></script>
 	<script src="/js/services/google.js"></script>
 	<script src="/js/services/myService.js"></script>
-	<script src="/js/controllers/busquedas.js"></script>
-	<script src="/js/controllers/contacto.js"></script>
 
 	<script src="libs/jquery/jquery.js"></script>
 
@@ -263,7 +264,66 @@ setTimeout(function(){
 
 		</div>
 	</section>
+	<section class="servicios wow fadeIn" id="servicios">
 
+			<div class="col-xs-12 col-lg-12">
+				<h2 class="tituloit"> <span class="spantext"><i class="fab fa-black-tie"></i></span>   Servicios <span class="spantext"> IT </span></h2>
+				
+			</div>	
+	
+			<div class="servicios-wrapper">			
+				
+				<div class="row">
+				
+					<div class="servicio-item-wrapper col-xs-12 col-lg-12">
+	
+	
+					</div>
+	
+					<div class="servicio-item-wrapper col-xs-12 col-md-4">
+						<div class="serviceImage">
+							<img src="/imagenes/web/inclusion/inclusion3.jpeg" alt="" class="img-fluid">
+						</div>	
+	
+						
+	
+					</div>
+					<div class="servicio-item-wrapper col-xs-12 col-md-4">
+						<div class="serviceCard">
+							<i class="far fa-lightbulb"></i>
+							<h4 class="card-title">Búsqueda y seleccion</h4>
+							<h3 class="card-subtitle">Dinamismo y Acertividad</h3>
+							<p class="textoit">
+								Entendemos lo que buscan tanto nuestros clientes como nuestros candidatos, y trabajamos en cada proyecto como si fuera el único. Es esto lo que nos permite brindar un servicio de calidad, a la medida de cada necesidad.
+							</p>
+						</div>	
+	
+						
+	
+					</div>
+	
+					<div class="servicio-item-wrapper col-xs-12 col-md-4">
+						<div class="serviceCard">
+								<i class="fas fa-brain"></i>
+								<h4 class="card-title">Psicotécnicos</h4>
+								<h3 class="card-subtitle"> Especialistas e innovadores</h3>
+								<p class="textoit">
+	
+								Comprometidos con la especialización e innovación en nuestros procesos. Acompañamos a nuestros clientes con un servicio de evaluaciones técnicas y psicométricas, administradas por psicólogos especialistas en perfiles it.
+	
+								</p>
+							</div>	
+	
+						
+	
+					</div>
+			
+			
+	
+				</div>
+			</div>
+		</section>
+	
 
 	<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
 
@@ -286,7 +346,7 @@ setTimeout(function(){
 						<p class="errtit">Ups...Hay algun errorcin!</p>
 						<p class="errtext">Intenta de nuevo en un rato</p>
 					</div>
-					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-3 col-md-offset-1 wow fadeIn">
+					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-4 col-md-offset-1 wow fadeIn">
 
 						<div class="jobOfferWrapp">
 
@@ -594,30 +654,52 @@ setTimeout(function(){
 		
 			</div>
 
-			<form action="" class="col-xs-12 col-md-7">
+			<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7">
 				<div class="input-group flex-nowrap">
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
 					</div>
-					<input type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
+					<input name="nombre" type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
 
 				</div>
+
 				<br>
-				<div class="input-group flex-nowrap">
+
+				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
 					</div>
-					<input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
+					<input name="mail" type="mail" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
 				</div>
 				<br>
-				<div class="input-group flex-nowrap">
+
+				<div class="input-group">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping"><i class="far fa-envelope"></i></span>
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
 					</div>
-					<input type="text" class="form-control" placeholder="Tema" aria-label="Username" aria-describedby="addon-wrapping">
+					<input type="text" name="asunto"  class="form-control" placeholder="asunto" aria-label="Username" aria-describedby="addon-wrapping">
 				</div>
 				<br>
-				<button type="button" class="mybut">CONECTATE!</button>
+
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+					</div>
+					<input type="file" name="adjunto" class="form-control" placeholder="CV" aria-label="adjunto" aria-describedby="addon-wrapping">
+				</div>
+				<br>
+
+
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+					</div>
+					<input name="comentario" type="text" class="form-control" placeholder="Dejanos tus comentarios" aria-label="Username" aria-describedby="addon-wrapping">
+				</div>
+
+				<br>
+				<br>
+				<button type="submit" class="mybut">CONECTATE!</button>
 
 			</form>
 		</div>
@@ -725,45 +807,14 @@ setTimeout(function(){
 
 			</div>
 
-			<p class="footer-company-name">Ingenio Técnico &copy; 2019</p>
+			
 		</div>
 
-		<div class="footer-center">
-
-			<div>
-				<i class="fa fa-map-marker"></i>
-				<p>
-					<span>E Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>
-			</div>
-
-			<div>
-				<i class="fa fa-phone"></i>
-				<p>+1 555 123456</p>
-			</div>
-
-			<div>
-				<i class="fa fa-envelope"></i>
-				<p>
-					<a href="mailto:web.ingeniotecnico@gmail.com">web.ingeniotecnico@gmail.com</a>
-				</p>
-			</div>
+		<span>E Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>		
 
 
+		
 
-
-		</div>
-
-		<div class="footer-right">
-
-			<p class="footer-company-about">
-				<span>Desarrollado por:</span>
-				<img src="imagenes/web/broomLogo.png" alt="" class="logoBroom">
-
-
-			</p>
-
-
-		</div>
 
 	</footer>
 

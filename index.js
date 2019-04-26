@@ -5,7 +5,8 @@ const port = process.env.PORT || 3000
 var path = require("path");
 var fs = require("fs");
 var mail = require("./node_aux/nodeMailer.js")
-var mailingenio = "contacto.ingeniotecnico@gmail.com";
+//var mailingenio = "contacto.ingeniotecnico@gmail.com";
+var mailingenio = "cminnelli@gmail.com";
 
 var user = "ingeniotecnico"
 var ps = "ingenio2017."
@@ -59,17 +60,33 @@ app.get("/mailcontacto" , function(req,res){
 	res.sendFile(path.join(__dirname ,"contactomsj.html"));
 })
 
-app.post("/sendMail" , function(req,res){
+
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
+
+
+
+
+app.post("/sendMail" , upload.single('adjunto'),  function(req, res, next){
+	var pt = req.file;
+	var attachments = [{ filename: "test.pdf" , path:"C:/Users/cminn/Documents/Illustrator/Coconelly/coconellyLOGO2.pdf" }];
+	
+	console.log(req.file);
+	console.log(req.body);
+
+var bd = req.body;
 
 var mailOptions = {
   from: req.body.mail ,
   to: mailingenio,
-  subject: 'Contacto: ' + req.body.nombre +' / Mail: ' + req.body.mail + " / Asunto: " + req.body.asunto,
-  text: req.body.comentario
+ 	subject: 'Contacto: ' + bd.nombre +' / Mail: ' + bd.mail + " / Asunto: " + bd.asunto,
+	text: req.body.comentario,
+	attachment: [{ filename: "test.pdf" , path: "C:/Users/cminn/Documents/Illustrator/Coconelly/coconellyLOGO2.pdf" , contentType:"application/pdf" }],
 };
 
+// console.log(mailOptions)
 mail.enviar(mailOptions)
-res.redirect("/mailcontacto")
+//res.redirect("/mailcontacto")
 })
 
 
