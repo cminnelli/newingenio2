@@ -91,7 +91,7 @@ mail.enviar(mailOptions , function(data){
 	var check =data.indexOf("OK")
 	console.log("check: " + check)
 	if (check > 0){
-		res.redirect("/mailcontacto")
+		res.sendFile(path.join(__dirname ,"contactomsj.html"));
 	}else{
 		console.log("error");		
 	}
