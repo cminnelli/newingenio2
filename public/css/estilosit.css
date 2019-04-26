@@ -98,8 +98,8 @@ nav {
     width: 0px;
     background-color: none; } }
 .textoit {
-  font-family: 'Quicksesand', sans-serif;
-  color: black;
+  font-family: "Quicksand", sans-serif;
+  color: #827D96;
   font-size: 13.5px;
   line-height: 25px;
   letter-spacing: 0.6px;
@@ -113,7 +113,7 @@ nav {
 
 .tituloit {
   font-family: 'Raleway', sans-serif;
-  color: #212240;
+  color: #444;
   font-weight: 700;
   font-size: 40px;
   margin-top: 20px; }
@@ -292,12 +292,6 @@ nav {
             left: 0px;
             height: 100%;
             width: 100%;
-            background: #5C258D;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4389A2, #5C258D);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             opacity: 0.8; }
           .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
             padding: 10px;
@@ -377,13 +371,16 @@ nav {
       height: 100%;
       width: 100%;
       background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(0, 0, 0, 0.4);
       filter: grayscale(100px); }
       @media only screen and (max-width: 600px) {
         .itsolutions .busquedas .transparencia {
           background-color: rgba(0, 0, 0, 0.8); } }
-    @media only screen and (max-width: 600px) {
-      .itsolutions .busquedas .tituloit {
-        color: whitesmoke; } }
+    .itsolutions .busquedas .tituloit {
+      color: whitesmoke; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .busquedas .tituloit {
+          color: whitesmoke; } }
     .itsolutions .busquedas .jobs-result {
       text-align: center;
       padding: 30px; }
@@ -403,7 +400,17 @@ nav {
           border-left: 10px solid #26D0CE;
           overflow: hidden;
           transition: 0.5s;
-          border-radius: 20px; }
+          border-radius: 20px;
+          transition: all ease-in 0.8s; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
+            border-left: 10px solid #895ef6;
+            transition: all ease-in-out 1s; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
+            color: #895ef6;
+            transition: all ease-in-out 1s; }
+          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
+            background-color: #a685f8 !important;
+            transition: all ease-in-out 1s; }
           @media only screen and (max-width: 600px) {
             .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp {
               border-radius: 25px;

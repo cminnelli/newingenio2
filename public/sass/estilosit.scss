@@ -7,18 +7,19 @@
 $secondary-color:#B9DCE0;
 $color-grey:rgba(30,30,30,0.8);
 
-$color-background:#EDEEF2;
+
 
 $color-ingenio1:#010608;
 $color-ingenio2:#028090;
 $color-ingenio3:#00a896;
 $color-ingenio4:#f261ad;
 $color-nosotros:#EDEEF2;
+$color-coolgrey:#444;
 
 $font-primary:'Quicksand', sans-serif;
 $font-encabezado:'Quicksand', sans-serif;
 $font-navegador:'Quicksand', sans-serif;
-$font-titulos:'Quicksand', sans-serif;
+$font-titulos:'Open Sans', sans-serif;
 
 /*CLASES GENERALES*/
 .centerpos{
@@ -40,6 +41,7 @@ $font-titulos:'Quicksand', sans-serif;
 }
 
 $color-background:#F9FAFE;
+$color-background2:#d0d0d0;
 $color-titulos:#212240;
 $color-texto:#827D96;
 $color-texto2:#3C495A;
@@ -203,8 +205,8 @@ nav{
 }
 
 .textoit{
-    font-family: 'Quicksesand', sans-serif;
-    color:black;
+    font-family: $font-primary;
+    color:$color-texto;
     font-size:$size-textoit  ; 
     line-height: 25px;
     letter-spacing: 0.6px;
@@ -220,7 +222,7 @@ nav{
 
 .tituloit{
 	font-family: 'Raleway', sans-serif;
-    color:$color-titulos;
+    color:$color-coolgrey;
     font-weight: 700;   
 	font-size:40px;
 	margin-top:20px;
@@ -246,7 +248,7 @@ nav{
     background:#F4F7FA;
     
 	.portada{       
- 
+	
         width:80%;
 		margin:0 auto;
 		height: 100vh;
@@ -471,9 +473,9 @@ nav{
 					left:0px;
 					height:100%;
 					width:100%;
-					background: #5C258D;  /* fallback for old browsers */
-					background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
-					background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
+					//background: #5C258D;  /* fallback for old browsers */
+					//background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+					//background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
 					opacity: 0.8;
 		
 				}
@@ -539,6 +541,7 @@ nav{
 	    			i{
 					font-size: $size-titulopri;
 					padding:15px;
+				
 	    			}
 
 	    			.card-title{
@@ -600,6 +603,7 @@ nav{
 			width:100%;
 			
 			background-color:rgba(255,255,255,0.9);
+			background-color:rgba(0,0,0,0.40);
 			filter: grayscale(100px);
 			@media only screen and  (max-width:600px) {
 				background-color:rgba(0,0,0,0.80);
@@ -609,6 +613,7 @@ nav{
 
 		}
 		.tituloit{
+			color: whitesmoke;	
 			@media only screen and  (max-width:600px) {
 				color: whitesmoke;				
 			}
@@ -638,6 +643,19 @@ nav{
 						overflow: hidden;
 						transition: 0.5s;
 						border-radius: 20px;
+						transition:all ease-in 0.8s;
+						&:hover{
+							border-left:10px solid lighten($color-but1,10%);
+							transition:all ease-in-out 1s;
+						}
+						&:hover i{
+							color:  lighten($color-but1,10%);
+							transition:all ease-in-out 1s;
+						}
+						&:hover button{
+							background-color:  lighten($color-but1,18%) !important;
+							transition:all ease-in-out 1s;
+						}
 
 						@media only screen and  (max-width:600px) {
 							border-radius: 25px;
