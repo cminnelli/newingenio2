@@ -63,13 +63,13 @@ app.get("/mailcontacto" , function(req,res){
 
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
+var Busboy = require('busboy');
 
 
 
 
 app.post("/sendMail" , upload.single('adjunto'),  function(req, res, next){
 	var pt = req.file;
-	var attachments = [{ filename: "test.pdf" , path:"C:/Users/cminn/Documents/Illustrator/Coconelly/coconellyLOGO2.pdf" }];
 	
 	console.log(req.file);
 	console.log(req.body);
@@ -79,9 +79,13 @@ var bd = req.body;
 var mailOptions = {
   from: req.body.mail ,
   to: mailingenio,
- 	subject: 'Contacto: ' + bd.nombre +' / Mail: ' + bd.mail + " / Asunto: " + bd.asunto,
-	text: req.body.comentario,
-	attachment: [{ filename: "test.pdf" , path: "C:/Users/cminn/Documents/Illustrator/Coconelly/coconellyLOGO2.pdf" , contentType:"application/pdf" }],
+   attachments: [{
+    filename: pt.originalname,
+    path: pt.path,
+   contentType: 'application/pdf'
+  }],
+  subject: 'Usuario: ' + req.body.nombre +' - Mail: ' + req.body.mail + " - Asunto: " + req.body.asunto,
+  text: req.body.comentario
 };
 
 // console.log(mailOptions)
