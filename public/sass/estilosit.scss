@@ -168,6 +168,7 @@ nav{
 	left:0px;
 	transition: all ease 0.8s;
 		background-color:rgba(0,0,0,0.40);
+		z-index: 999;
 
 	@media only screen and  (max-width:600px) {
 		display: block;
@@ -182,7 +183,8 @@ nav{
 		padding-top:10px;
 		position: relative;
 		text-align:left;
-
+		visibility: hidden;
+	
 		li{
 			display: inline-block;
 			padding:13px;
@@ -198,6 +200,7 @@ nav{
 		}
 
 		#hambur{
+			visibility: visible;
 			padding:13px;
 			position: absolute;
 			right:10px;
@@ -676,6 +679,7 @@ nav{
 		@media only screen and  (max-width:600px) {			
 			padding:8px;	
 			height:auto;
+			
 		}	
 		
 

@@ -95,6 +95,7 @@ nav {
   left: 0px;
   transition: all ease 0.8s;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
   display: none;
   text-align: center;
   position: fixed; }
@@ -106,7 +107,8 @@ nav {
     padding-left: 0px;
     padding-top: 10px;
     position: relative;
-    text-align: left; }
+    text-align: left;
+    visibility: hidden; }
     .nav2 .iconmenu li {
       display: inline-block;
       padding: 13px; }
@@ -118,6 +120,7 @@ nav {
           color: #76e6e5;
           transition: 1s; }
     .nav2 .iconmenu #hambur {
+      visibility: visible;
       padding: 13px;
       position: absolute;
       right: 10px;
