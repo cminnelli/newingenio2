@@ -4,19 +4,12 @@
 @import url('../css/animate.css');
 
 
-$secondary-color:#B9DCE0;
 $color-grey:rgba(30,30,30,0.8);
 
-
-
-$color-ingenio1:#010608;
-$color-ingenio2:#028090;
-$color-ingenio3:#00a896;
-$color-ingenio4:#f261ad;
 $color-nosotros:#EDEEF2;
 $color-coolgrey:#444;
 
-$font-primary:'Quicksand', sans-serif;
+$font-primary:'Montserrat', sans-serif;
 $font-encabezado:'Quicksand', sans-serif;
 $font-navegador:'Quicksand', sans-serif;
 $font-titulos:'Open Sans', sans-serif;
@@ -52,9 +45,9 @@ $color-span:#26D0CE;
 $color-newingenio:rgb(57,174,158);
 $color-span2:#15aabf;
 
-$size-textoit:13.5px;
-$size-textoit2:12.5px;
-$size-titulosec:18px;
+$size-textoit:13px;
+$size-textoit2:12px;
+$size-titulosec:19px;
 $size-titulopri:30px;
 $size-posttitulosec:18px;
 $color-span2:#15aabf;
@@ -75,7 +68,7 @@ $color-span2:#15aabf;
 .function{
 	color:$color-span;
 	display: inline-block;
-	font-size:28px;
+	font-size:40px;
 	
 	@media only screen and  (max-width:600px) {
 	
@@ -103,6 +96,7 @@ $color-span2:#15aabf;
 	@media only screen and  (min-width:600px) {
 		display: block;
 
+
 	}	
 }
 nav{
@@ -121,14 +115,46 @@ nav{
 	}	 
 
 }
+.nav1{
+	left:0px;
+	display: block;
+	padding:20px;
+	font-family: "Raleway";
+	font-size: $size-textoit +1;
+	color:$color-coolgrey;
+	@media only screen and  (max-width:600px) {
+		display: none;
 
+	}	 
+	.navWrapper{
+		margin-left:20%;
+		letter-spacing: 1.8px;
+			li{
+				display: inline;
+				padding:10px;
+				text-decoration: none;
+
+			}
+				.cvCircle{
+					.buttonWrapper{
+						display: inline-block;
+						button{
+							@include mybut(black);
+						}
+					}
+				}
+	}
+
+}
 .nav2{
 	width: 100%;
 	top:0px;
+	left:0px;
 	transition: all ease 0.8s;
+
 	@media only screen and  (max-width:600px) {
 		display: block;
-		background: $color-span;
+		// background: transparent;
 		z-index:9999;
 	}	 
 	display: none;
@@ -136,11 +162,12 @@ nav{
 	position: fixed;
 	.iconmenu{
 		padding-left:0px;
+		padding-top:10px;
 		li{
 			display: inline-block;
-			padding:10px;
+			padding:13px;
 
-			.icon{
+			.icon , i{
 				transition: 1s;
 				color:whitesmoke;
 				font-size: 30px;
@@ -157,22 +184,14 @@ nav{
 	0%{
 		height:30px;
 		width:30px;
-		//background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-		//background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		background-color: darken($color-span,10%);
 		opacity: 0.90;
 	}
 
 
 	100%{
-
 		height:470px;
 		width:470px;
-		//transform: translate(-50%,-50%);	
-		//top:50%;
-		//left:50%;
-		//background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-		//background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		opacity: 0.95;
 		background-color: darken($color-span,15%);
 	}
@@ -208,7 +227,7 @@ nav{
     font-family: $font-primary;
     color:$color-texto;
     font-size:$size-textoit  ; 
-    line-height: 25px;
+    line-height: 28px;
     letter-spacing: 0.6px;
 	padding:20px 0px;
 	margin-bottom: 0px;
@@ -222,20 +241,21 @@ nav{
 
 .tituloit{
 	font-family: 'Raleway', sans-serif;
-    color:$color-coolgrey;
+	color:$color-coolgrey;
+
     font-weight: 700;   
 	font-size:40px;
 	margin-top:20px;
 	&.portadatit{
-	font-size:25px;	
+			color:white;
+	font-size:40px;	
+	text-align: left !important;
+	text-shadow: 0 0 6px 3px rgba(0,0,0,0.25);
 	}
 
-	@media only screen and  (max-width:600px) {
-	
-		font-size:25px;
-	
-	}		
-	
+	@media only screen and  (max-width:600px) {	
+		font-size:25px;	
+	}			
 }
 .spantext{
     color:#26D0CE;
@@ -248,25 +268,45 @@ nav{
     background:#F4F7FA;
     
 	.portada{       
-	
-        width:80%;
-		margin:0 auto;
+		padding:50px;
 		height: 100vh;
+		background:url("https://images.unsplash.com/photo-1548611635-b6e7827d7d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+		background-size: cover;
+		background-position: 140px 10px;
+		position:relative;
+		@media only screen and  (max-width:600px) {	
+			
 		
-		@media only screen and  (max-width:600px) {		
-			margin:80px 0px;
 			width:100%;
-			padding:15px;
+			padding:25px;
 		}	 
+		.curvebotmob{
+			position:absolute;
+			left:1px;
+			bottom:-2px;
+			width:100%;
+		}
+		.transparencia{
+		position: absolute;
+		top:0px;
+		left:0px;
+		height:100%;
+		width:100%;
+		background: #5C258D;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
+		opacity: 0.5;
 
+	}
+	
         .portada_wrapper_texto{
-			@media screen and (min-width:300px) and (max-width:900px) {
-				text-align: center;
-			}
-            font-family: "Raleway";
 			padding:0px 20px;
 			perspective: 500px;
 			position:relative;
+			
+			@media only screen and  (max-width:600px) {
+				margin-top:100px;
+			}	
 			.banner{
 				margin-top:10px;
 				h1{
@@ -275,30 +315,45 @@ nav{
 					@media screen and (min-width:300px) and (max-width:900px) {
 						font-size: 18px;
 						text-align: left;
-						//float:left;
-						//display: 	block;
-					}	
+						}	
+					}
+					.textoit{
+						width:80%;
+						
+						font-size: 14px;
+						padding:0px;
+					@media only screen and  (max-width:600px) {
+						text-align: justify;
+						width:70%;
+						font-size: 14px;
+						margin:0px;
+					}	 						
+					}
+
+					.typed-cursor , .typed-cursor--blink {
+						color:lighten($color-texto2,10%);
+						font-size:50px;
+					@media screen and (min-width:300px) and (max-width:900px) {
+						font-size: 18px;
+						}	
+					}
 	
 				}
-				span{
-					color:$color-newingenio;
-					font-weight: 700;   
-					font-size:40px;   
-					padding-left:10px; 
-				}
-			}
+		}
 
 			.social{
+				padding:20px 0px;
 				.social-icons{
 					display:inline-block;
+					position: absolute;
 					padding-left:0px;
 					a{
-						color:$color-span;
-						font-size: 30px;
+						color:$color-ingenio4;
+						font-size: 33px;
 						padding:0px 5px;
-						
-						
-
+						@media only screen and  (max-width:600px) {
+							
+						}	 
 					}
 
 				}
@@ -344,25 +399,32 @@ nav{
             .logoImg{
             	transform:translateZ(200px);
 				height: 120px; 
+				margin:0 auto;
 				display: block;
 				animation:float 2s infinite;
 				transition:all ease-in-out 2s;
+				
 				@media only screen and  (max-width:600px) {
-					margin:0 auto;
+					margin:0px;
+					left:25%;
 				}	 
 			}
 			.logoshadow{
-				margin-left:10px;
+	
+		
 				position:absolute;
 				transition:all ease-in-out 4s;
 				width: 100px;
 				top:120px;
 				opacity:0.6;
 				animation:shadow 2s infinite;
-				margin-left:10px;
+
+				margin:20px auto;
+				transform: translate(-50%, -50%);
 				@media only screen and  (max-width:600px) {
-					margin:0 auto;
-					left: 30%;
+					left:20%;
+					margin:25px 0px;
+				
 				}	 
 			}
         }
@@ -390,6 +452,7 @@ nav{
 		background-position: top left;
 		overflow: hidden;
 		padding:50px 100px;
+		background-color: $color-background2;
 
 		@media only screen and  (max-width:600px) {
 			background-attachment: fixed;
@@ -428,10 +491,7 @@ nav{
 					text-align: justify;
 				}
 
-				.textoit{
-					text-align: justify;
-					font-size: 13px;
-					}									
+								
             }
             .modulo-nosotros-image{
                 //padding:50px;
@@ -505,7 +565,7 @@ nav{
     	padding:50px;
 
 		@media only screen and  (max-width:600px) {
-			padding:10px;
+		padding:10px;
 		}	
 
 		.servicios-wrapper{
@@ -552,11 +612,7 @@ nav{
 					font-size: $size-posttitulosec;
 					color:$color-span2;
 	    			}
-	    			.textoit{
-	    				font-family: $size-textoit;
 
-	    				// borrar cuando se generalice en texto it
-	    			}
 	    		}
 	    	}
     	}
@@ -614,25 +670,27 @@ nav{
 		}
 		.tituloit{
 			color: whitesmoke;	
+			margin-top:30px;
 			@media only screen and  (max-width:600px) {
-				color: whitesmoke;				
+				color: whitesmoke;	
+				text-align: center;
+					
 			}
 		}
 
         .jobs-result{	
                 
                 text-align: center;			
-                 padding:30px;			
+                 padding:5px 30px;			
 	
-				@media only screen and  (max-width:600px) {
-					padding:20px;
-				}	
                 .job-offer{
             
                     margin:5px 0px;
 					padding:0px;
+			
 					
 					.jobOfferWrapp{
+						height:360px;
 						z-index: 0;
 						position: relative;
 						background: rgba(255,255,255,0.75);
@@ -661,6 +719,7 @@ nav{
 							border-radius: 25px;
 							animation:2s;
 							background-color: rgba(255,255,255,0.85);
+							height:380px;
 						}							
 
 						.comentariosWrapp{
@@ -767,7 +826,7 @@ nav{
 	}
 	
 
-}
+
 
 .testimoniales{
 	position: relative;
@@ -880,9 +939,14 @@ $color-newingenio:rgb(57,174,158);
 
 html{
 	height: auto;
+	top:0px;
+
 
 }
-
+body{
+	height:100%;
+	background-color:white;
+}
  .graciasporcontactarnos{
  	background-color: $color-span;
  	height: 100vh;
@@ -1007,19 +1071,19 @@ html{
 
 		}
 
-		.mybut{
-			text-align: center;
-			border-radius:20px;
-			background-color: $color-newingenio;
-			padding:8px 20px;
-			color:white;
-			font-size: 14px;
-			border-style: none;
-			border:none;
-			outline: none;
-			transition: 3s;
-			animation-fill-mode: forwards;
-		}
+		// .mybut{
+		// 	text-align: center;
+		// 	border-radius:20px;
+		// 	background-color: $color-newingenio;
+		// 	padding:8px 20px;
+		// 	color:white;
+		// 	font-size: 14px;
+		// 	border-style: none;
+		// 	border:none;
+		// 	outline: none;
+		// 	transition: 3s;
+		// 	animation-fill-mode: forwards;
+		// }
 
 	}
 

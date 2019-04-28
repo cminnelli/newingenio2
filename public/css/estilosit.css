@@ -15,7 +15,7 @@
 .function {
   color: #26D0CE;
   display: inline-block;
-  font-size: 28px; }
+  font-size: 40px; }
   @media only screen and (max-width: 600px) {
     .function {
       font-size: 18px; } }
@@ -48,9 +48,39 @@ nav {
       display: none;
       background: rgba(30, 30, 30, 0.8); } }
 
+.nav1 {
+  left: 0px;
+  display: block;
+  padding: 20px;
+  font-family: "Raleway";
+  font-size: 14px;
+  color: #444; }
+  @media only screen and (max-width: 600px) {
+    .nav1 {
+      display: none; } }
+  .nav1 .navWrapper {
+    margin-left: 20%;
+    letter-spacing: 1.8px; }
+    .nav1 .navWrapper li {
+      display: inline;
+      padding: 10px;
+      text-decoration: none; }
+    .nav1 .navWrapper .cvCircle .buttonWrapper {
+      display: inline-block; }
+      .nav1 .navWrapper .cvCircle .buttonWrapper button {
+        border-radius: 20px;
+        background: black;
+        color: whitesmoke;
+        border-style: none;
+        padding: 15px 30px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase; }
+
 .nav2 {
   width: 100%;
   top: 0px;
+  left: 0px;
   transition: all ease 0.8s;
   display: none;
   text-align: center;
@@ -58,18 +88,18 @@ nav {
   @media only screen and (max-width: 600px) {
     .nav2 {
       display: block;
-      background: #26D0CE;
       z-index: 9999; } }
   .nav2 .iconmenu {
-    padding-left: 0px; }
+    padding-left: 0px;
+    padding-top: 10px; }
     .nav2 .iconmenu li {
       display: inline-block;
-      padding: 10px; }
-      .nav2 .iconmenu li .icon {
+      padding: 13px; }
+      .nav2 .iconmenu li .icon, .nav2 .iconmenu li i {
         transition: 1s;
         color: whitesmoke;
         font-size: 30px; }
-        .nav2 .iconmenu li .icon:hover {
+        .nav2 .iconmenu li .icon:hover, .nav2 .iconmenu li i:hover {
           color: #76e6e5;
           transition: 1s; }
 
@@ -98,17 +128,17 @@ nav {
     width: 0px;
     background-color: none; } }
 .textoit {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #827D96;
-  font-size: 13.5px;
-  line-height: 25px;
+  font-size: 13px;
+  line-height: 28px;
   letter-spacing: 0.6px;
   padding: 20px 0px;
   margin-bottom: 0px; }
   @media only screen and (max-width: 600px) {
     .textoit {
       text-align: -webkit-auto;
-      font-size: 12.5px;
+      font-size: 12px;
       line-height: 20px; } }
 
 .tituloit {
@@ -118,7 +148,10 @@ nav {
   font-size: 40px;
   margin-top: 20px; }
   .tituloit.portadatit {
-    font-size: 25px; }
+    color: white;
+    font-size: 40px;
+    text-align: left !important;
+    text-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.25); }
   @media only screen and (max-width: 600px) {
     .tituloit {
       font-size: 25px; } }
@@ -131,22 +164,41 @@ nav {
   background: #F9FAFE;
   background: #F4F7FA; }
   .itsolutions .portada {
-    width: 80%;
-    margin: 0 auto;
-    height: 100vh; }
+    padding: 50px;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1548611635-b6e7827d7d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-position: 140px 10px;
+    position: relative; }
     @media only screen and (max-width: 600px) {
       .itsolutions .portada {
-        margin: 80px 0px;
         width: 100%;
-        padding: 15px; } }
+        padding: 25px; } }
+    .itsolutions .portada .curvebotmob {
+      position: absolute;
+      left: 1px;
+      bottom: -2px;
+      width: 100%; }
+    .itsolutions .portada .transparencia {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #5C258D;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #4389A2, #5C258D);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      opacity: 0.5; }
     .itsolutions .portada .portada_wrapper_texto {
-      font-family: "Raleway";
       padding: 0px 20px;
       perspective: 500px;
       position: relative; }
-      @media screen and (min-width: 300px) and (max-width: 900px) {
+      @media only screen and (max-width: 600px) {
         .itsolutions .portada .portada_wrapper_texto {
-          text-align: center; } }
+          margin-top: 100px; } }
       .itsolutions .portada .portada_wrapper_texto .banner {
         margin-top: 10px; }
         .itsolutions .portada .portada_wrapper_texto .banner h1 {
@@ -156,27 +208,41 @@ nav {
             .itsolutions .portada .portada_wrapper_texto .banner h1 {
               font-size: 18px;
               text-align: left; } }
-        .itsolutions .portada .portada_wrapper_texto .banner span {
-          color: #39ae9e;
-          font-weight: 700;
-          font-size: 40px;
-          padding-left: 10px; }
-      .itsolutions .portada .portada_wrapper_texto .social .social-icons {
+        .itsolutions .portada .portada_wrapper_texto .banner .textoit {
+          width: 80%;
+          font-size: 14px;
+          padding: 0px; }
+          @media only screen and (max-width: 600px) {
+            .itsolutions .portada .portada_wrapper_texto .banner .textoit {
+              text-align: justify;
+              width: 70%;
+              font-size: 14px;
+              margin: 0px; } }
+        .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
+          color: #506279;
+          font-size: 50px; }
+          @media screen and (min-width: 300px) and (max-width: 900px) {
+            .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
+              font-size: 18px; } }
+    .itsolutions .portada .social {
+      padding: 20px 0px; }
+      .itsolutions .portada .social .social-icons {
         display: inline-block;
+        position: absolute;
         padding-left: 0px; }
-        .itsolutions .portada .portada_wrapper_texto .social .social-icons a {
-          color: #26D0CE;
-          font-size: 30px;
+        .itsolutions .portada .social .social-icons a {
+          color: #f261ad;
+          font-size: 33px;
           padding: 0px 5px; }
-      .itsolutions .portada .portada_wrapper_texto button {
-        border-radius: 20px;
-        background: #662ef3;
-        color: whitesmoke;
-        border-style: none;
-        padding: 15px 30px;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase; }
+    .itsolutions .portada button {
+      border-radius: 20px;
+      background: #662ef3;
+      color: whitesmoke;
+      border-style: none;
+      padding: 15px 30px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
 @keyframes float {
   0% {
     transform: translateY(0px); }
@@ -192,298 +258,300 @@ nav {
     opacity: 0.5; }
   100% {
     width: 100px; } }
-      .itsolutions .portada .portada_wrapper_texto .logoImg {
-        transform: translateZ(200px);
-        height: 120px;
-        display: block;
-        animation: float 2s infinite;
-        transition: all ease-in-out 2s; }
-        @media only screen and (max-width: 600px) {
-          .itsolutions .portada .portada_wrapper_texto .logoImg {
-            margin: 0 auto; } }
-      .itsolutions .portada .portada_wrapper_texto .logoshadow {
-        margin-left: 10px;
-        position: absolute;
-        transition: all ease-in-out 4s;
-        width: 100px;
-        top: 120px;
-        opacity: 0.6;
-        animation: shadow 2s infinite;
-        margin-left: 10px; }
-        @media only screen and (max-width: 600px) {
-          .itsolutions .portada .portada_wrapper_texto .logoshadow {
-            margin: 0 auto;
-            left: 30%; } }
-    .itsolutions .portada .portada_wrapper_logo {
-      position: relative; }
-      .itsolutions .portada .portada_wrapper_logo .portadaImage {
-        position: absolute;
-        transform: translate(0%, -50%);
-        top: 55%;
-        left: 10%;
-        height: 350px;
-        opacity: 0.6; }
-  .itsolutions .nosotros {
-    margin: 0 auto;
-    position: relative;
-    background: no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: 100%;
-    background-position: top left;
-    overflow: hidden;
-    padding: 50px 100px; }
-    @media only screen and (max-width: 600px) {
-      .itsolutions .nosotros {
-        background-attachment: fixed;
-        background: none;
-        padding: 0px;
-        background-position: center; } }
-    .itsolutions .nosotros .bigcode {
-      z-index: 0;
-      font-size: 800px;
-      opacity: 0.06;
-      text-align: center;
+    .itsolutions .portada .logoImg {
+      transform: translateZ(200px);
+      height: 120px;
+      margin: 0 auto;
+      display: block;
+      animation: float 2s infinite;
+      transition: all ease-in-out 2s; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .portada .logoImg {
+          margin: 0px;
+          left: 25%; } }
+    .itsolutions .portada .logoshadow {
       position: absolute;
-      top: 40%;
-      left: 20%;
+      transition: all ease-in-out 4s;
+      width: 100px;
+      top: 120px;
+      opacity: 0.6;
+      animation: shadow 2s infinite;
+      margin: 20px auto;
       transform: translate(-50%, -50%); }
       @media only screen and (max-width: 600px) {
-        .itsolutions .nosotros .bigcode {
-          top: 30%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-size: 350px; } }
-    .itsolutions .nosotros .nosotros-wrapper {
-      margin-bottom: 150px; }
-      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-        position: relative;
-        z-index: 900;
-        text-align: left; }
-        @media only screen and (max-width: 600px) {
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-            padding: 15px;
-            text-align: justify; } }
-        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-texto .textoit {
-          text-align: justify;
-          font-size: 13px; }
-      .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
-        background-size: 100%; }
-        @media only screen and (max-width: 600px) {
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
-            padding: 10px;
-            text-align: justify; } }
-        .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
-          padding: 15px 85px;
-          color: whitesmoke;
-          background: url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
-          background-size: cover;
-          box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
-          border-radius: 20px;
-          margin-bottom: 30px;
-          background-color: rgba(255, 255, 255, 0.4);
-          position: relative; }
-          @media only screen and (max-width: 600px) {
-            .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
-              padding: 20px;
-              text-align: justify; } }
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .transparencia {
-            border-radius: 20px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            height: 100%;
-            width: 100%;
-            opacity: 0.8; }
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
-            padding: 10px;
-            color: white; }
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .textoit {
-            text-align: justify;
-            color: whitesmoke;
-            padding: 2px;
-            font-family: "Quicksand"; }
-          .itsolutions .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper img {
-            margin-top: 45px; }
-  .itsolutions .servicios {
-    padding: 50px; }
-    @media only screen and (max-width: 600px) {
-      .itsolutions .servicios {
-        padding: 10px; } }
-    .itsolutions .servicios .servicios-wrapper {
-      background-color: rgba(250, 255, 255, 0.75);
-      box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
-      border-top: 4px solid #15aabf;
-      padding: 40px;
-      margin-top: 40px; }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .servicios .servicios-wrapper {
-          padding: 5px; } }
-      .itsolutions .servicios .servicios-wrapper img {
-        margin-top: 80px; }
-      .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper {
-        width: 95%;
-        margin: 0 auto; }
-        .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
-          padding: 20px;
-          text-align: justify; }
-          @media only screen and (max-width: 600px) {
-            .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
-              border: none; } }
-          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard:hover i {
-            color: #F06595;
-            transition: 1s; }
-          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard i {
-            font-size: 30px;
-            padding: 15px; }
-          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-title {
-            font-size: 18px;
-            text-transform: uppercase; }
-          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
-            font-size: 18px;
-            color: #15aabf; }
-          .itsolutions .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .textoit {
-            font-family: 13.5px; }
-  .itsolutions .busquedas {
-    padding: 50px 100px;
-    -webkit-background-attachment: fixed;
-    background: url("/imagenes/web/portada12.jpg") no-repeat top;
-    background-attachment: fixed;
-    position: relative;
-    min-height: 550px; }
-    @media only screen and (max-width: 600px) {
-      .itsolutions .busquedas {
-        padding: 8px; } }
-    .itsolutions .busquedas .robot {
-      width: 99%;
-      margin: 0 auto;
-      padding: 0px 70px; }
-      .itsolutions .busquedas .robot .errtit {
-        font-size: 20px;
-        color: #26D0CE;
-        margin-bottom: 2px; }
-      .itsolutions .busquedas .robot .errtext {
-        font-size: 13px;
-        color: whitesmoke;
-        margin-bottom: 10px; }
-    .itsolutions .busquedas .transparencia {
-      top: 0px;
-      left: 0px;
+        .itsolutions .portada .logoshadow {
+          left: 20%;
+          margin: 25px 0px; } }
+  .itsolutions .portada_wrapper_logo {
+    position: relative; }
+    .itsolutions .portada_wrapper_logo .portadaImage {
       position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.9);
-      background-color: rgba(0, 0, 0, 0.4);
-      filter: grayscale(100px); }
+      transform: translate(0%, -50%);
+      top: 55%;
+      left: 10%;
+      height: 350px;
+      opacity: 0.6; }
+
+.nosotros {
+  margin: 0 auto;
+  position: relative;
+  background: no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: 100%;
+  background-position: top left;
+  overflow: hidden;
+  padding: 50px 100px;
+  background-color: #d0d0d0; }
+  @media only screen and (max-width: 600px) {
+    .nosotros {
+      background-attachment: fixed;
+      background: none;
+      padding: 0px;
+      background-position: center; } }
+  .nosotros .bigcode {
+    z-index: 0;
+    font-size: 800px;
+    opacity: 0.06;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 600px) {
+      .nosotros .bigcode {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 350px; } }
+  .nosotros .nosotros-wrapper {
+    margin-bottom: 150px; }
+    .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+      position: relative;
+      z-index: 900;
+      text-align: left; }
       @media only screen and (max-width: 600px) {
-        .itsolutions .busquedas .transparencia {
-          background-color: rgba(0, 0, 0, 0.8); } }
-    .itsolutions .busquedas .tituloit {
-      color: whitesmoke; }
+        .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+          padding: 15px;
+          text-align: justify; } }
+    .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
+      background-size: 100%; }
       @media only screen and (max-width: 600px) {
-        .itsolutions .busquedas .tituloit {
-          color: whitesmoke; } }
-    .itsolutions .busquedas .jobs-result {
-      text-align: center;
-      padding: 30px; }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .busquedas .jobs-result {
-          padding: 20px; } }
-      .itsolutions .busquedas .jobs-result .job-offer {
-        margin: 5px 0px;
-        padding: 0px; }
-        .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp {
-          z-index: 0;
-          position: relative;
-          background: rgba(255, 255, 255, 0.75);
-          width: 90%;
-          margin: 5px auto;
+        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
           padding: 10px;
-          border-left: 10px solid #26D0CE;
-          overflow: hidden;
-          transition: 0.5s;
+          text-align: justify; } }
+      .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
+        padding: 15px 85px;
+        color: whitesmoke;
+        background: url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
+        background-size: cover;
+        box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        background-color: rgba(255, 255, 255, 0.4);
+        position: relative; }
+        @media only screen and (max-width: 600px) {
+          .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
+            padding: 20px;
+            text-align: justify; } }
+        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .transparencia {
           border-radius: 20px;
-          transition: all ease-in 0.8s; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
-            border-left: 10px solid #895ef6;
-            transition: all ease-in-out 1s; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
-            color: #895ef6;
-            transition: all ease-in-out 1s; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
-            background-color: #a685f8 !important;
-            transition: all ease-in-out 1s; }
-          @media only screen and (max-width: 600px) {
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp {
-              border-radius: 25px;
-              animation: 2s;
-              background-color: rgba(255, 255, 255, 0.85); } }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
-            z-index: 10;
-            position: absolute;
-            height: 0px;
-            width: 0px;
-            bottom: -8%;
-            right: -50%;
-            background: white;
-            /* fallback for old browsers */
-            border-radius: 50%;
-            overflow: hidden;
-            transition: 4s; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobcom {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 50%;
-            right: 0%;
-            transform: translate(0%, -50%);
-            z-index: 999;
-            display: none;
-            color: white;
-            text-align: right;
-            font-size: 15px;
-            margin: 20% auto;
-            padding: 30px; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
-            padding: 20px; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
-              text-transform: capitalize;
-              color: #3C495A;
-              font-family: "Raleway";
-              font-size: 18px;
-              font-weight: 700;
-              margin-bottom: 0px; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
-            padding: 8px;
-            border-top: 1px solid grey;
-            border-top: 1px whitesmoke; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
-              font-size: 25px;
-              color: #26D0CE;
-              height: 100%; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
-              text-align: left;
-              font-size: 14px; }
-              @media only screen and (max-width: 600px) {
-                .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
-                  text-align: center;
-                  padding: 0px; } }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera {
-            margin: 5px auto; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
-              padding: 10px 20px !important;
-              border-radius: 20px;
-              background: #26D0CE;
-              color: whitesmoke;
-              border-style: none;
-              padding: 15px 30px;
-              font-size: 12px;
-              letter-spacing: 2px;
-              text-transform: uppercase; }
-          .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 100%;
+          width: 100%;
+          opacity: 0.8; }
+        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
+          padding: 10px;
+          color: white; }
+        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .textoit {
+          text-align: justify;
+          color: whitesmoke;
+          padding: 2px;
+          font-family: "Quicksand"; }
+        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper img {
+          margin-top: 45px; }
+
+.servicios {
+  padding: 50px; }
+  @media only screen and (max-width: 600px) {
+    .servicios {
+      padding: 10px; } }
+  .servicios .servicios-wrapper {
+    background-color: rgba(250, 255, 255, 0.75);
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #15aabf;
+    padding: 40px;
+    margin-top: 40px; }
+    @media only screen and (max-width: 600px) {
+      .servicios .servicios-wrapper {
+        padding: 5px; } }
+    .servicios .servicios-wrapper img {
+      margin-top: 80px; }
+    .servicios .servicios-wrapper .servicio-item-wrapper {
+      width: 95%;
+      margin: 0 auto; }
+      .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
+        padding: 20px;
+        text-align: justify; }
+        @media only screen and (max-width: 600px) {
+          .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
+            border: none; } }
+        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard:hover i {
+          color: #F06595;
+          transition: 1s; }
+        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard i {
+          font-size: 30px;
+          padding: 15px; }
+        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-title {
+          font-size: 19px;
+          text-transform: uppercase; }
+        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
+          font-size: 18px;
+          color: #15aabf; }
+
+.busquedas {
+  padding: 50px 100px;
+  -webkit-background-attachment: fixed;
+  background: url("/imagenes/web/portada12.jpg") no-repeat top;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 550px; }
+  @media only screen and (max-width: 600px) {
+    .busquedas {
+      padding: 8px; } }
+  .busquedas .robot {
+    width: 99%;
+    margin: 0 auto;
+    padding: 0px 70px; }
+    .busquedas .robot .errtit {
+      font-size: 20px;
+      color: #26D0CE;
+      margin-bottom: 2px; }
+    .busquedas .robot .errtext {
+      font-size: 13px;
+      color: whitesmoke;
+      margin-bottom: 10px; }
+  .busquedas .transparencia {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: grayscale(100px); }
+    @media only screen and (max-width: 600px) {
+      .busquedas .transparencia {
+        background-color: rgba(0, 0, 0, 0.8); } }
+  .busquedas .tituloit {
+    color: whitesmoke;
+    margin-top: 30px; }
+    @media only screen and (max-width: 600px) {
+      .busquedas .tituloit {
+        color: whitesmoke;
+        text-align: center; } }
+  .busquedas .jobs-result {
+    text-align: center;
+    padding: 5px 30px; }
+    .busquedas .jobs-result .job-offer {
+      margin: 5px 0px;
+      padding: 0px; }
+      .busquedas .jobs-result .job-offer .jobOfferWrapp {
+        height: 360px;
+        z-index: 0;
+        position: relative;
+        background: rgba(255, 255, 255, 0.75);
+        width: 90%;
+        margin: 5px auto;
+        padding: 10px;
+        border-left: 10px solid #26D0CE;
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 20px;
+        transition: all ease-in 0.8s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
+          border-left: 10px solid #895ef6;
+          transition: all ease-in-out 1s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
+          color: #895ef6;
+          transition: all ease-in-out 1s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
+          background-color: #a685f8 !important;
+          transition: all ease-in-out 1s; }
+        @media only screen and (max-width: 600px) {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp {
+            border-radius: 25px;
+            animation: 2s;
+            background-color: rgba(255, 255, 255, 0.85);
+            height: 380px; } }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
+          z-index: 10;
+          position: absolute;
+          height: 0px;
+          width: 0px;
+          bottom: -8%;
+          right: -50%;
+          background: white;
+          /* fallback for old browsers */
+          border-radius: 50%;
+          overflow: hidden;
+          transition: 4s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobcom {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          right: 0%;
+          transform: translate(0%, -50%);
+          z-index: 999;
+          display: none;
+          color: white;
+          text-align: right;
+          font-size: 15px;
+          margin: 20% auto;
+          padding: 30px; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
+          padding: 20px; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
+            text-transform: capitalize;
+            color: #3C495A;
+            font-family: "Raleway";
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0px; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
+          padding: 8px;
+          border-top: 1px solid grey;
+          border-top: 1px whitesmoke; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
+            font-size: 25px;
+            color: #26D0CE;
+            height: 100%; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+            text-align: left;
             font-size: 14px; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
-              color: #662ef3; }
-            .itsolutions .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
-              color: #662ef3; }
+            @media only screen and (max-width: 600px) {
+              .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+                text-align: center;
+                padding: 0px; } }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera {
+          margin: 5px auto; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
+            padding: 10px 20px !important;
+            border-radius: 20px;
+            background: #26D0CE;
+            color: whitesmoke;
+            border-style: none;
+            padding: 15px 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
+          font-size: 14px; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
+            color: #662ef3; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
+            color: #662ef3; }
 
 .testimoniales {
   position: relative;
@@ -559,7 +627,12 @@ nav {
       text-align: center; }
 
 html {
-  height: auto; }
+  height: auto;
+  top: 0px; }
+
+body {
+  height: 100%;
+  background-color: white; }
 
 .graciasporcontactarnos {
   background-color: #26D0CE;
@@ -640,18 +713,6 @@ html {
       border: none; }
       .contacto form input:focus {
         outline: none; }
-    .contacto form .mybut {
-      text-align: center;
-      border-radius: 20px;
-      background-color: #39ae9e;
-      padding: 8px 20px;
-      color: white;
-      font-size: 14px;
-      border-style: none;
-      border: none;
-      outline: none;
-      transition: 3s;
-      animation-fill-mode: forwards; }
 
 @keyframes movdiv {
   0% {
