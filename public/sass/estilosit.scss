@@ -167,6 +167,7 @@ nav{
 	top:0px;
 	left:0px;
 	transition: all ease 0.8s;
+		background-color:rgba(0,0,0,0.40);
 
 	@media only screen and  (max-width:600px) {
 		display: block;
@@ -186,7 +187,7 @@ nav{
 			.icon , i{
 				transition: 1s;
 				color:whitesmoke;
-				font-size: 30px;
+				font-size: 23px;
 				&:hover{
 					color:lighten($color-span,20%);
 					transition: 1s;
@@ -520,6 +521,7 @@ nav{
 						width: 80px;
 						margin: auto 40%;
 						margin-top:0px;
+				
 						
 					}
 				.text1{
@@ -576,6 +578,7 @@ nav{
 				.compromisoTit{
 					padding:10px;					
 					color:white;
+					text-align: left;
 				
 					
 				}
@@ -586,7 +589,7 @@ nav{
 					font-family: "Quicksand";
 				}
 				img{
-					margin-top:45px;
+				
 				}
 			}
 			}
@@ -975,7 +978,7 @@ padding:30px;
 $color-newingenio:rgb(57,174,158);
 
 html{
-	height: auto;
+	height:100%;
 	top:0px;
 
 
@@ -1147,6 +1150,75 @@ body{
                    //transform: perspective(500px) translateZ(1000px);
                 }
 
+}
+
+footer{
+	color:whitesmoke;
+	.footerWrapper{
+		padding:40px;
+		height: auto;
+		background-color:darken($color-titulos,3%);
+
+		.logoWrapper{
+			    text-align: center;
+			width:250px;
+			margin:0 auto;
+			padding:10px;
+			.logoImg{
+				width:90px;
+			}
+		}
+
+		.social{
+		text-align: center;
+		ul{
+			width:100%;
+			background: none;
+			display:inline-block !important;
+			padding-left:0px;
+	
+			li{
+				padding:10px;
+				text-decoration: none;
+				display:inline-block;
+				a{
+				
+					color:whitesmoke;;
+					font-size: 30px;
+					padding:0px 5px;
+					@media only screen and  (max-width:600px) {
+					
+					}	 
+				}
+
+			}
+
+		}
+	}
+	.textoFooter{
+		color:whitesmoke;
+		p{
+			margin-top:0px;
+			padding:5px;
+			font-family: $font-titulos;
+			text-align: center;
+			font-size:14px;
+			@media only screen and  (max-width:600px) {
+			font-size:13px;
+			}	 
+			
+		}
+	}
+	}
+	.broom{
+	width:100%;
+	background-color:darken($color-titulos,15%);
+	padding:5px;
+	p{
+		text-align: center;
+	}
+	
+	}
 }
 
  

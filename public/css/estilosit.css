@@ -94,6 +94,7 @@ nav {
   top: 0px;
   left: 0px;
   transition: all ease 0.8s;
+  background-color: rgba(0, 0, 0, 0.4);
   display: none;
   text-align: center;
   position: fixed; }
@@ -110,7 +111,7 @@ nav {
       .nav2 .iconmenu li .icon, .nav2 .iconmenu li i {
         transition: 1s;
         color: whitesmoke;
-        font-size: 30px; }
+        font-size: 23px; }
         .nav2 .iconmenu li .icon:hover, .nav2 .iconmenu li i:hover {
           color: #76e6e5;
           transition: 1s; }
@@ -393,14 +394,13 @@ nav {
           opacity: 0.95; }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
           padding: 10px;
-          color: white; }
+          color: white;
+          text-align: left; }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .textoit {
           text-align: justify;
           color: whitesmoke;
           padding: 2px;
           font-family: "Quicksand"; }
-        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper img {
-          margin-top: 45px; }
 
 .servicios {
   padding: 0px 25px;
@@ -658,7 +658,7 @@ nav {
       text-align: center; }
 
 html {
-  height: auto;
+  height: 100%;
   top: 0px; }
 
 body {
@@ -757,5 +757,50 @@ body {
     height: 1500px;
     width: 1500px;
     background-color: #15aabf; } }
+footer {
+  color: whitesmoke; }
+  footer .footerWrapper {
+    padding: 40px;
+    height: auto;
+    background-color: #1c1d36; }
+    footer .footerWrapper .logoWrapper {
+      text-align: center;
+      width: 250px;
+      margin: 0 auto;
+      padding: 10px; }
+      footer .footerWrapper .logoWrapper .logoImg {
+        width: 90px; }
+    footer .footerWrapper .social {
+      text-align: center; }
+      footer .footerWrapper .social ul {
+        width: 100%;
+        background: none;
+        display: inline-block !important;
+        padding-left: 0px; }
+        footer .footerWrapper .social ul li {
+          padding: 10px;
+          text-decoration: none;
+          display: inline-block; }
+          footer .footerWrapper .social ul li a {
+            color: whitesmoke;
+            font-size: 30px;
+            padding: 0px 5px; }
+    footer .footerWrapper .textoFooter {
+      color: whitesmoke; }
+      footer .footerWrapper .textoFooter p {
+        margin-top: 0px;
+        padding: 5px;
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+        font-size: 14px; }
+        @media only screen and (max-width: 600px) {
+          footer .footerWrapper .textoFooter p {
+            font-size: 13px; } }
+  footer .broom {
+    width: 100%;
+    background-color: #07070e;
+    padding: 5px; }
+    footer .broom p {
+      text-align: center; }
 
 /*# sourceMappingURL=estilosit.css.map */
