@@ -20,6 +20,14 @@
     .function {
       font-size: 18px; } }
 
+.navCurve {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  width: 100%;
+  z-index: 9;
+  display: none; }
+
 .curvebotmob {
   position: absolute;
   left: 0px;
@@ -395,7 +403,7 @@ nav {
           margin-top: 45px; }
 
 .servicios {
-  padding: 0px 50px;
+  padding: 0px 25px;
   margin-bottom: 15px; }
   .servicios .servicios-wrapper {
     background-color: rgba(250, 255, 255, 0.75);
@@ -405,7 +413,7 @@ nav {
     margin-top: 40px; }
     @media only screen and (max-width: 600px) {
       .servicios .servicios-wrapper {
-        padding: 10px; } }
+        padding: 2px; } }
     .servicios .servicios-wrapper img {
       margin-top: 80px; }
     .servicios .servicios-wrapper .servicio-item-wrapper {

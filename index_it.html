@@ -81,6 +81,7 @@
 	<section id="portada " class="portada  wow fadeIn" data-wow-delay="0.2s" id="home">
 		<div class="row">
 			<div class="transparencia"></div>
+				<img src="/imagenes/web/navCurve.png" class="navCurve" alt="">
 				<img src="/imagenes/web/curvebotMob.png" class="curvebotmob" alt="">
 				<div class="nav2">
 					<ul class="iconmenu">
@@ -90,8 +91,25 @@
 						<li><a class="ancla" href="#servicios"><i class="fab fa-black-tie icon"></i></a></li>
 				
 						<li><a class="ancla" href="#busquedas"><i class="fab fa-searchengin"></i></a></li>
-						<li><a class="ancla" href="#contacto"><i class="fas fa-wifi icon"></i></ion-icon></a></li>
+						<li><a class="ancla" href="#contacto"><i class="fas fa-wifi icon"></i></a></li>
+						<li><a class="ancla" href="#hambur"><i class="fas fa-bars"></i></a></li>
+	
+						<script>
+						$("li").click(function(ev){
+							var le = $(".ancla").length -1
+							console.log(ev.target.index)
+							for (i=0 ; i<le ; i++){
+								console.log(i);
+									console.log
+									$("li").eq(i).fadeOut(500);
+				
+							}
+				
 							
+						})
+						
+						</script>
+		
 					</ul>
 				</div>
 			<div class="portada_wrapper_texto col-xs-12 col-md-12 col-lg-12 wow fadeIn">
@@ -129,10 +147,10 @@
 // 	var sc = window.scrollY
 // console.log(sc);
 // 	if (sc > 500){
-// 		$(".curvebotmob").css({
+// 		$(".navCurve").css({
 // 			position: 'fixed',
-// 			top:"0px",
-// 			left:"0px"
+// 			display:"block"
+
 // 		});
 
 // 		$("ion-icon").css({
@@ -141,14 +159,11 @@
 // 		});
 
 // 	}else{
-// 		$(".curvebotmob").css({
-// 		position:"absolute",
+// 		$(".navCurve").css({
+// 		display:"none"
 // 		});
 
-// 		$("ion-icon").css({
-// 			fontSize: '28px',
-// 			backgroundColor: '$color-span'
-// 		});
+
 // 	}
 // }
 
