@@ -104,7 +104,9 @@ nav {
       z-index: 9999; } }
   .nav2 .iconmenu {
     padding-left: 0px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    position: relative;
+    text-align: left; }
     .nav2 .iconmenu li {
       display: inline-block;
       padding: 13px; }
@@ -115,6 +117,11 @@ nav {
         .nav2 .iconmenu li .icon:hover, .nav2 .iconmenu li i:hover {
           color: #76e6e5;
           transition: 1s; }
+    .nav2 .iconmenu #hambur {
+      padding: 13px;
+      position: absolute;
+      right: 10px;
+      top: 10px; }
 
 @keyframes aumenta {
   0% {

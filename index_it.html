@@ -92,26 +92,44 @@
 				
 						<li><a class="ancla" href="#busquedas"><i class="fab fa-searchengin"></i></a></li>
 						<li><a class="ancla" href="#contacto"><i class="fas fa-wifi icon"></i></a></li>
-						<li><a class="ancla" href="#hambur"><i class="fas fa-bars"></i></a></li>
+						<li id="hambur"><a class="ancla" ><i class="fas fa-bars"></i></a></li>
 	
-						<script>
-						$("li").click(function(ev){
-							var le = $(".ancla").length -1
-							console.log(ev.target.index)
-							for (i=0 ; i<le ; i++){
-								console.log(i);
-									console.log
-									$("li").eq(i).fadeOut(500);
-				
-							}
-				
-							
-						})
-						
-						</script>
+
 		
 					</ul>
 				</div>
+
+									<script>
+										var ham = true;
+										$("li").click(function (ev) {
+
+											var le = $(".ancla").length - 1
+											console.log(ev.target.index)
+
+											if (ham === true){
+												ham = false;
+											for (i = 0; i < le; i++) {
+												console.log(i);
+												console.log
+												$("li").eq(i).css({
+													visibility: 'hidden',												
+												});
+											}
+											
+											}else{
+												ham = true;
+													for (i = 0; i < le; i++) {
+														console.log(i);
+														console.log
+														$("li").eq(i).css({
+															visibility: 'visible',															
+														});												
+											}
+
+											}
+										})
+
+									</script>
 			<div class="portada_wrapper_texto col-xs-12 col-md-12 col-lg-12 wow fadeIn">
 
 				<img class="logoImg" src="/imagenes/web/LOGO4.png" />
@@ -143,7 +161,7 @@
 
 <script>
 
-window.onscroll= function(){
+// window.onscroll= function(){
 // 	var sc = window.scrollY
 // console.log(sc);
 // 	if (sc > 500){

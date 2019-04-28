@@ -180,10 +180,12 @@ nav{
 	.iconmenu{
 		padding-left:0px;
 		padding-top:10px;
+		position: relative;
+		text-align:left;
+
 		li{
 			display: inline-block;
 			padding:13px;
-
 			.icon , i{
 				transition: 1s;
 				color:whitesmoke;
@@ -193,6 +195,14 @@ nav{
 					transition: 1s;
 				}
 			}
+		}
+
+		#hambur{
+			padding:13px;
+			position: absolute;
+			right:10px;
+			top:10px;
+	
 		}
 	}
 }
