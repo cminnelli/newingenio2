@@ -20,15 +20,19 @@
     .function {
       font-size: 18px; } }
 
-.capital {
-  font-size: 35px;
-  opacity: 0.5;
-  color: rgba(30, 30, 30, 0.8);
-  font-weight: 700;
-  font-family: "Roboto"; }
+.curvebotmob {
+  position: absolute;
+  left: 0px;
+  bottom: -4px;
+  width: 100%;
+  z-index: 9; }
 
-.highlights {
-  font-weight: 700; }
+.curvebotmob2 {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 100%;
+  z-index: 9; }
 
 .navbar, .navbar-expand {
   display: none; }
@@ -139,14 +143,20 @@ nav {
     .textoit {
       text-align: -webkit-auto;
       font-size: 12px;
-      line-height: 20px; } }
+      line-height: 20px;
+      text-align: justify; } }
+  .textoit.highlights {
+    font-weight: 700;
+    color: #212240; }
 
 .tituloit {
   font-family: 'Raleway', sans-serif;
   color: #444;
+  letter-spacing: 1px;
   font-weight: 700;
   font-size: 40px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  text-align: center; }
   .tituloit.portadatit {
     color: white;
     font-size: 40px;
@@ -168,18 +178,15 @@ nav {
     height: 100vh;
     background: url("https://images.unsplash.com/photo-1548611635-b6e7827d7d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
     background-size: cover;
-    background-position: 140px 10px;
+    background-position: 140px 0px;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    background-attachment: fixed; }
     @media only screen and (max-width: 600px) {
       .itsolutions .portada {
+        background-position: 5px 48px;
         width: 100%;
         padding: 25px; } }
-    .itsolutions .portada .curvebotmob {
-      position: absolute;
-      left: 0px;
-      bottom: -2px;
-      width: 100%; }
     .itsolutions .portada .transparencia {
       position: absolute;
       top: 0px;
@@ -218,9 +225,11 @@ nav {
               text-align: justify;
               width: 70%;
               font-size: 14px;
-              margin: 0px; } }
+              margin: 0px;
+              color: white;
+              opacity: 0.45; } }
         .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
-          color: #506279;
+          color: #505053;
           font-size: 50px; }
           @media screen and (min-width: 300px) and (max-width: 900px) {
             .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
@@ -233,7 +242,7 @@ nav {
         padding-left: 0px; }
         .itsolutions .portada .social .social-icons a {
           color: #f261ad;
-          font-size: 33px;
+          font-size: 28px;
           padding: 0px 5px; }
     .itsolutions .portada button {
       border-radius: 20px;
@@ -296,12 +305,11 @@ nav {
 .nosotros {
   margin: 0 auto;
   position: relative;
-  background: no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: 100%;
   background-position: top left;
   overflow: hidden;
-  padding: 50px 100px;
-  background-color: #d0d0d0; }
+  background-color: whitesmoke;
+  background-attachment: fixed; }
   @media only screen and (max-width: 600px) {
     .nosotros {
       background-attachment: fixed;
@@ -309,12 +317,12 @@ nav {
       padding: 0px;
       background-position: center; } }
   .nosotros .bigcode {
-    z-index: 0;
+    z-index: 99999;
     font-size: 800px;
     opacity: 0.06;
     text-align: center;
     position: absolute;
-    top: 40%;
+    top: 65%;
     left: 20%;
     transform: translate(-50%, -50%); }
     @media only screen and (max-width: 600px) {
@@ -324,43 +332,57 @@ nav {
         transform: translate(-50%, -50%);
         font-size: 350px; } }
   .nosotros .nosotros-wrapper {
-    margin-bottom: 150px; }
+    margin-bottom: 50px; }
     .nosotros .nosotros-wrapper .modulo-nosotros-texto {
       position: relative;
       z-index: 900;
-      text-align: left; }
+      padding: 50px; }
       @media only screen and (max-width: 600px) {
         .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-          padding: 15px;
+          padding: 0px;
           text-align: justify; } }
+      .nosotros .nosotros-wrapper .modulo-nosotros-texto .compromisoIcon {
+        width: 80px;
+        margin: auto 40%;
+        margin-top: 0px; }
+      .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
+        padding: 10px 50px; }
+      .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 {
+        background-color: #DB1E4D;
+        padding: 30px 50px; }
+        .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 p {
+          color: white; }
     .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
       background-size: 100%; }
       @media only screen and (max-width: 600px) {
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
-          padding: 10px;
-          text-align: justify; } }
+          padding: 0px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
-        padding: 15px 85px;
+        padding: 10px 50px;
         color: whitesmoke;
         background: url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
         background-size: cover;
         box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        margin-bottom: 30px;
         background-color: rgba(255, 255, 255, 0.4);
-        position: relative; }
+        position: relative;
+        height: 100%; }
         @media only screen and (max-width: 600px) {
           .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
-            padding: 20px;
+            padding: 35px 50px;
             text-align: justify; } }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .transparencia {
-          border-radius: 20px;
           position: absolute;
           top: 0px;
           left: 0px;
           height: 100%;
           width: 100%;
-          opacity: 0.8; }
+          background: #5C258D;
+          /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #4389A2, #5C258D);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          opacity: 0.95; }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
           padding: 10px;
           color: white; }
@@ -373,10 +395,8 @@ nav {
           margin-top: 45px; }
 
 .servicios {
-  padding: 50px; }
-  @media only screen and (max-width: 600px) {
-    .servicios {
-      padding: 10px; } }
+  padding: 0px 50px;
+  margin-bottom: 15px; }
   .servicios .servicios-wrapper {
     background-color: rgba(250, 255, 255, 0.75);
     box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
@@ -385,15 +405,14 @@ nav {
     margin-top: 40px; }
     @media only screen and (max-width: 600px) {
       .servicios .servicios-wrapper {
-        padding: 5px; } }
+        padding: 10px; } }
     .servicios .servicios-wrapper img {
       margin-top: 80px; }
     .servicios .servicios-wrapper .servicio-item-wrapper {
       width: 95%;
       margin: 0 auto; }
       .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
-        padding: 20px;
-        text-align: justify; }
+        padding: 20px; }
         @media only screen and (max-width: 600px) {
           .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
             border: none; } }
@@ -416,10 +435,12 @@ nav {
   background: url("/imagenes/web/portada12.jpg") no-repeat top;
   background-attachment: fixed;
   position: relative;
-  min-height: 550px; }
+  min-height: 550px;
+  position: relative; }
   @media only screen and (max-width: 600px) {
     .busquedas {
-      padding: 8px; } }
+      padding: 8px;
+      height: auto; } }
   .busquedas .robot {
     width: 99%;
     margin: 0 auto;
@@ -453,7 +474,8 @@ nav {
         text-align: center; } }
   .busquedas .jobs-result {
     text-align: center;
-    padding: 5px 30px; }
+    padding: 5px 30px;
+    z-index: 9999; }
     .busquedas .jobs-result .job-offer {
       margin: 5px 0px;
       padding: 0px; }
@@ -515,7 +537,7 @@ nav {
           padding: 20px; }
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
             text-transform: capitalize;
-            color: #3C495A;
+            color: #373739;
             font-family: "Raleway";
             font-size: 18px;
             font-weight: 700;
@@ -651,7 +673,7 @@ body {
     border-radius: 50%; }
 
 .contacto {
-  background-color: #F9FAFE;
+  background-color: #F4F7FA;
   padding: 180px 50px;
   position: relative;
   overflow: hidden;
@@ -666,12 +688,12 @@ body {
     opacity: 0.08;
     text-align: center;
     position: absolute;
-    top: 65%;
+    top: 85%;
     left: 30%;
     transform: translate(-50%, -50%) rotate(90deg); }
     @media only screen and (max-width: 600px) {
       .contacto .bigwifi {
-        top: 0%;
+        top: 20%;
         left: 0%;
         font-size: 500px;
         transform: translate(-50%, -50%) rotate(190deg); } }

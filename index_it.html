@@ -99,9 +99,9 @@
 				<img class="logoImg" src="/imagenes/web/LOGO4.png" />
 				<img class="logoshadow" src="/imagenes/web/shadow.png" />
 				<div class="banner">
-					<h1 id="typed" class="tituloit portadatit"></h1>
+					<span> </span>	<h1 id="typed" class="tituloit portadatit"> dasdsa.. </h1>
 						
-						<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico" </p>
+						<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>
 					
 				</div>
 
@@ -125,34 +125,32 @@
 
 <script>
 
-window.onscroll= function(){
-	var sc = window.scrollY
+// window.onscroll= function(){
+// 	var sc = window.scrollY
+// console.log(sc);
+// 	if (sc > 500){
+// 		$(".curvebotmob").css({
+// 			position: 'fixed',
+// 			top:"0px",
+// 			left:"0px"
+// 		});
 
-	if (sc > 100){
-		$(".nav2").css({
-			height: '60px',
-			backgroundColor: 'darken($color-span,15%)',
-			opacity:"0.92"
-		});
+// 		$("ion-icon").css({
+// 			fontSize: '25px',
+// 			backgroundColor: '$color-span'
+// 		});
 
-		$("ion-icon").css({
-			fontSize: '25px',
-			backgroundColor: '$color-span'
-		});
+// 	}else{
+// 		$(".curvebotmob").css({
+// 		position:"absolute",
+// 		});
 
-	}else{
-		$(".nav2").css({
-			height: '70px',
-			backgroundColor: '$color-span',
-			opacity:"1"
-		});
-
-		$("ion-icon").css({
-			fontSize: '28px',
-			backgroundColor: '$color-span'
-		});
-	}
-}
+// 		$("ion-icon").css({
+// 			fontSize: '28px',
+// 			backgroundColor: '$color-span'
+// 		});
+// 	}
+// }
 
 var typed = new Typed("#typed", {
 
@@ -185,24 +183,45 @@ setTimeout(function(){
 		
 		<div class="nosotros-wrapper wow fadeIn">
 			<div class="row">
-				<ion-icon class="bigcode" name="logo-codepen"></ion-icon>	
-				<!-- <i class="fas fa-cubes bigcode"></i> -->
 				<i class="fab fa-codepen bigcode"></i>
 
 
-				<div class="col-xs-12  col-md-9 modulo-nosotros-texto">
+				<div class="col-xs-12  col-md-12 modulo-nosotros-texto">
 					<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
 					<h2 class="tituloit"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
 					<br>
 					<div class="row">
-						<div class="text1 col-xs-12 col-md-6">
-							<p class="textoit wow fadeInUp">  Somos ingenio IT, es un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional. Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada día más desafiante, con un gran conocimiento del mercado tecnológico y sus principales actores. </p>
-
+						<div class="text1 col-xs-12 col-md-4">
+								<img class="compromisoIcon" src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/electronic_brain-512.png" />
+							<p class=" textoit highlights wow  fadeInLeft">  Somos ingenio IT,  un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional</p>
+							<p class="textoit wow fadeInLeft"> Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada
+							día más desafiante, con un  gran conocimiento del mercado tecnológico  y sus principales actores.</p>
 						</div> 
 					
-						<div class="text2 col-xs-12 col-md-6 ">
-								<p class="textoit wow fadeInUp">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
+						<div class="text2 col-xs-12 col-md-4 wow fadeInLeft ">
+							<img class="compromisoIcon" src="https://www.marsbranding.com/wp-content/uploads/2017/07/work-together-icon.png"/>
+								<p class="textoit wow fadeInUp">Gracias a nuestro<span class=" textoit highlights"> compromiso con clientes y candidatos </span>, y a una fuerte identidad basada en la <span class=" textoit highlights"> flexibilidad, curiosidad, creatividad e innovación</span>, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
 									</p>
+						</div>
+
+						<div class="col-xs-12  col-md-4 modulo-nosotros-inclusion wow fadeInLeft">
+							<div class="inclusionWrapper">
+								<div class="transparencia"></div>
+								<div class="row">
+						
+									<div class="col-xs-12 col-md-12">
+											<img class="compromisoIcon" src="https://cdn4.iconfinder.com/data/icons/outlines-business-web-optimization/256/1-44-512.png" />
+										<h4 class="compromisoTit">  Compromiso con la Inclusion</h4>
+										<p class="textoit">
+											Creemos  en el concepto de derribar barreras y crear oportunidades, es por esto que apostamos a la
+											inclusión laboral de profesionales con discapacidad y otros grupos vulnerables.
+						
+										</p>
+									</div>
+						
+								</div>
+							</div>
+						
 						</div>
 
 	
@@ -211,29 +230,10 @@ setTimeout(function(){
 						
 
 				</div>
-				<div class="col-xs-12 col-md-5 modulo-nosotros-image">
-
-				</div>
 
 
-				<div class="col-xs-12  col-md-9 modulo-nosotros-inclusion wow fadeInUp">
-					<div class="inclusionWrapper">
-					<div class="transparencia"></div>
-					<div class="row">
-					
-						<div class="col-xs-12 col-md-12 order-first">
-								<h4 class="compromisoTit"> <i class="fas fa-hands-helping"></i> Compromiso con la Inclusion</h4>
-								<p class="textoit">
-										En ingenio creemos fuertemente en derribar barreras y crear oportunidades, es por esto que apostamos a la inclusión laboral de profesionales con
-										discapacidad y otros grupos vulnerables.
-		
-								</p>
-						</div>
 
-					</div>
-					</div>	
 
-				</div>
 				
 			</div>
 		</div>
@@ -310,13 +310,13 @@ setTimeout(function(){
 	
 
 	<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
-
+			<img src="/imagenes/web/curvebotMob2.png" class="curvebotmob2" alt="">
 		<div class="transparencia"></div>
-
+	<img src="/imagenes/web/curvebotMob.png" class="curvebotmob" alt="">
 		<!-- <i class="fas fa-user-circle biguser"></i> -->
 		<div class="row">
 			<div class="col-xs-12 col-md-12 busquedas-title wow fadeInUp">
-					<h2 class="tituloit"> <i class="fab fa-searchengin"></i> Busquedas <span class="spantext"> Ingenio IT</span> </h2>
+					<h2 class="tituloit"> <i class="fab fa-searchengin"></i> Busquedas <span class="spantext"> Destacadas</span> </h2>
 					<br>
 			</div>
 		</div>
