@@ -169,14 +169,15 @@ nav {
     background: url("https://images.unsplash.com/photo-1548611635-b6e7827d7d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
     background-size: cover;
     background-position: 140px 10px;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     @media only screen and (max-width: 600px) {
       .itsolutions .portada {
         width: 100%;
         padding: 25px; } }
     .itsolutions .portada .curvebotmob {
       position: absolute;
-      left: 1px;
+      left: 0px;
       bottom: -2px;
       width: 100%; }
     .itsolutions .portada .transparencia {
@@ -483,7 +484,7 @@ nav {
             border-radius: 25px;
             animation: 2s;
             background-color: rgba(255, 255, 255, 0.85);
-            height: 380px; } }
+            height: 450px; } }
         .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
           z-index: 10;
           position: absolute;
