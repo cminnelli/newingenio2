@@ -3,7 +3,7 @@
 @import url("../css/animate.css");
 /*CLASES GENERALES*/
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-.centerpos, .loading .sloganIT, .loading .loadingWrapper .logoIT, .portada #mainportada .slogan, .portada #mainportada .logoWrapper, .portada #mainportada .logoWrapper .logoIT {
+.centerpos, .portada #mainportada .slogan, .portada #mainportada .logoWrapper, .portada #mainportada .logoWrapper .logoIT {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,6 +28,10 @@
     height: 150px; }
   to {
     height: 190px; } }
+.row {
+  margin-right: 0px;
+  margin-left: 0px; }
+
 .buttonGroup {
   padding: 5px; }
 
@@ -56,37 +60,78 @@
     background-color: #028090;
     color: whitesmoke; }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(10px) rotate(-2deg); }
+  100% {
+    transform: translateY(0px); } }
 .loading {
-  background: whitesmoke;
-  overflow-y: hidden;
+  z-index: 9999;
+  position: absolute;
+  background-color: #EDEEF2;
   height: 100vh;
-  background-color: white;
-  z-index: 3; }
-  .loading .sloganIT {
-    top: 62%;
+  width: 100%;
+  top: 0px;
+  left: 0px; }
+  .loading .loadingwrapper .logoWrapper {
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; }
+    .loading .loadingwrapper .logoWrapper .logoImg {
+      animation: float 2s infinite;
+      transition: all ease-in-out 2s;
+      height: 90px; }
+      @media only screen and (max-width: 600px) {
+        .loading .loadingwrapper .logoWrapper .logoImg {
+          height: 110px; } }
+  .loading .loadingwrapper .spinner {
+    color: #028090;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 85px;
     text-align: center;
-    font-size: 18px;
-    letter-spacing: 2.2px;
-    color: rgba(30, 30, 30, 0.8);
-    font-family: "Roboto"; }
-    @media screen and (max-width: 600px) {
-      .loading .sloganIT {
-        bottom: 53%; } }
-    .loading .sloganIT span {
-      color: #00a896;
-      font-size: 25px;
-      font-family: 'Roboto'; }
-    @media screen and (max-width: 600px) {
-      .loading .sloganIT {
-        font-size: 14px;
-        top: 59%; } }
-  .loading .loadingWrapper {
-    height: 200px; }
-    .loading .loadingWrapper .logoIT {
-      animation: pulsar 3s;
-      animation-iteration-count: infinite;
-      height: 150px; }
-
+    font-size: 10px; }
+    @media only screen and (max-width: 600px) {
+      .loading .loadingwrapper .spinner {
+        width: 100px;
+        height: 70px; } }
+  .loading .loadingwrapper .spinner > div {
+    background-color: #028090;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+  .loading .loadingwrapper .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s; }
+  .loading .loadingwrapper .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s; }
+  .loading .loadingwrapper .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s; }
+  .loading .loadingwrapper .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s; }
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
 .bodyMain {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
@@ -104,13 +149,7 @@ h1, .container, .container-fluid {
 .navbar-header, .navbar-default {
   border-radius: 0;
   background: rgba(255, 255, 255, 0.3);
-  border: none;
-  background: #abbaab;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffffff, #abbaab);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  border: none; }
 
 .navbar-toggle, .collapsed {
   border: none; }
@@ -136,6 +175,7 @@ h1, .container, .container-fluid {
 
 /*PORTADA SECTION*/
 .portada {
+  background: url("/imagenes/web/portada13.jpg") no-repeat top;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
@@ -143,8 +183,6 @@ h1, .container, .container-fluid {
   position: relative;
   z-index: 1000;
   position: relative; }
-  .portada.ingeneriaparticular {
-    background: url("/imagenes/web/portada13.jpg") no-repeat top; }
   .portada #mainportada {
     height: 100%; }
     .portada #mainportada .slogan {
@@ -196,24 +234,11 @@ h1, .container, .container-fluid {
 /*NOSOTROS SECTION*/
 .nosotros {
   position: relative;
-  color: #4F4E4A;
-  text-align: center; }
+  text-align: center;
+  background-color: #D7E0E5; }
   .nosotros .col-xs-12, .nosotros .col-xs-6, .nosotros .row {
     padding: 0px;
     margin: 0px; }
-  .nosotros.itparticular {
-    background: #1A2980;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #26D0CE, #1A2980);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-  .nosotros.ingenieriaparticular {
-    background: #43cea2;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #43cea2, #185a9d);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #43cea2, #185a9d); }
   .nosotros .modulo-nosotros {
     transition: 1s; }
     .nosotros .modulo-nosotros .engineertool {
@@ -227,7 +252,7 @@ h1, .container, .container-fluid {
           display: none; } }
     .nosotros .modulo-nosotros .texto-wrapper {
       padding: 50px;
-      color: white; }
+      color: #26555d; }
       .nosotros .modulo-nosotros .texto-wrapper h2 {
         margin-top: 0;
         margin-bottom: 15px;
@@ -452,7 +477,6 @@ h1, .container, .container-fluid {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #3CD3AD, #4CB8C4);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.95;
     padding: 15px;
     transition: 2s; }
     .panel .sesion h4 {
@@ -469,67 +493,72 @@ h1, .container, .container-fluid {
     .panel .sesion #cv {
       display: none; }
   .panel .contacto {
-    background-attachment: fixed;
-    background: #EDEEF2;
-    background-size: cover;
-    padding: 20px; }
-    .panel .contacto .row {
-      padding: 0px;
-      margin: 0px; }
-    .panel .contacto input, .panel .contacto textarea {
-      border-right: none;
-      border-left: none;
-      font-size: 13px;
-      outline: none;
-      border: none;
-      box-shadow: none;
-      background-color: rgba(100, 100, 100, 0.25);
-      color: #055174;
-      transition: 1.6s; }
-      .panel .contacto input:focus, .panel .contacto textarea:focus {
-        outline: none;
-        box-shadow: none;
-        background-color: rgba(100, 100, 100, 0.25);
-        color: #055174;
-        transition: 1.6s; }
-  .panel #footer-wrapper .footer-title {
-    font-weight: 700;
-    padding: 2px; }
-  .panel #footer-wrapper .copyright {
-    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
-    height: 55%;
-    background-color: rgba(105, 120, 131, 0.34);
-    color: black;
-    box-shadow: 10px 10px 5px #888888;
-    padding: 18px; }
-    .panel #footer-wrapper .copyright .telefono, .panel #footer-wrapper .copyright .direccion, .panel #footer-wrapper .copyright .social-media {
-      padding: 10px;
+    background-color: #EDEEF2;
+    padding: 180px 50px;
+    position: relative;
+    overflow: hidden;
+    height: 100vh; }
+    @media only screen and (max-width: 900px) {
+      .panel .contacto {
+        padding: 100px 25px;
+        height: auto; } }
+    .panel .contacto .bigwifi {
+      z-index: 10;
+      font-size: 700px;
+      opacity: 0.08;
+      text-align: center;
+      position: absolute;
+      top: 85%;
+      left: 30%;
+      transform: translate(-50%, -50%) rotate(90deg); }
+      @media only screen and (max-width: 600px) {
+        .panel .contacto .bigwifi {
+          top: 20%;
+          left: 0%;
+          font-size: 500px;
+          transform: translate(-50%, -50%) rotate(190deg); } }
+    .panel .contacto .slidediv {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      color: white;
+      padding: 50px;
+      font-size: 16px;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      z-index: 999; }
+    .panel .contacto .contacto-encabezado {
+      padding: 60px;
       text-align: center; }
-    .panel #footer-wrapper .copyright .social-media a {
-      text-decoration: none; }
-      .panel #footer-wrapper .copyright .social-media a span {
-        color: #055174;
-        padding: 5px;
-        font-size: 30px; }
-    .panel #footer-wrapper .copyright p, .panel #footer-wrapper .copyright h5 {
-      padding: 3px;
-      margin-bottom: 0;
-      margin: 0; }
-      .panel #footer-wrapper .copyright p span, .panel #footer-wrapper .copyright h5 span {
-        padding: 8px;
-        color: #055275; }
-  .panel #footer-wrapper .design-contact {
-    cursor: pointer;
-    height: 45%;
-    background-color: #24292E;
-    color: whitesmoke;
-    font-size: 15px;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); }
-    .panel #footer-wrapper .design-contact p {
-      padding: 10px;
-      margin-bottom: 0; }
+      .panel .contacto .contacto-encabezado h2 {
+        font-family: "Raleway";
+        font-size: 25px;
+        text-weight: 300;
+        text-align: center;
+        color: #00a896; }
+    .panel .contacto form {
+      text-align: center;
+      z-index: 99; }
+      .panel .contacto form span {
+        background-color: #00dbc4;
+        border-right: none;
+        font-size: 13px;
+        color: #C5C9C8;
+        border: none; }
+        .panel .contacto form span i {
+          color: white; }
+      .panel .contacto form input {
+        font-size: 13px;
+        border-left: none;
+        color: #00a896;
+        padding: 12px;
+        border: none; }
+        .panel .contacto form input:focus {
+          outline: none; }
+  @media only screen and (max-width: 600px) {
+    .panel .admin {
+      height: auto; } }
   .panel .admin .linkedin .linkelist {
     height: 400px;
     overflow-y: scroll; }
@@ -589,6 +618,52 @@ h1, .container, .container-fluid {
     .panel .login .form-group {
       padding: 3px;
       text-align: left; }
+
+footer {
+  color: whitesmoke; }
+  footer .footerWrapper {
+    padding: 40px;
+    height: auto;
+    background-color: #404040; }
+    footer .footerWrapper .logoWrapper {
+      text-align: center;
+      width: 250px;
+      margin: 0 auto;
+      padding: 10px; }
+      footer .footerWrapper .logoWrapper .logoImg {
+        width: 90px; }
+    footer .footerWrapper .social {
+      text-align: center; }
+      footer .footerWrapper .social ul {
+        width: 100%;
+        background: none;
+        display: inline-block !important;
+        padding-left: 0px; }
+        footer .footerWrapper .social ul li {
+          padding: 10px;
+          text-decoration: none;
+          display: inline-block; }
+          footer .footerWrapper .social ul li a {
+            color: whitesmoke;
+            font-size: 30px;
+            padding: 0px 5px; }
+    footer .footerWrapper .textoFooter {
+      color: whitesmoke; }
+      footer .footerWrapper .textoFooter p {
+        margin-top: 0px;
+        padding: 5px;
+        font-family: "Quicksand", sans-serif;
+        text-align: center;
+        font-size: 14px; }
+        @media only screen and (max-width: 600px) {
+          footer .footerWrapper .textoFooter p {
+            font-size: 13px; } }
+  footer .broom {
+    width: 100%;
+    background-color: #222222;
+    padding: 5px; }
+    footer .broom p {
+      text-align: center; }
 
 .loadcontain {
   width: 200px;

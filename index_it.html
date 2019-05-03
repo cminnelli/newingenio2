@@ -1,860 +1,877 @@
-<!DOCTYPE html >
-<html lang="es">
+	<!DOCTYPE html >
+	<html lang="es">
 
-<head>
-	<title>Ingenio Tecnico © - Buscamos talento </title>
+	<head>
+		<title>Ingenio Tecnico © - Buscamos talento </title>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-
-
-	<link href='imagenes/web/LOGO3.png' rel='shortcut icon' type='image/png'>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-	<link rel="stylesheet" href="css/animate.css">
-
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	 crossorigin="anonymous">
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-	 crossorigin="anonymous"></script>
-
-	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-	<!-- <link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css"> -->
-	<script src="https://unpkg.com/ionicons@4.0.0/dist/ionicons.js"></script>
-	<link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/>
-	<link rel="stylesheet" href="css/portada.css">
-	<link rel="stylesheet" href="css/estilosit.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 
 
+		<link href='imagenes/web/LOGO3.png' rel='shortcut icon' type='image/png'>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+		<link rel="stylesheet" href="css/animate.css">
 
 
-	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		 crossorigin="anonymous">
 
-	<!-- ANGULAR SCRIPTS -->
-	<!-- <script src="/libs/angular/angular.min.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		 crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		 crossorigin="anonymous"></script>
 
-	<script src="/js/app.js"></script>
+		 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-	<script src="/js/controllers/busquedas.js"></script>
-	<script src="/js/services/google.js"></script>
-	<script src="/js/services/myService.js"></script>
-
-	<script src="libs/jquery/jquery.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-</head>
-
-
-
-<body ng-cloak class="itsolutions" ng-init="" ng-app="myApp" ng-controller="busquedaController">
-
-	<script> new WOW().init() </script>
-
-<!-- <div class="nav1">
-	<ul class="navWrapper">
-		<li><i class="fas fa-home"></i> HOME</li>
-		<li><i class="fab fa-codepen bigcode"></i> NOSOTROS</li>
-		<li><i class="fab fa-black-tie"></i> SERVICIOS</li>
-		<li> <i class="fab fa-searchengin"></i> BUSQUEDAS</li>
-		<li><i class="fas fa-wifi"></i> CONTACTANOS</li> -->
-		<!-- <li class="cvCircle">
-			<div class="buttonWrapper">
-				<button > <i class="fas fa-file-alt"></i> ADJUNTAR CV</button>
-			</div>
-		</li> -->
-	<!-- </ul>
-</div> -->
+		<!-- <link rel="stylesheet" href="imagenes/ionicons-2.0.1/css/ionicons.min.css"> -->
+		<script src="https://unpkg.com/ionicons@4.0.0/dist/ionicons.js"></script>
+		<link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css"rel="stylesheet"/>
+		<link rel="stylesheet" href="css/portada.css">
+		<link rel="stylesheet" href="css/estilosit.css">
 
 
 
 
-	<section id="portada " class="portada  wow fadeIn" data-wow-delay="0.2s" id="home">
-		<div class="row">
-			<div class="transparencia"></div>
-				<img src="/imagenes/web/navCurve.png" class="navCurve" alt="">
-				<img src="/imagenes/web/curvebotMob.png" class="curvebotmob" alt="">
-				<div class="nav2">
-					<ul class="iconmenu">
-						<li><a class="ancla" href="#home"><i class="fas fa-home"></i></a></li>
-						<li><a class="ancla" href="#nosotros"><i class="fab fa-codepen icon"></i></a></li>
-				
-						<li><a class="ancla" href="#servicios"><i class="fab fa-black-tie icon"></i></a></li>
-				
-						<li><a class="ancla" href="#busquedas"><i class="fab fa-searchengin"></i></a></li>
-						<li><a class="ancla" href="#contacto"><i class="fas fa-wifi icon"></i></a></li>
-						<li id="hambur"><a class="ancla" ><i class="fas fa-bars"></i></a></li>
-	
 
-		
-					</ul>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+		<!-- ANGULAR SCRIPTS -->
+		<!-- <script src="/libs/angular/angular.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+
+		<script src="/js/app.js"></script>
+
+		<script src="/js/controllers/busquedas.js"></script>
+		<script src="/js/services/google.js"></script>
+		<script src="/js/services/myService.js"></script>
+
+		<script src="libs/jquery/jquery.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	</head>
+
+
+
+	<body ng-cloak class="itsolutions" ng-init="" ng-app="myApp" ng-controller="busquedaController">
+
+		<script> new WOW().init() </script>
+
+	<!-- <div class="nav1">
+		<ul class="navWrapper">
+			<li><i class="fas fa-home"></i> HOME</li>
+			<li><i class="fab fa-codepen bigcode"></i> NOSOTROS</li>
+			<li><i class="fab fa-black-tie"></i> SERVICIOS</li>
+			<li> <i class="fab fa-searchengin"></i> BUSQUEDAS</li>
+			<li><i class="fas fa-wifi"></i> CONTACTANOS</li> -->
+			<!-- <li class="cvCircle">
+				<div class="buttonWrapper">
+					<button > <i class="fas fa-file-alt"></i> ADJUNTAR CV</button>
 				</div>
-
-									<script>
-										var ham = false;
-										$("li").click(function (ev) {
-
-											var le = $(".ancla").length - 1
-											console.log(ev.target.index)
-
-											if (ham === true){
-												ham = false;
-											for (i = 0; i < le; i++) {
-												console.log(i);
-												console.log
-												$("li").eq(i).css({
-													visibility: 'hidden',												
-												});
-											}
-											
-											}else{
-												ham = true;
-													for (i = 0; i < le; i++) {
-														console.log(i);
-														console.log
-														$("li").eq(i).css({
-															visibility: 'visible',															
-														});												
-											}
-
-											}
-										})
-
-									</script>
-			<div class="portada_wrapper_texto col-xs-12 col-md-12 col-lg-12 wow fadeIn">
-
-				<img class="logoImg" src="/imagenes/web/LOGO4.png" />
-				<img class="logoshadow" src="/imagenes/web/shadow.png" />
-				<div class="banner">
-					<span> </span>	<h1 id="typed" class="tituloit portadatit"> dasdsa.. </h1>
-						
-						<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>
-					
-				</div>
-
-				<div class="social ">
-					<ul class="social-icons">
-						<a href="#" class="wow fadeInUp">
-							<i class="fa fa-facebook"></i>
-						</a>
-						<a href="#" class="wow fadeInUp">
-							<i class="fa fa-twitter"></i>
-						</a>
-						<a href="#" class="wow fadeInUp">
-							<i class="fa fa-linkedin"></i>
-						</a>
-	
-					</ul>	
-				</div>				
-				<!-- <button class="but1">Conocenos mas!</button> -->
-			</div>		
-			
-
-<script>
-
-// window.onscroll= function(){
-// 	var sc = window.scrollY
-// console.log(sc);
-// 	if (sc > 500){
-
-// 		$(".nav2").css({
-// 			height: '60px',
-// 			padding:"5px"
-
-// 		});
-
-// 		$("ion-icon").css({
-// 			fontSize: '25px',
-// 			backgroundColor: '$color-span'
-// 		});
-
-// 	}else{
-// 		$(".nav2fontSize").css({
-// 			height: '80px',
-// 			padding: "10px"
-// 		});
+			</li> -->
+		<!-- </ul>
+	</div> -->
 
 
-// 	}
-// }
-
-var typed = new Typed("#typed", {
-
-  strings: ["Innovacion   <p class='function'> ( anticiparnos al futuro ) </p> " , "Creatividad   <p class='function'> ( exigencias del mercado ) </p> ", "Flexibilidad  <p class='function'> ( Necesidades del cliente )</p> ", "Dinamismo  <p class='function'> ( Respuesta )  </p> "],
-		typeSpeed: 30,//specifies the typing speed of the text
-		backSpeed: 15, //specifies speed of deletion of the text,
-		contentType: 'html',
-		loop: false //repetition
-});
-setTimeout(function(){
-
-},1000)
-
-  
-  </script>
 
 
-		
-
-			<!-- <div class="portada_wrapper_logo col-xs-12 col-md-5">
-				<img class="portadaImage" alt="imagen mas cool" src="" />
-
-			</div> -->
-
-
-		</div>
-	</section>
-
-	<section class="nosotros wow fadeIn" id="nosotros">
-		
-		<div class="nosotros-wrapper wow fadeIn">
+		<section id="portada " class="portada  wow fadeIn" data-wow-delay="0.2s" id="home">
 			<div class="row">
-				<i class="fab fa-codepen bigcode"></i>
-
-
-				<div class="col-xs-12  col-md-12 modulo-nosotros-texto">
-					<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
-					<h2 class="tituloit"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
-					<br>
-					<div class="row">
-						<div class="text1 col-xs-12 col-md-4">
-								<img class="compromisoIcon wow rubberBand" src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/electronic_brain-512.png" />
-							<p class=" textoit highlights wow  fadeIn">  Somos ingenio IT,  un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional</p>
-							<p class="textoit wow fadeInLeft"> Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada
-							día más desafiante, con un  gran conocimiento del mercado tecnológico  y sus principales actores.</p>
-						</div> 
+				<div class="transparencia"></div>
+					<img src="/imagenes/web/navCurve.png" class="navCurve" alt="">
+					<img src="/imagenes/web/curvebotMob.png" class="curvebotmob" alt="">
+					<div class="nav2">
+						<ul class="iconmenu">
+							<li><a class="ancla" href="#home"><i class="fas fa-home"></i></a></li>
+							<li><a class="ancla" href="#nosotros"><i class="fab fa-codepen icon"></i></a></li>
 					
-						<div class="text2 col-xs-12 col-md-4 wow fadeIn ">
-							<img class="compromisoIcon wow rubberBand" src="https://www.marsbranding.com/wp-content/uploads/2017/07/work-together-icon.png"/>
-								<p class="textoit wow fadeInUp">Gracias a nuestro<span class=" textoit highlights"> compromiso con clientes y candidatos </span>, y a una fuerte identidad basada en la <span class=" textoit highlights"> flexibilidad, curiosidad, creatividad e innovación</span>, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
-									</p>
-						</div>
+							<li><a class="ancla" href="#servicios"><i class="fab fa-black-tie icon"></i></a></li>
+					
+							<li><a class="ancla" href="#busquedas"><i class="fab fa-searchengin"></i></a></li>
+							<li><a class="ancla" href="#contacto"><i class="fas fa-wifi icon"></i></a></li>
+							<li id="hambur"><a class="ancla" ><i class="fas fa-bars"></i></a></li>
+		
 
-						<div class="col-xs-12  col-md-4 modulo-nosotros-inclusion wow fadeIn">
-							<div class="inclusionWrapper">
-								<div class="transparencia"></div>
-								<div class="row">
-						
-									<div class="col-xs-12 col-md-12">
-											<img class="compromisoIcon wow rubberBand" src="https://cdn4.iconfinder.com/data/icons/outlines-business-web-optimization/256/1-44-512.png" />
-										<h4 class="compromisoTit">  Compromiso con la Inclusion</h4>
-										<p class="textoit">
-											Creemos  en el concepto de derribar barreras y crear oportunidades, es por esto que apostamos a la
-											inclusión laboral de profesionales con discapacidad y otros grupos vulnerables.
-						
-										</p>
-									</div>
-						
-								</div>
+			
+						</ul>
+					</div>
+
+		<script>
+			var ham = false;
+			$("li").click(function (ev) {
+
+				var le = $(".ancla").length - 1
+				console.log(ev.target.index)
+
+				if (ham === true){
+					ham = false;
+				for (i = 0; i < le; i++) {
+					console.log(i);
+					console.log
+					$("li").eq(i).css({
+						visibility: 'hidden',												
+					});
+				}
+				
+				}else{
+					ham = true;
+						for (i = 0; i < le; i++) {
+							console.log(i);
+							console.log
+							$("li").eq(i).css({
+								visibility: 'visible',															
+							});												
+				}
+
+				}
+			})
+
+		</script>
+					<div class="loading">
+						<div class="loadingwrapper">
+
+							<div class="logoWrapper">
+								<img class="logoImg" src="/imagenes/web/LOGO3.png" />
 							</div>
-						
+							<div class="spinner">
+							  <div class="rect1"></div>
+							  <div class="rect2"></div>
+							  <div class="rect3"></div>
+							  <div class="rect4"></div>
+							  <div class="rect5"></div>
+							</div
 						</div>
-
-	
+						</div>
 					</div>
-
+				<div class="portada_wrapper_texto col-xs-12 col-md-12 col-lg-12 wow fadeIn">
+					<img class="logoImg" src="/imagenes/web/LOGO4.png" />
+					<img class="logoshadow" src="/imagenes/web/shadow.png" />
+					<div class="banner">
+						<span> </span>	<h1 id="typed" class="tituloit portadatit"> dasdsa.. </h1>
+							
+							<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>
 						
-
-				</div>
-
-
-
-
-				
-			</div>
-		</div>
-
-
-
-
-	</section>
-
-	<section class="servicios wow fadeIn" id="servicios">
-		<div class="row">
-
-		</div>
-	</section>
-	<section class="servicios wow fadeIn" id="servicios">
-
-			<div class="col-xs-12 col-lg-12">
-				<h2 class="tituloit"> <span class="spantext"><i class="fab fa-black-tie"></i></span>   Servicios <span class="spantext"> IT </span></h2>
-				
-			</div>	
-	
-			<div class="servicios-wrapper">			
-				
-				<div class="row">
-				
-					<div class="servicio-item-wrapper col-xs-12 col-lg-12">
-	
-	
 					</div>
+
+					<div class="social ">
+						<ul class="social-icons">
+							<a href="#" class="wow fadeInUp">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="#" class="wow fadeInUp">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a href="#" class="wow fadeInUp">
+								<i class="fa fa-linkedin"></i>
+							</a>
+		
+						</ul>	
+					</div>				
+					<!-- <button class="but1">Conocenos mas!</button> -->
+				</div>		
+				
+
+	<script>
+
+	// window.onscroll= function(){
+	// 	var sc = window.scrollY
+	// console.log(sc);
+	// 	if (sc > 500){
+
+	// 		$(".nav2").css({
+	// 			height: '60px',
+	// 			padding:"5px"
+
+	// 		});
+
+	// 		$("ion-icon").css({
+	// 			fontSize: '25px',
+	// 			backgroundColor: '$color-span'
+	// 		});
+
+	// 	}else{
+	// 		$(".nav2fontSize").css({
+	// 			height: '80px',
+	// 			padding: "10px"
+	// 		});
+
+
+	// 	}
+	// }
+
 	
-					<div class="servicio-item-wrapper col-xs-12 col-md-4">
-						<div class="serviceImage">
-							<img src="/imagenes/web/computer1.jpg" alt="" class="img-fluid">
-						</div>	
-	
-						
-	
-					</div>
-					<div class="servicio-item-wrapper col-xs-12 col-md-4">
-						<div class="serviceCard">
-							<i class="far fa-lightbulb"></i>
-							<h4 class="card-title">Búsqueda y seleccion</h4>
-							<h3 class="card-subtitle">Dinamismo y Acertividad</h3>
-							<p class="textoit">
-								Entendemos lo que buscan tanto nuestros clientes como nuestros candidatos, y trabajamos en cada proyecto como si fuera el único. Es esto lo que nos permite brindar un servicio de calidad, a la medida de cada necesidad.
-							</p>
-						</div>	
-	
-						
-	
-					</div>
-	
-					<div class="servicio-item-wrapper col-xs-12 col-md-4">
-						<div class="serviceCard">
-								<i class="fas fa-brain"></i>
-								<h4 class="card-title">Psicotécnicos</h4>
-								<h3 class="card-subtitle"> Especialistas e innovadores</h3>
-								<p class="textoit">
-	
-								Comprometidos con la especialización e innovación en nuestros procesos. Acompañamos a nuestros clientes con un servicio de evaluaciones técnicas y psicométricas, administradas por psicólogos especialistas en perfiles it.
-	
-								</p>
-							</div>	
-	
-						
-	
-					</div>
+
+	var typed = new Typed("#typed", {
+
+	  strings: ["Innovacion   <p class='function'> ( anticiparnos al futuro ) </p> " , "Creatividad   <p class='function'> ( exigencias del mercado ) </p> ", "Flexibilidad  <p class='function'> ( Necesidades del cliente )</p> ", "Dinamismo  <p class='function'> ( Respuesta )  </p> "],
+			typeSpeed: 30,//specifies the typing speed of the text
+			backSpeed: 15, //specifies speed of deletion of the text,
+			contentType: 'html',
+			loop: false //repetition
+	});
+	setTimeout(function(){
+
+	},1000)
+
+	  
+	  </script>
+
+
 			
-			
-	
-				</div>
+
+				<!-- <div class="portada_wrapper_logo col-xs-12 col-md-5">
+					<img class="portadaImage" alt="imagen mas cool" src="" />
+
+				</div> -->
+
+
 			</div>
 		</section>
-	
 
-	<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
-
-		<div class="transparencia"></div>
-
-		<!-- <i class="fas fa-user-circle biguser"></i> -->
-		<div class="row">
-			<div class="col-xs-12 col-md-12 busquedas-title wow fadeInUp">
-					<h2 class="tituloit"> <i class="fab fa-searchengin"></i> Busquedas <span class="spantext"> Destacadas</span> </h2>
-					<br>
-			</div>
-		</div>
-
-
-		<div class="row">
-			<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
+		<section class="nosotros wow fadeIn" id="nosotros">
+			
+			<div class="nosotros-wrapper wow fadeIn">
 				<div class="row">
-					<div class="robot" ng-show="robot">
-						<img class="img-fluid" src="/imagenes/web/robot.png" alt="">
-						<p class="errtit">Ups...Hay algun errorcin!</p>
-						<p class="errtext">Intenta de nuevo en un rato</p>
-					</div>
-					<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-4 col-md-offset-1 wow fadeInUp">
+					<i class="fab fa-codepen bigcode"></i>
 
-						<div class="jobOfferWrapp">
 
-							<div class="jobText">
-								<h4 class="job-title"> {{j.puesto}} </h4>
-								<p class="badge badge-secondary">{{j.seniority}}</p>
-
+					<div class="col-xs-12  col-md-12 modulo-nosotros-texto">
+						<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
+						<h2 class="tituloit"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
+						<br>
+						<div class="row">
+							<div class="text1 col-xs-12 col-md-4">
+									<img class="compromisoIcon wow rubberBand" src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/electronic_brain-512.png" />
+								<p class=" textoit highlights wow  fadeIn">  Somos ingenio IT,  un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional</p>
+								<p class="textoit wow fadeInLeft"> Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada
+								día más desafiante, con un  gran conocimiento del mercado tecnológico  y sus principales actores.</p>
+							</div> 
+						
+							<div class="text2 col-xs-12 col-md-4 wow fadeIn ">
+								<img class="compromisoIcon wow rubberBand" src="https://www.marsbranding.com/wp-content/uploads/2017/07/work-together-icon.png"/>
+									<p class="textoit wow fadeInUp">Gracias a nuestro<span class=" textoit highlights"> compromiso con clientes y candidatos </span>, y a una fuerte identidad basada en la <span class=" textoit highlights"> flexibilidad, curiosidad, creatividad e innovación</span>, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
+										</p>
 							</div>
 
-							<div class="jobDescription">
-								<div class="row">
-									<div class="item col-xs-4 col-md-4 col-lg-12">
+							<div class="col-xs-12  col-md-4 modulo-nosotros-inclusion wow fadeIn">
+								<div class="inclusionWrapper">
+									<div class="transparencia"></div>
+									<div class="row">
+							
+										<div class="col-xs-12 col-md-12">
+												<img class="compromisoIcon wow rubberBand" src="https://cdn4.iconfinder.com/data/icons/outlines-business-web-optimization/256/1-44-512.png" />
+											<h4 class="compromisoTit">  Compromiso con la Inclusion</h4>
+											<p class="textoit">
+												Creemos  en el concepto de derribar barreras y crear oportunidades, es por esto que apostamos a la
+												inclusión laboral de profesionales con discapacidad y otros grupos vulnerables.
+							
+											</p>
+										</div>
+							
+									</div>
+								</div>
+							
+							</div>
+
+		
+						</div>
+
+							
+
+					</div>
+
+
+
+
+					
+				</div>
+			</div>
+
+
+
+
+		</section>
+
+		<section class="servicios wow fadeIn" id="servicios">
+			<div class="row">
+
+			</div>
+		</section>
+		<section class="servicios wow fadeIn" id="servicios">
+
+				<div class="col-xs-12 col-lg-12">
+					<h2 class="tituloit"> <span class="spantext"><i class="fab fa-black-tie"></i></span>   Servicios <span class="spantext"> IT </span></h2>
+					
+				</div>	
+		
+				<div class="servicios-wrapper">			
+					
+					<div class="row">
+					
+						<div class="servicio-item-wrapper col-xs-12 col-lg-12">
+		
+		
+						</div>
+		
+						<div class="servicio-item-wrapper col-xs-12 col-md-4">
+							<div class="serviceImage">
+								<img src="/imagenes/web/computer1.jpg" alt="" class="img-fluid">
+							</div>	
+		
+							
+		
+						</div>
+						<div class="servicio-item-wrapper col-xs-12 col-md-4">
+							<div class="serviceCard">
+								<i class="far fa-lightbulb"></i>
+								<h4 class="card-title">Búsqueda y seleccion</h4>
+								<h3 class="card-subtitle">Dinamismo y Acertividad</h3>
+								<p class="textoit">
+									Entendemos lo que buscan tanto nuestros clientes como nuestros candidatos, y trabajamos en cada proyecto como si fuera el único. Es esto lo que nos permite brindar un servicio de calidad, a la medida de cada necesidad.
+								</p>
+							</div>	
+		
+							
+		
+						</div>
+		
+						<div class="servicio-item-wrapper col-xs-12 col-md-4">
+							<div class="serviceCard">
+									<i class="fas fa-brain"></i>
+									<h4 class="card-title">Psicotécnicos</h4>
+									<h3 class="card-subtitle"> Especialistas e innovadores</h3>
+									<p class="textoit">
+		
+									Comprometidos con la especialización e innovación en nuestros procesos. Acompañamos a nuestros clientes con un servicio de evaluaciones técnicas y psicométricas, administradas por psicólogos especialistas en perfiles it.
+		
+									</p>
+								</div>	
+		
+							
+		
+						</div>
+				
+				
+		
+					</div>
+				</div>
+			</section>
+		
+
+		<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
+
+			<div class="transparencia"></div>
+
+			<!-- <i class="fas fa-user-circle biguser"></i> -->
+			<div class="row">
+				<div class="col-xs-12 col-md-12 busquedas-title wow fadeInUp">
+						<h2 class="tituloit"> <i class="fab fa-searchengin"></i> Busquedas <span class="spantext"> IT</span> </h2>
+						<br>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
+					<div class="row">
+						<div class="robot" ng-show="robot">
+							<img class="img-fluid" src="/imagenes/web/robot.png" alt="">
+							<p class="errtit">Ups...Hay algun errorcin!</p>
+							<p class="errtext">Intenta de nuevo en un rato</p>
+						</div>
+						<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-4 col-md-offset-1 wow fadeInUp">
+
+							<div class="jobOfferWrapp">
+
+								<div class="jobText">
+									<h4 class="job-title"> {{j.puesto}} </h4>
+									<p class="badge badge-secondary">{{j.seniority}}</p>
+
+								</div>
+
+								<div class="jobDescription">
+									<div class="row">
+										<div class="item col-xs-4 col-md-4 col-lg-12">
+												<div class="row">
+
+												
+												<div class="col-xs-4 col-lg-4 iconDes">
+														<i class="fas fa-building"></i>
+
+												</div>
+												<div class="col-xs-8 col-lg-8 textCat">
+													<p class="">{{j.area}}</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="item col-xs-4 col-md-4 col-lg-12" >
+											<div class="row">
+												<div class="col-xs-4 col-lg-4 iconDes">
+														
+														<i class="fa fa-angle-double-down"></i>
+												</div>
+												<div class="col-xs-8 col-lg-8 textCat">
+													<p class="">{{j.rubro}}</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="item col-xs-4 col-md-4 col-lg-12">
 											<div class="row">
 
 											
-											<div class="col-xs-4 col-lg-4 iconDes">
-													<i class="fas fa-building"></i>
-
-											</div>
-											<div class="col-xs-8 col-lg-8 textCat">
-												<p class="">{{j.area}}</p>
-											</div>
-										</div>
-									</div>
-
-									<div class="item col-xs-4 col-md-4 col-lg-12" >
-										<div class="row">
-											<div class="col-xs-4 col-lg-4 iconDes">
-													
-													<i class="fa fa-angle-double-down"></i>
-											</div>
-											<div class="col-xs-8 col-lg-8 textCat">
-												<p class="">{{j.rubro}}</p>
+												<div class="col-xs-4 col-lg-4 iconDes">
+														<i class="fas fa-map-marker-alt"></i>	
+												</div>
+												<div class="col-xs-8 col-lg-8 textCat">
+													<p class="">{{j.ubicacion}}</p>
+												</div>
 											</div>
 										</div>
-									</div>
 
-									<div class="item col-xs-4 col-md-4 col-lg-12">
-										<div class="row">
-
-										
-											<div class="col-xs-4 col-lg-4 iconDes">
-													<i class="fas fa-map-marker-alt"></i>	
-											</div>
-											<div class="col-xs-8 col-lg-8 textCat">
-												<p class="">{{j.ubicacion}}</p>
-											</div>
+										<div class="butonera">
+											<button class="infobut">Ver más</button>
 										</div>
-									</div>
+		
 
-									<div class="butonera">
-										<button class="infobut">Ver más</button>
 									</div>
-	
-
 								</div>
-							</div>
 
 
 
-							<div class="comentariosWrapp">
-								
-							</div>
+								<div class="comentariosWrapp">
+									
+								</div>
 
-		
-
-							<p class="jobcom">{{j.comentarios}}</p>
-
-						</div>
-						<script>
-
-							$(".infobut").click(function () {
-								var ind = $(".infobut").index(this);
-
-								$(".comentariosWrapp").eq(ind).css({
-									transition: 'all ease-in-out 0s',
-									animation: 'aumenta 1.8s',
-									animationFillMode: 'forwards'
-
-								});
-
-								$(".jobcom").eq(ind).fadeIn(1400)
-								
-								setTimeout(function(){
-									$(".comentariosWrapp").eq(ind).css({
-										transition: '3s',
-										animation: 'dismin 1s',
-										animationFillMode: 'forwards'
-									});
-									$(".jobcom").eq(ind).fadeOut(400)
-								},5500)
-
-		
-
-							})
-
-							// $(".closeicon").click(function () {
-
-							// 	var ind = $(".closeicon").index(this);
-							// 	console.log(ind);
-
-							// 	$(".comentariosWrapp").eq(ind).css({
-							// 		transition: '3s',
-							// 		animation: 'dismin 1s',
-							// 		animationFillMode: 'forwards'
-							// 	});
-
-							// 	$(".jobcom").eq(ind).fadeOut(500)
-							// 	$(".closeicon").eq(ind).fadeOut(500)	
-
-							// })
-
-						</script>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-
-
-
-
-
-		</div>
-	</section>
-
-
-	<!-- <section class="testimoniales ">
-
-	   <ion-icon class="bigcuote" name="quote"></ion-icon>
-	   
-	   <div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
-		<h2 class="tituloit"> <ion-icon name="bookmark"></ion-icon> Testimonios 
-			<span class="spantext"> Ingenio IT </span></h2>
-		<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
-			possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
-
-		</div>
-	   
-	   <div class="owl-carousel owl-theme">
-	   
-		   <div class="card ">
-	   
-			   <div class="testimoniales-avatar">
-				 <img src="https://scontent.faep9-2.fna.fbcdn.net/v/t1.0-9/19029561_10154503905920951_4737250782048933711_n.jpg?_nc_cat=105&_nc_ht=scontent.faep9-2.fna&oh=7fb20f753f76b5775ad2914405c1e63d&oe=5D185579">
-			   </div>
-	   
-			   <div class="testimoniales-content">
-				   <div class="testimoniales-content-titulos">
-				   <br>
-				   <br>
-					   <h4>Carlos E Minnelli</h4>
-					   <span>Desarrollador @ Google</span>
-					   
-				   </div>
-	   
-				   <div class="testimoniales-content-texto">
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
-				   </div>
-	   
-				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
-			   </div>
-	   
-			   <ion-icon class="quote" name="quote"></ion-icon>
-		   </div>
-	   
-	   <div class="card ">
-	   
-			   <div class="testimoniales-avatar">
-				 <img src="https://www.expoknews.com/wp-content/uploads/2017/09/mark-zuckerberg-headshot-11.jpg">
-			   </div>
-	   
-			   <div class="testimoniales-content">
-				   <div class="testimoniales-content-titulos">
-				   <br>
-				   <br>
-					   <h4>Carlos E Minnelli</h4>
-					   <span>Desarrollador @ Google</span>
-					   
-				   </div>
-	   
-				   <div class="testimoniales-content-texto">
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
-				   </div>
-	   
-				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
-			   </div>
-	   
-			   <ion-icon class="quote" name="quote"></ion-icon>
-		   </div>
-	   
-	   <div class="card ">
-	   
-			   <div class="testimoniales-avatar">
-				 <img src="https://www.thefamouspeople.com/profiles/images/steve-jobs-3.jpg">
-			   </div>
-	   
-			   <div class="testimoniales-content">
-				   <div class="testimoniales-content-titulos">
-				   <br>
-				   <br>
-					   <h4>Carlos E Minnelli</h4>
-					   <span>Desarrollador @ Google</span>
-					   
-				   </div>
-	   
-				   <div class="testimoniales-content-texto">
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
-				   </div>
-	   
-				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
-			   </div>
-	   
-			   <ion-icon class="quote" name="quote"></ion-icon>
-		   </div>
-	   
-	   <div class="card ">
-	   
-			   <div class="testimoniales-avatar">
-				 <img src="https://prabook.com/web/show-photo-icon.jpg?id=1876292&width=220&cache=false">
-			   </div>
-	   
-			   <div class="testimoniales-content">
-				   <div class="testimoniales-content-titulos">
-				   <br>
-				   <br>
-					   <h4>Carlos E Minnelli</h4>
-					   <span>Desarrollador @ Google</span>
-					   
-				   </div>
-	   
-				   <div class="testimoniales-content-texto">
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
-				   </div>
-	   
-				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
-			   </div>
-	   
-			   <ion-icon class="quote" name="quote"></ion-icon>
-		   </div>
-	   
-	   <div class="card ">
-	   
-			   <div class="testimoniales-avatar">
-				 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-			   </div>
-	   
-			   <div class="testimoniales-content">
-				   <div class="testimoniales-content-titulos">
-				   <br>
-				   <br>
-					   <h4>Carlos E Minnelli</h4>
-					   <span>Desarrollador @ Google</span>
-					   
-				   </div>
-	   
-				   <div class="testimoniales-content-texto">
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
-				   </div>
-	   
-				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
-			   </div>
-	   
-			   <ion-icon class="quote" name="quote"></ion-icon>
-		   </div>
-	   
-		   <div class="card ">
-	   
-			   <div class="testimoniales-avatar">
-				 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-			   </div>
-	   
-			   <div class="testimoniales-content">
-				   <div class="testimoniales-content-titulos">
-				   <br>
-				   <br>
-					   <h4>Carlos E Minnelli</h4>
-					   <span>Desarrollador @ Google</span>
-					   
-				   </div>
-	   
-				   <div class="testimoniales-content-texto">
-					   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis a</p>
-				   </div>
-	   
-				   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
-			   </div>
-	   
-			   <ion-icon class="quote" name="quote"></ion-icon>
-		   </div>
-	  	   
-	   </section> --> 
-	<section class="contacto wow fadeInUp" id="contacto">
-
-		<!-- <ion-icon class="bigwifi" name="wifi"></ion-icon> -->
-		<i class="fas fa-wifi bigwifi"></i>
-
-		<div class="row">
-					
-			<div class="col col-xs-12  col-md-5 modulo-nosotros-texto jackInTheBox">
-				<h2 class="tituloit"> <i class="fas fa-wifi"></i>  Conectate 
-					<span class="spantext"> con Nosotros</span></h2>
-				<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!</p>
-		
-			</div>
-
-			<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7">
-				<div class="input-group flex-nowrap wow jackInTheBox">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
-					</div>
-					<input name="nombre" type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
-
-				</div>
-
-				<br>
-
-				<div class="input-group wow  jackInTheBox">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping"><i class="far fa-envelope-open"></i>
-					</div>
-					<input name="mail" type="mail" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
-				</div>
-				<br>
-
-				<div class="input-group wow jackInTheBox">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
-					</div>
-					<input type="text" name="asunto"  class="form-control" placeholder="asunto" aria-label="Username" aria-describedby="addon-wrapping">
-				</div>
-				<br>
-
-<!-- 				<div class="input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
-					</div>
-					<input type="file" name="adjunto" class="form-control" placeholder="CV" aria-label="adjunto" aria-describedby="addon-wrapping">
-				</div>
-				<br> -->
-
-				  <div class="form-group">
-				    <label for="adjunto">Adjunta tu CV!</label>
-				<i class="fas fa-paperclip"></i>  <input type="file"  name="adjunto" class="form-control-file" placeholder="Adjunta tu CV!">
-				  </div>
-
-
-				<div class="input-group wow jackInTheBox">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="addon-wrapping"><i class="far fa-comment-dots"></i>
-					</div>
-					<input name="comentario" type="text" class="form-control" placeholder="Dejanos tus comentarios" aria-label="Username" aria-describedby="addon-wrapping">
-				</div>
-
-				<br>
-				<br>
-				<button class="btn btn-dark wow flipInX" type="submit">CONECTATE!</button>
-
-			</form>
-		</div>
-
-
-
-	</section>
-
-
-
-<!-- 	<script>
-
-		$(".mybut").click(function (event) {
 			
-			$(".slidediv").css({
-				animation: 'movdiv 4s',
-				animationFillMode: 'forwards'
+
+								<p class="jobcom">{{j.comentarios}}</p>
+
+							</div>
+							<script>
+
+								$(".infobut").click(function () {
+									var ind = $(".infobut").index(this);
+
+									$(".comentariosWrapp").eq(ind).css({
+										transition: 'all ease-in-out 0s',
+										animation: 'aumenta 1.8s',
+										animationFillMode: 'forwards'
+
+									});
+
+									$(".jobcom").eq(ind).fadeIn(1400)
+									
+									setTimeout(function(){
+										$(".comentariosWrapp").eq(ind).css({
+											transition: '3s',
+											animation: 'dismin 1s',
+											animationFillMode: 'forwards'
+										});
+										$(".jobcom").eq(ind).fadeOut(400)
+									},5500)
+
+			
+
+								})
+
+								// $(".closeicon").click(function () {
+
+								// 	var ind = $(".closeicon").index(this);
+								// 	console.log(ind);
+
+								// 	$(".comentariosWrapp").eq(ind).css({
+								// 		transition: '3s',
+								// 		animation: 'dismin 1s',
+								// 		animationFillMode: 'forwards'
+								// 	});
+
+								// 	$(".jobcom").eq(ind).fadeOut(500)
+								// 	$(".closeicon").eq(ind).fadeOut(500)	
+
+								// })
+
+							</script>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			</div>
+		</section>
+
+
+		<!-- <section class="testimoniales ">
+
+		   <ion-icon class="bigcuote" name="quote"></ion-icon>
+		   
+		   <div class="col col-xs-12 offset-md-2 col-md-6 modulo-nosotros-texto">
+			<h2 class="tituloit"> <ion-icon name="bookmark"></ion-icon> Testimonios 
+				<span class="spantext"> Ingenio IT </span></h2>
+			<p class="textoit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ut nam voluptatum. Saepe, nisi, velit molestiae nobis
+				possimus quaerat quidem veniam corporis, natus reprehenderit dolores impedit inventore? Earum, cumque praesentium.</p>
+
+			</div>
+		   
+		   <div class="owl-carousel owl-theme">
+		   
+			   <div class="card ">
+		   
+				   <div class="testimoniales-avatar">
+					 <img src="https://scontent.faep9-2.fna.fbcdn.net/v/t1.0-9/19029561_10154503905920951_4737250782048933711_n.jpg?_nc_cat=105&_nc_ht=scontent.faep9-2.fna&oh=7fb20f753f76b5775ad2914405c1e63d&oe=5D185579">
+				   </div>
+		   
+				   <div class="testimoniales-content">
+					   <div class="testimoniales-content-titulos">
+					   <br>
+					   <br>
+						   <h4>Carlos E Minnelli</h4>
+						   <span>Desarrollador @ Google</span>
+						   
+					   </div>
+		   
+					   <div class="testimoniales-content-texto">
+						   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+					   </div>
+		   
+					   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+				   </div>
+		   
+				   <ion-icon class="quote" name="quote"></ion-icon>
+			   </div>
+		   
+		   <div class="card ">
+		   
+				   <div class="testimoniales-avatar">
+					 <img src="https://www.expoknews.com/wp-content/uploads/2017/09/mark-zuckerberg-headshot-11.jpg">
+				   </div>
+		   
+				   <div class="testimoniales-content">
+					   <div class="testimoniales-content-titulos">
+					   <br>
+					   <br>
+						   <h4>Carlos E Minnelli</h4>
+						   <span>Desarrollador @ Google</span>
+						   
+					   </div>
+		   
+					   <div class="testimoniales-content-texto">
+						   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+					   </div>
+		   
+					   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+				   </div>
+		   
+				   <ion-icon class="quote" name="quote"></ion-icon>
+			   </div>
+		   
+		   <div class="card ">
+		   
+				   <div class="testimoniales-avatar">
+					 <img src="https://www.thefamouspeople.com/profiles/images/steve-jobs-3.jpg">
+				   </div>
+		   
+				   <div class="testimoniales-content">
+					   <div class="testimoniales-content-titulos">
+					   <br>
+					   <br>
+						   <h4>Carlos E Minnelli</h4>
+						   <span>Desarrollador @ Google</span>
+						   
+					   </div>
+		   
+					   <div class="testimoniales-content-texto">
+						   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+					   </div>
+		   
+					   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+				   </div>
+		   
+				   <ion-icon class="quote" name="quote"></ion-icon>
+			   </div>
+		   
+		   <div class="card ">
+		   
+				   <div class="testimoniales-avatar">
+					 <img src="https://prabook.com/web/show-photo-icon.jpg?id=1876292&width=220&cache=false">
+				   </div>
+		   
+				   <div class="testimoniales-content">
+					   <div class="testimoniales-content-titulos">
+					   <br>
+					   <br>
+						   <h4>Carlos E Minnelli</h4>
+						   <span>Desarrollador @ Google</span>
+						   
+					   </div>
+		   
+					   <div class="testimoniales-content-texto">
+						   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+					   </div>
+		   
+					   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+				   </div>
+		   
+				   <ion-icon class="quote" name="quote"></ion-icon>
+			   </div>
+		   
+		   <div class="card ">
+		   
+				   <div class="testimoniales-avatar">
+					 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+				   </div>
+		   
+				   <div class="testimoniales-content">
+					   <div class="testimoniales-content-titulos">
+					   <br>
+					   <br>
+						   <h4>Carlos E Minnelli</h4>
+						   <span>Desarrollador @ Google</span>
+						   
+					   </div>
+		   
+					   <div class="testimoniales-content-texto">
+						   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis assumenda necessitatibus.
+					   </div>
+		   
+					   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+				   </div>
+		   
+				   <ion-icon class="quote" name="quote"></ion-icon>
+			   </div>
+		   
+			   <div class="card ">
+		   
+				   <div class="testimoniales-avatar">
+					 <img src="https://images.pexels.com/photos/638700/pexels-photo-638700.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+				   </div>
+		   
+				   <div class="testimoniales-content">
+					   <div class="testimoniales-content-titulos">
+					   <br>
+					   <br>
+						   <h4>Carlos E Minnelli</h4>
+						   <span>Desarrollador @ Google</span>
+						   
+					   </div>
+		   
+					   <div class="testimoniales-content-texto">
+						   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque iure aliquid perferendis a</p>
+					   </div>
+		   
+					   <ion-icon class="logolink" name="logo-linkedin"><a href="test"></a></ion-icon>
+				   </div>
+		   
+				   <ion-icon class="quote" name="quote"></ion-icon>
+			   </div>
+		  	   
+		   </section> --> 
+		<section class="contacto wow fadeInUp" id="contacto">
+
+			<!-- <ion-icon class="bigwifi" name="wifi"></ion-icon> -->
+			<i class="fas fa-wifi bigwifi"></i>
+
+			<div class="row">
+						
+				<div class="col col-xs-12  col-md-5 modulo-nosotros-texto jackInTheBox">
+					<h2 class="tituloit"> <i class="fas fa-wifi"></i>  Conectate 
+						<span class="spantext"> con Nosotros</span></h2>
+					<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!</p>
+			
+				</div>
+
+				<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7">
+					<div class="input-group flex-nowrap wow jackInTheBox">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
+						</div>
+						<input name="nombre" type="text" class="form-control" placeholder="nombre y apellido" aria-label="Username" aria-describedby="addon-wrapping">
+
+					</div>
+
+					<br>
+
+					<div class="input-group wow  jackInTheBox">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="addon-wrapping"><i class="far fa-envelope-open"></i>
+						</div>
+						<input name="mail" type="mail" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
+					</div>
+					<br>
+
+					<div class="input-group wow jackInTheBox">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+						</div>
+						<input type="text" name="asunto"  class="form-control" placeholder="asunto" aria-label="Username" aria-describedby="addon-wrapping">
+					</div>
+					<br>
+
+	<!-- 				<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+						</div>
+						<input type="file" name="adjunto" class="form-control" placeholder="CV" aria-label="adjunto" aria-describedby="addon-wrapping">
+					</div>
+					<br> -->
+
+					  <div class="form-group">
+					    <label for="adjunto">Adjunta tu CV!</label>
+					<i class="fas fa-paperclip"></i>  <input type="file"  name="adjunto" class="form-control-file" placeholder="Adjunta tu CV!">
+					  </div>
+
+
+					<div class="input-group wow jackInTheBox">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="addon-wrapping"><i class="far fa-comment-dots"></i>
+						</div>
+						<input name="comentario" type="text" class="form-control" placeholder="Dejanos tus comentarios" aria-label="Username" aria-describedby="addon-wrapping">
+					</div>
+
+					<br>
+					<br>
+					<button class="btn btn-dark wow flipInX" type="submit">CONECTATE!</button>
+
+				</form>
+			</div>
+
+
+
+		</section>
+
+
+
+	<!-- 	<script>
+
+			$(".mybut").click(function (event) {
+				
+				$(".slidediv").css({
+					animation: 'movdiv 4s',
+					animationFillMode: 'forwards'
+				});
+
+				$(".textdiv").fadeIn(2000)
+
+
+				setTimeout(function () {
+					$(".slidediv").fadeOut(1000)
+					$(".textdiv").fadeOut(1000)
+
+
+
+				}, 7000)
+
+
+
 			});
 
-			$(".textdiv").fadeIn(2000)
-
-
-			setTimeout(function () {
-				$(".slidediv").fadeOut(1000)
-				$(".textdiv").fadeOut(1000)
-
-
-
-			}, 7000)
-
-
-
-		});
 
 
 
 
+		</script> -->
 
-	</script> -->
+		<!-- <section class="contacto wow fadeInUp" id="contacto">
+			
 
-	<!-- <section class="contacto wow fadeInUp" id="contacto">
+
+					<div class="formWrapper">
+						<div class="encabezado">
+									<h2 class="titContact">	Contactanos <span class="spantext"></span></h2>
+						</div>
+
+						<form method="post" action="/sendMail" class="">
+							<div class="row">
+									<div class="form-group col-xs-12 offset-md-1 col-md-5 ">								
+											<input required name="nombre" placeholder="Nombre completo" type="text" class="form-control" >
+									</div>
+									<div class="form-group col-xs-12  col-md-5">									
+											<input required name="asunto" placeholder="Asunto" type="text" class="form-control" >
+									</div>
+									<div class="form-group col-xs-12 offset-md-1 col-md-10 ">									
+											<input required name="mail" placeholder="Mail" type="email" class="form-control" >
+									</div>
+			
+									<div class="form-group col-xs-12 offset-md-1 col-md-10 ">
+											<textarea required name="comentario" placeholder="Dejanos tu comentario" class="form-control" rows="5" id="comment"></textarea>									
+									</div>
+									
+
+							</div>
+							<div class="text-center">
+									<button class="but1"> Enviar Mensaje!</button>
+							</div>
+
+						</form>
+				</div>
+				
+			</section> -->
+
+		<footer>
+
+			<div class="footerWrapper">
+				<div class="logoWrapper">
+					<img class="logoImg" src="/imagenes/web/LOGO4.png" />
+				</div>
+			<div class="social ">
+				<ul class="social-icons">
+					<li>
+										<a href="#" class="wow fadeInUp">
+											<i class="fa fa-facebook"></i>
+										</a>
+					</li>
+					<li>
+						<a href="#" class="wow fadeInUp">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="#" class="wow fadeInUp">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+
+
 		
+			
+				</ul>
+			</div>
 
-
-				<div class="formWrapper">
-					<div class="encabezado">
-								<h2 class="titContact">	Contactanos <span class="spantext"></span></h2>
+					<div class="textoFooter">
+						<p class="textoit"> <i class="fas fa-map-marker-alt"></i> <span>Entre Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>
+						<p class="textoit"><i class="far fa-copyright"></i>  INGENIO TECNICO 2019</p>
+					
 					</div>
 
-					<form method="post" action="/sendMail" class="">
-						<div class="row">
-								<div class="form-group col-xs-12 offset-md-1 col-md-5 ">								
-										<input required name="nombre" placeholder="Nombre completo" type="text" class="form-control" >
-								</div>
-								<div class="form-group col-xs-12  col-md-5">									
-										<input required name="asunto" placeholder="Asunto" type="text" class="form-control" >
-								</div>
-								<div class="form-group col-xs-12 offset-md-1 col-md-10 ">									
-										<input required name="mail" placeholder="Mail" type="email" class="form-control" >
-								</div>
-		
-								<div class="form-group col-xs-12 offset-md-1 col-md-10 ">
-										<textarea required name="comentario" placeholder="Dejanos tu comentario" class="form-control" rows="5" id="comment"></textarea>									
-								</div>
-								
-
-						</div>
-						<div class="text-center">
-								<button class="but1"> Enviar Mensaje!</button>
-						</div>
-
-					</form>
-			</div>
-			
-		</section> -->
-
-	<footer>
-
-		<div class="footerWrapper">
-			<div class="logoWrapper">
-					<img class="logoImg" src="/imagenes/web/LOGO4.png" />
-			</div>
-		<div class="social ">
-			<ul class="social-icons">
-				<li>
-									<a href="#" class="wow fadeInUp">
-										<i class="fa fa-facebook"></i>
-									</a>
-				</li>
-				<li>
-					<a href="#" class="wow fadeInUp">
-						<i class="fa fa-twitter"></i>
-					</a>
-
-				</li>
-
-				<li>
-
-					<a href="#" class="wow fadeInUp">
-						<i class="fa fa-linkedin"></i>
-					</a>
-				</li>
-
-
-	
-		
-			</ul>
-		</div>
-
-				<div class="textoFooter">
-					<p class="textoit"> <i class="fas fa-map-marker-alt"></i> <span>Entre Ríos 1457 , Olivos (CP: 1690)</span> Buenos Aires, Argentina</p>
-					<p class="textoit"><i class="far fa-copyright"></i>  INGENIO TECNICO 2019</p>
-				
+					
 				</div>
+				
+			<div class="broom">
+				<p class="textoit">DISEÑO POR BROOM STUDIO</p>
+			</div>
 
 				
 			</div>
-			
-		<div class="broom">
-			<p class="textoit">DISEÑO POR BROOM STUDIO</p>
-		</div>
-
-			
-		</div>
-	
-
-
 		
 
 
-	</footer>
+			
+
+
+		</footer>
 
 
 
@@ -864,11 +881,11 @@ setTimeout(function(){
 
 
 
-	<!-- STICKY MOJO SCRIPTS -->
-	<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
-	<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
-	<!-- <script src="/js/otros/portadaFade.js"></script> -->
+		<!-- STICKY MOJO SCRIPTS -->
+		<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+		<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+		<script src="/js/otros/portadaFade.js"></script>
 
-</body>
+	</body>
 
-</html>
+	</html>

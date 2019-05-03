@@ -81,39 +81,18 @@ function navbar(){
 /*ANIMACION LOADING*/
 
 function loading(time){
-	// var protocol = location.protocol;
-	// var host = location.host;
-	// window.location = protocol + '//' + host + '/#loading';
-	
-	$(".sloganIT").hide("fast");
-	$(".logoIT").hide("fast");
-	var ini = false;
-	var anim = setInterval(function(){
-		if (ini === true){
-			ini = false;
-			$(".sloganIT").fadeIn(1000);
-			$(".logoIT").fadeIn(1000);
-		}else{
-			ini = true
-			$(".sloganIT").fadeOut(500);
-			$(".logoIT").fadeOut(500);
-		}
-
-
-	},1100)
 
 
 	setTimeout( function(){
-		$(".loading").fadeOut("slow")
-		$(".bodyMain").css({
+		$(".loading").fadeOut(1000)
+
+		$("body").css({
 			overflowY:"visible",
 		})
 		$(".navbar-header , .navbar-default").css({
 			visible:"block",
 		})
-		
-		clearInterval(anim)
-		$(".logoIT").show("slow");
+
 
 	} ,time)
 
@@ -136,4 +115,4 @@ function visualize (text){
 }
 
 navbar()
-loading(0);
+loading(2000);
