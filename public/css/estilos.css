@@ -52,12 +52,12 @@
   .but.butOffer {
     background-color: #055174; }
   .but.butCv {
-    background-color: #028090; }
+    background-color: #0587AD; }
   .but.butPostulate {
     background-color: #055174;
     color: whitesmoke; }
   .but.butCandidato {
-    background-color: #028090;
+    background-color: #0587AD;
     color: whitesmoke; }
 
 @keyframes float {
@@ -88,7 +88,7 @@
         .loading .loadingwrapper .logoWrapper .logoImg {
           height: 110px; } }
   .loading .loadingwrapper .spinner {
-    color: #028090;
+    color: #0587AD;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -102,7 +102,7 @@
         width: 100px;
         height: 70px; } }
   .loading .loadingwrapper .spinner > div {
-    background-color: #028090;
+    background-color: #0587AD;
     height: 100%;
     width: 6px;
     display: inline-block;
@@ -259,7 +259,7 @@ h1, .container, .container-fluid {
         margin-top: 8px; }
       .nosotros .modulo-nosotros .texto-wrapper h5 {
         text-transform: uppercase;
-        color: #028090;
+        color: #0587AD;
         margin-top: 0;
         margin-bottom: 0;
         margin-top: 5px; }
@@ -290,7 +290,7 @@ h1, .container, .container-fluid {
     padding: 0px 70px; }
     .busquedas .robot .errtit {
       font-size: 20px;
-      color: #00a896;
+      color: #0587AD;
       margin-bottom: 2px; }
     .busquedas .robot .errtext {
       font-size: 13px;
@@ -330,19 +330,19 @@ h1, .container, .container-fluid {
         width: 90%;
         margin: 5px auto;
         padding: 10px;
-        border-left: 10px solid #00a896;
+        border-left: 10px solid #0587AD;
         overflow: hidden;
         transition: 0.5s;
         border-radius: 20px;
         transition: all ease-in 0.8s; }
         .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
-          border-left: 10px solid #00dbc4;
+          border-left: 10px solid #06aedf;
           transition: all ease-in-out 1s; }
         .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
-          color: #00dbc4;
+          color: #0773a5;
           transition: all ease-in-out 1s; }
         .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
-          background-color: #05ffe4 !important;
+          background-color: #16c5f8 !important;
           transition: all ease-in-out 1s; }
         @media only screen and (max-width: 600px) {
           .busquedas .jobs-result .job-offer .jobOfferWrapp {
@@ -380,7 +380,7 @@ h1, .container, .container-fluid {
           padding: 20px; }
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
             text-transform: capitalize;
-            color: #00a896;
+            color: #0587AD;
             font-family: "Raleway";
             font-size: 18px;
             font-weight: 700;
@@ -391,7 +391,7 @@ h1, .container, .container-fluid {
           border-top: 1px whitesmoke; }
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
             font-size: 25px;
-            color: #00a896;
+            color: #0587AD;
             height: 100%; }
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
             text-align: left;
@@ -405,7 +405,7 @@ h1, .container, .container-fluid {
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
             padding: 10px 20px !important;
             border-radius: 20px;
-            background: #00a896;
+            background: #0587AD;
             color: whitesmoke;
             border-style: none;
             padding: 15px 30px;
@@ -415,9 +415,9 @@ h1, .container, .container-fluid {
         .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
           font-size: 14px; }
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
-            color: #028090; }
+            color: #0587AD; }
           .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
-            color: #028090; }
+            color: #0587AD; }
 
 /*SERVICIOS SECTION*/
 .servicios {
@@ -781,7 +781,7 @@ footer {
   animation: dot-3-move 2s ease infinite, index 6s ease infinite; }
 
 .dot-2 {
-  background-color: #028090;
+  background-color: #0587AD;
   animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite; }
 
 .dot-1 {

@@ -10,7 +10,7 @@ $color-grey:rgba(30,30,30,0.8);
 $color-background:#EDEEF2;
 
 $color-ingenio1:#055174;
-$color-ingenio2:#028090;
+$color-ingenio2:#0587AD;
 $color-ingenio3:#00a896;
 $color-ingenio4:#f261ad;
 $color-nosotros:#EDEEF2;
@@ -480,7 +480,7 @@ $color-titulos:#484848;
 			padding:0px 70px;
 			.errtit{
 				font-size: 20px;
-				color:$color-ingenio3;
+				color:$color-ingenio2;
 				margin-bottom: 2px;
 			}
 			.errtext{
@@ -540,21 +540,21 @@ $color-titulos:#484848;
 						width: 90%;
 						margin:5px auto;
 						padding:10px;
-						border-left:10px solid $color-ingenio3;
+						border-left:10px solid $color-ingenio2;
 						overflow: hidden;
 						transition: 0.5s;
 						border-radius: 20px;
 						transition:all ease-in 0.8s;
 						&:hover{
-							border-left:10px solid lighten($color-ingenio3,10%);
+							border-left:10px solid lighten($color-ingenio2,10%);
 							transition:all ease-in-out 1s;
 						}
 						&:hover i{
-							color:  lighten($color-ingenio3,10%);
+							color:  lighten($color-ingenio1,10%);
 							transition:all ease-in-out 1s;
 						}
 						&:hover button{
-							background-color:  lighten($color-ingenio3,18%) !important;
+							background-color:  lighten($color-ingenio2,18%) !important;
 							transition:all ease-in-out 1s;
 						}
 
@@ -604,7 +604,7 @@ $color-titulos:#484848;
 							
 							.job-title{
 								text-transform: capitalize;
-								color:$color-ingenio3;
+								color:$color-ingenio2;
 								font-family: "Raleway";
 								font-size:18px;
 								font-weight: 700;
@@ -621,7 +621,7 @@ $color-titulos:#484848;
 								border-top:1px whitesmoke;
 								.iconDes, svg , .icon-inner{
 									font-size:25px;
-									color:$color-ingenio3;
+									color:$color-ingenio2;
 									height:100%;
 									//svg{
 									//	display: none;
@@ -643,7 +643,7 @@ $color-titulos:#484848;
 							margin:5px auto;
 									button{
 										padding:10px 20px !important;
-										@include mybut($color-ingenio3);
+										@include mybut($color-ingenio2);
 									}
 								}
 		

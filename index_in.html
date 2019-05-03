@@ -16,8 +16,13 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="libs/jquery/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		 crossorigin="anonymous">
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		 crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		 crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="css/estilos.css">
 
@@ -61,34 +66,7 @@
 		
 
 		<section id="portada" class="portada " data-wow-delay="0.2s" >	
-				<nav id="navbar" class="navbar navbar-default navbar-fixed-top ingenieriaparticular wow fadeInDown">
-						<div class="container-fluid">
-						  <!-- Brand and toggle get grouped for better mobile display -->
-						  <div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-							  <span class="sr-only">Toggle navigation</span>
-							  <span class="icon-bar"></span>
-							  <span class="icon-bar"></span>
-							  <span class="icon-bar"></span>
-							</button>
-							<!-- <a class="navbar-brand" href="#"><img src="/imagenes/web/LOGO.png" style="height:100px ; margin-left:10px" alt=""></a> -->
-						  </div>
-					  
-						  <!-- Collect the nav links, forms, and other content for toggling -->
-						  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-left">
-								<!-- <li><a href="#"><img id="isotipo" style="height:30px ; display:none" src="/imagenes/web/isotipo.png" alt=""></a></li> -->
-							  <li><a class="ancla" href="#"><span class="ion-home"></span></a></li>
-							  <li><a class="ancla" href="#nosotros"><span class="ion-tshirt"></span> Nosotros</a></li>
-							  <li><a class="ancla" href="#servicios"><span class="ion-briefcase"></span> Servicios</a></li>
-							  <li><a class="ancla" href="#busquedas"><span class="ion-social-linkedin"></span> Busquedas</a></li>
-							  <li><a class="ancla" href="#contacto"><span class="ion-person-stalker"></span> Contactanos</a></li>
-							</ul>
-	
-		
-						  </div><!-- /.navbar-collapse -->
-						</div><!-- /.container-fluid -->
-					  </nav>
+
 
 					  <div class="transparencia"></div>
 
@@ -172,7 +150,7 @@
 							<p class="errtit">Ups...Hay algun errorcin!</p>
 							<p class="errtext">Intenta de nuevo en un rato</p>
 						</div>
-						<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-12 col-lg-4 col-md-offset-1 wow fadeInUp">
+						<div ng-repeat="j in job | filter:'ingeniería Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-12 col-lg-4 col-md-offset-1 wow fadeInUp">
 
 							<div class="jobOfferWrapp">
 
@@ -312,21 +290,18 @@
 			<div class="social ">
 				<ul class="social-icons">
 					<li>
-										<a href="#" class="wow fadeInUp">
-											<i class="fa fa-facebook"></i>
-										</a>
+						<a href="#" class="wow fadeInUp">
+							<i class="fab fa-facebook-f"></i>
+						 </a>
 					</li>
 					<li>
 						<a href="#" class="wow fadeInUp">
-							<i class="fa fa-twitter"></i>
+							<i class="fab fa-twitter"></i>
 						</a>
-
 					</li>
-
 					<li>
-
 						<a href="#" class="wow fadeInUp">
-							<i class="fa fa-linkedin"></i>
+							<i class="fab fa-linkedin"></i>
 						</a>
 					</li>
 

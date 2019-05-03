@@ -36,7 +36,7 @@ $font-titulos:'Open Sans', sans-serif;
 $color-background:#F4F7FA;
 $color-background2:#d0d0d0;
 $color-titulos:#212240;
-$color-texto:#827D96;
+$color-texto:#1A1A23;
 $color-texto2:#373739;
 $color-but1:rgb(102, 46, 243);
 $color-ingenio4:#f261ad;
@@ -280,7 +280,7 @@ nav{
 	font-family: 'Raleway', sans-serif;
 	color:$color-coolgrey;
 	letter-spacing: 1px;
-    font-weight: 700;   
+    font-weight: 400;   
 	font-size:40px;
 	margin-top:20px;
 	text-align: center;
@@ -288,8 +288,8 @@ nav{
 	font-family:Inter UI,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
 	text-transform: uppercase;
 	font-size: 19px;
-	letter-spacing: 5px;
-	font-weight: 600;
+	letter-spacing: 4px;
+	
 
 	&.portadatit{
 	color:white;
@@ -302,7 +302,7 @@ nav{
 	}
 
 	@media only screen and  (max-width:600px) {	
-		font-size:17px;	
+		font-size:19px;	
 	}			
 }
 .spantext{
