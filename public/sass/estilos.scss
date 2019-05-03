@@ -66,6 +66,19 @@ $font-titulos:'Quicksand', sans-serif;
 	padding:5px;
 }
 
+@mixin mybut($color){
+    border-radius:20px;
+    background: $color;
+    color:whitesmoke;
+    border-style: none;
+    padding:15px 30px;
+	font-size:12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	
+
+}
+
 .but{
 	background-color:transparent;
 	color:whitemsmoke;
@@ -443,118 +456,217 @@ $color-titulos:#484848;
 
 
 // BUSQUEDAS
+   .busquedas{
+
+		padding:50px 100px;
+        -webkit-background-attachment: fixed;
+		background: url("/imagenes/web/portada14.jpeg")  no-repeat top;	
+		background-attachment: fixed;
+		position: relative;
+		min-height: 550px;
+		position:relative;
+		@media only screen and  (max-width:600px) {			
+			padding:8px;	
+			height:auto;
+			
+		}	
+		
 
 
-.busquedas{
-	background-attachment: fixed;
-
-	&.itparticular{
-		background: url("/imagenes/web/portada14.jpeg")  no-repeat center;	
-	}
-
-	&.ingenieriaparticular{
-	background: url("/imagenes/web/portada10.jpg")  no-repeat top;	
-
-		.job-title{
-		// INSERTAR DISTINTIVOS
+		
+		.robot{
+			width: 99%;
+			margin:0 auto;
+			padding:0px 70px;
+			.errtit{
+				font-size: 20px;
+				color:$color-ingenio3;
+				margin-bottom: 2px;
+			}
+			.errtext{
+				font-size: 13px;
+				color:whitesmoke;
+				margin-bottom: 10px;	
+			}
+				
 		}
 
-	}
 
-	.jobs-result{	
+			.transparencia{
+			top:0px;
+			left:0px;
+			position: absolute;
+			height:100%;
+			width:100%;
 			
-			text-align: center;			
-			margin-bottom:10px;	
-			padding:10px;			
-			
-			.job-offer{
+			background-color:rgba(255,255,255,0.9);
+			background-color:rgba(0,0,0,0.40);
+			filter: grayscale(100px);
+			@media only screen and  (max-width:600px) {
+				background-color:rgba(0,0,0,0.80);
 				
-				margin:0px;
-				padding:0px;
+			}	
 
 
-				.job-wrapp{
-					width: 95%;
-					margin:0 auto;
-					padding:15px;
-					background-color:$color-whiteopacity;
-					margin-bottom:10px;
-					border-bottom:5px solid $color-ingenio1;
-					&:hover{
-						border-bottom:5px solid $color-ingenio3;
-						transition:0.9s;
-						& span{
-							color:$color-ingenio2;
-							transition: 1.2s;
+		}
+		.tituloit{
+			color: whitesmoke;	
+			margin-top:30px;
+			@media only screen and  (max-width:600px) {
+				color: whitesmoke;	
+				text-align: center;
+					
+			}
+		}
+
+        .jobs-result{	
+                
+                text-align: center;			
+                 padding:5px 30px;			
+				z-index:9999;
+                .job-offer{
+            
+                    margin:5px 0px;
+					padding:0px;
+
+			
+					
+					.jobOfferWrapp{
+					
+						height:360px;
+						z-index: 0;
+						position: relative;
+						background: rgba(255,255,255,0.75);
+						width: 90%;
+						margin:5px auto;
+						padding:10px;
+						border-left:10px solid $color-ingenio3;
+						overflow: hidden;
+						transition: 0.5s;
+						border-radius: 20px;
+						transition:all ease-in 0.8s;
+						&:hover{
+							border-left:10px solid lighten($color-ingenio3,10%);
+							transition:all ease-in-out 1s;
 						}
-					}
+						&:hover i{
+							color:  lighten($color-ingenio3,10%);
+							transition:all ease-in-out 1s;
+						}
+						&:hover button{
+							background-color:  lighten($color-ingenio3,18%) !important;
+							transition:all ease-in-out 1s;
+						}
 
-				}
+						@media only screen and  (max-width:600px) {
+							border-radius: 25px;
+							animation:2s;
+							background-color: rgba(255,255,255,0.85);
+							height:450px;
+						}							
 
-	
-				.job-head{
-					
-					.job-title{
-						font-weight:700;
-						letter-spacing: 1.3px;
-						color:darken($color-ingenio1,30%);
-					}
-					
-
-					padding:10px;
-				}
-				.job-body{
-					height:200px;
-					padding:10px;
-					text-align: left;
-					letter-spacing: 1.5px;
-					padding:5px;
+						.comentariosWrapp{
+							z-index: 10;
+							position: absolute;
+							height: 0px;
+							width: 0px;
+							bottom:-8%;
+							right: -50%;
+							background: white;  /* fallback for old browsers */
 			
-				}
+							border-radius:50%;
+							overflow: hidden;
+							transition:4s;									
+						}
 
-				.iconGroup{
-					position: absolute;
-					bottom:15px;
-					right:35px;
-					.linkICON{
-						padding:5px;
-						color:$color-ingenio1;
-						font-size: 40px;
-						cursor:pointer;
-					
+						.jobcom{
+							width:100%;
+							height: 100%;
+							position: absolute;
+							top:50%;
+							right:0%;
+							transform: translate(0%, -50%);
+							z-index:999;
+							display:none;	
+							color:white;
+							text-align: right;
+							font-size:15px;
+							margin:20% auto;
+							
+							padding:30px;
+						}
+
+
+
+						
+						.jobText{
+							padding:20px;
+							
+							.job-title{
+								text-transform: capitalize;
+								color:$color-ingenio3;
+								font-family: "Raleway";
+								font-size:18px;
+								font-weight: 700;
+								margin-bottom:0px;
+							}
+
+						}
+
+						.jobDescription{
+						
+							.item{
+								padding:8px;
+								border-top:1px solid grey;
+								border-top:1px whitesmoke;
+								.iconDes, svg , .icon-inner{
+									font-size:25px;
+									color:$color-ingenio3;
+									height:100%;
+									//svg{
+									//	display: none;
+									//}
+									//color:black;
+								}
+		
+								.textCat{
+									text-align: left;
+									font-size: 14px;
+									@media only screen and  (max-width:600px) {
+										text-align: center;
+										padding:0px;
+
+									}
+								}	
+							}
+							.butonera{
+							margin:5px auto;
+									button{
+										padding:10px 20px !important;
+										@include mybut($color-ingenio3);
+									}
+								}
+		
+						}
+						.jobLink{
+							font-size: 14px;
+							.link{
+								color:$color-ingenio2;
+							}
+							.days{
+								color:$color-ingenio2;
+							}
+						}
+
 					}
-				}
+                    
 
-				.job-title{
-					margin-top:10px;					
-					font-weight: 700;
-					color:darken($color-ingenio1 , 35%);
-				}
-
-
-	
-				.icon{
-					padding:3px;
-					margin-right:4px;
-					color:#0077B5;
-					font-size: 18px;
-				}
-				&:hover .icon{
-					transition:0.8s;
-								
-				}
-				label{
-					color:$color-grey;
-					text-align: left;
-					
-				}
+                }
+    }
+                
+    
+   
 	}
-}
-			
-
-
-
-}
 
 /*SERVICIOS SECTION*/
 
@@ -693,7 +805,10 @@ $button-color:#00CCCB;
 		height: 100vh;
 		background-size:cover;
 		background-attachment: fixed;
-		
+		@media only screen and  (max-width:600px) {
+			height:auto;
+				
+		}		
 		.titulo{
 			font-size:25px;
 			color:white;

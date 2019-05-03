@@ -273,66 +273,151 @@ h1, .container, .container-fluid {
             text-align: justify; } }
 
 .busquedas {
-  background-attachment: fixed; }
-  .busquedas.itparticular {
-    background: url("/imagenes/web/portada14.jpeg") no-repeat center; }
-  .busquedas.ingenieriaparticular {
-    background: url("/imagenes/web/portada10.jpg") no-repeat top; }
+  padding: 50px 100px;
+  -webkit-background-attachment: fixed;
+  background: url("/imagenes/web/portada14.jpeg") no-repeat top;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 550px;
+  position: relative; }
+  @media only screen and (max-width: 600px) {
+    .busquedas {
+      padding: 8px;
+      height: auto; } }
+  .busquedas .robot {
+    width: 99%;
+    margin: 0 auto;
+    padding: 0px 70px; }
+    .busquedas .robot .errtit {
+      font-size: 20px;
+      color: #00a896;
+      margin-bottom: 2px; }
+    .busquedas .robot .errtext {
+      font-size: 13px;
+      color: whitesmoke;
+      margin-bottom: 10px; }
+  .busquedas .transparencia {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: grayscale(100px); }
+    @media only screen and (max-width: 600px) {
+      .busquedas .transparencia {
+        background-color: rgba(0, 0, 0, 0.8); } }
+  .busquedas .tituloit {
+    color: whitesmoke;
+    margin-top: 30px; }
+    @media only screen and (max-width: 600px) {
+      .busquedas .tituloit {
+        color: whitesmoke;
+        text-align: center; } }
   .busquedas .jobs-result {
     text-align: center;
-    margin-bottom: 10px;
-    padding: 10px; }
+    padding: 5px 30px;
+    z-index: 9999; }
     .busquedas .jobs-result .job-offer {
-      margin: 0px;
+      margin: 5px 0px;
       padding: 0px; }
-      .busquedas .jobs-result .job-offer .job-wrapp {
-        width: 95%;
-        margin: 0 auto;
-        padding: 15px;
-        background-color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 10px;
-        border-bottom: 5px solid #055174; }
-        .busquedas .jobs-result .job-offer .job-wrapp:hover {
-          border-bottom: 5px solid #00a896;
-          transition: 0.9s; }
-          .busquedas .jobs-result .job-offer .job-wrapp:hover span {
-            color: #028090;
-            transition: 1.2s; }
-      .busquedas .jobs-result .job-offer .job-head {
-        padding: 10px; }
-        .busquedas .jobs-result .job-offer .job-head .job-title {
-          font-weight: 700;
-          letter-spacing: 1.3px;
-          color: black; }
-      .busquedas .jobs-result .job-offer .job-body {
-        height: 200px;
+      .busquedas .jobs-result .job-offer .jobOfferWrapp {
+        height: 360px;
+        z-index: 0;
+        position: relative;
+        background: rgba(255, 255, 255, 0.75);
+        width: 90%;
+        margin: 5px auto;
         padding: 10px;
-        text-align: left;
-        letter-spacing: 1.5px;
-        padding: 5px; }
-      .busquedas .jobs-result .job-offer .iconGroup {
-        position: absolute;
-        bottom: 15px;
-        right: 35px; }
-        .busquedas .jobs-result .job-offer .iconGroup .linkICON {
-          padding: 5px;
-          color: #055174;
-          font-size: 40px;
-          cursor: pointer; }
-      .busquedas .jobs-result .job-offer .job-title {
-        margin-top: 10px;
-        font-weight: 700;
-        color: black; }
-      .busquedas .jobs-result .job-offer .icon {
-        padding: 3px;
-        margin-right: 4px;
-        color: #0077B5;
-        font-size: 18px; }
-      .busquedas .jobs-result .job-offer:hover .icon {
-        transition: 0.8s; }
-      .busquedas .jobs-result .job-offer label {
-        color: rgba(30, 30, 30, 0.8);
-        text-align: left; }
+        border-left: 10px solid #00a896;
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 20px;
+        transition: all ease-in 0.8s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
+          border-left: 10px solid #00dbc4;
+          transition: all ease-in-out 1s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
+          color: #00dbc4;
+          transition: all ease-in-out 1s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
+          background-color: #05ffe4 !important;
+          transition: all ease-in-out 1s; }
+        @media only screen and (max-width: 600px) {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp {
+            border-radius: 25px;
+            animation: 2s;
+            background-color: rgba(255, 255, 255, 0.85);
+            height: 450px; } }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
+          z-index: 10;
+          position: absolute;
+          height: 0px;
+          width: 0px;
+          bottom: -8%;
+          right: -50%;
+          background: white;
+          /* fallback for old browsers */
+          border-radius: 50%;
+          overflow: hidden;
+          transition: 4s; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobcom {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          right: 0%;
+          transform: translate(0%, -50%);
+          z-index: 999;
+          display: none;
+          color: white;
+          text-align: right;
+          font-size: 15px;
+          margin: 20% auto;
+          padding: 30px; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
+          padding: 20px; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
+            text-transform: capitalize;
+            color: #00a896;
+            font-family: "Raleway";
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0px; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
+          padding: 8px;
+          border-top: 1px solid grey;
+          border-top: 1px whitesmoke; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
+            font-size: 25px;
+            color: #00a896;
+            height: 100%; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+            text-align: left;
+            font-size: 14px; }
+            @media only screen and (max-width: 600px) {
+              .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+                text-align: center;
+                padding: 0px; } }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera {
+          margin: 5px auto; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
+            padding: 10px 20px !important;
+            border-radius: 20px;
+            background: #00a896;
+            color: whitesmoke;
+            border-style: none;
+            padding: 15px 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase; }
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
+          font-size: 14px; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
+            color: #028090; }
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
+            color: #028090; }
 
 /*SERVICIOS SECTION*/
 .servicios {
@@ -423,6 +508,9 @@ h1, .container, .container-fluid {
   background-attachment: fixed;
   /*CONTACTO SECTION*/
   /*LOGIN*/ }
+  @media only screen and (max-width: 600px) {
+    .panel {
+      height: auto; } }
   .panel .titulo {
     font-size: 25px;
     color: white;

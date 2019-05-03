@@ -212,10 +212,10 @@ nav {
       transform: translate(-50%, -50%);
       position: absolute; }
       .itsolutions .loading .loadingwrapper .logoWrapper .logoImg {
-        height: 80px; }
+        height: 90px; }
         @media only screen and (max-width: 600px) {
           .itsolutions .loading .loadingwrapper .logoWrapper .logoImg {
-            height: 100px; } }
+            height: 110px; } }
     .itsolutions .loading .loadingwrapper .spinner {
       color: #26D0CE;
       position: absolute;

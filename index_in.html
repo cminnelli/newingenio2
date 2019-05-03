@@ -21,8 +21,7 @@
 
 <link rel="stylesheet" href="css/estilos.css">
 
-
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -152,41 +151,153 @@
 		</section>
 
 
-		<section ng-init="initBusquedas()" class="busquedas ingenieriaparticular wow fadeIn" id="busquedas">
-				<div class="row">
-			<div class=" col-xs-3 encabezado busquedas-title wow fadeIn">
-				<h3> Búsquedas Ingeniería</h3>
+<section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
+
+			<div class="transparencia"></div>
+
+			<!-- <i class="fas fa-user-circle biguser"></i> -->
+			<div class="row">
+				<div class="col-xs-12 col-md-12 busquedas-title wow fadeInUp">
+						<h2 class="tituloit"> <i class="fab fa-searchengin"></i> Busquedas <span class="spantext"> IT</span> </h2>
+						<br>
+				</div>
 			</div>
 
-				<div class="col-xs-9 jobs-result wow fadeInUp">
-					<div ng-repeat="j in job | filter:'ingeniería'| orderBy:orderProp"  class="job-offer wow fadeInUp col-xs-12 col-sm-3 ">
-							<div class="job-wrapp">				
-								<div class="job-head">
-										<h4 class="job-title"> {{j.puesto}} </h4>
-										<p class="badge badge-default">{{j.seniority}}</p>
-								</div>
-		
-								<div class="job-body">										
-										<p> <span class="ion-lightbulb icon"></span>{{j.area}}</p>
-										 <p> <span class="ion-pricetags icon"></span>{{j.rubro}}</p>
-										<p> <span class="ion-log-in icon"></span>{{j.segmento}}</p>
-										Locación: <p> <span class="ion-location icon"></span>{{j.location}}</p>												
-								</div>
-		
-								<div class="iconGroup">
-										<a ng-click="linkopen(job.linkedin)"><span class="linkICON ion-social-linkedin"></span></a>
-								</div>
-							</div>
 
-					
+			<div class="row">
+				<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
+					<div class="row">
+						<div class="robot" ng-show="robot">
+							<img class="img-fluid" src="/imagenes/web/robot.png" alt="">
+							<p class="errtit">Ups...Hay algun errorcin!</p>
+							<p class="errtext">Intenta de nuevo en un rato</p>
+						</div>
+						<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-12 col-lg-4 col-md-offset-1 wow fadeInUp">
+
+							<div class="jobOfferWrapp">
+
+								<div class="jobText">
+									<h4 class="job-title"> {{j.puesto}} </h4>
+									<p class="badge badge-secondary">{{j.seniority}}</p>
+
+								</div>
+
+								<div class="jobDescription">
+									<div class="row">
+										<div class="item col-xs-4 col-md-4 col-lg-12">
+												<div class="row">
+
+												
+												<div class="col-xs-4 col-lg-4 iconDes">
+														<i class="fas fa-building"></i>
+
+												</div>
+												<div class="col-xs-8 col-lg-8 textCat">
+													<p class="">{{j.area}}</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="item col-xs-4 col-md-4 col-lg-12" >
+											<div class="row">
+												<div class="col-xs-4 col-lg-4 iconDes">
+														
+														<i class="fa fa-angle-double-down"></i>
+												</div>
+												<div class="col-xs-8 col-lg-8 textCat">
+													<p class="">{{j.rubro}}</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="item col-xs-4 col-md-4 col-lg-12">
+											<div class="row">
+
+											
+												<div class="col-xs-4 col-lg-4 iconDes">
+														<i class="fas fa-map-marker-alt"></i>	
+												</div>
+												<div class="col-xs-8 col-lg-8 textCat">
+													<p class="">{{j.ubicacion}}</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="butonera">
+											<button class="infobut">Ver más</button>
+										</div>
+		
+
+									</div>
+								</div>
+
+
+
+								<div class="comentariosWrapp">
+									
+								</div>
+
+			
+
+								<p class="jobcom">{{j.comentarios}}</p>
+
+							</div>
+							<script>
+
+								$(".infobut").click(function () {
+									var ind = $(".infobut").index(this);
+
+									$(".comentariosWrapp").eq(ind).css({
+										transition: 'all ease-in-out 0s',
+										animation: 'aumenta 1.8s',
+										animationFillMode: 'forwards'
+
+									});
+
+									$(".jobcom").eq(ind).fadeIn(1400)
+									
+									setTimeout(function(){
+										$(".comentariosWrapp").eq(ind).css({
+											transition: '3s',
+											animation: 'dismin 1s',
+											animationFillMode: 'forwards'
+										});
+										$(".jobcom").eq(ind).fadeOut(400)
+									},5500)
+
+			
+
+								})
+
+								// $(".closeicon").click(function () {
+
+								// 	var ind = $(".closeicon").index(this);
+								// 	console.log(ind);
+
+								// 	$(".comentariosWrapp").eq(ind).css({
+								// 		transition: '3s',
+								// 		animation: 'dismin 1s',
+								// 		animationFillMode: 'forwards'
+								// 	});
+
+								// 	$(".jobcom").eq(ind).fadeOut(500)
+								// 	$(".closeicon").eq(ind).fadeOut(500)	
+
+								// })
+
+							</script>
+						</div>
+
+
 					</div>
 				</div>
+			</div>
 
 
 
-				
-				
-			</div>			
+
+
+			</div>
 		</section>
 
 		
