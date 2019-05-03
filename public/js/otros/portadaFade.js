@@ -115,4 +115,4 @@ function visualize (text){
 }
 
 navbar()
-loading(0);
+loading(5000);
