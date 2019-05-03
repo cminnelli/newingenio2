@@ -1,82 +1,3 @@
-window.onbeforeunload = function() {window.scrollTo(0,0);}//
-/*ANIMACION PARA CAMBIAR SLOGAN*/
-
-function changeSlogan (slogansArray , time){
-	var titulo = document.getElementById("slogans");
-	var currText = 0;
-		
-
-	setInterval(function(){
-		var textSel = slogansArray[currText];
-		titulo.textContent = textSel;								
-		//console.log(textSel)
-		currText += 1;
-
-		if (currText === slogansArray.length){
-		currText = 0 ;
-		}
-
-	},time)	
-
-	setTimeout(function(){
-		setInterval(function(){
-			titulo.classList.add("shide");	
-			//console.log("repeticion desaparecer")					
-		},time)
-			//console.log("empieza a desaparecer")
-	} , time-500)
-
-
-	setTimeout(function(){
-		setInterval(function(){
-			titulo.classList.remove("shide");	
-			//console.log("repeticion aparecer")					
-			},time)
-			//console.log("empieza a aparecer")
-	} , time+500)					
-
-}
-
-
-
-var time = 4500;
-//changeSlogan(text1 , time)
-//changePortada(ima2 , time)
-
-
-/*MODULO NAVBAR*/
-
-function navbar(){
-	var nav = $("#navbar");
-	var ima = $("#isotipo")
-	window.onscroll = function(){
-		var x = window.scrollY;
-		if (x >600){
-			nav.addClass("highNav")
-
-			ima.css({
-			display:"inline-block"
-			})
-
-			$(".navbar-default .navbar-nav>li>a").css({color:"whitesmoke"})
-			$(".nav .navbar-header").css({backgroundColor:"#055174"})
-			$(".navbar-collapse").css({backgroundColor:"#055174"})
-			$(".navbar-default .navbar-nav>li>a").css({color:"whitesmoke"})
-
-			$(".navbar-default .navbar-nav>li>a>.item").text("nada")
-
-
-		}else{
-			nav.removeClass("highNav")
-	
-			ima.css({
-			display:"none"
-			})
-		
-		}
-	}
-}
-
 
 /*ANIMACION LOADING*/
 
@@ -93,6 +14,17 @@ function loading(time){
 			visible:"block",
 		})
 
+		var typed = new Typed("#typed", {
+
+			strings: ["Innovacion   <p class='function'> ( anticiparnos al futuro ) </p> ", "Creatividad   <p class='function'> ( exigencias del mercado ) </p> ", "Flexibilidad  <p class='function'> ( Necesidades del cliente )</p> ", "Dinamismo  <p class='function'> ( Respuesta )  </p> "],
+			typeSpeed: 30,//specifies the typing speed of the text
+			backSpeed: 15, //specifies speed of deletion of the text,
+			contentType: 'html',
+			loop: false //repetition
+		});
+		setTimeout(function () {
+
+		}, 1000)
 
 	} ,time)
 
@@ -100,19 +32,19 @@ function loading(time){
 
 
 
-function visualize (text){
-	var txt = document.getElementsByClassName(text)[0]
-	var group = document.getElementsByClassName("intro")
-	var qgroup = group.length;
-	for (i = 0 ; i<qgroup ; i++){
-		var group = document.getElementsByClassName("intro")[i]	;
-		group.style.display = 'none';	
-	} 
+// function visualize (text){
+// 	var txt = document.getElementsByClassName(text)[0]
+// 	var group = document.getElementsByClassName("intro")
+// 	var qgroup = group.length;
+// 	for (i = 0 ; i<qgroup ; i++){
+// 		var group = document.getElementsByClassName("intro")[i]	;
+// 		group.style.display = 'none';	
+// 	} 
 
-	var txt = document.getElementsByClassName(text)[0]
-	txt.style.display = 'block';
+// 	var txt = document.getElementsByClassName(text)[0]
+// 	txt.style.display = 'block';
 
-}
+// }
 
-navbar()
-loading(5000);
+// navbar()
+loading(3000);

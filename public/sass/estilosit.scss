@@ -4,10 +4,7 @@
 @import url('../css/animate.css');
 
 
-$color-grey:rgba(30,30,30,0.8);
 
-$color-nosotros:#EDEEF2;
-$color-coolgrey:#444;
 
 $font-primary:'Montserrat', sans-serif;
 $font-encabezado:'Quicksand', sans-serif;
@@ -33,6 +30,7 @@ $font-titulos:'Open Sans', sans-serif;
     margin:0;
 }
 
+// COLORES
 $color-background:#F4F7FA;
 $color-background2:#d0d0d0;
 $color-titulos:#212240;
@@ -44,13 +42,18 @@ $color-nosotros:212240;
 $color-span:#26D0CE;
 $color-newingenio:rgb(57,174,158);
 $color-span2:#15aabf;
+$color-span2:#15aabf;
+$color-grey:rgba(30,30,30,0.8);
+$color-nosotros:#EDEEF2;
+$color-coolgrey:#444;
 
+// TAMAÑOS
 $size-textoit:13px;
-$size-textoit2:12px;
+$size-textoit2:13px;
 $size-titulosec:19px;
 $size-titulopri:30px;
 $size-posttitulosec:18px;
-$color-span2:#15aabf;
+
 
 @mixin mybut($color){
     border-radius:20px;
@@ -258,7 +261,7 @@ nav{
     color:$color-texto;
     font-size:$size-textoit  ; 
     line-height: 28px;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.4px;
 	padding:20px 0px;
 	margin-bottom: 0px;
 	@media only screen and  (max-width:600px) {
@@ -296,7 +299,7 @@ nav{
 	font-size:40px;	
 	text-align: left !important;
 	text-shadow: 0 0 6px 3px rgba(0,0,0,0.25);
-	text-transform: lowercase;
+text-transform: initial;
 
 
 	}
@@ -577,9 +580,8 @@ nav{
 
     .nosotros{
       
-        margin:0 auto;
+    margin:0 auto;
 		position: relative;
-	//	background:no-repeat url("https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 		background-size:100%;
 		background-position: top left;
 		overflow: hidden;		
@@ -587,6 +589,7 @@ nav{
 		background-attachment: fixed;
 
 		@media only screen and  (max-width:600px) {
+			
 			background-attachment: fixed;
 			background:none;
 			padding:20px 0px;
@@ -605,24 +608,25 @@ nav{
 			
 		@media only screen and  (max-width:600px) {
 			top:30%;
-			left: 50%;
-			transform: translate(-50%,-50%);
+			left: 0%;
+	
 			font-size:350px;			
 			}	
 
 		}
 		//@include shadows(25px);
         .nosotros-wrapper{
-			margin-bottom:50px;
-
+				margin-bottom:50px;
+		
             .modulo-nosotros-texto{
+									text-align: justify;
             	position: 	relative;
 				z-index: 900;
 				padding:50px;
               
 				@media only screen and  (max-width:600px) {
 					padding:0px;
-					text-align: justify;
+
 				}
 
 					.compromisoIcon{
@@ -634,10 +638,14 @@ nav{
 					}
 				.text1{
 					padding:10px 50px;
+				@media only screen and  (max-width:600px) {
+					padding:20px 50px 30px 70px;
+
+				}
 				}
 				.text2{
 					
-					background-color:#2E8864;
+					background-color:$color-span2;
 					padding:30px 50px;
 
 					p{
@@ -714,7 +722,7 @@ nav{
 			box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
 			border-top:4px solid $color-span2;
 			padding:40px;
-			margin-top:40px;
+			margin:40px 0px 150px 0px;
 
 			@media only screen and  (max-width:600px) {
 				padding:2px;
@@ -737,10 +745,11 @@ nav{
 					}	
 
 					&:hover i{
-						color:#F06595;
+						color:$color-but1;;
 						transition:1s;				}
 
 	    			i{
+							transition:2s;
 					font-size: $size-titulopri;
 					padding:15px;
 				
@@ -1262,7 +1271,8 @@ body{
 }
 
 footer{
-	color:whitesmoke;
+
+		
 	.footerWrapper{
 		padding:40px;
 		height: auto;
@@ -1305,26 +1315,34 @@ footer{
 		}
 	}
 	.textoFooter{
+		
 		color:whitesmoke;
-		p{
+		.textoit{
+			color:whitesmoke;
+			font-family:"Raleway";
+		}
+		p, span{
 			margin-top:0px;
 			padding:5px;
-			font-family: $font-titulos;
 			text-align: center;
-			font-size:14px;
-			@media only screen and  (max-width:600px) {
-			font-size:13px;
-			}	 
+			color:whitesmoke;
 			
 		}
 	}
 	}
 	.broom{
+		font-family:"Raleway";
 	width:100%;
 	background-color:darken($color-titulos,15%);
 	padding:5px;
+	color:white;
+	.textoit{
+		color:white;
+	}
 	p{
 		text-align: center;
+		opacity: 0.85;
+
 	}
 	
 	}

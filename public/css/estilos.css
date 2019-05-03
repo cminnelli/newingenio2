@@ -18,11 +18,6 @@
   flex-direction: row-reverse;
   justify-content: center; }
 
-.stars > i {
-  color: #FFD76E;
-  padding: 2px;
-  transition: all 0.2s ease; }
-
 @keyframes pulsar {
   from {
     height: 150px; }
@@ -83,10 +78,10 @@
     .loading .loadingwrapper .logoWrapper .logoImg {
       animation: float 2s infinite;
       transition: all ease-in-out 2s;
-      height: 90px; }
+      height: 110px; }
       @media only screen and (max-width: 600px) {
         .loading .loadingwrapper .logoWrapper .logoImg {
-          height: 110px; } }
+          height: 130px; } }
   .loading .loadingwrapper .spinner {
     color: #0587AD;
     position: absolute;
@@ -133,7 +128,8 @@
     transform: scaleY(1);
     -webkit-transform: scaleY(1); } }
 .bodyMain {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13.5px;
   font-weight: 300;
   overflow-y: hidden; }
 
@@ -469,11 +465,12 @@ h1, .container, .container-fluid {
   font-family: "Quicksand", sans-serif;
   color: rgba(30, 30, 30, 0.8);
   text-align: center;
-  font-weight: 900; }
+  font-weight: 900;
+  z-index: 9999; }
   .encabezado.servicio-title {
     color: #484848; }
   .encabezado.busquedas-title {
-    color: black; }
+    color: whitesmoke; }
   .encabezado h3 {
     padding: 15px;
     margin: 0;
@@ -689,7 +686,7 @@ h1, .container, .container-fluid {
     font-family: "Arial";
     font-weight: 200;
     text-align: center;
-    font-family: "Quicksand", sans-serif; }
+    font-family: "Montserrat", sans-serif; }
     .panel .login h3 {
       margin: 0;
       padding: 10px; }
@@ -735,17 +732,16 @@ footer {
             color: whitesmoke;
             font-size: 30px;
             padding: 0px 5px; }
-    footer .footerWrapper .textoFooter {
+    footer .footerWrapper .textoFooter p {
+      margin-top: 0px;
+      padding: 5px;
+      font-family: "Quicksand", sans-serif;
+      text-align: center;
+      font-size: 14px;
       color: whitesmoke; }
-      footer .footerWrapper .textoFooter p {
-        margin-top: 0px;
-        padding: 5px;
-        font-family: "Quicksand", sans-serif;
-        text-align: center;
-        font-size: 14px; }
-        @media only screen and (max-width: 600px) {
-          footer .footerWrapper .textoFooter p {
-            font-size: 13px; } }
+      @media only screen and (max-width: 600px) {
+        footer .footerWrapper .textoFooter p {
+          font-size: 13px; } }
   footer .broom {
     width: 100%;
     background-color: #222222;

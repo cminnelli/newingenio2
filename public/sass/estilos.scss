@@ -15,7 +15,7 @@ $color-ingenio3:#00a896;
 $color-ingenio4:#f261ad;
 $color-nosotros:#EDEEF2;
 
-$font-primary:'Quicksand', sans-serif;
+$font-primary:'Montserrat', sans-serif;
 $font-encabezado:'Quicksand', sans-serif;
 $font-navegador:'Quicksand', sans-serif;
 $font-titulos:'Quicksand', sans-serif;
@@ -39,11 +39,7 @@ $font-titulos:'Quicksand', sans-serif;
   justify-content: center;
 }
 
-.stars > i {
-  color: #FFD76E;
-  padding: 2px;
-  transition: all 0.2s ease;
-}
+
 
 @keyframes pulsar{
 	from{
@@ -152,9 +148,9 @@ $font-titulos:'Quicksand', sans-serif;
 					.logoImg{
 						animation:float 2s infinite;
 						transition:all ease-in-out 2s;
-						height: 90px;
+						height: 110px;
 						@media only screen and  (max-width:600px) {	
-							height: 110px;	
+							height: 130px;	
 
 						}	
 					}
@@ -226,6 +222,7 @@ $font-titulos:'Quicksand', sans-serif;
 
 .bodyMain{
 	font-family: $font-primary;
+	font-size:13.5px;
 	font-weight:300;
 	overflow-y:hidden;
 }
@@ -290,19 +287,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 	height: 100vh;
 	position: relative;
 	z-index: 1000;
-
-	position:relative;
-// 	.transparencia{
-// 		position:absolute;
-// 		height: 100%;
-// 		width:100%;
-// 		opacity: 0.8;
-// 		background: #b993d6; /* fallback for old browsers */
-//   background: -webkit-linear-gradient(to bottom, #b993d6, #8ca6db); /* Chrome 10-25, Safari 5.1-6 */
-//   background: linear-gradient(to bottom, #b993d6, #8ca6db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// 	}
-
-	
+	position:relative;	
 
 	#mainportada{
 		height: 100%;
@@ -753,11 +738,12 @@ $color-titulos:#484848;
 	color:$color-grey;
 	text-align: center;
 	font-weight: 900;
+	z-index:9999;
 	&.servicio-title{
 		color:$color-titulos;
 	}
 	&.busquedas-title{
-		color:black;
+		color:whitesmoke;
 	}
 
 	h3{
@@ -1183,13 +1169,14 @@ footer{
 		}
 	}
 	.textoFooter{
-		color:whitesmoke;
+
 		p{
 			margin-top:0px;
 			padding:5px;
 			font-family: $font-titulos;
 			text-align: center;
 			font-size:14px;
+			color:whitesmoke;
 			@media only screen and  (max-width:600px) {
 			font-size:13px;
 			}	 

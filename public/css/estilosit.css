@@ -155,13 +155,13 @@ nav {
   color: #1A1A23;
   font-size: 13px;
   line-height: 28px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   padding: 20px 0px;
   margin-bottom: 0px; }
   @media only screen and (max-width: 600px) {
     .textoit {
       text-align: -webkit-auto;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 25px;
       text-align: justify; } }
   .textoit.highlights {
@@ -185,7 +185,7 @@ nav {
     font-size: 40px;
     text-align: left !important;
     text-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.25);
-    text-transform: lowercase; }
+    text-transform: initial; }
   @media only screen and (max-width: 600px) {
     .tituloit {
       font-size: 19px; } }
@@ -416,27 +416,29 @@ nav {
     @media only screen and (max-width: 600px) {
       .nosotros .bigcode {
         top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0%;
         font-size: 350px; } }
   .nosotros .nosotros-wrapper {
     margin-bottom: 50px; }
     .nosotros .nosotros-wrapper .modulo-nosotros-texto {
+      text-align: justify;
       position: relative;
       z-index: 900;
       padding: 50px; }
       @media only screen and (max-width: 600px) {
         .nosotros .nosotros-wrapper .modulo-nosotros-texto {
-          padding: 0px;
-          text-align: justify; } }
+          padding: 0px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .compromisoIcon {
         width: 80px;
         margin: auto 40%;
         margin-top: 0px; }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
         padding: 10px 50px; }
+        @media only screen and (max-width: 600px) {
+          .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
+            padding: 20px 50px 30px 70px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 {
-        background-color: #2E8864;
+        background-color: #15aabf;
         padding: 30px 50px; }
         .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 p {
           color: white; }
@@ -488,7 +490,7 @@ nav {
     box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
     border-top: 4px solid #15aabf;
     padding: 40px;
-    margin-top: 40px; }
+    margin: 40px 0px 150px 0px; }
     @media only screen and (max-width: 600px) {
       .servicios .servicios-wrapper {
         padding: 2px; } }
@@ -503,9 +505,10 @@ nav {
           .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
             border: none; } }
         .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard:hover i {
-          color: #F06595;
+          color: #662ef3;
           transition: 1s; }
         .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard i {
+          transition: 2s;
           font-size: 30px;
           padding: 15px; }
         .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-title {
@@ -836,50 +839,52 @@ body {
     height: 1500px;
     width: 1500px;
     background-color: #15aabf; } }
-footer {
-  color: whitesmoke; }
-  footer .footerWrapper {
-    padding: 40px;
-    height: auto;
-    background-color: #1c1d36; }
-    footer .footerWrapper .logoWrapper {
+footer .footerWrapper {
+  padding: 40px;
+  height: auto;
+  background-color: #1c1d36; }
+  footer .footerWrapper .logoWrapper {
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px; }
+    footer .footerWrapper .logoWrapper .logoImg {
+      width: 90px; }
+  footer .footerWrapper .social {
+    text-align: center; }
+    footer .footerWrapper .social ul {
+      width: 100%;
+      background: none;
+      display: inline-block !important;
+      padding-left: 0px; }
+      footer .footerWrapper .social ul li {
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block; }
+        footer .footerWrapper .social ul li a {
+          color: whitesmoke;
+          font-size: 30px;
+          padding: 0px 5px; }
+  footer .footerWrapper .textoFooter {
+    color: whitesmoke; }
+    footer .footerWrapper .textoFooter .textoit {
+      color: whitesmoke;
+      font-family: "Raleway"; }
+    footer .footerWrapper .textoFooter p, footer .footerWrapper .textoFooter span {
+      margin-top: 0px;
+      padding: 5px;
       text-align: center;
-      width: 250px;
-      margin: 0 auto;
-      padding: 10px; }
-      footer .footerWrapper .logoWrapper .logoImg {
-        width: 90px; }
-    footer .footerWrapper .social {
-      text-align: center; }
-      footer .footerWrapper .social ul {
-        width: 100%;
-        background: none;
-        display: inline-block !important;
-        padding-left: 0px; }
-        footer .footerWrapper .social ul li {
-          padding: 10px;
-          text-decoration: none;
-          display: inline-block; }
-          footer .footerWrapper .social ul li a {
-            color: whitesmoke;
-            font-size: 30px;
-            padding: 0px 5px; }
-    footer .footerWrapper .textoFooter {
       color: whitesmoke; }
-      footer .footerWrapper .textoFooter p {
-        margin-top: 0px;
-        padding: 5px;
-        font-family: "Open Sans", sans-serif;
-        text-align: center;
-        font-size: 14px; }
-        @media only screen and (max-width: 600px) {
-          footer .footerWrapper .textoFooter p {
-            font-size: 13px; } }
-  footer .broom {
-    width: 100%;
-    background-color: #07070e;
-    padding: 5px; }
-    footer .broom p {
-      text-align: center; }
+footer .broom {
+  font-family: "Raleway";
+  width: 100%;
+  background-color: #07070e;
+  padding: 5px;
+  color: white; }
+  footer .broom .textoit {
+    color: white; }
+  footer .broom p {
+    text-align: center;
+    opacity: 0.85; }
 
 /*# sourceMappingURL=estilosit.css.map */
