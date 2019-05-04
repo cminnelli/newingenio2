@@ -737,7 +737,7 @@ text-transform: initial;
 						background-size: cover;
 						box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
 						border-top:4px solid $color-span2;
-						padding:20px;
+						padding:20px 5px;
 						margin-top:20px;
 			
 
@@ -864,11 +864,11 @@ text-transform: initial;
                 
                 text-align: center;			
                  padding:5px 30px;			
-											z-index:9999;
+				z-index:9999;
                 .job-offer{
             
                     margin:5px 0px;
-										padding:0px;
+					padding:0px;
 
 			
 					
@@ -1292,7 +1292,7 @@ footer{
 	.footerWrapper{
 		padding:40px;
 		height: auto;
-		background-color:#1c1d36;
+		background-color:rgba(55,55,57,0.7);
 
 		.logoWrapper{
 			    text-align: center;

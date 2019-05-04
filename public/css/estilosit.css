@@ -514,7 +514,7 @@ nav {
       background-size: cover;
       box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
       border-top: 4px solid #15aabf;
-      padding: 20px;
+      padding: 20px 5px;
       margin-top: 20px; }
       .servicios .servicewrapper .module-wrapper img {
         margin-top: 80px; }
@@ -597,12 +597,10 @@ nav {
     text-align: center;
     padding: 5px 30px;
     z-index: 9999; }
-    .busquedas .jobs-result ss
-    .job-offer {
+    .busquedas .jobs-result .job-offer {
       margin: 5px 0px;
       padding: 0px; }
-      .busquedas .jobs-result ss
-      .job-offer .jobOfferWrapp {
+      .busquedas .jobs-result .job-offer .jobOfferWrapp {
         height: 360px;
         z-index: 0;
         position: relative;
@@ -615,27 +613,22 @@ nav {
         transition: 0.5s;
         border-radius: 20px;
         transition: all ease-in 0.8s; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp:hover {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
           border-left: 10px solid #895ef6;
           transition: all ease-in-out 1s; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp:hover i {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
           color: #895ef6;
           transition: all ease-in-out 1s; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp:hover button {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
           background-color: #a685f8 !important;
           transition: all ease-in-out 1s; }
         @media only screen and (max-width: 600px) {
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp {
             border-radius: 25px;
             animation: 2s;
             background-color: rgba(255, 255, 255, 0.85);
             height: 450px; } }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp .comentariosWrapp {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
           z-index: 10;
           position: absolute;
           height: 0px;
@@ -647,8 +640,7 @@ nav {
           border-radius: 50%;
           overflow: hidden;
           transition: 4s; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp .jobcom {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobcom {
           width: 100%;
           height: 100%;
           position: absolute;
@@ -662,43 +654,33 @@ nav {
           font-size: 15px;
           margin: 20% auto;
           padding: 30px; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp .jobText {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
           padding: 20px; }
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobText .job-title {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
             text-transform: capitalize;
             color: #373739;
             font-family: "Raleway";
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 0px; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp .jobDescription .item {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
           padding: 8px;
           border-top: 1px solid grey;
           border-top: 1px whitesmoke; }
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
             font-size: 25px;
             color: #26D0CE;
             height: 100%; }
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
             text-align: left;
             font-size: 14px; }
             @media only screen and (max-width: 600px) {
-              .busquedas .jobs-result ss
-              .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+              .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
                 text-align: center;
                 padding: 0px; } }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp .jobDescription .butonera {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera {
           margin: 5px auto; }
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobDescription .butonera button {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
             padding: 10px 20px !important;
             border-radius: 20px;
             background: #26D0CE;
@@ -708,14 +690,11 @@ nav {
             font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase; }
-        .busquedas .jobs-result ss
-        .job-offer .jobOfferWrapp .jobLink {
+        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
           font-size: 14px; }
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobLink .link {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
             color: #662ef3; }
-          .busquedas .jobs-result ss
-          .job-offer .jobOfferWrapp .jobLink .days {
+          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
             color: #662ef3; }
 
 .testimoniales {
@@ -904,7 +883,7 @@ body {
 footer .footerWrapper {
   padding: 40px;
   height: auto;
-  background-color: #1c1d36; }
+  background-color: rgba(55, 55, 57, 0.7); }
   footer .footerWrapper .logoWrapper {
     text-align: center;
     width: 250px;
