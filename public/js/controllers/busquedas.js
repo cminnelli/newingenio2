@@ -51,11 +51,12 @@ $scope.buttonGoogle = true;
 $scope.ingenio = false;
 $scope.loader = true;
 $scope.signOut = false;
-
+$scope.spinnerContact = false;
 /*BOTONERA SIGN GOOGLE FUNCTION*/
 
 
-$scope.busquedaInit = function(){
+$scope.conect = function(event){
+	$scope.spinnerContact = true;
 
 }
 

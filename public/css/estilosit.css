@@ -12,6 +12,57 @@
 .row {
   margin: 0; }
 
+.spinner {
+  color: #26D0CE;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 85px;
+  text-align: center;
+  font-size: 10px; }
+  @media only screen and (max-width: 600px) {
+    .spinner {
+      width: 100px;
+      height: 70px; } }
+
+.spinner > div {
+  background-color: #41ECAF;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s; }
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s; }
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s; }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
 .function {
   color: #26D0CE;
   display: inline-block;
@@ -66,7 +117,7 @@ nav {
   padding: 20px;
   font-family: "Raleway";
   font-size: 14px;
-  color: #444; }
+  color: #051146; }
   @media only screen and (max-width: 600px) {
     .nav1 {
       display: none; } }
@@ -133,8 +184,8 @@ nav {
     background-color: #1ea5a3;
     opacity: 0.90; }
   100% {
-    height: 470px;
-    width: 470px;
+    height: 530px;
+    width: 530px;
     opacity: 0.95;
     background-color: #1a8f8e; } }
 @keyframes dismin {
@@ -155,7 +206,7 @@ nav {
   color: #1A1A23;
   font-size: 13px;
   line-height: 28px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   padding: 20px 0px;
   margin-bottom: 0px; }
   @media only screen and (max-width: 600px) {
@@ -166,19 +217,19 @@ nav {
       text-align: justify; } }
   .textoit.highlights {
     font-weight: 700;
-    color: #212240; }
+    color: #051146; }
 
 .tituloit {
   font-family: 'Raleway', sans-serif;
-  color: #444;
+  color: #051146;
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 40px;
-  margin-top: 20px;
+  margin-bottom: 35px;
   text-align: center;
   font-family: Inter UI,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: 25px;
   letter-spacing: 4px; }
   .tituloit.portadatit {
     color: white;
@@ -200,7 +251,7 @@ nav {
   .itsolutions .loading {
     z-index: 9999;
     position: absolute;
-    background-color: #F4F7FA;
+    background-color: #F2F5FF;
     height: 100vh;
     width: 100%;
     top: 0px;
@@ -215,51 +266,6 @@ nav {
         @media only screen and (max-width: 600px) {
           .itsolutions .loading .loadingwrapper .logoWrapper .logoImg {
             height: 110px; } }
-    .itsolutions .loading .loadingwrapper .spinner {
-      color: #26D0CE;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 110px;
-      height: 85px;
-      text-align: center;
-      font-size: 10px; }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .loading .loadingwrapper .spinner {
-          width: 100px;
-          height: 70px; } }
-    .itsolutions .loading .loadingwrapper .spinner > div {
-      background-color: #41ECAF;
-      height: 100%;
-      width: 6px;
-      display: inline-block;
-      -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-      animation: sk-stretchdelay 1.2s infinite ease-in-out; }
-    .itsolutions .loading .loadingwrapper .spinner .rect2 {
-      -webkit-animation-delay: -1.1s;
-      animation-delay: -1.1s; }
-    .itsolutions .loading .loadingwrapper .spinner .rect3 {
-      -webkit-animation-delay: -1.0s;
-      animation-delay: -1.0s; }
-    .itsolutions .loading .loadingwrapper .spinner .rect4 {
-      -webkit-animation-delay: -0.9s;
-      animation-delay: -0.9s; }
-    .itsolutions .loading .loadingwrapper .spinner .rect5 {
-      -webkit-animation-delay: -0.8s;
-      animation-delay: -0.8s; }
-@-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% {
-    -webkit-transform: scaleY(0.4); }
-  20% {
-    -webkit-transform: scaleY(1); } }
-@keyframes sk-stretchdelay {
-  0%, 40%, 100% {
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4); }
-  20% {
-    transform: scaleY(1);
-    -webkit-transform: scaleY(1); } }
   .itsolutions .portada {
     position: relative;
     padding: 50px;
@@ -306,6 +312,7 @@ nav {
               text-align: left; } }
         .itsolutions .portada .portada_wrapper_texto .banner .textoit {
           width: 80%;
+          color: whitesmoke;
           font-size: 14px;
           padding: 0px; }
           @media only screen and (max-width: 600px) {
@@ -315,7 +322,7 @@ nav {
               font-size: 14px;
               margin: 0px;
               color: white;
-              opacity: 0.45; } }
+              opacity: 0.75; } }
         .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
           color: #505053;
           font-size: 50px; }
@@ -329,7 +336,7 @@ nav {
         position: absolute;
         padding-left: 0px; }
         .itsolutions .portada .social .social-icons a {
-          color: #f261ad;
+          color: #F2F5FF;
           font-size: 28px;
           padding: 0px 5px; }
     .itsolutions .portada button {
@@ -391,13 +398,19 @@ nav {
       opacity: 0.6; }
 
 .nosotros {
-  margin: 0 auto;
+  margin: 30px auto;
   position: relative;
   background-size: 100%;
   background-position: top left;
   overflow: hidden;
-  background-color: whitesmoke;
   background-attachment: fixed; }
+  .nosotros .part {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.35; }
   @media only screen and (max-width: 600px) {
     .nosotros {
       background-attachment: fixed;
@@ -419,45 +432,50 @@ nav {
         left: 0%;
         font-size: 350px; } }
   .nosotros .nosotros-wrapper {
-    margin-bottom: 50px; }
+    padding: 40px; }
+    @media only screen and (max-width: 600px) {
+      .nosotros .nosotros-wrapper {
+        padding: 0px; } }
     .nosotros .nosotros-wrapper .modulo-nosotros-texto {
       text-align: justify;
       position: relative;
-      z-index: 900;
-      padding: 50px; }
+      z-index: 900; }
+      .nosotros .nosotros-wrapper .modulo-nosotros-texto .compromisoIcon {
+        width: 80px;
+        margin: 15px 50%;
+        transform: translate(-50%, 0%); }
       @media only screen and (max-width: 600px) {
         .nosotros .nosotros-wrapper .modulo-nosotros-texto {
           padding: 0px; } }
-      .nosotros .nosotros-wrapper .modulo-nosotros-texto .compromisoIcon {
-        width: 80px;
-        margin: auto 40%;
-        margin-top: 0px; }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
-        padding: 10px 50px; }
+        z-index: 99999; }
         @media only screen and (max-width: 600px) {
           .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
-            padding: 20px 50px 30px 70px; } }
+            padding: 1px 50px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 {
-        background-color: #15aabf;
-        padding: 30px 50px; }
-        .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 p {
-          color: white; }
+        z-index: 99999; }
+        @media only screen and (max-width: 600px) {
+          .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 {
+            padding: 1px 50px; } }
     .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
+      z-index: 99999;
       background-size: 100%; }
       @media only screen and (max-width: 600px) {
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
-          padding: 0px; } }
+          padding: 20px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
-        padding: 10px 50px;
+        margin-top: 10px;
+        padding: 10px 30px;
         color: whitesmoke;
         background: url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
         background-size: cover;
-        box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 25px 0 rgba(90, 77, 131, 0.2);
+        border-radius: 5px;
         position: relative;
         height: 100%; }
         @media only screen and (max-width: 600px) {
           .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
-            padding: 35px 50px;
+            padding: 35px;
             text-align: justify; } }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .transparencia {
           position: absolute;
@@ -471,7 +489,8 @@ nav {
           /* Chrome 10-25, Safari 5.1-6 */
           background: linear-gradient(to right, #2B2F3C, #2B2F3C);
           /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-          opacity: 0.95; }
+          opacity: 0.65;
+          border-radius: 5px; }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
           padding: 10px;
           color: white;
@@ -483,41 +502,53 @@ nav {
           font-family: "Quicksand"; }
 
 .servicios {
-  padding: 0px 25px;
-  margin-bottom: 15px; }
-  .servicios .servicios-wrapper {
-    background-color: rgba(250, 255, 255, 0.75);
-    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #15aabf;
-    padding: 40px;
-    margin: 40px 0px 150px 0px; }
-    @media only screen and (max-width: 600px) {
-      .servicios .servicios-wrapper {
-        padding: 2px; } }
-    .servicios .servicios-wrapper img {
-      margin-top: 80px; }
-    .servicios .servicios-wrapper .servicio-item-wrapper {
-      width: 95%;
-      margin: 0 auto; }
-      .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
-        padding: 20px; }
-        @media only screen and (max-width: 600px) {
-          .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard {
-            border: none; } }
-        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard:hover i {
-          color: #662ef3;
-          transition: 1s; }
-        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard i {
-          transition: 2s;
-          font-size: 30px;
-          padding: 15px; }
-        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-title {
-          font-size: 19px;
-          font-family: "Montserrat", sans-serif;
-          text-transform: uppercase; }
-        .servicios .servicios-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
-          font-size: 18px;
-          color: #15aabf; }
+  padding: 10px;
+  height: 100vh; }
+  @media only screen and (max-width: 600px) {
+    .servicios {
+      height: auto; } }
+  .servicios .servicewrapper {
+    padding: 25px; }
+    .servicios .servicewrapper .module-wrapper {
+      background: url(//www.yotpo.com/wp-content/themes/tg/css/../images/templates/homev8/SVG/BG/Part2-BG.svg) no-repeat;
+      background-size: cover;
+      box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #15aabf;
+      padding: 20px;
+      margin-top: 20px; }
+      .servicios .servicewrapper .module-wrapper img {
+        margin-top: 80px; }
+      .servicios .servicewrapper .module-wrapper .servicio-item-wrapper {
+        cursor: pointer;
+        width: 95%;
+        margin: 0 auto; }
+        .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard {
+          padding: 20px; }
+          @media only screen and (max-width: 600px) {
+            .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard {
+              border: none; } }
+          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard:hover i {
+            color: #081d76;
+            transition: 1s; }
+          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard i {
+            color: #051146;
+            transition: 2s;
+            font-size: 30px;
+            padding: 15px; }
+          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-title {
+            margin-bottom: 0px;
+            font-size: 19px;
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase; }
+            @media only screen and (max-width: 600px) {
+              .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-title {
+                font-size: 13px; } }
+          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
+            font-size: 18px;
+            color: #15aabf; }
+            @media only screen and (max-width: 600px) {
+              .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
+                font-size: 15px; } }
 
 .busquedas {
   padding: 50px 100px;
@@ -566,10 +597,12 @@ nav {
     text-align: center;
     padding: 5px 30px;
     z-index: 9999; }
-    .busquedas .jobs-result .job-offer {
+    .busquedas .jobs-result ss
+    .job-offer {
       margin: 5px 0px;
       padding: 0px; }
-      .busquedas .jobs-result .job-offer .jobOfferWrapp {
+      .busquedas .jobs-result ss
+      .job-offer .jobOfferWrapp {
         height: 360px;
         z-index: 0;
         position: relative;
@@ -582,22 +615,27 @@ nav {
         transition: 0.5s;
         border-radius: 20px;
         transition: all ease-in 0.8s; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp:hover {
           border-left: 10px solid #895ef6;
           transition: all ease-in-out 1s; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover i {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp:hover i {
           color: #895ef6;
           transition: all ease-in-out 1s; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp:hover button {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp:hover button {
           background-color: #a685f8 !important;
           transition: all ease-in-out 1s; }
         @media only screen and (max-width: 600px) {
-          .busquedas .jobs-result .job-offer .jobOfferWrapp {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp {
             border-radius: 25px;
             animation: 2s;
             background-color: rgba(255, 255, 255, 0.85);
             height: 450px; } }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp .comentariosWrapp {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp .comentariosWrapp {
           z-index: 10;
           position: absolute;
           height: 0px;
@@ -609,7 +647,8 @@ nav {
           border-radius: 50%;
           overflow: hidden;
           transition: 4s; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobcom {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp .jobcom {
           width: 100%;
           height: 100%;
           position: absolute;
@@ -623,33 +662,43 @@ nav {
           font-size: 15px;
           margin: 20% auto;
           padding: 30px; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp .jobText {
           padding: 20px; }
-          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobText .job-title {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobText .job-title {
             text-transform: capitalize;
             color: #373739;
             font-family: "Raleway";
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 0px; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp .jobDescription .item {
           padding: 8px;
           border-top: 1px solid grey;
           border-top: 1px whitesmoke; }
-          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobDescription .item .iconDes, .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobDescription .item svg, .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobDescription .item .icon-inner {
             font-size: 25px;
             color: #26D0CE;
             height: 100%; }
-          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobDescription .item .textCat {
             text-align: left;
             font-size: 14px; }
             @media only screen and (max-width: 600px) {
-              .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .item .textCat {
+              .busquedas .jobs-result ss
+              .job-offer .jobOfferWrapp .jobDescription .item .textCat {
                 text-align: center;
                 padding: 0px; } }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp .jobDescription .butonera {
           margin: 5px auto; }
-          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobDescription .butonera button {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobDescription .butonera button {
             padding: 10px 20px !important;
             border-radius: 20px;
             background: #26D0CE;
@@ -659,11 +708,14 @@ nav {
             font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase; }
-        .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink {
+        .busquedas .jobs-result ss
+        .job-offer .jobOfferWrapp .jobLink {
           font-size: 14px; }
-          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .link {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobLink .link {
             color: #662ef3; }
-          .busquedas .jobs-result .job-offer .jobOfferWrapp .jobLink .days {
+          .busquedas .jobs-result ss
+          .job-offer .jobOfferWrapp .jobLink .days {
             color: #662ef3; }
 
 .testimoniales {
@@ -751,6 +803,8 @@ body {
   background-color: #26D0CE;
   height: 100vh;
   padding: 5px; }
+  .graciasporcontactarnos.error {
+    background-color: #F63720; }
   .graciasporcontactarnos .graciasWrapper .textdiv {
     text-align: center;
     position: absolute;
@@ -763,8 +817,8 @@ body {
     border-radius: 50%; }
 
 .contacto {
-  background-color: #F4F7FA;
-  padding: 180px 50px;
+  background-color: #F2F5FF;
+  padding: 150px 50px;
   position: relative;
   overflow: hidden;
   height: 100vh; }
@@ -772,13 +826,21 @@ body {
     .contacto {
       padding: 100px 25px;
       height: auto; } }
+  .contacto .spinner {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    color: #15aabf; }
   .contacto .bigwifi {
     z-index: 10;
     font-size: 700px;
     opacity: 0.08;
     text-align: center;
     position: absolute;
-    top: 85%;
+    top: 75%;
     left: 30%;
     transform: translate(-50%, -50%) rotate(90deg); }
     @media only screen and (max-width: 600px) {
@@ -804,14 +866,13 @@ body {
     .contacto .contacto-encabezado h2 {
       font-family: "Raleway";
       font-size: 25px;
-      text-weight: 300;
       text-align: center;
       color: #39ae9e; }
   .contacto form {
     text-align: center;
     z-index: 99; }
     .contacto form span {
-      background-color: #323462;
+      background-color: #081d76;
       border-right: none;
       font-size: 13px;
       color: #C5C9C8;
@@ -823,7 +884,8 @@ body {
       border-left: none;
       color: #1A1A23;
       padding: 12px;
-      border: none; }
+      border: none;
+      opacity: 0.8; }
       .contacto form input:focus {
         outline: none; }
 
@@ -878,7 +940,7 @@ footer .footerWrapper {
 footer .broom {
   font-family: "Raleway";
   width: 100%;
-  background-color: #07070e;
+  background-color: black;
   padding: 5px;
   color: white; }
   footer .broom .textoit {

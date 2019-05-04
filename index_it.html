@@ -32,7 +32,7 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
 
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
@@ -57,30 +57,14 @@
 
 		<script> new WOW().init() </script>
 
-	<!-- <div class="nav1">
-		<ul class="navWrapper">
-			<li><i class="fas fa-home"></i> HOME</li>
-			<li><i class="fab fa-codepen bigcode"></i> NOSOTROS</li>
-			<li><i class="fab fa-black-tie"></i> SERVICIOS</li>
-			<li> <i class="fab fa-searchengin"></i> BUSQUEDAS</li>
-			<li><i class="fas fa-wifi"></i> CONTACTANOS</li> -->
-			<!-- <li class="cvCircle">
-				<div class="buttonWrapper">
-					<button > <i class="fas fa-file-alt"></i> ADJUNTAR CV</button>
-				</div>
-			</li> -->
-		<!-- </ul>
-	</div> -->
-
-
 
 
 		<section id="portada " class="portada  wow fadeIn" data-wow-delay="0.2s" id="home">
 			<div class="row">
+				
 				<div class="transparencia"></div>
-					<img src="/imagenes/web/navCurve.png" class="navCurve" alt="">
-					<img src="/imagenes/web/curvebotMob.png" class="curvebotmob" alt="">
-					<div class="nav2">
+
+					<!-- <div class="nav2">
 						<ul class="iconmenu">
 							<li><a class="ancla" href="#home"><i class="fas fa-home"></i></a></li>
 							<li><a class="ancla" href="#nosotros"><i class="fab fa-codepen icon"></i></a></li>
@@ -94,39 +78,8 @@
 
 			
 						</ul>
-					</div>
+					</div> -->
 
-		<script>
-			var ham = false;
-			$("li").click(function (ev) {
-
-				var le = $(".ancla").length - 1
-				console.log(ev.target.index)
-
-				if (ham === true){
-					ham = false;
-				for (i = 0; i < le; i++) {
-					console.log(i);
-					console.log
-					$("li").eq(i).css({
-						visibility: 'hidden',												
-					});
-				}
-				
-				}else{
-					ham = true;
-						for (i = 0; i < le; i++) {
-							console.log(i);
-							console.log
-							$("li").eq(i).css({
-								visibility: 'visible',															
-							});												
-				}
-
-				}
-			})
-
-		</script>
 					<div class="loading">
 						<div class="loadingwrapper">
 
@@ -147,10 +100,8 @@
 					<img class="logoImg" src="/imagenes/web/LOGO4.png" />
 					<img class="logoshadow" src="/imagenes/web/shadow.png" />
 					<div class="banner">
-						<span> </span>	<h1 id="typed" class="tituloit portadatit"> dasdsa.. </h1>
-							
-							<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>
-						
+						<span> </span>	<h1 id="typed" class="tituloit portadatit wow fadeIn"> </h1>							
+							<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>						
 					</div>
 
 					<div class="social ">
@@ -169,77 +120,33 @@
 					</div>				
 					<!-- <button class="but1">Conocenos mas!</button> -->
 				</div>		
-				
-
-	<script>
-
-	// window.onscroll= function(){
-	// 	var sc = window.scrollY
-	// console.log(sc);
-	// 	if (sc > 500){
-
-	// 		$(".nav2").css({
-	// 			height: '60px',
-	// 			padding:"5px"
-
-	// 		});
-
-	// 		$("ion-icon").css({
-	// 			fontSize: '25px',
-	// 			backgroundColor: '$color-span'
-	// 		});
-
-	// 	}else{
-	// 		$(".nav2fontSize").css({
-	// 			height: '80px',
-	// 			padding: "10px"
-	// 		});
-
-
-	// 	}
-	// }
-
-
-
-
-
-	  
-	  </script>
-
-
-			
-
-				<!-- <div class="portada_wrapper_logo col-xs-12 col-md-5">
-					<img class="portadaImage" alt="imagen mas cool" src="" />
-
-				</div> -->
-
 
 			</div>
 		</section>
 
 		<section class="nosotros wow fadeIn" id="nosotros">
-			
+			<canvas class="part"></canvas>
 			<div class="nosotros-wrapper wow fadeIn">
 				<div class="row">
-					<i class="fab fa-codepen bigcode"></i>
 
+			
 
-					<div class="col-xs-12  col-md-12 modulo-nosotros-texto">
-						<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
-						<h2 class="tituloit"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
+					<div class="col-xs-12  col-md-12 modulo-nosotros-texto wow fadeIn">
+						<img class="compromisoIcon wow fadeIn" src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/electronic_brain-512.png" />
+						<h2 class="tituloit wow fadeInUp"><i class="fas fa-laptop-code"></i> Sobre <span class="spantext"> Ingenio IT</span> </h2>
 						<br>
+						<!-- <img src="https://images.pexels.com/photos/872958/pexels-photo-872958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid nosotros-banner"> -->
 						<div class="row">
-							<div class="text1 col-xs-12 col-md-4">
-									<img class="compromisoIcon wow rubberBand" src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/electronic_brain-512.png" />
+							<div class="text1 col-xs-12 col-md-4 wow fadeIn ">
+			
 								<p class=" textoit  wow  fadeIn">  Somos ingenio IT,  un equipo interdisciplinario jóven, que nace ante la necesidad de acercar profesionales vinculados a los sistemas de tecnología e información, al siguiente paso en su carrera profesional</p>
 								<p class="textoit wow fadeIn"> Originado en la creencia de la especialización, el equipo de Ingenio IT desarrolla sus actividades en un contexto cada
 								día más desafiante, con un  gran conocimiento del mercado tecnológico  y sus principales actores.</p>
 							</div> 
 						
 							<div class="text2 col-xs-12 col-md-4 wow fadeIn ">
-								<img class="compromisoIcon wow rubberBand" src="https://www.marsbranding.com/wp-content/uploads/2017/07/work-together-icon.png"/>
-									<p class="textoit wow fadeInUp">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
+								<!-- <img class="compromisoIcon wow rubberBand" src="https://www.marsbranding.com/wp-content/uploads/2017/07/work-together-icon.png"/> -->
+											<p class="textoit wow fadeInUp">Gracias a nuestro compromiso con clientes y candidatos, y a una fuerte identidad basada en la flexibilidad, curiosidad, creatividad e innovación, que hemos logrado una fórmula capaz de adaptarse al dinamismo y exigencia que hoy nos demanda el mercado, con lo cual estamos orgullosos de formar parte de un equipo con los altos estándares de calidad y servicio que Ingenio brinda a sus socios estratégicos.
 									</p>
 							</div>
 
@@ -248,10 +155,10 @@
 									<div class="transparencia"></div>
 									<div class="row">
 							
-										<div class="col-xs-12 col-md-12">
-												<img class="compromisoIcon wow rubberBand" src="https://cdn4.iconfinder.com/data/icons/outlines-business-web-optimization/256/1-44-512.png" />
-											<h4 class="compromisoTit">  Compromiso con la Inclusion</h4>
-											<p class="textoit">
+										<div class="col-xs-12 col-md-12 wow fadeIn ">
+														<!-- <p class="tituloit"><i class="far fa-heart"></i></p> -->
+											<h4 class="compromisoTi wow fadeInUpt">  Compromiso con la Inclusion</h4>
+											<p class="textoit wow fadeIn">
 												Creemos  en el concepto de derribar barreras y crear oportunidades, es por esto que apostamos a la
 												inclusión laboral de profesionales con discapacidad y otros grupos vulnerables.
 							
@@ -261,62 +168,40 @@
 									</div>
 								</div>
 							
-							</div>
-
-		
-						</div>
-
-							
-
-					</div>
-
-
-
-
-					
+							</div>		
+						</div>	
+					</div>					
 				</div>
 			</div>
 
-
-
-
 		</section>
 
-		<section class="servicios wow fadeIn" id="servicios">
-			<div class="row">
 
-			</div>
-		</section>
 		<section class="servicios wow fadeIn" id="servicios">
-
+			<div class="servicewrapper wow fadeIn">			
 				<div class="col-xs-12 col-lg-12">
-					<h2 class="tituloit">  <i class="fab fa-black-tie"></i> Servicios <span class="spantext"> IT </span></h2>
-					
+					<h2 class="tituloit wow fadeInUp"> <i class="fas fa-store"></i> Servicios <span class="spantext"> IT </span></h2>					
 				</div>	
 		
-				<div class="servicios-wrapper">			
-					
-					<div class="row">
-					
-						<div class="servicio-item-wrapper col-xs-12 col-lg-12">
-		
-		
+				<div class="module-wrapper wow fadeIn ">								
+					<div class="row">					
+						<div class="servicio-item-wrapper col-xs-12 col-lg-12">			
 						</div>
 		
-						<div class="servicio-item-wrapper col-xs-12 col-md-4">
-							<div class="serviceImage">
-								<img src="/imagenes/web/computer1.jpg" alt="" class="img-fluid">
+						<div class="servicio-item-wrapper col-xs-12 col-md-4 wow fadeIn ">
+							<div class="serviceImage wow fadeInDown">
+								<img src="/imagenes/web/portada4.jpg" alt="" class="img-fluid">
 							</div>	
 		
 							
 		
 						</div>
-						<div class="servicio-item-wrapper col-xs-12 col-md-4">
-							<div class="serviceCard">
-								<i class="far fa-lightbulb"></i>
-								<h4 class="card-title">Búsqueda y seleccion</h4>
-								<h3 class="card-subtitle">Dinamismo y Acertividad</h3>
-								<p class="textoit">
+						<div class="servicio-item-wrapper col-xs-12 col-md-4 wow fadeIn ">
+							<div class="serviceCard wow fadeIn">
+							
+								<h4 class="card-title wow fadeIn" > <i class="fas fa-fingerprint"></i> Búsqueda y seleccion </h4>
+								<h3 class="card-subtitle wow fadeIn">Dinamismo y Acertividad</h3>
+								<p class="textoit wow fadeIn">
 									Entendemos lo que buscan tanto nuestros clientes como nuestros candidatos, y trabajamos en cada proyecto como si fuera el único. Es esto lo que nos permite brindar un servicio de calidad, a la medida de cada necesidad.
 								</p>
 							</div>	
@@ -325,12 +210,12 @@
 		
 						</div>
 		
-						<div class="servicio-item-wrapper col-xs-12 col-md-4">
-							<div class="serviceCard">
-									<i class="fas fa-brain"></i>
-									<h4 class="card-title">Psicotécnicos</h4>
-									<h3 class="card-subtitle"> Especialistas e innovadores</h3>
-									<p class="textoit">
+						<div class="servicio-item-wrapper wow fadeIn col-xs-12 col-md-4">
+							<div class="serviceCard wow fadeIn">
+								
+									<h4 class="card-title wow fadeIn"><i class="fas fa-brain"> </i> Psicotécnicos </i></h4>
+									<h3 class="card-subtitle wow fadeIn"> Especialistas e innovadores</h3>
+									<p class="textoit wow fadeIn">
 		
 									Comprometidos con la especialización e innovación en nuestros procesos. Acompañamos a nuestros clientes con un servicio de evaluaciones técnicas y psicométricas, administradas por psicólogos especialistas en perfiles it.
 		
@@ -345,6 +230,7 @@
 		
 					</div>
 				</div>
+				</div>
 			</section>
 		
 
@@ -355,7 +241,7 @@
 			<!-- <i class="fas fa-user-circle biguser"></i> -->
 			<div class="row">
 				<div class="col-xs-12 col-md-12 busquedas-title wow fadeInUp">
-						<h2 class="tituloit"> <i class="fab fa-staylinked"></i></i> Busquedas <span class="spantext"> Ingenio</span> </h2>
+						<h2 class="tituloit"> <i class="fab fa-staylinked"></i></i> Búsquedas <span class="spantext"> Ingenio</span> </h2>
 						<br>
 				</div>
 			</div>
@@ -466,22 +352,6 @@
 
 								})
 
-								// $(".closeicon").click(function () {
-
-								// 	var ind = $(".closeicon").index(this);
-								// 	console.log(ind);
-
-								// 	$(".comentariosWrapp").eq(ind).css({
-								// 		transition: '3s',
-								// 		animation: 'dismin 1s',
-								// 		animationFillMode: 'forwards'
-								// 	});
-
-								// 	$(".jobcom").eq(ind).fadeOut(500)
-								// 	$(".closeicon").eq(ind).fadeOut(500)	
-
-								// })
-
 							</script>
 						</div>
 
@@ -489,10 +359,6 @@
 					</div>
 				</div>
 			</div>
-
-
-
-
 
 			</div>
 		</section>
@@ -663,21 +529,22 @@
 			   </div>
 		  	   
 		   </section> --> 
-		<section class="contacto wow fadeInUp" id="contacto">
+		<section class="contacto wow fadeIn" id="contacto">
 
-			<!-- <ion-icon class="bigwifi" name="wifi"></ion-icon> -->
 			<i class="fas fa-wifi bigwifi"></i>
 
 			<div class="row">
 						
-				<div class="col col-xs-12  col-md-5 modulo-nosotros-texto jackInTheBox">
+				<div class="col col-xs-12  col-md-5 modulo-nosotros-texto wow jackInTheBox">
 					<h2 class="tituloit"> <i class="fas fa-wifi"></i>  Conectate 
 						<span class="spantext"> con Nosotros</span></h2>
 					<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!</p>
 			
 				</div>
 
-				<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7">
+				
+
+				<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7" class="wow fadeInm">
 					<div class="input-group flex-nowrap wow jackInTheBox">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
@@ -704,18 +571,10 @@
 					</div>
 					<br>
 
-	<!-- 				<div class="input-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
-						</div>
-						<input type="file" name="adjunto" class="form-control" placeholder="CV" aria-label="adjunto" aria-describedby="addon-wrapping">
-					</div>
-					<br> -->
 
 					  <div class="form-group">
-					    <label for="adjunto">Adjunta tu CV!</label>
-					<i class="fas fa-paperclip"></i>  <input type="file"  name="adjunto" class="form-control-file" placeholder="Adjunta tu CV!">
-					  </div>
+						  <input type="file"  name="adjunto" class="form-control-file" placeholder="Adjunta tu CV!">
+						</div>										
 
 
 					<div class="input-group wow jackInTheBox">
@@ -724,11 +583,18 @@
 						</div>
 						<input name="comentario" type="text" class="form-control" placeholder="Dejanos tus comentarios" aria-label="Username" aria-describedby="addon-wrapping">
 					</div>
-
 					<br>
-					<br>
-					<button class="btn btn-dark wow flipInX" type="submit">CONECTATE!</button>
-
+							
+				<button class="btn btn-dark wow flipInX conect" type="submit" ng-click="conect()">CONECTATE!</button>
+				<br>
+				
+				<div class="spinner" ng-show="spinnerContact">
+					<div class="rect1"></div>
+					<div class="rect2"></div>
+					<div class="rect3"></div>
+					<div class="rect4"></div>
+					<div class="rect5"></div>
+				</div>
 				</form>
 			</div>
 
@@ -804,13 +670,13 @@
 				
 			</section> -->
 
-		<footer>
+		<footer class="wow fadeInUp">
 
 			<div class="footerWrapper">
 				<div class="logoWrapper">
-					<img class="logoImg" src="/imagenes/web/LOGO4.png" />
+					<img class="logoImg wow rubberBand" src="/imagenes/web/LOGO4.png" />
 				</div>
-			<div class="social ">
+			<div class="social  wow fadeInUp">
 				<ul class="social-icons">
 					<li>
 							<a href="#" class="wow fadeInUp">

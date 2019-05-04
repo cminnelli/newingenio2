@@ -8,17 +8,26 @@ $secondary-color:#B9DCE0;
 $color-grey:rgba(30,30,30,0.8);
 
 $color-background:#EDEEF2;
-
 $color-ingenio1:#055174;
 $color-ingenio2:#0587AD;
 $color-ingenio3:#00a896;
 $color-ingenio4:#f261ad;
 $color-nosotros:#EDEEF2;
+$color-texto: #1A1A23;
+$color-texto2:#373739;
+$color-titulos:#484848;
 
 $font-primary:'Montserrat', sans-serif;
 $font-encabezado:'Quicksand', sans-serif;
 $font-navegador:'Quicksand', sans-serif;
 $font-titulos:'Quicksand', sans-serif;
+
+// TAMAÑOS
+$size-textoit:13px;
+$size-textoit2:13px;
+$size-titulosec:19px;
+$size-titulopri:30px;
+$size-posttitulosec:18px;
 
 /*CLASES GENERALES*/
 .centerpos{
@@ -219,6 +228,92 @@ $font-titulos:'Quicksand', sans-serif;
 			}
 		}
 
+@keyframes aumenta {
+	0%{
+		height:30px;
+		width:30px;
+		background-color: darken($color-ingenio2,10%);
+		opacity: 0.90;
+	}
+
+
+	100%{
+		height:530px;
+		width:530px;
+		opacity: 0.95;
+		background-color: darken($color-ingenio2,15%);
+	}
+
+}
+
+@keyframes dismin {
+	0%{
+		height:470px;
+		width:470px;
+		opacity: 0.95;
+		background-color: darken($color-ingenio2,15%);
+	}
+	20%{
+		opacity: 0.55;
+	}
+
+	100%{
+			opacity: 0.95;
+			height:0px;
+			width:0px;
+			background-color:none;		
+	}
+}
+.textoit{
+    font-family: $font-primary;
+    color:$color-texto;
+    font-size:$size-textoit  ; 
+    line-height: 28px;
+    letter-spacing: 0.2px;
+		padding:20px 0px;
+	margin-bottom: 0px;
+	@media only screen and  (max-width:600px) {
+		text-align:-webkit-auto;
+		font-size:$size-textoit2;
+		line-height: 25px;
+		text-align:justify;	
+	}	 
+
+&.highlights{
+	font-weight: 700;
+	color:$color-titulos;
+
+}
+
+}
+
+.tituloit{
+	font-family: 'Raleway', sans-serif;
+	color:$color-texto;
+	letter-spacing: 1px;
+  font-weight: 400;   
+	font-size:40px;
+	margin-bottom:35px;
+	text-align: center;
+
+	font-family:Inter UI,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 4px;
+	
+
+	&.portadatit{
+	color:white;
+	font-size:40px;	
+	text-align: left !important;
+	text-shadow: 0 0 6px 3px rgba(0,0,0,0.25);
+text-transform: initial;
+	}
+
+	@media only screen and  (max-width:600px) {	
+		font-size:19px;	
+	}			
+}
 
 .bodyMain{
 	font-family: $font-primary;
@@ -365,7 +460,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 
 }
 
-$color-titulos:#484848;
+
 
 
 .titulos{
@@ -658,37 +753,41 @@ $color-titulos:#484848;
 .servicios{
 
 	
-	padding:20px;	
+	padding:40px;	
 	background:white;
 	
 		.servGeneral{
-			padding:60px;
+			padding:80px;
 			@media screen and (max-width:600px){
 				padding:20px;
 			}			
 			.servWrapper{
+				box-shadow: 0 0 25px 0 rgba(90,77,131,.2);
 				border:10px solid white;
 				margin:0px;
 				margin-bottom:5px;
 				padding:0px;				
-				background-color:white;			
+				background-color:white;		
+			@media screen and (max-width:600px){
+				margin-bottom:30px;
+			}								
 				
-				&:hover{
+				&:hover {
 					transition:0.5s;
-					-webkit-transform: scale(1.03,1.03);
-
+					color:$color-ingenio2;
+					// -webkit-transform: scale(1.03,1.03);
 				}
 				&:hover img{					
 					overflow: hidden;
 				}
+
 				&:hover .textWrapper{
 				
 					background-color:white;
 					transition:0.8s;
 					color:darken($color-ingenio1 , 25%);
 				}
-				&:hover .servBody{
-					
+				&:hover .servBody{					
 					transition:0.5s;					
 					color:darken($color-ingenio1 , 35%);
 				}
@@ -697,21 +796,14 @@ $color-titulos:#484848;
 					padding:0px;
 					img{
 						border-radius: 3px;
-						max-height: 249.781px;
+						height: 249.781px;
 					}
 
-
-					.textWrapper{
-						
-						text-align: center;
+					.textWrapper{		
 						padding:5px;
-
 						.serv-tit{
 							text-align: center;
-							font-weight: 700;
-					
-							
-							
+							font-weight: 700;						
 						}
 					}
 				}
@@ -720,7 +812,7 @@ $color-titulos:#484848;
 					background-color:white;
 					color:$color-titulos;
 					padding:25px;
-					text-align: center;
+					text-align: justify;
 					line-height: 1.5;
 				}
 			}
@@ -961,8 +1053,7 @@ $button-color:#00CCCB;
 				h2{
 					font-family: "Raleway";
 					font-size:25px;
-					text-weight:300;
-					text-align:center;
+						text-align:center;
 					color:$color-ingenio3;
 				}
 
@@ -1125,6 +1216,112 @@ li > a:hover:before ,.servWrapper:hover:before {
 }
 }
 
+.contacto{
+    
+ 	background-color: $color-background;
+ 	padding:150px 50px;
+ 	position: relative;
+	overflow: hidden;
+	height:100vh;
+
+	@media only screen and  (max-width:900px) {	
+		padding:100px 25px;
+		height: auto;
+	}	
+	
+.spinner{
+	position:relative;
+	top:0px;
+	left:0px;
+	text-align:center;
+	width:90%;
+	margin:0 auto;
+	color:$color-ingenio3;
+	
+
+}
+	.bigwifi{
+		z-index: 10;
+		font-size:700px;
+		opacity: 0.08;
+		text-align: center;
+		position: absolute;
+	
+		top:75%;
+		left: 30%;
+		transform: translate(-50%, -50%) rotate(90deg) ;
+
+		@media only screen and  (max-width:600px) {	
+			top:20%;
+			left: 0%;
+			font-size:500px;	
+			transform: translate(-50%, -50%) rotate(190deg) ;	
+		}	
+		
+				
+	}
+
+	.slidediv{
+		height: 100px;
+		width:100px;
+		position: absolute;
+		color:white;
+		padding:50px;
+		font-size:16px;
+		top:50%;
+		left: 50%;
+		border-radius:50%; 
+		z-index: 999;
+
+
+	}
+		.contacto-encabezado{
+			padding:60px;
+			text-align:center;
+			h2{
+				font-family: "Raleway";
+				font-size:25px;
+				text-align:center;
+				color:$color-ingenio2;
+			}
+
+		}
+
+	form{
+
+	text-align: center;
+	z-index: 99;
+		span{
+			background-color: lighten($color-titulos,10%);
+			border-right:none;
+			font-size:13px;
+			color:#C5C9C8;
+			border:none;
+			i{				
+				color:white;
+			}						
+		}
+
+			
+		input{
+			font-size:13px;
+
+			border-left:none;
+			color:$color-titulos;
+			padding:12px;
+			border:none;
+			opacity:0.8;	
+
+			&:focus{
+				outline:none;
+
+			}	
+		}
+
+	}
+
+}
+
 footer{
 	color:whitesmoke;
 	.footerWrapper{
@@ -1185,11 +1382,19 @@ footer{
 	}
 	}
 	.broom{
+		font-family:"Raleway";
 	width:100%;
 	background-color:darken($color-titulos,15%);
 	padding:5px;
+	color:white;
+	.textoit{
+		color:white;
+	}
 	p{
 		text-align: center;
+		opacity: 0.85;
+		color:white;
+
 	}
 	
 	}

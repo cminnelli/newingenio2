@@ -41,7 +41,7 @@
 
 </head>
 
-	<body class="bodyMain" ng-init="" ng-app="myApp" ng-controller="busquedaController">
+	<body ng-cloak class="bodyMain" ng-init="" ng-app="myApp" ng-controller="busquedaController">
 
 		<script> new WOW().init() </script>
 
@@ -59,8 +59,8 @@
 			  <div class="rect3"></div>
 			  <div class="rect4"></div>
 			  <div class="rect5"></div>
-			</div
-		</div>
+			</div>
+
 		</div>
 	</div>
 		
@@ -121,7 +121,7 @@
 							</div>
 						</div>
 						<div class="servBody">
-							<p>{{serv.descripcion}}</p>
+							<p class="textoit">{{serv.descripcion}}</p>
 						</div>				
 					</div>
 				</div>
@@ -130,14 +130,11 @@
 
 
 <section ng-init="initBusquedas()" class="busquedas wow fadeIn" id="busquedas">
-
-
-	
 	
 	<div class="row">
 			<div class="transparencia"></div>
 				<div class="encabezado busquedas-title wow fadeIn">
-					<h3> <i class="fab fa-staylinked"></i></i> Busquedas</h3>
+					<h3> <i class="fab fa-staylinked"></i></i> Búsquedas</h3>
 				</div>
 				<div class="col-xs-12 col-lg-12 jobs-result wow fadeInUp">
 					<div class="row">
@@ -205,13 +202,7 @@
 									</div>
 								</div>
 
-
-
-								<div class="comentariosWrapp">
-									
-								</div>
-
-			
+								<div class="comentariosWrapp"></div>
 
 								<p class="jobcom">{{j.comentarios}}</p>
 
@@ -274,12 +265,91 @@
 			</div>
 		</section>
 
+			<section class="contacto wow fadeIn" id="contacto">
+			
+				<i class="fas fa-wifi bigwifi"></i>
+			
+				<div class="row">
+			
+					<div class="col col-xs-12  col-md-5 modulo-nosotros-texto wow jackInTheBox">
+						<h2 class="tituloit"> <i class="fas fa-wifi"></i> Conectate
+							<span class="spantext"> con Nosotros</span></h2>
+						<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!
+						</p>
+			
+					</div>
+			
+			
+			
+					<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7"
+						class="wow fadeInm">
+						<div class="input-group flex-nowrap wow jackInTheBox">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
+							</div>
+							<input name="nombre" type="text" class="form-control" placeholder="nombre y apellido"
+								aria-label="Username" aria-describedby="addon-wrapping">
+			
+						</div>
+			
+						<br>
+			
+						<div class="input-group wow  jackInTheBox">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="far fa-envelope-open"></i>
+							</div>
+							<input name="mail" type="mail" class="form-control" placeholder="email" aria-label="Username"
+								aria-describedby="addon-wrapping">
+						</div>
+						<br>
+			
+						<div class="input-group wow jackInTheBox">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+							</div>
+							<input type="text" name="asunto" class="form-control" placeholder="asunto" aria-label="Username"
+								aria-describedby="addon-wrapping">
+						</div>
+						<br>
+			
+			
+						<div class="form-group">
+							<input type="file" name="adjunto" class="form-control-file" placeholder="Adjunta tu CV!">
+						</div>
+			
+			
+						<div class="input-group wow jackInTheBox">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="addon-wrapping"><i class="far fa-comment-dots"></i>
+							</div>
+							<input name="comentario" type="text" class="form-control" placeholder="Dejanos tus comentarios"
+								aria-label="Username" aria-describedby="addon-wrapping">
+						</div>
+						<br>
+			
+						<button class="btn btn-dark wow flipInX conect" type="submit" ng-click="conect()">CONECTATE!</button>
+						<br>
+			
+						<div class="spinner" ng-show="spinnerContact">
+							<div class="rect1"></div>
+							<div class="rect2"></div>
+							<div class="rect3"></div>
+							<div class="rect4"></div>
+							<div class="rect5"></div>
+						</div>
+					</form>
+				</div>
+			
+			
+			
+			</section>
+
 		
 
 
 		<footer>
 
-			<div class="footerWrapper">
+			<div class="footerWrapper wow fadeIn">
 				<div class="logoWrapper">
 					<img class="logoImg" src="/imagenes/web/LOGO.png" />
 				</div>

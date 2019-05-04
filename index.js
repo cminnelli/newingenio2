@@ -57,7 +57,7 @@ app.get("/admin" , function(req,res){
 })
 
 app.get("/mailcontacto" , function(req,res){
-	res.sendFile(path.join(__dirname ,"contactomsj.html"));
+	res.sendFile(path.join(__dirname ,"contactomsj2.html"));
 })
 
 
@@ -93,7 +93,7 @@ mail.enviar(mailOptions , function(data){
 	if (check > 0){
 		res.sendFile(path.join(__dirname ,"contactomsj.html"));
 	}else{
-		console.log("error");		
+		res.sendFile(path.join(__dirname, "contactomsj2.html"));	
 	}
 })
 })

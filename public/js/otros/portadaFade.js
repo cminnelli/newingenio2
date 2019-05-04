@@ -1,4 +1,66 @@
 
+
+window.onload = function () {
+	Particles.
+		init
+		({
+
+			// normal options
+			selector:
+				'.part'
+			,
+			maxParticles:
+				170
+			,
+			connectParticles:true,
+			color:"#26D0CE",
+			minDistance:120,
+			sizeVariations: 3,
+			speed: 1.2,
+
+			// options for breakpoints
+			responsive: [
+				{
+					breakpoint:
+						768
+					,
+					options: {
+						maxParticles:
+							65
+						,
+						color:
+							'#26D0CE'
+						,
+						connectParticles:
+							true
+					}
+				}, {
+					breakpoint:
+						425
+					,
+					options: {
+						maxParticles:
+							60
+						,
+						connectParticles:
+							true
+					}
+				}, {
+					breakpoint:
+						320
+					,
+					options: {
+						maxParticles:
+							0
+
+						// disables particles.js
+					}
+				}
+			]
+		});
+};
+
+
 /*ANIMACION LOADING*/
 
 function loading(time){
@@ -47,4 +109,5 @@ function loading(time){
 // }
 
 // navbar()
-loading(3000);
+loading(5000);
+
