@@ -732,6 +732,9 @@ text-transform: initial;
 			}	
 			.servicewrapper{
 				padding:25px;
+				@media only screen and  (max-width:600px) {
+					padding:10px;
+				}		
 					.module-wrapper{
 						background: url(//www.yotpo.com/wp-content/themes/tg/css/../images/templates/homev8/SVG/BG/Part2-BG.svg) no-repeat;
 						background-size: cover;
@@ -751,7 +754,7 @@ text-transform: initial;
 								margin:0 auto;
 								.serviceCard{
 									//border-right:1.8px solid white;
-								padding:20px;
+								padding:10px;
 								//text-align: justify;
 			
 								@media only screen and  (max-width:600px) {

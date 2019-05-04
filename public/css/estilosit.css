@@ -509,6 +509,9 @@ nav {
       height: auto; } }
   .servicios .servicewrapper {
     padding: 25px; }
+    @media only screen and (max-width: 600px) {
+      .servicios .servicewrapper {
+        padding: 10px; } }
     .servicios .servicewrapper .module-wrapper {
       background: url(//www.yotpo.com/wp-content/themes/tg/css/../images/templates/homev8/SVG/BG/Part2-BG.svg) no-repeat;
       background-size: cover;
@@ -523,7 +526,7 @@ nav {
         width: 95%;
         margin: 0 auto; }
         .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard {
-          padding: 20px; }
+          padding: 10px; }
           @media only screen and (max-width: 600px) {
             .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard {
               border: none; } }
