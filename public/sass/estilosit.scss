@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Catamaran|Cormorant+Garamond|EB+Garamond|Inconsolata|Lato|Libre+Franklin|Montserrat|Oxygen|Questrial|Quicksand|Raleway|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Source+Serif+Pro|Varela+Round');
 @import url('https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Playfair+Display+SC|Raleway|Rubik|Rubik+Mono+One|Space+Mono|Spectral|Spectral+SC');
 @import url('../css/animate.css');
+//@import ("../../node_modules/codyhouse-framework/main/assets/css/style.css");
 
 
 
@@ -42,7 +43,7 @@ $color-nosotros:212240;
 $color-span:#26D0CE;
 $color-newingenio:rgb(57,174,158);
 $color-span2:#15aabf;
-$color-span2:#15aabf;
+$color-span2:#000000;
 $color-grey:rgba(30,30,30,0.8);
 $color-nosotros:#EDEEF2;
 $color-coolblue:#051146;
@@ -140,137 +141,10 @@ $size-posttitulosec:18px;
 }
 
 
-	.navCurve{
-		position:absolute;
-		left:0px;
-		top:1px;
-		width:100%;
-		z-index: 9;
-		display: none;
-	}
-
-	.curvebotmob{
-		position:absolute;
-		left:0px;
-		bottom:-4px;
-		width:100%;
-		z-index: 9;;
-	}
-
-	.curvebotmob2{
-		position:absolute;
-		left:-1px;
-		top:-1px;
-		width:100%;
-		z-index: 9;;
-	}
-
-	
 
 
 // ANEXOS
-.navbar , .navbar-expand{
-	display: none;
-	@media only screen and  (min-width:600px) {
-		display: block;
 
-
-	}	
-}
-nav{
-	text-transform: uppercase;
-	font-size: 13px;
-	letter-spacing: 1.5px;
-	font-family: 'Quicksand', sans-serif;
-	color:$color-grey;
-	font-weight: 700;
-
-
-
-		@media only screen and  (min-width:600px) {
-		display: none;
-		background: $color-grey;
-	}	 
-
-}
-.nav1{
-	left:0px;
-	display: block;
-	padding:20px;
-	font-family: "Raleway";
-	font-size: $size-textoit +1;
-	color:$color-coolblue;
-	@media only screen and  (max-width:600px) {
-		display: none;
-
-	}	 
-	.navWrapper{
-		margin-left:20%;
-		letter-spacing: 1.8px;
-			li{
-				display: inline;
-				padding:10px;
-				text-decoration: none;
-
-			}
-				.cvCircle{
-					.buttonWrapper{
-						display: inline-block;
-						button{
-							@include mybut(black);
-						}
-					}
-				}
-	}
-
-}
-.nav2{
-	width: 100%;
-	top:0px;
-	left:0px;
-	transition: all ease 0.8s;
-		background-color:rgba(0,0,0,0.40);
-		z-index: 999;
-
-	@media only screen and  (max-width:600px) {
-		display: block;
-		// background: transparent;
-		z-index:9999;
-	}	 
-	display: none;
-	text-align: center;
-	position: fixed;
-	.iconmenu{
-		padding-left:0px;
-		padding-top:10px;
-		position: relative;
-		text-align:left;
-		visibility: hidden;
-	
-		li{
-			display: inline-block;
-			padding:13px;
-			.icon , i{
-				transition: 1s;
-				color:whitesmoke;
-				font-size: 23px;
-				&:hover{
-					color:lighten($color-span,20%);
-					transition: 1s;
-				}
-			}
-		}
-
-		#hambur{
-			visibility: visible;
-			padding:13px;
-			position: absolute;
-			right:10px;
-			top:10px;
-	
-		}
-	}
-}
 
 @keyframes aumenta {
 	0%{
@@ -344,7 +218,6 @@ nav{
 	letter-spacing: 1px;
   font-weight: 400;   
 	font-size:40px;
-	margin-bottom:35px;
 	text-align: center;
 
 	font-family:Inter UI,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
@@ -386,6 +259,7 @@ text-transform: initial;
 			top:0px;
 			left:0px;
 			.loadingwrapper{
+				
 				.logoWrapper{		
 						top:33%;
 						left:50%;
@@ -419,6 +293,35 @@ text-transform: initial;
 			padding:25px;
 		}	 
 
+		        .logoImg{
+					transform:translateZ(200px);
+					height: 120px; 
+						margin: 50px;
+					display: block;
+					animation:float 2s infinite;
+					transition:all ease-in-out 2s;
+				margin-top:100px;
+				
+				@media only screen and  (max-width:600px) {
+
+					left:25%;
+				}	 
+			}
+			.logoshadow{	
+				position:absolute;
+				transition:all ease-in-out 4s;
+				width: 100px;
+				top:120px;
+				opacity:0.6;
+				animation:shadow 2s infinite;
+
+				margin:20px auto;
+				transform: translate(-50%, -50%);
+				@media only screen and  (max-width:600px) {
+					left:20%;
+					margin:25px 0px;				
+						}	 
+					}
 		.transparencia{
 		position: absolute;
 		top:0px;
@@ -432,19 +335,20 @@ text-transform: initial;
 
 	}
 	
+	
      .portada_wrapper_texto{
 			padding:0px 20px;
 			perspective: 500px;
 			position:relative;
 			
 			@media only screen and  (max-width:600px) {
-				margin-top:100px;
+				margin-top:50px;
 			}	
 			.banner{
 				margin-top:10px;
 				h1{
 					display: inline-block;
-					margin-top:50px;
+		
 					@media screen and (min-width:300px) and (max-width:900px) {
 						font-size: 18px;
 						text-align: left;
@@ -457,7 +361,7 @@ text-transform: initial;
 						padding:0px;
 					@media only screen and  (max-width:600px) {
 						text-align: justify;
-						width:70%;
+						width:100%;
 						font-size: 14px;
 						margin:0px;
 						color:white;
@@ -468,6 +372,7 @@ text-transform: initial;
 					.typed-cursor , .typed-cursor--blink {
 						color:lighten($color-texto2,10%);
 						font-size:50px;
+						margin-bottom:0px;
 					@media screen and (min-width:300px) and (max-width:900px) {
 						font-size: 18px;
 						}	
@@ -531,35 +436,7 @@ text-transform: initial;
 				
 				}	
 			}			
-            .logoImg{
-            	transform:translateZ(200px);
-				height: 120px; 
-				margin:0 auto;
-				display: block;
-				animation:float 2s infinite;
-				transition:all ease-in-out 2s;
-				
-				@media only screen and  (max-width:600px) {
-					margin:0px;
-					left:25%;
-				}	 
-			}
-			.logoshadow{	
-				position:absolute;
-				transition:all ease-in-out 4s;
-				width: 100px;
-				top:120px;
-				opacity:0.6;
-				animation:shadow 2s infinite;
 
-				margin:20px auto;
-				transform: translate(-50%, -50%);
-				@media only screen and  (max-width:600px) {
-					left:20%;
-					margin:25px 0px;
-				
-				}	 
-			}
         }
 
         .portada_wrapper_logo{
@@ -646,14 +523,14 @@ text-transform: initial;
 				}
 
 				.text1{
-					z-index:99999;
+					z-index:10;
 				@media only screen and  (max-width:600px) {
 					padding:1px 50px;
 				}
 
 				}
 				.text2{				
-					z-index:99999;
+					z-index:10;
 					
 						@media only screen and  (max-width:600px) {
 							padding:1px 50px;
@@ -665,7 +542,7 @@ text-transform: initial;
             }
 
 			.modulo-nosotros-inclusion{
-				z-index:99999;
+				z-index:10;
 				background-size:100%;
 		
 			
@@ -675,7 +552,7 @@ text-transform: initial;
 				
 				.inclusionWrapper{
 				margin-top:10px;
-				padding:10px 30px;
+				padding:20px ;
 				color:whitesmoke;
 				background:url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
 				background-size: cover;
@@ -683,6 +560,7 @@ text-transform: initial;
 				border-radius: 5px;
 					position: relative;
 					height:100%;
+			
 
 				@media only screen and  (max-width:600px) {
 					padding:35px ;
@@ -704,7 +582,7 @@ text-transform: initial;
 		
 				}
 
-				.compromisoTit{
+				.compromisoTi{
 					padding:10px;					
 					color:white;
 					text-align: left;
@@ -1172,6 +1050,11 @@ body{
 		height: auto;
 	}	
 	
+
+	button{
+		@include mybut($color-span);
+	}
+
 .spinner{
 	position:relative;
 	top:0px;
@@ -1235,14 +1118,14 @@ body{
 	text-align: center;
 	z-index: 99;
 		span{
-			background-color: lighten($color-titulos,10%);
+			background-color: #E2E5EE;;
 			border-right:none;
 			font-size:13px;
 			color:#C5C9C8;
 			border:none;
 			i{
 				
-				color:white;
+				color:$color-span;
 			}						
 		}
 
@@ -1295,7 +1178,7 @@ footer{
 	.footerWrapper{
 		padding:40px;
 		height: auto;
-		background-color:rgba(55,55,57,0.7);
+		background-color:darken($color-span , 45%);
 
 		.logoWrapper{
 			    text-align: center;
@@ -1352,7 +1235,7 @@ footer{
 	.broom{
 		font-family:"Raleway";
 	width:100%;
-	background-color:darken($color-titulos,15%);
+	background-color:darken($color-span , 20%);
 	padding:5px;
 	color:white;
 	.textoit{
@@ -1368,4 +1251,3 @@ footer{
 }
 
  
-

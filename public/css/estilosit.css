@@ -71,112 +71,6 @@
     .function {
       font-size: 18px; } }
 
-.navCurve {
-  position: absolute;
-  left: 0px;
-  top: 1px;
-  width: 100%;
-  z-index: 9;
-  display: none; }
-
-.curvebotmob {
-  position: absolute;
-  left: 0px;
-  bottom: -4px;
-  width: 100%;
-  z-index: 9; }
-
-.curvebotmob2 {
-  position: absolute;
-  left: -1px;
-  top: -1px;
-  width: 100%;
-  z-index: 9; }
-
-.navbar, .navbar-expand {
-  display: none; }
-  @media only screen and (min-width: 600px) {
-    .navbar, .navbar-expand {
-      display: block; } }
-
-nav {
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  font-family: 'Quicksand', sans-serif;
-  color: rgba(30, 30, 30, 0.8);
-  font-weight: 700; }
-  @media only screen and (min-width: 600px) {
-    nav {
-      display: none;
-      background: rgba(30, 30, 30, 0.8); } }
-
-.nav1 {
-  left: 0px;
-  display: block;
-  padding: 20px;
-  font-family: "Raleway";
-  font-size: 14px;
-  color: #051146; }
-  @media only screen and (max-width: 600px) {
-    .nav1 {
-      display: none; } }
-  .nav1 .navWrapper {
-    margin-left: 20%;
-    letter-spacing: 1.8px; }
-    .nav1 .navWrapper li {
-      display: inline;
-      padding: 10px;
-      text-decoration: none; }
-    .nav1 .navWrapper .cvCircle .buttonWrapper {
-      display: inline-block; }
-      .nav1 .navWrapper .cvCircle .buttonWrapper button {
-        border-radius: 20px;
-        background: black;
-        color: whitesmoke;
-        border-style: none;
-        padding: 15px 30px;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase; }
-
-.nav2 {
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  transition: all ease 0.8s;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 999;
-  display: none;
-  text-align: center;
-  position: fixed; }
-  @media only screen and (max-width: 600px) {
-    .nav2 {
-      display: block;
-      z-index: 9999; } }
-  .nav2 .iconmenu {
-    padding-left: 0px;
-    padding-top: 10px;
-    position: relative;
-    text-align: left;
-    visibility: hidden; }
-    .nav2 .iconmenu li {
-      display: inline-block;
-      padding: 13px; }
-      .nav2 .iconmenu li .icon, .nav2 .iconmenu li i {
-        transition: 1s;
-        color: whitesmoke;
-        font-size: 23px; }
-        .nav2 .iconmenu li .icon:hover, .nav2 .iconmenu li i:hover {
-          color: #76e6e5;
-          transition: 1s; }
-    .nav2 .iconmenu #hambur {
-      visibility: visible;
-      padding: 13px;
-      position: absolute;
-      right: 10px;
-      top: 10px; }
-
 @keyframes aumenta {
   0% {
     height: 30px;
@@ -225,7 +119,6 @@ nav {
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 40px;
-  margin-bottom: 35px;
   text-align: center;
   font-family: Inter UI,Source Sans Pro,Helvetica Neue,Arial,sans-serif;
   text-transform: uppercase;
@@ -281,6 +174,30 @@ nav {
         background-position: 5px 48px;
         width: 100%;
         padding: 25px; } }
+    .itsolutions .portada .logoImg {
+      transform: translateZ(200px);
+      height: 120px;
+      margin: 50px;
+      display: block;
+      animation: float 2s infinite;
+      transition: all ease-in-out 2s;
+      margin-top: 100px; }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .portada .logoImg {
+          left: 25%; } }
+    .itsolutions .portada .logoshadow {
+      position: absolute;
+      transition: all ease-in-out 4s;
+      width: 100px;
+      top: 120px;
+      opacity: 0.6;
+      animation: shadow 2s infinite;
+      margin: 20px auto;
+      transform: translate(-50%, -50%); }
+      @media only screen and (max-width: 600px) {
+        .itsolutions .portada .logoshadow {
+          left: 20%;
+          margin: 25px 0px; } }
     .itsolutions .portada .transparencia {
       position: absolute;
       top: 0px;
@@ -300,12 +217,11 @@ nav {
       position: relative; }
       @media only screen and (max-width: 600px) {
         .itsolutions .portada .portada_wrapper_texto {
-          margin-top: 100px; } }
+          margin-top: 50px; } }
       .itsolutions .portada .portada_wrapper_texto .banner {
         margin-top: 10px; }
         .itsolutions .portada .portada_wrapper_texto .banner h1 {
-          display: inline-block;
-          margin-top: 50px; }
+          display: inline-block; }
           @media screen and (min-width: 300px) and (max-width: 900px) {
             .itsolutions .portada .portada_wrapper_texto .banner h1 {
               font-size: 18px;
@@ -318,14 +234,15 @@ nav {
           @media only screen and (max-width: 600px) {
             .itsolutions .portada .portada_wrapper_texto .banner .textoit {
               text-align: justify;
-              width: 70%;
+              width: 100%;
               font-size: 14px;
               margin: 0px;
               color: white;
               opacity: 0.75; } }
         .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
           color: #505053;
-          font-size: 50px; }
+          font-size: 50px;
+          margin-bottom: 0px; }
           @media screen and (min-width: 300px) and (max-width: 900px) {
             .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor, .itsolutions .portada .portada_wrapper_texto .banner .typed-cursor--blink {
               font-size: 18px; } }
@@ -363,30 +280,6 @@ nav {
     opacity: 0.5; }
   100% {
     width: 100px; } }
-    .itsolutions .portada .logoImg {
-      transform: translateZ(200px);
-      height: 120px;
-      margin: 0 auto;
-      display: block;
-      animation: float 2s infinite;
-      transition: all ease-in-out 2s; }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .portada .logoImg {
-          margin: 0px;
-          left: 25%; } }
-    .itsolutions .portada .logoshadow {
-      position: absolute;
-      transition: all ease-in-out 4s;
-      width: 100px;
-      top: 120px;
-      opacity: 0.6;
-      animation: shadow 2s infinite;
-      margin: 20px auto;
-      transform: translate(-50%, -50%); }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .portada .logoshadow {
-          left: 20%;
-          margin: 25px 0px; } }
   .itsolutions .portada_wrapper_logo {
     position: relative; }
     .itsolutions .portada_wrapper_logo .portadaImage {
@@ -448,24 +341,24 @@ nav {
         .nosotros .nosotros-wrapper .modulo-nosotros-texto {
           padding: 0px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
-        z-index: 99999; }
+        z-index: 10; }
         @media only screen and (max-width: 600px) {
           .nosotros .nosotros-wrapper .modulo-nosotros-texto .text1 {
             padding: 1px 50px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 {
-        z-index: 99999; }
+        z-index: 10; }
         @media only screen and (max-width: 600px) {
           .nosotros .nosotros-wrapper .modulo-nosotros-texto .text2 {
             padding: 1px 50px; } }
     .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
-      z-index: 99999;
+      z-index: 10;
       background-size: 100%; }
       @media only screen and (max-width: 600px) {
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion {
           padding: 20px; } }
       .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper {
         margin-top: 10px;
-        padding: 10px 30px;
+        padding: 20px;
         color: whitesmoke;
         background: url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
         background-size: cover;
@@ -491,7 +384,7 @@ nav {
           /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
           opacity: 0.65;
           border-radius: 5px; }
-        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTit {
+        .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTi {
           padding: 10px;
           color: white;
           text-align: left; }
@@ -516,7 +409,7 @@ nav {
       background: url(//www.yotpo.com/wp-content/themes/tg/css/../images/templates/homev8/SVG/BG/Part2-BG.svg) no-repeat;
       background-size: cover;
       box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
-      border-top: 4px solid #15aabf;
+      border-top: 4px solid #000000;
       padding: 20px 5px;
       margin-top: 20px; }
       .servicios .servicewrapper .module-wrapper img {
@@ -548,7 +441,7 @@ nav {
                 font-size: 13px; } }
           .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
             font-size: 18px;
-            color: #15aabf; }
+            color: #000000; }
             @media only screen and (max-width: 600px) {
               .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
                 font-size: 15px; } }
@@ -808,6 +701,15 @@ body {
     .contacto {
       padding: 100px 25px;
       height: auto; } }
+  .contacto button {
+    border-radius: 20px;
+    background: #26D0CE;
+    color: whitesmoke;
+    border-style: none;
+    padding: 15px 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
   .contacto .spinner {
     position: relative;
     top: 0px;
@@ -815,7 +717,7 @@ body {
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    color: #15aabf; }
+    color: #000000; }
   .contacto .bigwifi {
     z-index: 10;
     font-size: 700px;
@@ -854,13 +756,13 @@ body {
     text-align: center;
     z-index: 99; }
     .contacto form span {
-      background-color: #081d76;
+      background-color: #E2E5EE;
       border-right: none;
       font-size: 13px;
       color: #C5C9C8;
       border: none; }
       .contacto form span i {
-        color: white; }
+        color: #26D0CE; }
     .contacto form input {
       font-size: 13px;
       border-left: none;
@@ -886,7 +788,7 @@ body {
 footer .footerWrapper {
   padding: 40px;
   height: auto;
-  background-color: rgba(55, 55, 57, 0.7); }
+  background-color: #030e0e; }
   footer .footerWrapper .logoWrapper {
     text-align: center;
     width: 250px;
@@ -922,7 +824,7 @@ footer .footerWrapper {
 footer .broom {
   font-family: "Raleway";
   width: 100%;
-  background-color: black;
+  background-color: #167a79;
   padding: 5px;
   color: white; }
   footer .broom .textoit {

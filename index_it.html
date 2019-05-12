@@ -27,6 +27,7 @@
 
 
 		<link rel="stylesheet" href="css/portada.css">
+			<link rel="stylesheet" href="css/nav.css">
 		<link rel="stylesheet" href="css/estilosit.css">
 
 
@@ -55,8 +56,42 @@
 
 	<body ng-cloak class="itsolutions" ng-init="" ng-app="myApp" ng-controller="busquedaController">
 
-		<script> new WOW().init() </script>
+		<script>
+			 new WOW().init()
 
+
+		</script>
+
+	<input id="burger" type="checkbox" hidden />
+	
+	<label for="burger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+	
+	<nav>
+		<ul>
+			<li><a id="myMenu" class="item" href="#nosotros">Sobre Nosotros</a></li>
+			<li><a class="item" href="#servicios">Servicios</a></li>
+			<li><a class="item" href="#busquedas">Busquedas</a></li>
+			<li><a class="item" href="#contacto">Conectate!</a></li>
+		</ul>
+	</nav>
+
+	<script>
+		var top = 0;
+				$("#myMenu").click(function () {
+						if (top ==0){
+							top =1;
+							$("nav").height("100vh");
+						}else{
+								top = 0;
+							$("nav").height(0);
+						}
+						
+					})
+	</script>	
 
 
 		<section id="portada " class="portada  wow fadeIn" data-wow-delay="0.2s" id="home">
@@ -64,21 +99,6 @@
 				
 				<div class="transparencia"></div>
 
-					<!-- <div class="nav2">
-						<ul class="iconmenu">
-							<li><a class="ancla" href="#home"><i class="fas fa-home"></i></a></li>
-							<li><a class="ancla" href="#nosotros"><i class="fab fa-codepen icon"></i></a></li>
-					
-							<li><a class="ancla" href="#servicios"><i class="fab fa-black-tie icon"></i></a></li>
-					
-							<li><a class="ancla" href="#busquedas"><i class="fab fa-searchengin"></i></a></li>
-							<li><a class="ancla" href="#contacto"><i class="fas fa-wifi icon"></i></a></li>
-							<li id="hambur"><a class="ancla" ><i class="fas fa-bars"></i></a></li>
-		
-
-			
-						</ul>
-					</div> -->
 
 					<div class="loading">
 						<div class="loadingwrapper">
@@ -96,9 +116,11 @@
 						</div>
 						</div>
 					</div>
+
+				<img class="logoImg" src="/imagenes/web/LOGO4.png" />
+				<img class="logoshadow" src="/imagenes/web/shadow.png" />
+
 				<div class="portada_wrapper_texto col-xs-12 col-md-12 col-lg-12 wow fadeIn">
-					<img class="logoImg" src="/imagenes/web/LOGO4.png" />
-					<img class="logoshadow" src="/imagenes/web/shadow.png" />
 					<div class="banner">
 						<span> </span>	<h1 id="typed" class="tituloit portadatit wow fadeIn"> </h1>							
 							<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>						
@@ -565,7 +587,7 @@
 
 					<div class="input-group wow jackInTheBox">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-lock"></i>
+							<span class="input-group-text" id="addon-wrapping"><i class="fas fa-angle-double-right"></i>
 						</div>
 						<input type="text" name="asunto"  class="form-control" placeholder="asunto" aria-label="Username" aria-describedby="addon-wrapping">
 					</div>
@@ -585,7 +607,7 @@
 					</div>
 					<br>
 							
-				<button class="btn btn-dark wow flipInX conect" type="submit" ng-click="conect()">CONECTATE!</button>
+				<button class="myBut wow flipInX conect" type="submit" ng-click="conect()">CONECTATE!</button>
 				<br>
 				
 				<div class="spinner" ng-show="spinnerContact">
@@ -722,6 +744,7 @@
 		</footer>
 
 
+		
 
 
 

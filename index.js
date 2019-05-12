@@ -71,8 +71,9 @@ var Busboy = require('busboy');
 app.post("/sendMail" , upload.single('adjunto'),  function(req, res, next){
 	var pt = req.file;
 		var bd = req.body;
-
-	var mailOptions = {
+var mailOptions = {};
+try{
+	mailOptions = {
 	  from: req.body.mail ,
 	  to: mailingenio,
 	   attachments: [{
@@ -84,6 +85,18 @@ app.post("/sendMail" , upload.single('adjunto'),  function(req, res, next){
 	  subject: 'Usuario: ' + req.body.nombre +' - Mail: ' + req.body.mail + " - Asunto: " + req.body.asunto,
 	  text: req.body.comentario
 	};
+	
+}
+
+catch(e){
+
+	mailOptions = {
+		from: req.body.mail,
+		to: mailingenio,
+		subject: 'Usuario: ' + req.body.nombre + ' - Mail: ' + req.body.mail + " - Asunto: " + req.body.asunto,
+		text: req.body.comentario
+	};
+}
 
 
 mail.enviar(mailOptions , function(data){
