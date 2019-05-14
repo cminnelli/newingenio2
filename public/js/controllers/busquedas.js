@@ -17,7 +17,7 @@ app.controller("busquedaController" , function($scope , $http , googleService , 
 	$scope.servicios_in = [
 		{nombre:"Busqueda y Selección" , descripcion:"Porque somos especialistas, estamos comprometidos en la búsqueda de un resultado que signifique tanto un crecimiento personal y profesional para nuestros candidatos, como también una incorporación de valor al equipo humano y técnico de nuestros clientes." , img:"/imagenes/web/portada2.jpg"},
 		{nombre:"Capacitación" , descripcion:"Como creemos en la búsqueda constante de excelencia, potenciamos equipos y profesionales mediante la implementación y el diseño de innovadoras propuestas de capacitación, orientadas a impactar directamente sobre su performance personal y profesional." , img:"/imagenes/web/portada5.jpg"},
-		{nombre:"Psicotécnicos y Evaluaciones" , descripcion:"Involucrados con la calidad, facilitamos una amplia gama de evaluaciones psicotecnicas diseñadas y administradas por psicólogos y especialistas en las distintas ramas de la industria, lo cual nos permite alcanzar los mejores resultados en cada proceso de reclutamiento." , img:"/imagenes/web/service2.jpg"},
+		{nombre:"Psicotécnicos y Evaluaciones" , descripcion:"Involucrados con la calidad, facilitamos una amplia gama de evaluaciones psicotecnicas diseñadas y administradas por psicólogos y especialistas en las distintas ramas de la industria, lo cual nos permite alcanzar los mejores resultados en cada proceso de reclutamiento." , img:"/imagenes/web/service21.jpg"},
 		
 	]
 
@@ -119,7 +119,7 @@ googleService.monitor("empleos" ,function(data){
 $scope.simulate =function(){
 
 	$("#division").val("division test"),
-	$("#cuit").val("30256323235"),
+
 	$("#empresa").val("IT Solutions"),
 	$("#puesto").val("Gerente de IT"),
 	$("#seniority").val("Gerente"),
@@ -136,12 +136,10 @@ $scope.newJob = function(){
 
 		var newOffer = {
 			division:$("#division").val(),
-			cuit:$("#cuit").val(),
-			empresa:$("#empresa").val(),
+				empresa:$("#empresa").val(),
 			puesto:$("#puesto").val(),
 			seniority:$("#seniority").val(),
 			rubro:$("#rubro").val(),
-			segmento:$("#segmento").val(),
 			area:$("#area").val(),
 			ubicacion:$("#ubicacion").val(),
 			comentarios:$("#comentarios").val()
@@ -152,7 +150,8 @@ $scope.newJob = function(){
 			googleService.update("empleos/" + key , {key: key}) //agrego id-key como property
 		}); //agregrando oferta
 
-
+			$("input").val("");
+		$('#modal').modal('toggle');
 }
 
 $scope.eliminarJob = function(key){

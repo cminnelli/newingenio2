@@ -169,8 +169,6 @@
 
 						<button ng-show="ingenio" type="button" class="but butOffer" data-toggle="modal" data-target="#myModal">Nueva Oferta</button>
 
-						<button ng-show="ingenio" ng-click="simulate()" type="button" class="but butOffer">simular</button>
-
 						<input id="cv" name="input-b1" type="file" class="btn btn-file" placeholder="hola">	
 					</div>					
 				</div>
@@ -227,8 +225,8 @@
 								</div>
 							</div>								
 					
-							<button ng-click="eliminarJob(x.key)" class="but butCandidato">Eliminar</button>																
-							<button ng-click="modificarJob(x.key)" class="but butCandidato">Modificar</button>																
+							<button ng-click="eliminarJob(x.key)" class="but butCandidato">Eliminar</button>										
+															
 
 						</div>
 
@@ -258,9 +256,7 @@
 						<h4 class="modal-title" id="myModalLabel">Agregar Nueva Oferta</h4>
 					</div>
 					<div class="modal-body">
-							<div class="alert alert-success" role="alert">
-									<h4 class="alert-heading">Genial! nuevo Job agregado</h4>
-							</div>
+
 						<form action="/joboffer_new" method="post" class="">
 							<div class="row">
 
@@ -272,10 +268,7 @@
 								  </select>
 								</div>
 
-								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">	
-									<input placeholder="cuit" name="cuit" type="text" class="form-control" id="cuit" required>
-								</div>
-
+	
 								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">	
 									<input placeholder="Empresa" name="empresa" type="text" class="form-control" id="empresa" >
 								</div>
@@ -294,9 +287,6 @@
 									<input placeholder="rubro" id="rubro" name="rubro" type="text" class="form-control" id="rubro">
 
 								</div>
-								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">			
-									<input placeholder="segmento" name="segmento" id="segmento" type="text" class="form-control" id="segmento">
-								</div>
 
 								<div class="form-group col-xs-12 col-md-8 col-md-offset-2">			
 									<input name="location" placeholder="Lugar" type="text" class="form-control" id="ubicacion">
@@ -314,7 +304,6 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 						<button ng-click="newJob()" type="button" class="btn btn-light">Guardar </button>
-						<button ng-click="newJob()" type="button" class="btn btn-dark">Guardar y  Nuevo</button>
 					</div>
 				</div>
 			</div>

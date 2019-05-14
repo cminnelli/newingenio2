@@ -78,8 +78,8 @@ function loading(time){
 
 		var typed = new Typed("#typed", {
 
-			strings: ["Innovacion   <p class='function'> ( anticiparnos al futuro ) </p> ", "Creatividad   <p class='function'> ( exigencias del mercado ) </p> ", "Flexibilidad  <p class='function'> ( Necesidades del cliente )</p> ", "Dinamismo  <p class='function'> ( Respuesta )  </p> "],
-			typeSpeed: 30,//specifies the typing speed of the text
+			strings: ["Innovacion   <p class='function'> ( anticiparnos al futuro ) </p> ", "Creatividad   <p class='function'> ( exigencias del mercado ) </p> ", "Flexibilidad  <p class='function'> ( Necesidades del cliente )</p> ", "Inteligencia  <p class='function'> (ver q mas )  </p> ", "Dinamismo  <p class='function'> ( Respuesta )  </p> "],
+			typeSpeed: 40,//specifies the typing speed of the text
 			backSpeed: 15, //specifies speed of deletion of the text,
 			contentType: 'html',
 			loop: false //repetition
