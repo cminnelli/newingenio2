@@ -149,10 +149,10 @@
       transform: translate(-50%, -50%);
       position: absolute; }
       .itsolutions .loading .loadingwrapper .logoWrapper .logoImg {
-        height: 90px; }
+        height: 140px; }
         @media only screen and (max-width: 600px) {
           .itsolutions .loading .loadingwrapper .logoWrapper .logoImg {
-            height: 110px; } }
+            height: 130px; } }
   .itsolutions .portada {
     position: relative;
     padding: 50px;
@@ -179,19 +179,6 @@
       @media only screen and (max-width: 600px) {
         .itsolutions .portada .logoImg {
           left: 25%; } }
-    .itsolutions .portada .logoshadow {
-      position: absolute;
-      transition: all ease-in-out 4s;
-      width: 100px;
-      top: 120px;
-      opacity: 0.6;
-      animation: shadow 2s infinite;
-      margin: 20px auto;
-      transform: translate(-50%, -50%); }
-      @media only screen and (max-width: 600px) {
-        .itsolutions .portada .logoshadow {
-          left: 20%;
-          margin: 25px 0px; } }
     .itsolutions .portada .transparencia {
       position: absolute;
       top: 0px;
@@ -382,6 +369,9 @@
           padding: 10px;
           color: white;
           text-align: left; }
+          @media only screen and (max-width: 600px) {
+            .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTi {
+              font-size: 20px; } }
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .textoit {
           text-align: justify;
           color: whitesmoke;
@@ -789,7 +779,7 @@ footer .footerWrapper {
     margin: 0 auto;
     padding: 10px; }
     footer .footerWrapper .logoWrapper .logoImg {
-      width: 90px; }
+      width: 120px; }
   footer .footerWrapper .social {
     text-align: center; }
     footer .footerWrapper .social ul {

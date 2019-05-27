@@ -39,7 +39,7 @@ app.listen(port, function(req , res){
 
 app.get("/" , function(req , res){
 
-	res.sendFile(path.join(__dirname ,"index_it.html"));
+	res.sendFile(path.join(__dirname ,"index.html"));
 
 })
 

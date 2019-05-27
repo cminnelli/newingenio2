@@ -38,16 +38,6 @@ $size-posttitulosec:18px;
 }
 
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-#cv{
-	width: 100%;
-}
-.stars {
-  display: inline-block;
-  font-size: 13px;
-  flex-direction: row-reverse;
-  justify-content: center;
-}
-
 
 
 @keyframes pulsar{
@@ -59,12 +49,11 @@ $size-posttitulosec:18px;
 	}
 }
 
-
 .row{
 	 margin-right: 0px;
-    margin-left: 0px;
+		margin-left: 0px;
+		font-size: 15px;
 }
-
 	.spinner {
 		  border-radius: 100%;
 					color:$color-ingenio3;
@@ -84,8 +73,8 @@ $size-posttitulosec:18px;
 
 				.spinner > div {
 				  background-color: $color-ingenio1;
-				width: 18px;
-				height: 18px;
+					width: 18px;
+					height: 18px;
 	
 
 				border-radius: 100%;
@@ -134,7 +123,6 @@ $size-posttitulosec:18px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	
-
 }
 
 .but{
@@ -210,10 +198,9 @@ $size-posttitulosec:18px;
 					.logoImg{
 						animation:float 2s infinite;
 						transition:all ease-in-out 2s;
-						height: 110px;
+						height: 140px;
 						@media only screen and  (max-width:600px) {	
 							height: 130px;	
-
 						}	
 					}
 				}
@@ -369,7 +356,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 
 .portada{
 	
-			background: url("/imagenes/web/portada13.jpg")  no-repeat top;	
+	background: url("/imagenes/web/portada13.jpg")  no-repeat top;	
 	background-attachment: fixed;
 	background-size: cover;
 	background-position:top;
@@ -472,7 +459,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 		margin:0px;
 	}
 	
-	text-align: center;
+	text-align: justify;
 	background-color:#D7E0E5;
 
 
@@ -500,6 +487,8 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 				margin-top:0;
 				margin-bottom:15px;
 				margin-top:8px;
+				font-weight: 700;
+				text-transform: uppercase;
 			}
 			h5{
 				text-transform: uppercase;
@@ -510,12 +499,15 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 			}
 			p{
 				line-height: 2;
-				width: 65%;
+				width: 75%;
+				margin:0px 30px;
 				@media screen and (max-width:600px){
 					width: 98%;
-					text-align: justify;
+						margin:0px;
 				}
-				margin:0 auto;
+			}
+			.icon{
+				font-size:30px;
 			}
 
 		}
@@ -1326,15 +1318,15 @@ footer{
 	.footerWrapper{
 		padding:40px;
 		height: auto;
-		background-color:darken($color-titulos,3%);
+		background-color:#353439;;
 
 		.logoWrapper{
-			    text-align: center;
+			 text-align: center;
 			width:250px;
 			margin:0 auto;
 			padding:10px;
 			.logoImg{
-				width:90px;
+				width:120px;
 			}
 		}
 
