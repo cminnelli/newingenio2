@@ -17,7 +17,7 @@
 .row {
   margin-right: 0px;
   margin-left: 0px;
-  font-size: 15px; }
+  font-size: 13,5px; }
 
 .spinner {
   border-radius: 100%;
@@ -186,7 +186,7 @@
 
 .bodyMain {
   font-family: "Montserrat", sans-serif;
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 300;
   overflow-y: hidden; }
 
@@ -304,14 +304,24 @@ h1, .container, .container-fluid {
         .nosotros .modulo-nosotros .engineertool {
           display: none; } }
     .nosotros .modulo-nosotros .texto-wrapper {
-      padding: 50px;
+      padding: 60px;
       color: #26555d; }
+      @media only screen and (max-width: 600px) {
+        .nosotros .modulo-nosotros .texto-wrapper {
+          padding: 55px; } }
       .nosotros .modulo-nosotros .texto-wrapper h2 {
+        text-align: left;
         margin-top: 0;
         margin-bottom: 15px;
         margin-top: 8px;
         font-weight: 700;
         text-transform: uppercase; }
+        .nosotros .modulo-nosotros .texto-wrapper h2.compromiso {
+          color: #427A83;
+          font-size: 13px; }
+        @media only screen and (max-width: 600px) {
+          .nosotros .modulo-nosotros .texto-wrapper h2 {
+            font-size: 13.5px; } }
       .nosotros .modulo-nosotros .texto-wrapper h5 {
         text-transform: uppercase;
         color: #0587AD;
@@ -320,7 +330,7 @@ h1, .container, .container-fluid {
         margin-top: 5px; }
       .nosotros .modulo-nosotros .texto-wrapper p {
         line-height: 2;
-        width: 75%;
+        width: 70%;
         margin: 0px 30px; }
         @media screen and (max-width: 600px) {
           .nosotros .modulo-nosotros .texto-wrapper p {
@@ -525,9 +535,11 @@ h1, .container, .container-fluid {
       .servicios .servGeneral .servWrapper .servBody {
         background-color: white;
         color: #484848;
-        padding: 8px;
+        padding: 25px;
         text-align: justify;
         line-height: 1.5; }
+        .servicios .servGeneral .servWrapper .servBody p {
+          line-height: 25px; }
 
 /*BUSQUEDAS SECTION*/
 .encabezado {
@@ -543,7 +555,7 @@ h1, .container, .container-fluid {
   .encabezado h3 {
     padding: 15px;
     margin: 0;
-    font-size: 35px; }
+    font-size: 26px; }
     .encabezado h3 span {
       padding: 5px;
       display: block; }
@@ -835,14 +847,14 @@ h1, .container, .container-fluid {
       border: none; }
       .contacto form span i {
         color: white; }
-    .contacto form input {
+    .contacto form input, .contacto form textarea {
       font-size: 13px;
       border-left: none;
       color: #484848;
       padding: 12px;
       border: none;
       opacity: 0.8; }
-      .contacto form input:focus {
+      .contacto form input:focus, .contacto form textarea:focus {
         outline: none; }
 
 footer {

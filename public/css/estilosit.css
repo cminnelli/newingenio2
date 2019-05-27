@@ -92,17 +92,16 @@
 .textoit {
   font-family: "Montserrat", sans-serif;
   color: #1A1A23;
-  font-size: 13px;
+  font-size: 11.5px;
   line-height: 28px;
   letter-spacing: 0.2px;
   padding: 20px 0px;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  text-align: justify; }
   @media only screen and (max-width: 600px) {
     .textoit {
-      text-align: -webkit-auto;
-      font-size: 13px;
-      line-height: 25px;
-      text-align: justify; } }
+      font-size: 12px;
+      line-height: 25px; } }
   .textoit.highlights {
     font-weight: 700;
     color: #051146; }
@@ -216,7 +215,7 @@
             .itsolutions .portada .portada_wrapper_texto .banner .textoit {
               text-align: justify;
               width: 100%;
-              font-size: 14px;
+              font-size: 13px;
               margin: 0px;
               color: white;
               opacity: 0.75; } }
@@ -368,7 +367,8 @@
         .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTi {
           padding: 10px;
           color: white;
-          text-align: left; }
+          text-align: left;
+          font-size: 18px; }
           @media only screen and (max-width: 600px) {
             .nosotros .nosotros-wrapper .modulo-nosotros-inclusion .inclusionWrapper .compromisoTi {
               font-size: 20px; } }
@@ -381,54 +381,67 @@
 .servicios {
   padding: 10px;
   height: 100vh; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     .servicios {
       height: auto; } }
   .servicios .servicewrapper {
     padding: 25px; }
     @media only screen and (max-width: 600px) {
       .servicios .servicewrapper {
-        padding: 10px; } }
+        padding: 5px; } }
     .servicios .servicewrapper .module-wrapper {
-      background: url(//www.yotpo.com/wp-content/themes/tg/css/../images/templates/homev8/SVG/BG/Part2-BG.svg) no-repeat;
+      background: url("/imagenes/web/theme1.svg") no-repeat;
       background-size: cover;
       box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
-      border-top: 4px solid #000000;
-      padding: 20px 5px;
-      margin-top: 20px; }
-      .servicios .servicewrapper .module-wrapper img {
-        margin-top: 80px; }
-      .servicios .servicewrapper .module-wrapper .servicio-item-wrapper {
-        cursor: pointer;
-        width: 95%;
-        margin: 0 auto; }
-        .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard {
-          padding: 10px; }
-          @media only screen and (max-width: 600px) {
-            .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard {
-              border: none; } }
-          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard:hover i {
-            color: #081d76;
-            transition: 1s; }
-          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard i {
-            color: #051146;
-            transition: 2s;
-            font-size: 30px;
-            padding: 15px; }
-          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-title {
-            margin-bottom: 0px;
-            font-size: 19px;
-            font-family: "Montserrat", sans-serif;
-            text-transform: uppercase; }
+      border-top: 3px solid #000000;
+      margin-top: 50px; }
+      @media only screen and (max-width: 600px) {
+        .servicios .servicewrapper .module-wrapper {
+          border-top: none; } }
+      .servicios .servicewrapper .module-wrapper .serviceImage {
+        background: url("/imagenes/web/computer6.jpg") no-repeat;
+        background-size: cover; }
+        @media only screen and (max-width: 900px) {
+          .servicios .servicewrapper .module-wrapper .serviceImage {
+            height: 180px;
+            background-position: 0px -80px;
+            border-top: none; } }
+      .servicios .servicewrapper .module-wrapper .serviceFirstWrapp {
+        padding: 40px; }
+        @media only screen and (max-width: 600px) {
+          .servicios .servicewrapper .module-wrapper .serviceFirstWrapp {
+            padding: 10px; } }
+        .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper {
+          cursor: pointer;
+          width: 95%;
+          margin: 0 auto; }
+          .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard {
+            padding: 20px; }
             @media only screen and (max-width: 600px) {
-              .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-title {
-                font-size: 13px; } }
-          .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
-            font-size: 18px;
-            color: #000000; }
-            @media only screen and (max-width: 600px) {
-              .servicios .servicewrapper .module-wrapper .servicio-item-wrapper .serviceCard .card-subtitle {
-                font-size: 15px; } }
+              .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard {
+                border: none; } }
+            .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard:hover i {
+              color: #081d76;
+              transition: 1s; }
+            .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard i {
+              color: #051146;
+              transition: 2s;
+              font-size: 30px;
+              padding: 15px; }
+            .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-title {
+              margin-bottom: 0px;
+              font-size: 19px;
+              font-family: "Montserrat", sans-serif;
+              text-transform: uppercase; }
+              @media only screen and (max-width: 1000px) {
+                .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-title {
+                  font-size: 13px; } }
+            .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-subtitle {
+              font-size: 18px;
+              color: #000000; }
+              @media only screen and (max-width: 1000px) {
+                .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-subtitle {
+                  font-size: 15px; } }
 
 .busquedas {
   padding: 50px 100px;
@@ -664,6 +677,13 @@ body {
   padding: 5px; }
   .graciasporcontactarnos.error {
     background-color: #F63720; }
+  .graciasporcontactarnos .graciasWrapper .butonWrapp {
+    padding: 10px;
+    margin-top: 40px; }
+    .graciasporcontactarnos .graciasWrapper .butonWrapp a {
+      margin-top: 10px; }
+      .graciasporcontactarnos .graciasWrapper .butonWrapp a button {
+        width: 90%; }
   .graciasporcontactarnos .graciasWrapper .textdiv {
     text-align: center;
     position: absolute;
@@ -747,14 +767,14 @@ body {
       border: none; }
       .contacto form span i {
         color: #26D0CE; }
-    .contacto form input {
+    .contacto form input, .contacto form textarea {
       font-size: 13px;
       border-left: none;
       color: #1A1A23;
       padding: 12px;
       border: none;
       opacity: 0.8; }
-      .contacto form input:focus {
+      .contacto form input:focus, .contacto form textarea:focus {
         outline: none; }
 
 @keyframes movdiv {

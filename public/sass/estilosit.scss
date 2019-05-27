@@ -49,8 +49,8 @@ $color-nosotros:#EDEEF2;
 $color-coolblue:#051146;
 
 // TAMAÑOS
-$size-textoit:13px;
-$size-textoit2:13px;
+$size-textoit:11.5px;
+$size-textoit2:12px;
 $size-titulosec:19px;
 $size-titulopri:30px;
 $size-posttitulosec:18px;
@@ -146,8 +146,6 @@ $size-posttitulosec:18px;
 		background-color: darken($color-span,10%);
 		opacity: 0.90;
 	}
-
-
 	100%{
 		height:530px;
 		width:530px;
@@ -158,43 +156,37 @@ $size-posttitulosec:18px;
 }
 
 @keyframes dismin {
-
-
 	0%{
-
-	height:470px;
+		height:470px;
 		width:470px;
-
 		opacity: 0.95;
 		background-color: darken($color-span,15%);
 	}
 	20%{
-	opacity: 0.55;
+		opacity: 0.55;
 	}
-
 	100%{
 		opacity: 0.95;
 		height:0px;
 		width:0px;
-		background-color:none;
-		
+		background-color:none;		
 	}
 
 }
 
 .textoit{
-    font-family: $font-primary;
-    color:$color-texto;
-    font-size:$size-textoit  ; 
-    line-height: 28px;
-    letter-spacing: 0.2px;
-	padding:20px 0px;
-	margin-bottom: 0px;
+   font-family: $font-primary;
+   color:$color-texto;
+   font-size:$size-textoit  ; 
+   line-height: 28px;
+   letter-spacing: 0.2px;
+		padding:20px 0px;
+		margin-bottom: 0px;
+		text-align:justify;	
 	@media only screen and  (max-width:600px) {
-		text-align:-webkit-auto;
+	
 		font-size:$size-textoit2;
 		line-height: 25px;
-		text-align:justify;	
 	}	 
 
 &.highlights{
@@ -296,7 +288,6 @@ text-transform: initial;
 				margin-top:100px;
 				
 				@media only screen and  (max-width:600px) {
-
 					left:25%;
 				}	 
 			}
@@ -341,7 +332,7 @@ text-transform: initial;
 					@media only screen and  (max-width:600px) {
 						text-align: justify;
 						width:100%;
-						font-size: 14px;
+						font-size: 13px;
 						margin:0px;
 						color:white;
 						opacity:0.75;
@@ -534,16 +525,14 @@ text-transform: initial;
 				background:url("/imagenes/web/inclusion/inclusion4.jpeg") no-repeat;
 				background-size: cover;
 			   box-shadow: 0 0 25px 0 rgba(90,77,131,.2);
-				border-radius: 5px;
+					border-radius: 5px;
 					position: relative;
 					height:100%;
-			
 
 				@media only screen and  (max-width:600px) {
 					padding:35px ;
 					text-align: justify;
 				}
-
 				.transparencia{
 					position: absolute;
 					top:0px;
@@ -554,18 +543,17 @@ text-transform: initial;
 					background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
 					background: linear-gradient(to right, #2B2F3C, #2B2F3C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */			
 					opacity: 0.65;
-					border-radius: 5px;
-
-		
+					border-radius: 5px;		
 				}
 
 				.compromisoTi{
 					padding:10px;					
 					color:white;
 					text-align: left;
+						font-size:18px;
 					@media only screen and  (max-width:600px) {
 						font-size:20px;
-				}
+					}
 					
 				}
 				.textoit{
@@ -573,9 +561,9 @@ text-transform: initial;
 					color:whitesmoke;
 					padding:2px;
 					font-family: "Quicksand";
+						}
+					}
 				}
-			}
-			}
         }
 	}
 	
@@ -584,68 +572,82 @@ text-transform: initial;
     	padding: 10px;
 			height:100vh;
 						
-			@media only screen and  (max-width:600px) {
+			@media only screen and  (max-width:900px) {
 				height:auto;
 			}	
 			.servicewrapper{
 				padding:25px;
 				@media only screen and  (max-width:600px) {
-					padding:10px;
+					padding:5px;
 				}		
 					.module-wrapper{
-						background: url(//www.yotpo.com/wp-content/themes/tg/css/../images/templates/homev8/SVG/BG/Part2-BG.svg) no-repeat;
+						background: url("/imagenes/web/theme1.svg") no-repeat;
 						background-size: cover;
 						box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
-						border-top:4px solid $color-span2;
-						padding:20px 5px;
-						margin-top:20px;	
-			
-							img{
-								margin-top:80px;
-							}
-							.servicio-item-wrapper{
-								cursor:pointer;
-								width:95%;
-								margin:0 auto;
-								.serviceCard{
-								padding:10px;
-		
-								@media only screen and  (max-width:600px) {
-									border:none;
+						border-top:3px solid $color-span2;
+						margin-top:50px;	
+						@media only screen and  (max-width:600px) {
+							border-top:none;
+						}				
+				
+							.serviceImage{
+								background: url("/imagenes/web/computer6.jpg") no-repeat;
+								background-size:cover;			
+								@media only screen and  (max-width:900px) {
+									height:180px;
+									background-position:0px -80px;
+									border-top:none;
 								}	
-			
-								&:hover i{			
-									color:lighten($color-coolblue,10%);
-									transition:1s;
+
+							}
+							.serviceFirstWrapp{
+								padding:40px;
+									@media only screen and  (max-width:600px) {
+										padding:10px;
+									}	
+								.servicio-item-wrapper{
+									cursor:pointer;
+									width:95%;
+									margin:0 auto;
+									.serviceCard{
+									padding:20px;			
+									@media only screen and  (max-width:600px) {
+										border:none;
+									}	
+				
+									&:hover i{			
+										color:lighten($color-coolblue,10%);
+										transition:1s;
+										}
+				
+										i{
+											color:$color-coolblue;
+											transition:2s;
+											font-size: $size-titulopri;
+											padding:15px;
+								
+										}
+				
+										.card-title{
+											margin-bottom: 0px;
+											font-size: $size-titulosec;
+											font-family: $font-primary;
+											text-transform:uppercase;
+											@media only screen and  (max-width:1000px) {
+												font-size:13px;											}									
+				
+										}
+										.card-subtitle{
+										font-size: $size-posttitulosec;
+										color:$color-span2;
+										@media only screen and  (max-width:1000px) {
+											font-size:15px;
+										}		
+										}
+				
 									}
-			
-									i{
-										color:$color-coolblue;
-										transition:2s;
-										font-size: $size-titulopri;
-										padding:15px;
-							
-									}
-			
-									.card-title{
-								margin-bottom: 0px;
-								font-size: $size-titulosec;
-								font-family: $font-primary;
-								text-transform:uppercase;
-								@media only screen and  (max-width:600px) {
-									font-size:13px;
-								}									
-			
-									}
-									.card-subtitle{
-								font-size: $size-posttitulosec;
-								color:$color-span2;
-								@media only screen and  (max-width:600px) {
-									font-size:15px;
-								}		
-									}
-			
 								}
+
 							}
 						}
 
@@ -656,7 +658,7 @@ text-transform: initial;
     .busquedas{
 
 		padding:50px 100px;
-        -webkit-background-attachment: fixed;
+    -webkit-background-attachment: fixed;
 		background: url("/imagenes/web/portada12.jpg")  no-repeat top;	
 		background-attachment: fixed;
 		position: relative;
@@ -994,6 +996,17 @@ body{
 		  	background-color: #F63720;
 	 }
  	.graciasWrapper{
+		.butonWrapp{
+			padding: 10px;
+			margin-top:40px;
+			a{
+				margin-top:10px;
+					button{
+						width:90%;
+		
+					}
+			}
+		}
 
 		.textdiv{
 			text-align: center;
@@ -1105,7 +1118,7 @@ body{
 		}
 
 			
-		input{
+		input, textarea{
 			font-size:13px;
 
 			border-left:none;
