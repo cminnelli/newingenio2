@@ -109,7 +109,7 @@ function loading(time){
 // }
 
 // navbar()
-loading(6000);
+loading(5000);
 
 
 
