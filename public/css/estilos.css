@@ -530,12 +530,14 @@ h1, .container, .container-fluid {
         .servicios .servGeneral .servWrapper .servHead .textWrapper {
           padding: 10px; }
           .servicios .servGeneral .servWrapper .servHead .textWrapper .serv-tit {
+            font-size: 19px;
+            color: rgba(30, 30, 30, 0.8);
             text-align: center;
             font-weight: 700; }
       .servicios .servGeneral .servWrapper .servBody {
         background-color: white;
         color: #484848;
-        padding: 25px;
+        padding: 15px;
         text-align: justify;
         line-height: 1.5; }
         .servicios .servGeneral .servWrapper .servBody p {
@@ -801,7 +803,7 @@ h1, .container, .container-fluid {
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    background-color: #00a896; }
+    display: block; }
   .contacto .bigwifi {
     z-index: 10;
     font-size: 700px;
@@ -817,17 +819,6 @@ h1, .container, .container-fluid {
         left: 0%;
         font-size: 500px;
         transform: translate(-50%, -50%) rotate(190deg); } }
-  .contacto .slidediv {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    color: white;
-    padding: 50px;
-    font-size: 16px;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    z-index: 999; }
   .contacto .contacto-encabezado {
     padding: 60px;
     text-align: center; }

@@ -6,23 +6,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="theme-color" content="#055174">
 
 
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href='imagenes/web/ISOTIPO.png' rel='shortcut icon' type='image/png'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <link rel="stylesheet" href="css/animate.css">
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="libs/jquery/jquery.js"></script>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-		 crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		 crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		 crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="css/estilos.css">
 
@@ -84,12 +83,12 @@
 						<div class="col-xs-12  texto-wrapper wow fadeIn">	
 								<i class="fas fa-hard-hat icon"></i>
 								<!-- <h5>Buscamos talento</h5> -->
-								<h2>Sobre Nosotros</h2>
+								<h2 class="compromiso "> Sobre Nosotros</h2>
 								<p>Somos el headhunter especialista en captar los mejores talentos con perfil técnico e industrial. Estando conformados por un apasionado equipo de especialistas en ingeniería, supply chain y operaciones, nos focalizamos en generar una red de profesionales a través de la cual conectamos verdaderos talentos con empresas líderes. Es gracias a esto, nuestro fuerte compromiso profesional con dar un valor agregado a nuestros procesos y el claro entendimiento que tenemos del mercado, lo que nos permite alcanzar los resultados de calidad que nuestros clientes merecen.
 								</p>
 								<br>	
-
-								<h2 class="compromiso"><i class="fas fa-street-view icon"></i>   Compromiso con la Inclusión</h2>
+								<i class="fas fa-street-view icon"></i>
+								<h2 class="compromiso">Compromiso con la Inclusión</h2>
 								<p>	Creemos en el concepto de derribar barreras y crear oportunidades, es por esto que apostamos a la inclusión laboral de
 								profesionales con discapacidad y otros grupos vulnerables.</p>
 
@@ -112,17 +111,19 @@
 				</div>
 				
 				
-				<div class="servGeneral">			
-					<div ng-repeat="serv in servicios_in" class="servWrapper col-xs-12 col-sm-6 col-lg-4 wow fadeInUp">
-						<div class="servHead">
-							<img class="img-responsive wow fadeInDown" src={{serv.img}} />
-							<div class="textWrapper">
-							<h3 class="serv-tit">{{serv.nombre}}</h3>
+				<div class="servGeneral">	
+					<div class="row">
+						<div ng-repeat="serv in servicios_in" class="servWrapper col-xs-12 col-sm-6 col-lg-4 wow fadeInUp">
+							<div class="servHead">
+								<img class="img-fluid wow fadeInDown" src={{serv.img}} />
+								<div class="textWrapper">
+								<h3 class="serv-tit">{{serv.nombre}}</h3>
+								</div>
 							</div>
+							<div class="servBody">
+								<p class="">{{serv.descripcion}}</p>
+							</div>				
 						</div>
-						<div class="servBody">
-							<p class="">{{serv.descripcion}}</p>
-						</div>				
 					</div>
 				</div>
 			</div>
@@ -269,12 +270,8 @@
 					<h2 class="tituloit"> <i class="fas fa-wifi"></i> Conectate
 						<span class="spantext"> con Nosotros</span></h2>
 					<p class="textoit">Esta es nuestra forma de mantener contacto con uds, no duden en dejarnos muchos mensajes!
-					</p>
-		
-				</div>
-		
-		
-		
+					</p>		
+				</div>	
 				<form action="/sendMail" method="post" enctype="multipart/form-data" class="col-xs-12 col-md-7"
 					class="wow fadeInm">
 					<div class="input-group flex-nowrap wow jackInTheBox">
@@ -319,15 +316,13 @@
 						<div class="form-group">
 							<input type="file" name="adjunto" class="form-control-file" placeholder="Adjunta tu CV!">
 						</div>
-					<button class="btn btn-dark wow flipInX conect" type="submit" ng-click="conect()">CONECTATE!</button>
+					<button class="btn btn-dark wow flipInX"  type="submit" ng-click="conect()">CONECTATE!</button>
 					<br>
 		
-					<div class="spinner" ng-show="spinnerContact">
-						<div class="rect1"></div>
-						<div class="rect2"></div>
-						<div class="rect3"></div>
-						<div class="rect4"></div>
-						<div class="rect5"></div>
+					<div class="spinner" ng-show = "spinnerContact">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
 					</div>
 
 

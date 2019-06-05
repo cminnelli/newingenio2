@@ -802,7 +802,8 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 					.textWrapper{		
 						padding:10px;
 						.serv-tit{
-							
+							font-size:19px;
+							color:rgba(30,30,30,0.8);
 							text-align: center;
 							font-weight: 700;						
 						}
@@ -812,7 +813,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 		
 					background-color:white;
 					color:$color-titulos;
-					padding:25px;
+					padding:15px;
 					text-align: justify;
 					line-height: 1.5;
 					p{
@@ -1086,8 +1087,7 @@ $button-color:#00CCCB;
 
 			input{
 				font-size:13px;
-				//background-color: #F4F8F7;
-				border-left:none;
+					border-left:none;
 				color:$color-ingenio3;
 				padding:12px;
 				border:none;	
@@ -1241,7 +1241,7 @@ li > a:hover:before ,.servWrapper:hover:before {
 	text-align:center;
 	width:90%;
 	margin:0 auto;
-	background-color:$color-ingenio3;
+	display: block;
 	
 
 }
@@ -1263,20 +1263,7 @@ li > a:hover:before ,.servWrapper:hover:before {
 		}							
 	}
 
-	.slidediv{
-		height: 100px;
-		width:100px;
-		position: absolute;
-		color:white;
-		padding:50px;
-		font-size:16px;
-		top:50%;
-		left: 50%;
-		border-radius:50%; 
-		z-index: 999;
 
-
-	}
 		.contacto-encabezado{
 			padding:60px;
 			text-align:center;
