@@ -65,7 +65,7 @@
 		<section id="portada" class="portada " data-wow-delay="0.2s" >	
 
 
-					  <div class="transparencia"></div>
+			<div class="transparencia"></div>
 
 			<div id="mainportada">
 				<div class="logoWrapper">
@@ -82,7 +82,6 @@
 						<img class="engineertool wow fadeInLeft"  src="/imagenes/web/helmet.png" />
 						<div class="col-xs-12  texto-wrapper wow fadeIn">	
 								<i class="fas fa-hard-hat icon"></i>
-								<!-- <h5>Buscamos talento</h5> -->
 								<h2 class="compromiso "> Sobre Nosotros</h2>
 								<p>Somos el headhunter especialista en captar los mejores talentos con perfil técnico e industrial. Estando conformados por un apasionado equipo de especialistas en ingeniería, supply chain y operaciones, nos focalizamos en generar una red de profesionales a través de la cual conectamos verdaderos talentos con empresas líderes. Es gracias a esto, nuestro fuerte compromiso profesional con dar un valor agregado a nuestros procesos y el claro entendimiento que tenemos del mercado, lo que nos permite alcanzar los resultados de calidad que nuestros clientes merecen.
 								</p>
@@ -114,15 +113,18 @@
 				<div class="servGeneral">	
 					<div class="row">
 						<div ng-repeat="serv in servicios_in" class="servWrapper col-xs-12 col-sm-6 col-lg-4 wow fadeInUp">
-							<div class="servHead">
-								<img class="img-fluid wow fadeInDown" src={{serv.img}} />
-								<div class="textWrapper">
-								<h3 class="serv-tit">{{serv.nombre}}</h3>
+							<div class="servWrapper2">									
+								<div class="servHead">
+									<img class="img-fluid wow fadeInDown" src={{serv.img}} />
+									<div class="textWrapper">
+
+									<h3 class="serv-tit"><i class="fab fa-buffer"></i></i> {{serv.nombre}}</i></h3>
+									</div>
 								</div>
+								<div class="servBody">
+									<p class="">{{serv.descripcion}}</p>
+								</div>				
 							</div>
-							<div class="servBody">
-								<p class="">{{serv.descripcion}}</p>
-							</div>				
 						</div>
 					</div>
 				</div>

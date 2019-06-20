@@ -49,7 +49,7 @@ $scope.robot = false;
 
 $scope.buttonGoogle = true;
 $scope.ingenio = false;
-$scope.loader = true;
+$scope.loader = false;
 $scope.signOut = false;
 $scope.spinnerContact = false;
 /*BOTONERA SIGN GOOGLE FUNCTION*/
@@ -60,12 +60,7 @@ $scope.conect = function(event){
 
 }
 
-// $scope.sendMail = function(){
-	
-// 	myService.angularhttp("post", "sendMail" , function(data){
-// 		console.log(data);
-// 	})
-// }
+
 
 
 $scope.displayButtons = function(data){
@@ -76,8 +71,8 @@ $scope.displayButtons = function(data){
 		$scope.signOut = true;
 		
 		$(".avatar").attr('src', data.photoURL);
-
-	if ($scope.userMail === "cminnelli@gmail.com" || $scope.userMail ==="web.ingeniotecnico@gmail.com"){
+ 
+	if ($scope.userMail === "cminnelli@gmail.com" || $scope.userMail ==="web.ingeniotecnico@gmail.com" || $scope.userMail ===" ezequieljaburr@gmail.com"){
 		$scope.sesionMsg = "Hola  " + $scope.firstName + " Ingenio !";
 		$scope.ingenio = true;
 	}else{
@@ -91,45 +86,47 @@ $scope.displayButtons = function(data){
 
 /*TRANSFORMAR FIREBASE DB EN UN JSON Y MUESTRA LAS OFERTAS LABORALES*/
 
-googleService.monitor("empleos" ,function(data){
+$scope.activatemonitor = function(){
+	googleService.monitor("empleos" ,function(data){
 
-	if(data != null){
-		var arr = myService.object2array(data)
-		$scope.job = myService.object2array(data);
-		$scope.loader = false;		
-	}else{
-		$scope.robot = true;
-	}
-
-
-	try{
-		var userName = googleService.currentUser();
-		$scope.displayButtons(userName);	
-		console.log("Usuario Logueado " + userName.displayName)
-	}
-	catch(e){
-		console.log("No hay usuario de gmail logueado")
-		$scope.$apply();
-	}
-	
-})
+		if(data != null){
+			var arr = myService.object2array(data)
+			$scope.job = myService.object2array(data);
+			$scope.loader = false;		
+		}else{
+			$scope.robot = true;
+		}
 
 
-
-$scope.simulate =function(){
-
-	$("#division").val("division test"),
-
-	$("#empresa").val("IT Solutions"),
-	$("#puesto").val("Gerente de IT"),
-	$("#seniority").val("Gerente"),
-	$("#rubro").val("IT"),
-	$("#segmento").val("TECNO"),
-	$("#area").val("Software"),
-	$("#ubicacion").val("Martinez"),
-	$("#comentarios").val("lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+		try{
+			var userName = googleService.currentUser();
+			$scope.displayButtons(userName);	
+			console.log("Usuario Logueado " + userName.displayName);
+			$scope.loader = true;
+		}
+		catch(e){
+			console.log("No hay usuario de gmail logueado")
+			$scope.$apply();
+		}
+		
+	})
 
 }
+
+
+
+// $scope.simulate =function(){
+// 	$("#division").val("division test"),
+// 	$("#empresa").val("IT Solutions"),
+// 	$("#puesto").val("Gerente de IT"),
+// 	$("#seniority").val("Gerente"),
+// 	$("#rubro").val("IT"),
+// 	$("#segmento").val("TECNO"),
+// 	$("#area").val("Software"),
+// 	$("#ubicacion").val("Martinez"),
+// 	$("#comentarios").val("lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+
+// }
 
 
 $scope.newJob = function(){
@@ -162,13 +159,15 @@ $scope.eliminarJob = function(key){
 
 
 $scope.googleSignIn = function(){
-	
+	$scope.loader = true;
 	//INICIAMOS LA AUTENTIFICACION DE GOOGLE
 	googleService.googleAuth(function(data){
 		// INFORMACION DE GMAIL
 		console.log(data)
 		$scope.displayButtons(data);
 		$('#postulModal').modal('hide');
+
+		$scope.activatemonitor();
 
 	})
 

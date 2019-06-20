@@ -25,7 +25,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		 crossorigin="anonymous"></script>
 
-
+		<!-- <link rel="stylesheet" href="css/reset.css">		 -->
 		<link rel="stylesheet" href="css/portada.css">
 		<link rel="stylesheet" href="css/nav.css">
 		<link rel="stylesheet" href="css/estilosit.css">
@@ -60,39 +60,32 @@
 			 new WOW().init()
 		</script>
 
-	<input id="burgeropen" type="checkbox" hidden  />
-	
-	<label for="burgeropen">
-		<span></span>
-		<span></span>
-		<span></span>
-	</label>
-	
-	<nav>
-		<ul>
-			<li><a class="menuitem" href="#nosotros">Sobre Nosotros</a></li>
-			<li><a class="menuitem" href="#servicios">Servicios</a></li>
-			<li><a class="menuitem" href="#busquedas">Busquedas</a></li>
-			<li><a class="menuitem" href="#contacto">Conectate!</a></li>
-		</ul>
-	</nav>
-
-	<script>
-		var ch = 0;
-				$(".menuitem").click(function () {
-					var hola = document.getElementById("burgeropen");
-						if (ch ==0){			
-							ch = 1 ;		
-							hola.checked = false;
-
-						}else{
-								ch = 0;
-							hola.checked = true;
-
-						}
-						
-					})
-	</script>	
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="d-flex w-50 order-0">
+<!--         <a class="navbar-brand mr-1" href="#">Bootstrap 4</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+        <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link ancla" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ancla" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ancla" href="#busquedas">Búsquedas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ancla" href="#contacto">Contactate!</a>
+                </li>
+        </ul>
+    </div>
+    <!-- <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last">always show</span> -->
+</nav>
+<!--/ fixed-top-->
 
 
 		<section id="portada " class="portada  wow fadeIn" data-wow-delay="0.2s" id="home">
@@ -123,26 +116,25 @@
 
 				<div class="portada_wrapper_texto col-xs-12 col-md-12 col-lg-12 wow fadeIn">
 					<div class="banner">
-						<span> </span>	<h1 id="typed" class="tituloit portadatit wow fadeIn"> </h1>							
-							<p class="textoit">"Buscamos el trabajo que te haga feliz en el mundo tecnológico, y en constante cambio, somos" </p>						
+
+							<div class="container py-5">
+							  <div class="output" id="output">
+							    <h1 class="cursor"></h1>
+							    <p></p>
+							  </div>
+							</div>	
+			
 					</div>
 
-					<div class="social ">
-						<ul class="social-icons">
-							<!-- <a href="#" class="wow fadeInUp">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-							<a href="#" class="wow fadeInUp">
-								<i class="fab fa-twitter"></i>
-							</a> -->
-							<a href="#" class="wow fadeInUp">
-								<i class="fab fa-linkedin"></i>
-							</a>
-		
-						</ul>	
-					</div>				
-					<!-- <button class="but1">Conocenos mas!</button> -->
 				</div>		
+
+				<ul class="social-icons">
+					<a href="https://www.linkedin.com/company/ingenio-t%C3%A9cnico" target="_blank" class="wow fadeInUp">
+						<i class="fab fa-linkedin"></i>
+					</a>
+
+				</ul>	
+	
 
 			</div>
 		</section>
@@ -259,8 +251,8 @@
 					<div class="row">
 						<div class="robot" ng-show="robot">
 							<img class="img-fluid" src="/imagenes/web/robot.png" alt="">
-							<p class="errtit">Ups...Hay algun errorcin!</p>
-							<p class="errtext">Intenta de nuevo en un rato</p>
+							<p class="errtit">Ups...Hay algun error</p>
+							<p class="errtext">Intenta de nuevo en un rato!</p>
 						</div>
 						<div ng-repeat="j in job | filter:'IT Job'| orderBy:orderProp" class="job-offer col-xs-12 col-sm-6 col-lg-4 col-md-offset-1 wow fadeInUp">
 
