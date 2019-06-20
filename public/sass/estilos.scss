@@ -352,11 +352,11 @@ border:none;
 
 /*PORTADA SECTION*/
 
-$color-whiteopacity:rgba(255, 255, 255, 0.90);
+$color-whiteopacity:rgba(255, 255, 255, 0.75);
 
 .portada{
 	
-	background: url("/imagenes/web/portada13.jpg")  no-repeat top;	
+	background: url("/imagenes/web/portada14.jpg")  no-repeat top;	
 	background-attachment: fixed;
 	background-size: cover;
 	background-position:top;
@@ -364,6 +364,18 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 	position: relative;
 	z-index: 1000;
 	position:relative;	
+	.transparencia{
+	position: absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background: #5C258D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
+	opacity: 0.40;
+
+}
 
 	#mainportada{
 		height: 100%;
@@ -374,16 +386,16 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 	
 		}
 		.logoWrapper{
-			height: 200px;
-			width: 200px;
+			height: 230px;
+			width: 230px;
 			border-radius: 50%;	
 			@extend .centerpos;
-			top:55%;		
+			top:50%;		
 			background: $color-whiteopacity;
 			padding:20px;	
 			
 			.logoIT{
-				height: 135px;
+				height: 140px;
 				@extend .centerpos;
 		
 	
@@ -537,6 +549,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 		padding:50px 100px;
         -webkit-background-attachment: fixed;
 		background: url("/imagenes/web/portada14.jpeg")  no-repeat top;	
+		//background-position: 0px 300px;
 		background-size:100%;
 		background-attachment: fixed;
 		position: relative;
@@ -756,20 +769,24 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 		padding:20px;
 	}			
 		.servGeneral{
-			padding:80px;
+			padding:30px;
 			@media screen and (max-width:600px){
 				padding:20px 0px;
 			}			
 			.servWrapper{
-				box-shadow: 0 0 25px 0 rgba(90,77,131,.2);
 				border:10px solid white;
 				margin:0px;
 				margin-bottom:5px;
 				padding:0px;				
-				background-color:white;		
-			@media screen and (max-width:600px){
-				margin-bottom:30px;
-			}								
+				.servWrapper2{
+				background-color:white;	
+				width: 95%;
+				box-shadow: 0 0 25px 0 rgba(90,77,131,.2);
+
+				}	
+				@media screen and (max-width:600px){
+					margin-bottom:30px;
+				}								
 				
 				&:hover {
 					transition:0.5s;
@@ -800,9 +817,9 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 					}
 
 					.textWrapper{		
-						padding:10px;
+						padding:20px;
 						.serv-tit{
-							font-size:19px;
+							font-size:18px;
 							color:rgba(30,30,30,0.8);
 							text-align: center;
 							font-weight: 700;						
@@ -813,9 +830,9 @@ $color-whiteopacity:rgba(255, 255, 255, 0.90);
 		
 					background-color:white;
 					color:$color-titulos;
-					padding:15px;
+					padding:8px 30px;
 					text-align: justify;
-					line-height: 1.5;
+					line-height: 1.4;
 					p{
 						line-height: 25px;
 					}
@@ -882,17 +899,16 @@ $button-color:#00CCCB;
 	.panel{
 		padding:20px;
 		background-color:transparent;
-		//background: url("https://i2.wp.com/onlyvectorbackgrounds.com/wp-content/uploads/2018/10/Abstract-Gradient-Shadow-Lines-Background-Blue.jpg?resize=1024%2C725")  no-repeat top;
 		background: #2b5876;  /* fallback for old browsers */
 		background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		height: 100vh;
+		//height: 100vh;
 		background-size:cover;
 		background-attachment: fixed;
 		@media only screen and  (max-width:600px) {
-			height:auto;
-				
+			height:auto;				
 		}		
+
 		.titulo{
 			font-size:25px;
 			color:white;
@@ -902,22 +918,26 @@ $button-color:#00CCCB;
 		.jobWrapper{
 			margin:0;
 			padding:0;
-			background-color:none;
+			background-color:rgba(250,250,250,0.6);
+			
 			.jobOffer{
-				font-size:14px;
+				font-size:13px;
 				cursor:pointer;
 				border:none;		
 				box-sizing:border-box;
 				padding:10px;
+				height: 370px;
 				.jobOfferIn{
+					height: 100%;
 					padding:10px;
-					transition:2s;
-	
+					transition:2s;	
 					background:white;
+					text-align: center;
 
 
 					.jobTitle{
 						text-align:center;
+						font-size:12px;
 						p{
 							margin:0;
 							padding-top:3px;
@@ -1098,20 +1118,6 @@ $button-color:#00CCCB;
 				}						
 
 			}
-
-			// .mybut{
-			// 	text-align: center;
-			// 	border-radius:20px;
-			// 	background-color: $color-newingenio;
-			// 	padding:8px 20px;
-			// 	color:white;
-			// 	font-size: 14px;
-			// 	border-style: none;
-			// 	border:none;
-			// 	outline: none;
-			// 	transition: 3s;
-			// 	animation-fill-mode: forwards;
-			// }
 
 		}
 

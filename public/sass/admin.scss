@@ -1,0 +1,113 @@
+.panel{
+		padding:20px;
+		background-color:transparent;
+		//background: url("https://i2.wp.com/onlyvectorbackgrounds.com/wp-content/uploads/2018/10/Abstract-Gradient-Shadow-Lines-Background-Blue.jpg?resize=1024%2C725")  no-repeat top;
+		background: #2b5876;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		height: 100vh;
+		background-size:cover;
+		background-attachment: fixed;
+		@media only screen and  (max-width:600px) {
+			height:auto;
+				
+		}		
+		.titulo{
+			font-size:25px;
+			color:white;
+			margin-bottom:20px;
+			text-align: right;
+		}
+		.jobWrapper{
+			margin:0;
+			padding:0;
+			background-color:none;
+			.jobOffer{
+				font-size:14px;
+				cursor:pointer;
+				border:none;		
+				box-sizing:border-box;
+				padding:10px;
+				.jobOfferIn{
+					padding:10px;
+					transition:2s;
+	
+					background:white;
+
+
+					.jobTitle{
+						text-align:center;
+						p{
+							margin:0;
+							padding-top:3px;
+							letter-spacing:1.5px;
+							color:black;
+						}
+
+						h4{
+							font-weight:700;
+							text-transform:uppercase;
+							margin:0;
+							padding:1px;
+							color:black;
+						}
+					}
+					.jobBody{
+						padding:15px;
+						p{
+							font-size:13px;
+							color:black;
+						}
+						.jobProp{
+							margin:0;
+							color:$color-ingenio1;
+							font-weight:700;
+							font-size:15px;
+						}
+					}
+				}
+			
+			}
+		}
+	
+
+		.sesion{
+			color:whitesmoke;
+			border-radius:5px;
+			cursor:pointer;
+			margin-bottom:10px;	
+			text-align:center;
+			background: #4CB8C4;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #3CD3AD, #4CB8C4);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #3CD3AD, #4CB8C4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			padding:15px;
+			transition:2s;
+
+
+			h4{
+				width: 75%;
+				padding:5px;
+				margin: 0 auto;
+			}
+			#progress{
+				width:0%;
+			}
+
+			.avatar{
+			border-radius:50%;
+			margin:5px 0 5px 0;
+			height:160px;
+			border:3px solid rgba(1000,1000,1000,0.5);
+			}			
+			
+
+
+			#cv{
+				display: none;
+			}
+
+			
+
+		}
+
+}

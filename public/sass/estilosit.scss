@@ -31,6 +31,16 @@ $font-titulos:'Open Sans', sans-serif;
     margin:0;
 }
 
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
 // COLORES
 $color-background:#F2F5FF;
 $color-background2:#d0d0d0;
@@ -262,34 +272,50 @@ text-transform: initial;
 			
 			}
 		}
+
+	nav{
+		position: absolute;
+		z-index: 99;
+		top:0px;
+		width:100%;
+		background-color:transparent !important;
+		a{
+		color:whitesmoke !important; 
+		font-family: "Raleway";
+		font-size:13px;
+		letter-spacing: 1.5px;
+
+		}
+	}
 	.portada{
-		position: relative;       
-		padding:50px;
-		height: 100vh;
+		position: relative;		
+		height: 400px;
 		background:url("https://images.unsplash.com/photo-1548611635-b6e7827d7d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
 		background-size: cover;
-		background-position: 140px 0px;
+		background-position: 40px -120px;
 		position:relative;
-		overflow:hidden;
+		
 		background-attachment: fixed;
 		@media only screen and  (max-width:600px) {	
 			background-position: 5px 48px;		
 			width:100%;
 			padding:25px;
+			height: 100vh;
 		}	 
 
 		        .logoImg{
+		        	margin:0 auto;
 					transform:translateZ(200px);
-					height: 120px; 
-						margin: 50px;
-					display: block;
+					height: 100px; 
+					text-align:center;
 					animation:float 2s infinite;
 					transition:all ease-in-out 2s;
-				margin-top:100px;
+					margin-top:60px;
 				
-				@media only screen and  (max-width:600px) {
-					left:25%;
-				}	 
+					@media only screen and  (max-width:600px) {
+						height: 120px; 
+						margin-top:110px;
+					}	 
 			}
 
 		.transparencia{
@@ -301,7 +327,7 @@ text-transform: initial;
 		background: #5C258D;  /* fallback for old browsers */
 		background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
 		background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */		
-		opacity: 0.5;
+		opacity: 0.80;
 
 	}
 	
@@ -309,13 +335,65 @@ text-transform: initial;
      .portada_wrapper_texto{
 			padding:0px 20px;
 			perspective: 500px;
-			position:relative;
+				position: absolute;
+				top:55%;
+				left:50%;
+				transform: translate(-50%,-50%);
 			
 			@media only screen and  (max-width:600px) {
 				margin-top:50px;
 			}	
+
 			.banner{
-				margin-top:10px;
+
+				.output {
+				  text-align:center;
+				  font-family: 'Montserrat', monospace;
+				  color:white;
+				  h1 {
+				    font-size:45px;
+			
+					@media only screen and  (max-width:600px) {
+						font-size:35px;
+					}	
+
+				  }
+				}
+
+				/* Cursor Styling */
+
+				.cursor::after {
+				  content:'';
+				  display:inline-block;
+				  margin-left:3px;
+				  background-color:white;
+				  animation-name:blink;
+				  animation-duration:0.5s;
+				  animation-iteration-count: infinite;
+				}
+				h1.cursor::after {
+				  height:24px;
+				  width:13px;
+				}
+				p.cursor::after {
+				  height:13px;
+				  width:6px;
+				}
+
+				@keyframes blink {
+				  0% {
+				    opacity:1;
+				  }
+				  49% {
+				    opacity:1;
+				  }
+				  50% {
+				    opacity:0;
+				  }
+				  100% {
+				    opacity:0;
+				  }
+				}				
 				h1{
 					display: inline-block;
 		
@@ -332,42 +410,41 @@ text-transform: initial;
 					@media only screen and  (max-width:600px) {
 						text-align: justify;
 						width:100%;
-						font-size: 13px;
+						font-size: 14px;
 						margin:0px;
 						color:white;
 						opacity:0.75;
 					}	 						
 					}
 
-					.typed-cursor , .typed-cursor--blink {
-						color:lighten($color-texto2,10%);
-						font-size:50px;
-						margin-bottom:0px;
-					@media screen and (min-width:300px) and (max-width:900px) {
-						font-size: 18px;
-						}	
-					}
 	
 				}
 		}
 
-			.social{
-				padding:20px 0px;
+			
+
 				.social-icons{
-					display:inline-block;
-					position: absolute;
-					padding-left:0px;
-					a{
-						color:$color-background;
-						font-size: 28px;
-						padding:0px 5px;
-						@media only screen and  (max-width:600px) {
-							
-						}	 
-					}
+				padding:35px 0px;
+				position: absolute !important;
+				top:75%;
+				left:50%;
+				transform: translate(-50%,-50%);					
+				@media only screen and  (max-width:600px) {
+					top:83%;
+				}		
+				padding-left:0px;
+				a{
+					color:$color-background;
+					font-size: 28px;
+					padding:0px 5px;
+					@media only screen and  (max-width:600px) {
+						
+					}	 
+				}
+
 
 				}
-			}
+			
 
 
 			button{
@@ -577,21 +654,24 @@ text-transform: initial;
 			}	
 			.servicewrapper{
 				padding:25px;
+
 				@media only screen and  (max-width:600px) {
 					padding:5px;
 				}		
 					.module-wrapper{
-						background: url("/imagenes/web/theme1.svg") no-repeat;
+		
 						background-size: cover;
+							background: #FAFAFA;
 						box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
-						border-top:3px solid $color-span2;
+						border-top:4px solid $color-span;
 						margin-top:50px;	
 						@media only screen and  (max-width:600px) {
 							border-top:none;
 						}				
 				
 							.serviceImage{
-								background: url("/imagenes/web/computer6.jpg") no-repeat;
+								background: url("/imagenes/web/computer6.jpeg") no-repeat;
+
 								background-size:cover;			
 								@media only screen and  (max-width:900px) {
 									height:180px;
@@ -602,9 +682,9 @@ text-transform: initial;
 							}
 							.serviceFirstWrapp{
 								padding:40px;
-									@media only screen and  (max-width:600px) {
-										padding:10px;
-									}	
+								@media only screen and  (max-width:600px) {
+									padding:10px;
+								}	
 								.servicio-item-wrapper{
 									cursor:pointer;
 									width:95%;
@@ -981,13 +1061,16 @@ $color-newingenio:rgb(57,174,158);
 html{
 	height:100%;
 	top:0px;
-
+position: absolute;
 
 }
 body{
+
 	height:100%;
+	top:0px;
 	background-color:white;
 }
+
  .graciasporcontactarnos{
  	background-color: $color-span;
  	height: 100vh;
