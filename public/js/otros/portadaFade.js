@@ -96,9 +96,15 @@ function loading(time){
 			visible:"block",
 		})
 
-    $(".portada").css({
-      height:"400px",
-    })
+    if (window.matchMedia("(min-width: 600px)").matches) {
+      $(".portada").css({
+        height:"400px",
+      })
+    } else {
+      $(".portada").css({
+        height:"100vh",
+      })
+    }
 
     typew();
 
