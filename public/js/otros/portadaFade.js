@@ -76,6 +76,11 @@ function loading(time){
 			visible:"block",
 		})
 
+    $(".portada").css({
+      height:"400px",
+    })
+
+  
 
 
 	} ,time)

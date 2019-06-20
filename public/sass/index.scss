@@ -3,12 +3,12 @@
 
 .index{
     .indexWrapper{
-        padding: 50px;
+        padding: 40px;
             margin-left:0px;
     margin-right:0px;
         $color-shadow:transparentize(#303336, .9);
 		@media only screen and  (max-width:600px) {	
-                    padding: 40px;
+                    padding: 25px;
 		}	
 		        
         .isotipo{
