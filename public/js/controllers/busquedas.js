@@ -40,6 +40,7 @@ app.controller("busquedaController" , function($scope , $http , googleService , 
 //MENSAJE MODAL LOGUEADO
 $scope.sign = false;
 $scope.nosign = true;
+$scope.notlogin = true;
 
 //BD EMPLEOS
 $scope.job;
@@ -168,6 +169,7 @@ $scope.googleSignIn = function(){
 		$('#postulModal').modal('hide');
 
 		$scope.activatemonitor();
+		$scope.notlogin = false;
 
 	})
 
