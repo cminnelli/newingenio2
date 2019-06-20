@@ -14,21 +14,11 @@
   margin: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
 .spinner {
   border-radius: 100%;
   color: #26D0CE;
   position: absolute;
-  top: 54%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 110px;
@@ -910,11 +900,9 @@
 html {
   height: 100%;
   top: 0px;
-  position: absolute;
 }
 
 body {
-  height: 100%;
   top: 0px;
   background-color: white;
 }

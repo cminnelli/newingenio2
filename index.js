@@ -60,6 +60,10 @@ app.get("/mailcontacto" , function(req,res){
 	res.sendFile(path.join(__dirname ,"contactomsj2.html"));
 })
 
+app.get("/mailcontacto2" , function(req,res){
+	res.sendFile(path.join(__dirname ,"contactomsj.html"));
+})
+
 
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
