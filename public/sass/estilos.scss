@@ -16,6 +16,8 @@ $color-nosotros:#EDEEF2;
 $color-texto: #1A1A23;
 $color-texto2:#373739;
 $color-titulos:#484848;
+$linkedin: #0073B0;
+
 
 $font-primary:'Montserrat', sans-serif;
 $font-encabezado:'Quicksand', sans-serif;
@@ -312,58 +314,48 @@ h1, .container , .container-fluid{
 	padding-left:0px;
 	padding-right: 0px;
 }
-.navbar-header , .navbar-default {
-border-radius: 0;
-background:rgba(255,255,255,0.3);
-border:none;
 
-
-
-}
-
-.navbar-toggle , .collapsed{
-border:none;
-&:hover{
-	border:none;
-}
-}
-
-.navbar-default .navbar-nav>li>a{
-	color:$color-grey;
-	font-size: 14px;
-	  
-}
-
-.navbar-default .navbar-nav>li{
-	color:$color-grey; 
-	font-size: 13px;
-	padding:0px;
-	text-align:center;
-	font-weight: 700;
-}
-.highNav{
-	height: 40px;
-	background-color:$color-ingenio1;
-	position: fixed;
-	transition:0.6s;
-
-
-}
 
 /*PORTADA SECTION*/
 
 $color-whiteopacity:rgba(255, 255, 255, 0.75);
+	.navbar{
+		background-color:$linkedin !important;
+	}
+
+	nav{
+		
+		z-index: 99;
+		top:0px;
+		width:100%;
+		background-color:red !important;
+	
+		ul{
+			text-align: center;
+		}
+		a{
+		color:whitesmoke !important; 
+		font-family: "Raleway";
+		font-size:13px;
+		letter-spacing: 1.5px;
+
+		}
+	}
 
 .portada{
 	
 	background: url("/imagenes/web/portada14.jpg")  no-repeat top;	
 	background-attachment: fixed;
 	background-size: cover;
-	background-position:top;
+	background-position:0px -100px;
 	height: 100vh;
 	position: relative;
 	z-index: 1000;
 	position:relative;	
+	@media only screen and  (max-width:600px) {
+		background-position:0px 0px;
+	}	 
+
 	.transparencia{
 	position: absolute;
 	top:0px;
@@ -386,16 +378,16 @@ $color-whiteopacity:rgba(255, 255, 255, 0.75);
 	
 		}
 		.logoWrapper{
-			height: 230px;
-			width: 230px;
+			height: 220px;
+			width: 220px;
 			border-radius: 50%;	
 			@extend .centerpos;
-			top:50%;		
+			top:45%;		
 			background: $color-whiteopacity;
 			padding:20px;	
 			
 			.logoIT{
-				height: 140px;
+				height: 130px;
 				@extend .centerpos;
 		
 	
@@ -409,50 +401,6 @@ $color-whiteopacity:rgba(255, 255, 255, 0.75);
 
 
 }
-
-
-/*NAVBAR*/
-
-.navBar{
-	
-	width: 100%;
-	position: fixed;
-	z-index: 3;
-	margin-top:30px;
-
-	color:$color-ingenio1;
-
-
-	ul{
-		padding:100px;
-		padding-top:20px;
-		margin:0px;
-		text-align: left;
-
-		li{
-			&:first-child{
-			color:orange;
-			}
-			color:black;
-			list-style: none;
-			padding-right: 25px;
-			font-size: 14px;
-			cursor: pointer;
-			display: inline-block;
-			&:hover{
-				transition: 1s;
-				color:orange;
-			}
-			span{
-				font-size: 18px;
-				padding:3px;
-				margin-right:2px;
-			}
-		}
-	}
-
-}
-
 
 
 
@@ -495,7 +443,7 @@ $color-whiteopacity:rgba(255, 255, 255, 0.75);
 			padding:60px;
 			color:#26555d;
 			@media only screen and  (max-width:600px) {
-							padding:55px;
+				padding:55px;
 			}	 		
 			h2{
 				text-align: left;
@@ -1072,10 +1020,7 @@ $button-color:#00CCCB;
 			border-radius:50%; 
 			z-index: 999;
 
-
-		}
-
-	 
+		}	 
 
 
 			.contacto-encabezado{
@@ -1084,15 +1029,10 @@ $button-color:#00CCCB;
 				h2{
 					font-family: "Raleway";
 					font-size:25px;
-						text-align:center;
+					text-align:center;
 					color:$color-ingenio3;
 				}
-
 			}
-
-	 
-
-	 
 
 		form{
 

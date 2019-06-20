@@ -250,49 +250,41 @@ h1, .container, .container-fluid {
   padding-right: 0px;
 }
 
-.navbar-header, .navbar-default {
-  border-radius: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-}
-
-.navbar-toggle, .collapsed {
-  border: none;
-}
-.navbar-toggle:hover, .collapsed:hover {
-  border: none;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: rgba(30, 30, 30, 0.8);
-  font-size: 14px;
-}
-
-.navbar-default .navbar-nav > li {
-  color: rgba(30, 30, 30, 0.8);
-  font-size: 13px;
-  padding: 0px;
-  text-align: center;
-  font-weight: 700;
-}
-
-.highNav {
-  height: 40px;
-  background-color: #055174;
-  position: fixed;
-  transition: 0.6s;
-}
-
 /*PORTADA SECTION*/
+.navbar {
+  background-color: #0073B0 !important;
+}
+
+nav {
+  z-index: 99;
+  top: 0px;
+  width: 100%;
+  background-color: red !important;
+}
+nav ul {
+  text-align: center;
+}
+nav a {
+  color: whitesmoke !important;
+  font-family: "Raleway";
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
 .portada {
   background: url("/imagenes/web/portada14.jpg") no-repeat top;
   background-attachment: fixed;
   background-size: cover;
-  background-position: top;
+  background-position: 0px -100px;
   height: 100vh;
   position: relative;
   z-index: 1000;
   position: relative;
+}
+@media only screen and (max-width: 600px) {
+  .portada {
+    background-position: 0px 0px;
+  }
 }
 .portada .transparencia {
   position: absolute;
@@ -315,50 +307,15 @@ h1, .container, .container-fluid {
   top: 48%;
 }
 .portada #mainportada .logoWrapper {
-  height: 230px;
-  width: 230px;
+  height: 220px;
+  width: 220px;
   border-radius: 50%;
-  top: 50%;
+  top: 45%;
   background: rgba(255, 255, 255, 0.75);
   padding: 20px;
 }
 .portada #mainportada .logoWrapper .logoIT {
-  height: 140px;
-}
-
-/*NAVBAR*/
-.navBar {
-  width: 100%;
-  position: fixed;
-  z-index: 3;
-  margin-top: 30px;
-  color: #055174;
-}
-.navBar ul {
-  padding: 100px;
-  padding-top: 20px;
-  margin: 0px;
-  text-align: left;
-}
-.navBar ul li {
-  color: black;
-  list-style: none;
-  padding-right: 25px;
-  font-size: 14px;
-  cursor: pointer;
-  display: inline-block;
-}
-.navBar ul li:first-child {
-  color: orange;
-}
-.navBar ul li:hover {
-  transition: 1s;
-  color: orange;
-}
-.navBar ul li span {
-  font-size: 18px;
-  padding: 3px;
-  margin-right: 2px;
+  height: 130px;
 }
 
 .titulos {

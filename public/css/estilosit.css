@@ -28,6 +28,7 @@
 }
 @media only screen and (max-width: 600px) {
   .spinner {
+    top: 58%;
     width: 100px;
     height: 70px;
   }
@@ -191,12 +192,17 @@
     height: 130px;
   }
 }
+.itsolutions .navbar .navbar-expand-md .navbar-dark .bg-primary {
+  background-color: transparent !important;
+}
 .itsolutions nav {
-  position: absolute;
+  background-color: #5d66aa !important;
   z-index: 99;
   top: 0px;
   width: 100%;
-  background-color: transparent !important;
+}
+.itsolutions nav ul {
+  text-align: center;
 }
 .itsolutions nav a {
   color: whitesmoke !important;
@@ -228,12 +234,12 @@
   text-align: center;
   animation: float 2s infinite;
   transition: all ease-in-out 2s;
-  margin-top: 60px;
+  margin-top: 55px;
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .logoImg {
-    height: 100px;
-    margin-top: 67px;
+    height: 130px;
+    margin-top: 20px;
   }
 }
 .itsolutions .portada .transparencia {
@@ -254,13 +260,13 @@
   padding: 0px 20px;
   perspective: 500px;
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .portada_wrapper_texto {
-    margin-top: 50px;
+    top: 50%;
   }
 }
 .itsolutions .portada .portada_wrapper_texto .banner {
@@ -270,9 +276,6 @@
   text-align: center;
   font-family: "Montserrat", monospace;
   color: white;
-}
-.itsolutions .portada .portada_wrapper_texto .banner .output h1 {
-  font-size: 42px;
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .portada_wrapper_texto .banner .output h1 {
@@ -298,7 +301,7 @@
 }
 @media screen and (min-width: 200px) and (max-width: 900px) {
   .itsolutions .portada .portada_wrapper_texto .banner p.cursor {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @keyframes blink {
@@ -343,20 +346,24 @@
 .itsolutions .portada .social-icons {
   padding: 35px 0px;
   position: absolute !important;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-left: 0px;
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .social-icons {
-    top: 87%;
+    top: 75%;
   }
 }
 .itsolutions .portada .social-icons a {
   color: #F2F5FF;
   font-size: 28px;
   padding: 0px 5px;
+}
+.itsolutions .portada .social-icons a:hover {
+  transition: 1s;
+  color: #0094e3;
 }
 .itsolutions .portada button {
   border-radius: 20px;
@@ -621,7 +628,12 @@
 }
 @media only screen and (max-width: 1000px) {
   .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-title {
-    font-size: 13px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-title i {
+    font-size: 18px;
   }
 }
 .servicios .servicewrapper .module-wrapper .serviceFirstWrapp .servicio-item-wrapper .serviceCard .card-subtitle {

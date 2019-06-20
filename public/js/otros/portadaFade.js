@@ -98,7 +98,7 @@ function loading(time){
 
     if (window.matchMedia("(min-width: 600px)").matches) {
       $(".portada").css({
-        height:"400px",
+        height:"380px",
       })
     } else {
       $(".portada").css({
@@ -193,7 +193,7 @@ function typeWriter(id, ar) {
 }
 
 
-loading(5000);
+loading(1000);
 
 // (function () {
 // 	// 3d Rotating Navigation - by CodyHouse.co
