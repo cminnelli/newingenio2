@@ -73,7 +73,7 @@ $size-posttitulosec:18px;
 		border-radius: 100%;
 		color:$color-span;
 		position: absolute;
-		top:58%;
+		top:54%;
 		left:50%;
 		transform: translate(-50%,-50%);				  
 		width: 110px;
@@ -248,7 +248,7 @@ text-transform: initial;
 			.loadingwrapper{
 				
 				.logoWrapper{		
-						top:33%;
+						top:26%;
 						left:50%;
 						transform: translate(-50%,-50%);
 						position: absolute;
@@ -305,8 +305,8 @@ text-transform: initial;
 					margin-top:60px;
 				
 					@media only screen and  (max-width:600px) {
-						height: 120px; 
-						margin-top:110px;
+						height: 100px; 
+						margin-top:67px;
 					}	 
 			}
 
@@ -337,16 +337,15 @@ text-transform: initial;
 			}	
 
 			.banner{
-
 				.output {
 				  text-align:center;
 				  font-family: 'Montserrat', monospace;
 				  color:white;
 				  h1 {
-				    font-size:45px;
+				    font-size:42px;
 			
 					@media only screen and  (max-width:600px) {
-						font-size:35px;
+						font-size:25px;
 					}	
 
 				  }
@@ -362,14 +361,24 @@ text-transform: initial;
 				  animation-name:blink;
 				  animation-duration:0.5s;
 				  animation-iteration-count: infinite;
+	
+
 				}
 				h1.cursor::after {
 				  height:24px;
 				  width:13px;
+
+						
 				}
 				p.cursor::after {
 				  height:13px;
 				  width:6px;
+
+				}
+				p.cursor{
+					@media screen and (min-width:200px) and (max-width:900px) {
+						font-size: 13px;
+					}					
 				}
 
 				@keyframes blink {
@@ -389,7 +398,7 @@ text-transform: initial;
 				h1{
 					display: inline-block;
 		
-					@media screen and (min-width:300px) and (max-width:900px) {
+					@media screen and (min-width:200px) and (max-width:900px) {
 						font-size: 18px;
 						text-align: left;
 						}	
@@ -402,7 +411,7 @@ text-transform: initial;
 					@media only screen and  (max-width:600px) {
 						text-align: justify;
 						width:100%;
-						font-size: 14px;
+						font-size: 13px;
 						margin:0px;
 						color:white;
 						opacity:0.75;
@@ -422,7 +431,7 @@ text-transform: initial;
 				left:50%;
 				transform: translate(-50%,-50%);					
 				@media only screen and  (max-width:600px) {
-					top:83%;
+					top:87%;
 				}		
 				padding-left:0px;
 				a{

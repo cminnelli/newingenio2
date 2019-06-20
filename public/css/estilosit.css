@@ -18,7 +18,7 @@
   border-radius: 100%;
   color: #26D0CE;
   position: absolute;
-  top: 58%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 110px;
@@ -178,7 +178,7 @@
   left: 0px;
 }
 .itsolutions .loading .loadingwrapper .logoWrapper {
-  top: 33%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -232,8 +232,8 @@
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .logoImg {
-    height: 120px;
-    margin-top: 110px;
+    height: 100px;
+    margin-top: 67px;
   }
 }
 .itsolutions .portada .transparencia {
@@ -272,11 +272,11 @@
   color: white;
 }
 .itsolutions .portada .portada_wrapper_texto .banner .output h1 {
-  font-size: 45px;
+  font-size: 42px;
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .portada_wrapper_texto .banner .output h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 .itsolutions .portada .portada_wrapper_texto .banner .cursor::after {
@@ -296,6 +296,11 @@
   height: 13px;
   width: 6px;
 }
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  .itsolutions .portada .portada_wrapper_texto .banner p.cursor {
+    font-size: 13px;
+  }
+}
 @keyframes blink {
   0% {
     opacity: 1;
@@ -313,7 +318,7 @@
 .itsolutions .portada .portada_wrapper_texto .banner h1 {
   display: inline-block;
 }
-@media screen and (min-width: 300px) and (max-width: 900px) {
+@media screen and (min-width: 200px) and (max-width: 900px) {
   .itsolutions .portada .portada_wrapper_texto .banner h1 {
     font-size: 18px;
     text-align: left;
@@ -329,7 +334,7 @@
   .itsolutions .portada .portada_wrapper_texto .banner .textoit {
     text-align: justify;
     width: 100%;
-    font-size: 14px;
+    font-size: 13px;
     margin: 0px;
     color: white;
     opacity: 0.75;
@@ -345,7 +350,7 @@
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .social-icons {
-    top: 83%;
+    top: 87%;
   }
 }
 .itsolutions .portada .social-icons a {

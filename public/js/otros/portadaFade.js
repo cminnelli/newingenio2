@@ -1,4 +1,24 @@
 
+var i = 0,
+    a = 0,
+    isBackspacing = false,
+    isParagraph = false;
+
+var textArray = [
+  "Creatividad   | (exigencias del mercado) ", 
+  "Flexibilidad  | (necesidades del cliente)", 
+  "Inteligencia  | (orden del día)",
+  "Dinamismo | (de respuesta)",
+  "INGENIO IT | Inteligencia y Creatividad aplicada a tus soluciones tecnologicas de recursos humanos "
+
+];
+
+// Speed (in milliseconds) of typing.
+var speedForward = 32, //Typing Speed
+    speedWait = 1000, // Wait between typing and backspacing
+    speedBetweenLines = 100, //Wait between first and second lines
+    speedBackspace = 25; //Backspace Speed
+
 
 window.onload = function () {
 	Particles.
@@ -80,7 +100,7 @@ function loading(time){
       height:"400px",
     })
 
-  
+    typew();
 
 
 	} ,time)
@@ -88,51 +108,10 @@ function loading(time){
 }
 
 
-//animacion TYPE
-
- 
-
-// function visualize (text){
-// 	var txt = document.getElementsByClassName(text)[0]
-// 	var group = document.getElementsByClassName("intro")
-// 	var qgroup = group.length;
-// 	for (i = 0 ; i<qgroup ; i++){
-// 		var group = document.getElementsByClassName("intro")[i]	;
-// 		group.style.display = 'none';	
-// 	} 
-
-// 	var txt = document.getElementsByClassName(text)[0]
-// 	txt.style.display = 'block';
-
-// }
-
-// navbar()
-loading(5000);
 
 
-var i = 0,
-    a = 0,
-    isBackspacing = false,
-    isParagraph = false;
+var typew = function(){
 
-// Typerwrite text content. Use a pipe to indicate the start of the second line "|". 
-
-//creatividad exigencias del mercado flexibilidad necesidades del cliente inteligencia ver que mas dinamismo respuesta
-
-var textArray = [
-  "Creatividad   | (exigencias del mercado) ", 
-  "Flexibilidad  | (necesidades del cliente)", 
-  "Inteligencia  | (orden del día)",
-  "Dinamismo | ( de respuesta)",
-  "INGENIO IT | Inteligencia y Creatividad aplicada a tus soluciones tecnologicas de recursos humanos "
-
-];
-
-// Speed (in milliseconds) of typing.
-var speedForward = 32, //Typing Speed
-    speedWait = 1000, // Wait between typing and backspacing
-    speedBetweenLines = 100, //Wait between first and second lines
-    speedBackspace = 25; //Backspace Speed
 
 //Run the loop
 typeWriter("output", textArray);
@@ -205,6 +184,10 @@ function typeWriter(id, ar) {
     }
   }
 }
+}
+
+
+loading(5000);
 
 // (function () {
 // 	// 3d Rotating Navigation - by CodyHouse.co
