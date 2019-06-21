@@ -87,13 +87,13 @@ function loading(time){
 
 
 	setTimeout( function(){
-		$(".loading").fadeOut(1000)
+
 
 		$("body").css({
 			overflowY:"visible",
 		})
-		$(".navbar-header , .navbar-default").css({
-			visible:"block",
+		$("nav ,.navbar , .navbar-expand-md , .navbar-dark , .bg-primary").css({
+			display:"block"
 		})
 
     if (window.matchMedia("(min-width: 600px)").matches) {
@@ -105,7 +105,7 @@ function loading(time){
         height:"100vh",
       })
     }
-
+    $(".loading").fadeOut(1000)
     typew();
 
 
@@ -193,7 +193,7 @@ function typeWriter(id, ar) {
 }
 
 
-loading(1000);
+loading(3000);
 
 // (function () {
 // 	// 3d Rotating Navigation - by CodyHouse.co

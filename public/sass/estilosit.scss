@@ -240,7 +240,7 @@ text-transform: initial;
     background:#F4F7FA;
     
 		.loading{
-			z-index: 99999999;
+			z-index: 9999;
 			position: absolute;
 			background-color: $color-background;
 			height: 100vh;
@@ -269,14 +269,17 @@ text-transform: initial;
 
 	.navbar .navbar-expand-md .navbar-dark .bg-primary{
 		background-color:transparent !important;
+		z-index: 0;
 
 	}
 
 	nav{
 		background-color:lighten(#40477A,15%) !important;
-		z-index: 99;
+		z-index: 0;
 		top:0px;
 		width:100%;
+		display: none;
+
 
 	
 		ul{
@@ -317,8 +320,8 @@ text-transform: initial;
 					margin-top:55px;
 				
 					@media only screen and  (max-width:600px) {
-						height: 130px; 
-						margin-top:20px;
+						height: 120px; 
+						margin-top:35px;
 					}	 
 			}
 
