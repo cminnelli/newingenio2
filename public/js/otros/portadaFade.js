@@ -193,7 +193,7 @@ function typeWriter(id, ar) {
 }
 
 
-loading(3000);
+loading(6000);
 
 // (function () {
 // 	// 3d Rotating Navigation - by CodyHouse.co
