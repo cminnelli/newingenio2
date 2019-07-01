@@ -74,7 +74,7 @@ $size-posttitulosec:18px;
 		border-radius: 100%;
 		color:$color-span;
 		position: absolute;
-		top:54%;
+		top:56%;
 		left:50%;
 		transform: translate(-50%,-50%);				  
 		width: 110px;
@@ -247,10 +247,12 @@ text-transform: initial;
 			width:100%;
 			top:0px;
 			left:0px;
+			
+			
 			.loadingwrapper{
 				
 				.logoWrapper{		
-						top:26%;
+						top:33%;
 						left:50%;
 						transform: translate(-50%,-50%);
 						position: absolute;
@@ -321,7 +323,7 @@ text-transform: initial;
 				
 					@media only screen and  (max-width:600px) {
 						height: 120px; 
-						margin-top:35px;
+						margin-top:85px;
 					}	 
 			}
 
@@ -445,7 +447,7 @@ text-transform: initial;
 				left:50%;
 				transform: translate(-50%,-50%);					
 				@media only screen and  (max-width:600px) {
-					top:75%;
+					top:68%;
 				}		
 				padding-left:0px;
 				a{
@@ -1086,11 +1088,11 @@ html{
 
 
 }
-body{
-
-	
+body{	
 	top:0px;
 	background-color:white;
+	overflow-y: hidden;
+	
 }
 
  .graciasporcontactarnos{

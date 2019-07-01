@@ -5,8 +5,8 @@ const port = process.env.PORT || 3000
 var path = require("path");
 var fs = require("fs");
 var mail = require("./node_aux/nodeMailer.js")
-//var mailingenio = "contacto.ingeniotecnico@gmail.com";
-var mailingenio = "cminnelli@gmail.com";
+//var mailingenio = "cminnelli@gmail.com";
+var mailingenio = "contacto.ingeniotecnico@gmail.com";
 
 var user = "ingeniotecnico"
 var ps = "ingenio2017."

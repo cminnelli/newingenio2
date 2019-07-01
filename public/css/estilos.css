@@ -28,7 +28,7 @@
   border-radius: 100%;
   color: #00a896;
   position: absolute;
-  top: 54%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 110px;
@@ -132,13 +132,14 @@
   z-index: 9999;
   position: absolute;
   background-color: #EDEEF2;
+  overflow-y: hidden;
   height: 100vh;
   width: 100%;
   top: 0px;
   left: 0px;
 }
 .loading .loadingwrapper .logoWrapper {
-  top: 33%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -234,10 +235,10 @@
 }
 
 .bodyMain {
+  overflow-y: hidden;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 300;
-  overflow-y: hidden;
 }
 
 /*BOOTSTRAP MODIFY*/
@@ -279,7 +280,6 @@ nav a {
   height: 100vh;
   position: relative;
   z-index: 1000;
-  position: relative;
 }
 @media only screen and (max-width: 600px) {
   .portada {
@@ -1221,12 +1221,6 @@ footer .broom p {
   66.6% {
     z-index: 1;
   }
-}
-.itsolutions {
-  overflow-y: visible;
-}
-.itsolutions .portada {
-  background: whitesmoke;
 }
 
 /*# sourceMappingURL=estilos.css.map */

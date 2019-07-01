@@ -56,34 +56,34 @@ $size-posttitulosec:18px;
 		margin-left: 0px;
 		font-size: 13,5px;
 }
-	.spinner {
-		  border-radius: 100%;
-					color:$color-ingenio3;
-					position: absolute;
-					top:54%;
-					left:50%;
-					transform: translate(-50%,-50%);				  
-					width: 110px;
-					height: 85px;
-					text-align: center;
-					font-size: 10px;
-					@media only screen and  (max-width:600px) {	
-						width: 100px;
-						height: 70px;
-					}	
-				}
+.spinner {
+	border-radius: 100%;
+	color:$color-ingenio3;
+	position: absolute;
+	top:56%;
+	left:50%;
+	transform: translate(-50%,-50%);				  
+	width: 110px;
+	height: 85px;
+	text-align: center;
+	font-size: 10px;
+	@media only screen and  (max-width:600px) {	
+		width: 100px;
+		height: 70px;
+	}	
+}
 
-				.spinner > div {
-				  background-color: $color-ingenio1;
-					width: 18px;
-					height: 18px;
-	
+.spinner > div {
+	background-color: $color-ingenio1;
+	width: 18px;
+	height: 18px;
 
-				border-radius: 100%;
-				display: inline-block;
-				-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-				animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-				}
+
+border-radius: 100%;
+display: inline-block;
+-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
 
 .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
@@ -186,13 +186,14 @@ $size-posttitulosec:18px;
 			z-index: 9999;
 			position: absolute;
 			background-color: $color-background;
+			overflow-y:hidden;
 			height: 100vh;
 			width:100%;
 			top:0px;
 			left:0px;
 			.loadingwrapper{
 				.logoWrapper{		
-						top:33%;
+						top:38%;
 						left:50%;
 						transform: translate(-50%,-50%);
 						position: absolute;
@@ -290,7 +291,7 @@ $size-posttitulosec:18px;
 	font-size:40px;	
 	text-align: left !important;
 	text-shadow: 0 0 6px 3px rgba(0,0,0,0.25);
-text-transform: initial;
+	text-transform: initial;
 	}
 
 	@media only screen and  (max-width:600px) {	
@@ -299,10 +300,11 @@ text-transform: initial;
 }
 
 .bodyMain{
+	overflow-y: hidden;
 	font-family: $font-primary;
 	font-size:12px;
 	font-weight:300;
-	overflow-y:visible !important;
+	
 }
 
 /*BOOTSTRAP MODIFY*/
@@ -1415,13 +1417,3 @@ footer{
   66.6% {z-index: 1}
 }
 
-
-// IT SOLUTIONS WEB
-
-
-.itsolutions{
-	overflow-y: visible;
-	.portada{
-		background: whitesmoke;
-	}
-}

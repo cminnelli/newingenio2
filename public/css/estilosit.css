@@ -18,7 +18,7 @@
   border-radius: 100%;
   color: #26D0CE;
   position: absolute;
-  top: 54%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 110px;
@@ -179,7 +179,7 @@
   left: 0px;
 }
 .itsolutions .loading .loadingwrapper .logoWrapper {
-  top: 26%;
+  top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -241,7 +241,7 @@
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .logoImg {
     height: 120px;
-    margin-top: 35px;
+    margin-top: 85px;
   }
 }
 .itsolutions .portada .transparencia {
@@ -355,7 +355,7 @@
 }
 @media only screen and (max-width: 600px) {
   .itsolutions .portada .social-icons {
-    top: 75%;
+    top: 68%;
   }
 }
 .itsolutions .portada .social-icons a {
@@ -924,6 +924,7 @@ html {
 body {
   top: 0px;
   background-color: white;
+  overflow-y: hidden;
 }
 
 .graciasporcontactarnos {
