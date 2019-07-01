@@ -195,4 +195,4 @@ function typeWriter(id, ar) {
 }
 
 
-loading(2000);
+loading(5000);
