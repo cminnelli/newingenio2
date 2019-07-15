@@ -1,15 +1,18 @@
-
+function contactMe(){
+  alert("Contacto Diseño y Programación web: cminnelli@gmail.com")
+  }
+  
 var i = 0,
     a = 0,
     isBackspacing = false,
     isParagraph = false;
 
 var textArray = [
-  "Creatividad   | (exigencias del mercado) ", 
-  "Flexibilidad  | (necesidades del cliente)", 
-  "Inteligencia  | (orden del día)",
-  "Dinamismo | (de respuesta)",
-  "INGENIO IT | Inteligencia y Creatividad aplicada a tus soluciones tecnologicas de recursos humanos "
+  "Creatividad   | (En nuestras soluciones) ", 
+  "Flexibilidad  | (Para acompañar a nuestros socios estratégicos)", 
+  "Inteligencia  | (Aplicada en todos nuestros procesos)",
+  "Dinamismo | (En nuestra respuesta)",
+  "INGENIO IT | Inteligencia y Creatividad aplicada a tus soluciones tecnologicas de recursos humanos. "
 
 ];
 
