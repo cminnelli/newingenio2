@@ -53,35 +53,6 @@ $scope.ingenio = false;
 $scope.loader = false;
 $scope.signOut = false;
 $scope.spinnerContact = false;
-/*BOTONERA SIGN GOOGLE FUNCTION*/
-
-
-$scope.conect = function(event){
-	$scope.spinnerContact = true;
-
-}
-
-
-
-
-$scope.displayButtons = function(data){
-		$scope.gmailUser = data;
-		$scope.userMail = data.email;
-		$scope.firstName = data.displayName.split(" ")[0];
-		$scope.buttonGoogle = false;
-		$scope.signOut = true;
-		
-		$(".avatar").attr('src', data.photoURL);
- 
-	if ($scope.userMail === "cminnelli@gmail.com" || $scope.userMail ==="web.ingeniotecnico@gmail.com" || $scope.userMail ===" ezequieljaburr@gmail.com"){
-		$scope.sesionMsg = "Hola  " + $scope.firstName + " Ingenio !";
-		$scope.ingenio = true;
-	}else{
-		$scope.sesionMsg = "Acceso denegado"
-	}
-
-	$scope.$apply();
-}
 
 
 
@@ -115,26 +86,11 @@ $scope.activatemonitor = function(){
 }
 
 
-
-// $scope.simulate =function(){
-// 	$("#division").val("division test"),
-// 	$("#empresa").val("IT Solutions"),
-// 	$("#puesto").val("Gerente de IT"),
-// 	$("#seniority").val("Gerente"),
-// 	$("#rubro").val("IT"),
-// 	$("#segmento").val("TECNO"),
-// 	$("#area").val("Software"),
-// 	$("#ubicacion").val("Martinez"),
-// 	$("#comentarios").val("lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
-
-// }
-
-
 $scope.newJob = function(){
 
 		var newOffer = {
 			division:$("#division").val(),
-				empresa:$("#empresa").val(),
+			empresa:$("#empresa").val(),
 			puesto:$("#puesto").val(),
 			seniority:$("#seniority").val(),
 			rubro:$("#rubro").val(),
@@ -148,7 +104,7 @@ $scope.newJob = function(){
 			googleService.update("empleos/" + key , {key: key}) //agrego id-key como property
 		}); //agregrando oferta
 
-			$("input").val("");
+		$("input").val("");
 		$('#modal').modal('toggle');
 }
 
@@ -165,15 +121,37 @@ $scope.googleSignIn = function(){
 	googleService.googleAuth(function(data){
 		// INFORMACION DE GMAIL
 		console.log(data)
-		$scope.displayButtons(data);
+		$scope.gmailUser = data;
+		$scope.userMail = data.email;
+		$scope.firstName = data.displayName.split(" ")[0];
+			
+		if ($scope.userMail === "cminnelli@gmail.com" || $scope.userMail ==="web.ingeniotecnico@gmail.com" || $scope.userMail ==="jsalvador@gmail.com" || $scope.userMail ==="ezequieljaburr@gmail.com"){
+			$scope.sesionMsg = "Hola  " + $scope.firstName + " Ingenio !";
+			$scope.ingenio = true;
+			$scope.buttonGoogle = false;
+			$scope.signOut = true;
+			$scope.activatemonitor();
+			$(".avatar").attr('src', data.photoURL);
+			$(".sesion").css({"background": "#11998e" , "background": "-webkit-linear-gradient(to right, #11998e, #38ef7d)" , "background": "linear-gradient(to right, #ed213a, #93291e)"});
+			$(".sesion").css({"background": "#ed213a" , "background": "-webkit-linear-gradient(to right, #ed213a, #93291e)" , "background": "linear-gradient(to right, #11998e, #38ef7d)"});
+		}else{
+			$scope.sesionMsg = "Acceso denegado";
+			$scope.job = "";
+			$scope.loader = false;
+			$scope.$apply();
+			$(".sesion").css({"background": "#11998e" , "background": "-webkit-linear-gradient(to right, #11998e, #38ef7d)" , "background": "linear-gradient(to right, #ed213a, #93291e)"});
+
+		}
+
 		$('#postulModal').modal('hide');
 
-		$scope.activatemonitor();
+	
 		$scope.notlogin = false;
 
 	})
 
 }
+
 
 $scope.googleSignOut = function(){
 	googleService.signOut();
@@ -182,26 +160,11 @@ $scope.googleSignOut = function(){
 	$scope.butCv = false;
 	$scope.ingenio = false; 
 	$scope.signOut = false;
+	$scope.loader = false;
 	$scope.userName = null;
+	$scope.job = true;
+	$scope.notlogin = true;
 
 }
-
-// DEFINIR ESTRELLA DE PUESTOS NG REPEAT
-$scope.getStars = function(seniority){
-	var arrOne = [1,2,3,4,5];
-	var arrTwo = [1,2];
-
-	if (seniority === "Senior"){
-		return arrOne
-	}else{
-		return arrTwo   
-	}
-}
-
-
-
 })	
 
-
-//Diferencia entre update, set y push
-//Set reemplaza, update agrega o cambia valores y push genera un objeto nuevo con un key predeterminado
