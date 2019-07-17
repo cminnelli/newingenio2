@@ -125,7 +125,7 @@ $scope.googleSignIn = function(){
 		$scope.userMail = data.email;
 		$scope.firstName = data.displayName.split(" ")[0];
 			
-		if ($scope.userMail === "cminnelli@gmail.com" || $scope.userMail ==="web.ingeniotecnico@gmail.com" || $scope.userMail ==="jsalvador@gmail.com" || $scope.userMail ==="ezequieljaburr@gmail.com"){
+		if ($scope.userMail === "cminnelli@gmail.com" || $scope.userMail ==="web.ingeniotecnico@gmail.com" || $scope.userMail ==="jsalvador.ingeniotecnico@gmail.com" || $scope.userMail ==="ezequieljaburr@gmail.com"){
 			$scope.sesionMsg = "Hola  " + $scope.firstName + " Ingenio !";
 			$scope.ingenio = true;
 			$scope.buttonGoogle = false;
